@@ -1,46 +1,43 @@
 .. currentmodule:: pyb
 .. _pyb.LED:
 
-class LED -- LED object
+class LED -- LED发光二极管对象
 =======================
 
-The LED object controls an individual LED (Light Emitting Diode).
+LED对象控制单个LED（发光二极管）
 
 
-Constructors
+构造器
 ------------
 
 .. class:: pyb.LED(id)
 
-   Create an LED object associated with the given LED:
+   创建与给定LED相关联的LED对象:
    
-     - ``id`` is the LED number, 1-4.
+     - ``id`` 是LED编号, 1-4.
 
 
-Methods
+方法
 -------
 
 .. method:: LED.intensity([value])
 
-   Get or set the LED intensity.  Intensity ranges between 0 (off) and 255 (full on).
-   If no argument is given, return the LED intensity.
-   If an argument is given, set the LED intensity and return ``None``.
+   获取或设置LED强度。强度范围在0（关闭）和255（最亮）。
+   如果没有参数，返回LED强度。
+   如果一个参数，设置LED强度和返回``None``。
 
-   *Note:* Only LED(3) and LED(4) can have a smoothly varying intensity, and
-   they use timer PWM to implement it.  LED(3) uses Timer(2) and LED(4) uses
-   Timer(3).  These timers are only configured for PWM if the intensity of the
-   relevant LED is set to a value between 1 and 254.  Otherwise the timers are
-   free for general purpose use.
+   *注：*只有LED（3）和LED（4）可以有一个平滑变化的强度，他们使用定时器PWM来实现它。
+   LED（3）采用定时器（2）和LED（4）使用定时器（3）。 
+   这些定时器仅配置为PWM，如果相关LED的强度设置为1和254之间的值。否则定时器是免费的一般用途。
 
 .. method:: LED.off()
 
-   Turn the LED off.
+   关闭LED。
 
 .. method:: LED.on()
 
-   Turn the LED on, to maximum intensity.
+   打开LED, 最大亮度。
 
 .. method:: LED.toggle()
 
-   Toggle the LED between on (maximum intensity) and off.  If the LED is at
-   non-zero intensity then it is considered "on" and toggle will turn it off.
+   切换之间的LED（最大强度）和关闭。如果LED是在非零强度，然后它被认为是 "on" 和切换将关闭它。

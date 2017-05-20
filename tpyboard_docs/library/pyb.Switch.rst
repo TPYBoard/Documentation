@@ -1,11 +1,11 @@
 .. currentmodule:: pyb
 
-class Switch -- switch object
+class Switch -- 按键对象
 =============================
 
-A Switch object is used to control a push-button switch.
+按键对象是一个可定义使用的用户按钮。
 
-Usage::
+用法::
 
      sw = pyb.Switch()       # create a switch object
      sw()                    # get state (True if pressed, False otherwise)
@@ -13,28 +13,28 @@ Usage::
                              #   switch is pressed down
      sw.callback(None)       # remove the callback
 
-Example::
+例子::
 
      pyb.Switch().callback(lambda: pyb.LED(1).toggle())
 
 
-Constructors
+构造器
 ------------
 
 .. class:: pyb.Switch()
 
-   Create and return a switch object.
+   创建并返回一个按钮。
 
 
-Methods
+方法
 -------
 
 .. method:: Switch.__call__()
 
-   Call switch object directly to get its state: ``True`` if pressed down,
-   ``False`` otherwise.
+   调用按键对象来直接获取状态: ``True`` 按键按下,
+   ``False`` 按键松开
 
 .. method:: Switch.callback(fun)
 
-   Register the given function to be called when the switch is pressed down.
-   If ``fun`` is ``None``, then it disables the callback.
+   当按钮被按下时，注册回调函数。
+   如果 ``fun`` 是 ``None``, 禁用回调。

@@ -1,16 +1,14 @@
 .. currentmodule:: pyb
 .. _pyb.Pin:
 
-class Pin -- control I/O pins
+class Pin -- 控制I/O引脚
 =============================
 
-A pin is the basic object to control I/O pins.  It has methods to set
-the mode of the pin (input, output, etc) and methods to get and set the
-digital logic level. For analog control of a pin, see the ADC class.
+一个引脚是基本的对象来控制I / O引脚。它有方法设置引脚的模式（输入，输出等）和方法来获取和设置数字逻辑电平。对于引脚的模拟控制，请参见ADC类。
 
-Usage Model:
+使用模型:
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     All Board Pins are predefined as pyb.Pin.board.Name::
     
@@ -73,18 +71,17 @@ Usage Model:
     All pin objects go through the pin mapper to come up with one of the
     gpio pins.
 
-Constructors
+构造器
 ------------
 
 .. class:: pyb.Pin(id, ...)
 
-   Create a new Pin object associated with the id.  If additional arguments are given,
-   they are used to initialise the pin.  See :meth:`pin.init`.
+   如果额外的给出参数创建一个新的ID关联销对象，它们被用来初始化引脚。 参考:meth:`pin.init`.
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
-    Class methods
-    -------------
+    Class 方法
+    -------------
 
     .. classmethod:: Pin.debug([state])
     
@@ -99,10 +96,10 @@ Constructors
        Get or set the pin mapper function.
 
 
-Methods
+方法
 -------
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. method:: Pin.init(mode, pull=Pin.PULL_NONE, af=-1)
     
@@ -137,7 +134,7 @@ Methods
        anything that converts to a boolean.  If it converts to ``True``, the pin
        is set high, otherwise it is set low.
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. method:: Pin.__str__()
     
@@ -188,7 +185,7 @@ Methods
 Constants
 ---------
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. data:: Pin.AF_OD
     
@@ -226,7 +223,7 @@ Constants
     
        enable the pull-up resistor on the pin
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     class PinAF -- Pin Alternate Functions
     ======================================

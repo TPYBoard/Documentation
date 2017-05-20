@@ -1,15 +1,12 @@
 .. currentmodule:: pyb
 .. _pyb.UART:
 
-class UART -- duplex serial communication bus
+class UART -- 双工串行通信总线
 =============================================
 
-UART implements the standard UART/USART duplex serial communications protocol.  At
-the physical level it consists of 2 lines: RX and TX.  The unit of communication
-is a character (not to be confused with a string character) which can be 8 or 9
-bits wide.
+UART实现标准UART / USART双工串行通信协议。在物理层，它包括2条线：RX和TX通信单元是一个字符（不与一个字符串混淆），可以是8或9位。
 
-UART objects can be created and initialised using::
+UART的对象可以被创建并初始化使用::
 
     from pyb import UART
 
@@ -23,8 +20,7 @@ UART objects can be created and initialised using::
     *Note:* with parity=None, only 8 and 9 bits are supported.  With parity enabled,
     only 7 and 8 bits are supported.
 
-A UART object acts like a stream object and reading and writing is done
-using the standard stream methods::
+一个UART对象的行为就像一个流对象，读和写是使用标准流方法完成的::
 
     uart.read(10)       # read 10 characters, returns a bytes object
     uart.read()         # read all available characters
@@ -47,10 +43,10 @@ using the standard stream methods::
     *Note:* The stream functions ``read``, ``write``, etc. are new in MicroPython v1.3.4.
     Earlier versions use ``uart.send`` and ``uart.recv``.
 
-Constructors
+ 构造器
 ------------
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. class:: pyb.UART(bus, ...)
     
@@ -72,10 +68,10 @@ Constructors
 
          - ``UART(2)`` is on: ``(TX, RX) = (X1, X2) = (PA2, PA3)``
 
-Methods
+方法
 -------
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. method:: UART.init(baudrate, bits=8, parity=None, stop=1, \*, timeout=1000, flow=0, timeout_char=0, read_buf_len=64)
     
@@ -103,13 +99,13 @@ Methods
 
 .. method:: UART.deinit()
 
-   Turn off the UART bus.
+   关闭UART总线。
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. method:: UART.any()
 
-       Returns the number of bytes waiting (may be 0).
+       返回等待的字节数（可能是0）
 
 .. method:: UART.read([nbytes])
 
@@ -120,7 +116,7 @@ Methods
    If ``nbytes`` is not given then the method reads as much data as possible.  It
    returns after the timeout has elapsed.
 
-   .. only:: port_pyboard
+   .. only:: port_tpyboard
 
       *Note:* for 9 bit characters each character takes two bytes, ``nbytes`` must
       be even, and the number of characters is ``nbytes/2``.
@@ -130,9 +126,9 @@ Methods
 
 .. method:: UART.readchar()
 
-   Receive a single character on the bus.
+   从总线上收到一个字符。
 
-   Return value: The character read, as an integer.  Returns -1 on timeout.
+   返回值：作为整数读取的字符。超时返回-1。
 
 .. method:: UART.readinto(buf[, nbytes])
 
@@ -152,7 +148,7 @@ Methods
 
 .. method:: UART.write(buf)
 
-   .. only:: port_pyboard
+   .. only:: port_tpyboard
 
       Write the buffer of bytes to the bus.  If characters are 7 or 8 bits wide
       then each byte is one character.  If characters are 9 bits wide then two
@@ -162,7 +158,7 @@ Methods
       Return value: number of bytes written. If a timeout occurs and no bytes
       were written returns ``None``.
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. method:: UART.writechar(char)
 
@@ -175,20 +171,20 @@ Methods
    of 13 bits.
    Return value: ``None``.
 
-Constants
+常数
 ---------
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. data:: UART.RTS
     .. data:: UART.CTS
 
-       to select the flow control type.
+       选择流量控制类型。
 
-Flow Control
+流量控制
 ------------
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     On Pyboards V1 and V1.1 ``UART(2)`` and ``UART(3)`` support RTS/CTS hardware flow control
     using the following pins:

@@ -6,8 +6,8 @@ TPYBoard Document
     tpyboard/quickref.rst
     tpyboard/general.rst
     tpyboard/tutorial/index.rst
-    example_index.rst
     library/index.rst
+    example_index.rst
     tpyboard/hardware/index.rst
     license.rst
     tpyboard_contents.rst
