@@ -1,0 +1,57 @@
+{% extends "defindex.html" %}
+{% block body %}
+<h1>MicroPython文档</h1>
+<style>
+td{
+	padding-bottom:15px;
+	font-size:14px;
+}
+td a{
+	font-size:14px;
+}
+</style>
+<p style="font-size:14px;">这是MicroPython文档，版本:{{ port_version }}</p>
+<p style="font-size:14px;">micropython运行在多种系统中各有自己特定的文档。当前是TPYBoard的文档。</p>
+<p style="font-size:14px;">MicroPython和TPYBoard文档</p>
+<p style="font-size:14px;">
+	<table style="width:100%;">
+		<tr>
+			<td><a class="biglink" href="{{ pathto(port + "/quickref") }}">TPYBoard快速参考</a></td>
+			<td><a class="biglink" href="">TPYBoard硬件</a></td>
+		</tr>
+		<tr>
+			<td><a class="biglink" href="{{ pathto(port + "/quickref") }}">TPYBoard的引脚图和例程</a></td>
+			<td><a class="biglink" href="{{ pathto(port + "/hardware/index") }}">原理图，尺寸和数据表</a></td>
+		</tr>
+		<tr>
+			<td><a class="biglink" href="{{ pathto(port + "/general") }}">TPYBoard概述</a></td>
+			<td><a class="biglink" href="{{ pathto(port + "/tutorial/index") }}">快速掌握TPYB的文档</a></td>
+		</tr>
+		<tr>
+			<td><a class="biglink" href="{{ pathto("example_index") }}">教程和代码示例</a></td>
+			<td><a class="biglink" href="{{ pathto("license") }}">许可证</a></td>
+		</tr>
+		<tr>
+			<td><a class="biglink" href="{{ pathto("example_index") }}">让我们开始编程吧</a></td>
+			<td><a class="biglink" href="{{ pathto("license") }}">MicroPython许可证信息</a></td>
+		</tr>
+		<tr>
+			<td><a class="biglink" href="{{ pathto("library/index") }}">类库</a></td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+</p>
+<hr/>
+<p style="font-size:14px;">
+	<table style="width:100%;">
+		<tr>
+			<td><a class="biglink" href="{{ pathto("py-modindex") }}">模块索引</a></td>
+			<td><a class="biglink" href="{{ pathto("genindex") }}">全文索引</a></td>
+		</tr>
+		<tr>
+			<td><a class="biglink" href="{{ pathto("search") }}">搜索页面</a></td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+</p>
+{% endblock %}
