@@ -90,7 +90,7 @@ source_suffix = '.rst'
 
 # General information about the project.
 project = 'MicroPython TPYBoard'
-copyright = '2016-2017. 翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明'
+copyright = '2016-2017. 翻译整理属于TPYBoard,转载时请以超链接形式标明文章原始出处和作者信息及本声明'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
