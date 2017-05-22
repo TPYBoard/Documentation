@@ -1,18 +1,16 @@
 .. currentmodule:: pyb
 .. _pyb.I2C:
 
-class I2C -- a two-wire serial protocol
+class I2C -- 2线串行通信协议
 =======================================
 
-I2C is a two-wire protocol for communicating between devices.  At the physical
-level it consists of 2 wires: SCL and SDA, the clock and data lines respectively.
+I2C是一种两线通信设备之间的协议。在物理层包括2条线：SCL和SDA，时钟线和数据线分别。
 
-I2C objects are created attached to a specific bus.  They can be initialised
-when created, or initialised later on.
+创建I2C对象连接到一个特定的总线。他们可以在创建时初始化，或初始化后
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
-    Example::
+    例如::
 
         from pyb import I2C
 
@@ -22,32 +20,32 @@ when created, or initialised later on.
         i2c.init(I2C.SLAVE, addr=0x42)       # init as a slave with given address
         i2c.deinit()                         # turn off the peripheral
 
-Printing the i2c object gives you information about its configuration.
+打印I2C对象提供有关其配置的信息。
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
-    The basic methods are send and recv::
+    基本方法是发送和接收::
 
         i2c.send('abc')      # send 3 bytes
         i2c.send(0x42)       # send a single byte, given by the number
         data = i2c.recv(3)   # receive 3 bytes
     
-    To receive inplace, first create a bytearray::
+    接收到位，首先创建一个ByteArray::
 
         data = bytearray(3)  # create a buffer
         i2c.recv(data)       # receive 3 bytes, writing them into data
 
-    You can specify a timeout (in ms)::
+    可以指定超时（毫秒)::
 
         i2c.send(b'123', timeout=2000)   # timeout after 2 seconds
 
-    A master must specify the recipient's address::
+    主机必须指定收件人地址::
 
         i2c.init(I2C.MASTER)
         i2c.send('123', 0x42)        # send 3 bytes to slave with address 0x42
         i2c.send(b'456', addr=0x42)  # keyword for address
 
-    Master also has other methods::
+    其它方法::
 
         i2c.is_ready(0x42)           # check if slave 0x42 is ready
         i2c.scan()                   # scan for slaves on the bus, returning
@@ -57,10 +55,10 @@ Printing the i2c object gives you information about its configuration.
         i2c.mem_write('abc', 0x42, 2, timeout=1000) # write 'abc' (3 bytes) to memory of slave 0x42
                                                     # starting at address 2 in the slave, timeout after 1 second
 
-Constructors
+构造器
 ------------
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. class:: pyb.I2C(bus, ...)
 
@@ -83,34 +81,34 @@ Constructors
        Calling the constructor with 'X' or 'Y' enables portability between Pyboard
        types.
 
-Methods
+方法
 -------
 
 .. method:: I2C.deinit()
 
-   Turn off the I2C bus.
+   解除I2C定义。
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. method:: I2C.init(mode, \*, addr=0x12, baudrate=400000, gencall=False, dma=False)
 
-      Initialise the I2C bus with the given parameters:
+      初始化参数:
 
-         - ``mode`` must be either ``I2C.MASTER`` or ``I2C.SLAVE``
-         - ``addr`` is the 7-bit address (only sensible for a slave)
-         - ``baudrate`` is the SCL clock rate (only sensible for a master)
-         - ``gencall`` is whether to support general call mode
-         - ``dma`` is whether to allow the use of DMA for the I2C transfers (note
+         - ``mode`` 只能是 ``I2C.MASTER`` 或者 ``I2C.SLAVE``
+         - ``addr`` 7位I2C地址(only sensible for a slave)
+         - ``baudrate`` 时钟频率 (only sensible for a master)
+         - ``gencall`` 通用调用模式
+         - ``dma`` is whether to allow the use of DMA for the I2C transfers (note
            that DMA transfers have more precise timing but currently do not handle bus
            errors properly)
 
     .. method:: I2C.is_ready(addr)
 
-       Check if an I2C device responds to the given address.  Only valid when in master mode.
+       检测I2C设备是否响应，只对主模式有效。
 
     .. method:: I2C.mem_read(data, addr, memaddr, \*, timeout=5000, addr_size=8)
 
-       Read from the memory of an I2C device:
+       读取数据
 
          - ``data`` can be an integer (number of bytes to read) or a buffer to read into
          - ``addr`` is the I2C device address
@@ -118,8 +116,8 @@ Methods
          - ``timeout`` is the timeout in milliseconds to wait for the read
          - ``addr_size`` selects width of memaddr: 8 or 16 bits
 
-       Returns the read data.
-       This is only valid in master mode.
+       返回读取数据
+       只对主模式有效。
 
     .. method:: I2C.mem_write(data, addr, memaddr, \*, timeout=5000, addr_size=8)
 
@@ -168,7 +166,7 @@ Constants
 
    for initialising the bus to master mode
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. data:: I2C.SLAVE
     
