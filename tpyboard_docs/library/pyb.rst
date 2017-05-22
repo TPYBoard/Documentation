@@ -22,9 +22,7 @@
    返回自上次重置电路以来的毫秒数，
    结果是一个31位有符号整数，在2**30（约12.4天）后开始返回负数。
 
-   Note that if :meth:`pyb.stop()` is issued the hardware counter supporting this
-   function will pause for the duration of the "sleeping" state. This
-   will affect the outcome of :meth:`pyb.elapsed_millis()`.
+   注意 如果调用:meth:`pyb.stop()` 经停止硬件计数器，因此 "sleeping" 将计数。他也会影响 :meth:`pyb.elapsed_millis()`。
 
 .. function:: micros()
 
