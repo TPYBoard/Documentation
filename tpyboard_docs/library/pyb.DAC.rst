@@ -1,15 +1,16 @@
 .. currentmodule:: pyb
 .. _pyb.DAC:
 
-class DAC -- digital to analog conversion
+class DAC -- 数模转换
 =========================================
 
-The DAC is used to output analog values (a specific voltage) on pin X5 or pin X6.
-The voltage will be between 0 and 3.3V.
 
-*This module will undergo changes to the API.*
+DAC是用来模拟输出值（特定的电压）在X5或X6输出。
+电压将介于0和3.3V之间
 
-Example usage::
+*将对API进行更改。*
+
+使用示例::
 
     from pyb import DAC
 
@@ -19,7 +20,7 @@ Example usage::
     dac = DAC(1, bits=12)   # use 12 bit resolution
     dac.write(4095)         # output maximum value, 3.3V
 
-To output a continuous sine-wave::
+输出连续正弦波::
 
     import math
     from pyb import DAC
@@ -33,7 +34,7 @@ To output a continuous sine-wave::
     dac = DAC(1)
     dac.write_timed(buf, 400 * len(buf), mode=DAC.CIRCULAR)
 
-To output a continuous sine-wave at 12-bit resolution::
+以12位分辨率输出连续正弦波 ::
 
     import math
     from array import array
@@ -46,62 +47,49 @@ To output a continuous sine-wave at 12-bit resolution::
     dac = DAC(1, bits=12)
     dac.write_timed(buf, 400 * len(buf), mode=DAC.CIRCULAR)
 
-Constructors
+构造器
 ------------
 
 .. class:: pyb.DAC(port, bits=8)
 
-   Construct a new DAC object.
+   构造一个DAC对象。
 
-   ``port`` can be a pin object, or an integer (1 or 2).
-   DAC(1) is on pin X5 and DAC(2) is on pin X6.
+   ``port`` 是一个针脚, 或整数(1 或 2)。DAC(1) 是针脚X5 和 DAC(2) 是针脚X6。
 
-   ``bits`` is an integer specifying the resolution, and can be 8 or 12.
-   The maximum value for the write and write_timed methods will be
-   2\*\*``bits``-1.
+   ``bits`` 是指定分辨率的整数，可以是8或12。
+   写入最大值和写入时间2\*\*``bits``-1.
 
-Methods
+方法
 -------
 
 .. method:: DAC.init(bits=8)
 
-   Reinitialise the DAC.  ``bits`` can be 8 or 12.
+   重新初始化DAC。  ``bits`` 8位或12位。
 
 .. method:: DAC.deinit()
 
-   De-initialise the DAC making its pin available for other uses.
+   初始化DAC使其引脚可用于其他用途。
 
 .. method:: DAC.noise(freq)
 
-   Generate a pseudo-random noise signal.  A new random sample is written
-   to the DAC output at the given frequency.
+   产生伪随机噪声信号。一个新的随机样本写入DAC输出在给定的频率
 
 .. method:: DAC.triangle(freq)
 
-   Generate a triangle wave.  The value on the DAC output changes at
-   the given frequency, and the frequency of the repeating triangle wave
-   itself is 2048 times smaller.
+   以指定频率产生三角波。
 
 .. method:: DAC.write(value)
 
-   Direct access to the DAC output.  The minimum value is 0.  The maximum
-   value is 2\*\*``bits``-1, where ``bits`` is set when creating the DAC
-   object or by using the ``init`` method.
+   写入参数。在8bits时，参数范围[0-255]；在12bits时，参数范围[0..4095]。
 
 .. method:: DAC.write_timed(data, freq, \*, mode=DAC.NORMAL)
 
-   Initiates a burst of RAM to DAC using a DMA transfer.
-   The input data is treated as an array of bytes in 8-bit mode, and
-   an array of unsigned half-words (array typecode 'H') in 12-bit mode.
+   使用DMA方式周期写入数据
+   data，缓冲区数组
+   ``freq``，默认使用Timer(6)，用指定频率更新。也可以指定另外的定时器，有效的定时器是[2, 4, 5, 6, 7, 8]。
+   ``mode``，``DAC.NORMAL`` 或 ``DAC.CIRCULAR``。
 
-   ``freq`` can be an integer specifying the frequency to write the DAC
-   samples at, using Timer(6).  Or it can be an already-initialised
-   Timer object which is used to trigger the DAC sample.  Valid timers
-   are 2, 4, 5, 6, 7 and 8.
-
-   ``mode`` can be ``DAC.NORMAL`` or ``DAC.CIRCULAR``.
-
-   Example using both DACs at the same time::
+   同时利用DAC的例子::
 
      dac1 = DAC(1)
      dac2 = DAC(2)
