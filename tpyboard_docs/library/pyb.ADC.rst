@@ -4,7 +4,7 @@
 class ADC -- 数模转换
 =========================================
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     用法::
 
@@ -24,7 +24,7 @@ class ADC -- 数模转换
 ------------
 
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. class:: pyb.ADC(pin)
 
@@ -33,7 +33,7 @@ class ADC -- 数模转换
 方法
 -------
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     .. method:: ADC.read()
 
@@ -71,7 +71,7 @@ class ADC -- 数模转换
 AdCall对象
 -----------------
 
-.. only:: port_pyboard
+.. only:: port_tpyboard
 
     实例化这个改变所有ADC引脚模拟输入。原单片机温度，VREF和VBAT的数据可以在ADC通道16访问，分别为17和18。适当的缩放将需要应用。芯片上的温度传感器的绝对精度差，仅适用于检测温度变化。
 
