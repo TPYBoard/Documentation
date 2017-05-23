@@ -7,22 +7,21 @@ TPYBoard v10x 典型实例
    :maxdepth: 1
    :numbered:
 
-   602.rst
-   5110.rst
-   88led.rst
-   acceleratorcar.rst
-   airfan.rst
-   bluetoothcar.rst
-   diytime.rst
-   infraredarrestcar.rst
-   infraredcar.rst
    intro.rst
    metaldetector.rst
    nightlight.rst
-   oled.rst
-   pm2.5.rst
-   repl.rst
-   script.rst
+   88led.rst
    template.rst
+   script.rst
+   pm2.5.rst
    ultrasonicranging.rst
-
+   diytime.rst
+   5110.rst
+   oled.rst
+   1602.rst
+   airfan.rst
+   repl.rst
+   infraredarrestcar.rst
+   infraredcar.rst
+   bluetoothcar.rst
+   acceleratorcar.rst
