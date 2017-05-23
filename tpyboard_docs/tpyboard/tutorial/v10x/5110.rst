@@ -5,50 +5,43 @@
 
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
 
-实验目的
+ 实验目的
 ---------------------
 
-    1. 学习在PC机系统中扩展简单I/O 接口的方法
-    2. 什么是SPI接口
-    3. 学习TPYBoard I2C接口的用法
-    4. 学习LCD5110接线方
-    5. DS3231的接线方法
-    6. 16*16汉字显示温度与当前时间
+    - 学习在PC机系统中扩展简单I/O 接口的方法
+    - 什么是SPI接口
+    - 学习TPYBoard I2C接口的用法
+    - 学习LCD5110接线方
+    - DS3231的接线方法
+    - 16*16汉字显示温度与当前时间
 
-所需元器件
+ 所需元器件
 ---------------------
 
-    DS3231模块 1个
+    - DS3231模块 1个
+    - TPYBoard v102板子 1块
+    - LCD5110显示屏 1个
+    - micro USB数据线 1条
+    - 杜邦线 若干
 
-    TPYBoard v102板子 1块
-
-    LCD5110显示屏 1个
-
-    micro USB数据线 1条
-
-    杜邦线 若干
-
-TPYBoard v102的SPI接口
+ TPYBoard v102的SPI接口
 ---------------------
 
     LCD5110需要SPI接口与TPYBoard v102进行连接传输数据，SPI接口是在CPU和外围低速器件之间进行同步串行数据传输。
-
     TPYBoard v102有两个SPI接口，本次使用SPI1接口。
 
 .. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161229/1482973399550325.png
 
-TPYBoard v102的I2C接口
+ TPYBoard v102的I2C接口
 ---------------------
     DS3231是I2C接口通信的，它通过I2C接口与TPYBoard v102进行数据通讯，DS3231通过这个接口与TPYBoard v102进行双向通讯，进行数据传输。
-
     TPYBoard有两个I2C接口，本次使用I2C1接口。
 
 .. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161229/1482973431559379.png
 
 DS3231的使用方法
 ---------------------
-
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161229/1482973477928543.png
+.. image:: http://tpyboard.com/ueditor/php/upload/image/20161229/1482973477928543.png
 
     本次教程使用DS3231的SCL,SDA,VCC,GND四个针脚进行时间的读取和设定，接线方式如下:
 
