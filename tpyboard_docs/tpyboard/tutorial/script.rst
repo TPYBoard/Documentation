@@ -9,7 +9,7 @@
 通过 USB 线连接你的 PC 机（windows,mac,linux皆可）。
 你不可能搞错因为仅有这么一种连接方式。
 
-.. 图像:: img/pyboard_usb_micro.jpg
+.. 图像:: ../img/tpyboard_usb.jpg
 
 当连接成功后开发板将上电和进入开机程序，绿色的 LED 灯应该在半秒或更少的时间内亮起，当其熄灭时意味着开机程序已完成。
 
@@ -24,7 +24,7 @@
    Windows系统同时会将开发板视为串口驱动，且设备将会自动连接。
    如果是这样，取消这样的连接，我们将在下一篇教程中展示串口驱动如何工作。
 
-  - **Mac**: 你的TPYboard开发板将作为一个可移动磁盘出现在桌面。
+  - **Mac**: 你的TPYBoard开发板将作为一个可移动磁盘出现在桌面。
     其可能为“NONAME”，请点击打开里边的文件夹。
 
   - **Linux**: 开发版将作为可移动的多媒体设备出现。
@@ -36,7 +36,7 @@
 
 你所见到的设备是由开发板里边的 /flash实现的，其由以下四个文件关联组成：
 
-* `boot.py <http://micropython.org/resources/fresh-pyboard/boot.py>`_ -- 这个脚本执行时TPYboard开发板启动。
+* `boot.py <http://micropython.org/resources/fresh-pyboard/boot.py>`_ -- 这个脚本执行时TPYBoard开发板启动。
    它设置了开发板的多个选项参数。
 
 * `main.py <http://micropython.org/resources/fresh-pyboard/main.py>`_ -- 这是包含Python程序的主要脚本。
@@ -45,7 +45,7 @@
 * `README.txt <http://micropython.org/resources/fresh-pyboard/README.txt>`_ -- 包含开启Python的必要基础信息。
 
 * `pybcdc.inf <http://micropython.org/resources/fresh-pyboard/pybcdc.inf>`_ --   这是一个Windows驱动文件，配置串行USB装置，
-之后的教程中有更多的介绍。  
+之后的教程中有更多的介绍。
 
 编辑mian.py
 -------------------
@@ -58,7 +58,7 @@ Mac 和 linux 下使用你喜欢的文本编辑器即可。
     # main.py -- put your code here!
 
 该行以 # 字符开始，意味着只是一个注释。
-这样的命令行不会被执行，仅为代码提供信息用在这个 main.py 加多两行，如下所示：
+这样的命令行不会被执行，仅为代码提供信息用在这个 main.py 加多两行，如下所示:::
 
     # main.py -- put your code here!
     import pyb

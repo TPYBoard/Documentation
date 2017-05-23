@@ -1,4 +1,4 @@
-获取MicroPython REPL提示 
+获取MicroPython REPL提示
 =================================
 
 REPL（交互式解释器）全称是 Read Evaluate Print Loop，TPYBoard 允许用户和 MicorPython 的交互式连接。
@@ -11,7 +11,7 @@ Windows
 -------
 
 你需要安装TPYBoard驱动使用串行USB设备。
-该驱动在TPYBoard的USB闪存驱动中，名为 "pybcdc.inf"。
+该驱动在TPYBoard的USB闪存驱动中，名为 "tpybcdc.inf"。
 
 安装该驱动用户需要在电脑的设备管理器列表中中找到 TPYBoard 设备（尚未工作的设备，旁边应该有黄色的警告图标）
 在该设备上鼠标右键，选择工具（properties）然后安装驱动。
@@ -21,7 +21,7 @@ Windows
 `Windows TPYBoard指南<http://micropython.org/resources/Micro-Python-Windows-setup.pdf>`_.
 如果安装驱动程序有问题，请咨询本指南。
 
-您现在需要运行您的终端程序。  
+您现在需要运行您的终端程序。
 你可以使用超级终端，如果你没有安装，或者下载免费程序putty:
 `putty.exe <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`_.
 串口程序通过上一步找到的 COM 端口运行。
@@ -34,7 +34,7 @@ Mac OS X
 打开一个终端并运行：
 
     “screen /dev/tty.usbmodem”
-    
+
 当想要终止退出界面时，使用快捷键 CTPL-A CTRL-\
 
 Linux
@@ -43,8 +43,8 @@ Linux
 打开终端并运行：
 
     “screen /dev/ttyACM0”
-    
-你也可以尝试 piocom 或者 minicom 的连接方式而非终端界面。 
+
+你也可以尝试 piocom 或者 minicom 的连接方式而非终端界面。
 你需要使用 /dev/ttyACM1或者更高的ttyACM数字。
 而且，用户需要给自己正确的权限连接该设备（例如组 uucp 或者 dialout，或者权限 sudo）
 
@@ -63,7 +63,7 @@ Linux
 在上面的例程中用户不需要敲入 >>> 字符，而是应该在解释器中写入内容。
 在最后，一旦输入 ``print("hello pyboard!")``文本并按下回车键，输出结果将在屏幕上如上呈现。
 
-如果你已经知道一些Python，你可以尝试一些基本的命令在这里。 
+如果你已经知道一些Python，你可以尝试一些基本的命令在这里。
 
 如果打印不成功，尝试下边的硬件复位或者软件复位的方法。可以继续打入其他指令如：
 
@@ -83,9 +83,9 @@ Linux
 其一是在 MicroPython 解释器中打入 CTRL-D 进行软件复位。出现的消息如下所示：
 
     “>>>“
-    “PYB: sync filesystems“
-    “PYB: soft reboot“
-    “Micro Python v1.0 on 2014-05-03; PYBv1.0 with STM32F405RG“
+    “TPYB: sync filesystems“
+    “TPYB: soft reboot“
+    “Micro Python v1.0 on 2014-05-03; TPYBoard v10x with STM32F405RG“
     “Type "help()" for more information.“
     “>>>“
 
