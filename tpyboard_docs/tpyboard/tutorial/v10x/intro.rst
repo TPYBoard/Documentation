@@ -241,4 +241,4 @@
 效果演示
 ------------------------------------
 
-  `点击观看视频<http://v.youku.com/v_show/id_XMTY1MzY5NDExNg==.html>`
+  `点击观看视频<http://v.youku.com/v_show/id_XMTY1MzY5NDExNg==.html>`_
