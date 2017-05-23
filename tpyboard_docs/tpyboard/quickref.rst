@@ -3,10 +3,10 @@
 TPYBoard快速参考手册
 ===============================
 
-下面是tPYBv10x的针脚图。你也可以查看其他版本的tpyboard的针脚图:.
+下面是TPYBoard v10x的针脚图。你也可以查看其他版本的tpyboard的针脚图:.
 
 .. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20170310/1489140924942008.png
-    :alt: PYBv1.0 pinout
+    :alt: TPYBoard v10x pinout
     :width: 700px
 
 开发板基础控制
