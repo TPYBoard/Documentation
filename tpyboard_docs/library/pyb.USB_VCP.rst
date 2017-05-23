@@ -1,102 +1,71 @@
 .. currentmodule:: pyb
 
-class USB_VCP -- USB virtual comm port
+class USB_VCP -- USB虚拟串口
 ======================================
 
-The USB_VCP class allows creation of an object representing the USB
-virtual comm port.  It can be used to read and write data over USB to
-the connected host.
+micropython上的USB兼做VCP，可以通过函数去控制VCP，和PC进行数据通信。
+发送的数据会在终端上直接显示出来
 
 
-Constructors
+构造器
 ------------
 
 .. class:: pyb.USB_VCP()
 
-   Create a new USB_VCP object.
+   创建虚拟串口对象。
 
 
-Methods
+方法
 -------
 
 .. method:: USB_VCP.setinterrupt(chr)
 
-   Set the character which interrupts running Python code.  This is set
-   to 3 (CTRL-C) by default, and when a CTRL-C character is received over
-   the USB VCP port, a KeyboardInterrupt exception is raised.
-
-   Set to -1 to disable this interrupt feature.  This is useful when you
-   want to send raw bytes over the USB VCP port.
+   设置中断python运行键，默认是3（Ctrl+C）。
+   -1是禁止中断功能，在需要发送原始字节时需要。
 
 .. method:: USB_VCP.isconnected()
 
-   Return ``True`` if USB is connected as a serial device, else ``False``.
+   如果USB连接到串口设备，返回 ``True``。
 
 .. method:: USB_VCP.any()
 
-   Return ``True`` if any characters waiting, else ``False``.
+   如果缓冲区有数据等待接收，返回 ``True``。
 
 .. method:: USB_VCP.close()
 
-   This method does nothing.  It exists so the USB_VCP object can act as
-   a file.
+   这个函数什么也不做，它的目的是为了让vcp可以做为文件来使用。
 
 .. method:: USB_VCP.read([nbytes])
 
-   Read at most ``nbytes`` from the serial device and return them as a
-   bytes object.  If ``nbytes`` is not specified then the method reads
-   all available bytes from the serial device.
-   USB_VCP stream implicitly works in non-blocking mode,
-   so if no pending data available, this method will return immediately
-   with ``None`` value.
+   最多读取 ``nbytes`` 字节。如果不指定 ``nbytes`` 参数，那么这个函数和readall()功能相同。
 
 .. method:: USB_VCP.readinto(buf, [maxlen])
 
-   Read bytes from the serial device and store them into ``buf``, which
-   should be a buffer-like object.  At most ``len(buf)`` bytes are read.
-   If ``maxlen`` is given and then at most ``min(maxlen, len(buf))`` bytes
-   are read.
-
-   Returns the number of bytes read and stored into ``buf`` or ``None``
-   if no pending data available.
+   读取串口数据并存放到 ``buf``。如果指定maxlen参数，那么最多读取 ``maxlen`` 个字节。
 
 .. method:: USB_VCP.readline()
 
-   Read a whole line from the serial device.
-
-   Returns a bytes object containing the data, including the trailing
-   newline character or ``None`` if no pending data available.
+   读取整行数据。
 
 .. method:: USB_VCP.readlines()
 
-   Read as much data as possible from the serial device, breaking it into
-   lines.
-
-   Returns a list of bytes objects, each object being one of the lines.
-   Each line will include the newline character.
+   读取所有数据并分行存储，返回字节对象列表。
 
 .. method:: USB_VCP.write(buf)
 
-   Write the bytes from ``buf`` to the serial device.
-
-   Returns the number of bytes written.
+   写入缓冲区数据，返回写入数据的个数。
 
 .. method:: USB_VCP.recv(data, \*, timeout=5000)
 
-   Receive data on the bus:
+   接收数据:
    
-     - ``data`` can be an integer, which is the number of bytes to receive,
-       or a mutable buffer, which will be filled with received bytes.
-     - ``timeout`` is the timeout in milliseconds to wait for the receive.
-   
-   Return value: if ``data`` is an integer then a new buffer of the bytes received,
-   otherwise the number of bytes read into ``data`` is returned.
+     - ``data`` ，可以是读取数据个数，或者是缓冲区。
+     - ``timeout`` ，等待接收超时时间。
 
 .. method:: USB_VCP.send(data, \*, timeout=5000)
 
    Send data over the USB VCP:
    
-     - ``data`` is the data to send (an integer to send, or a buffer object).
-     - ``timeout`` is the timeout in milliseconds to wait for the send.
+     - ``data`` 缓冲区或者整数。
+     - ``timeout`` 发送超时时间。
    
-   Return value: number of bytes sent.
