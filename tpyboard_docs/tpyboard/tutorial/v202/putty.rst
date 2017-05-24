@@ -11,8 +11,8 @@
 所需器件
 --------------
 
-	- PYBoard v202开发板 1块
-	- micro USB数据线一条
+	- TPYBoard v202开发板 1块
+	- micro USB数据线 1条
 
 所需软件
 ----------------
@@ -23,7 +23,7 @@
 Putty连接方法
 ----------------
 
-*安装驱动*
+**安装驱动**
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556668728667.png
 
@@ -42,9 +42,10 @@ Putty连接方法
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556741930279.png
 
-*注意事项*
+**注意事项**
 
 如果在端口中没有出现红色方框中的选项，请确认以下几点：
+
 	- 检查驱动程序（CH341SER）是否安装成功。
 	- 安装驱动精灵且将TPYBoard v102开发板连接电脑的同时自动搜索与其匹配的驱动进行安装。
 	- 检查TPYBoard-esp8266开发板与电脑的连接是否有误。

@@ -17,13 +17,13 @@
 烧写固件
 -----------------
 
-*第一步：下载烧写固件所需的软件*
+**第一步：下载烧写固件所需的软件**
 
 在windows系统下可以使用ESPFlashDownloadTool_v3.3.4软件。不用担心不好找，见下面的附件压缩包。
 
 `flash_download_tools_v3.3.4_win.zip <http://www.tpyboard.com/ueditor/php/upload/file/20170222/1487749912530684.zip>`__
 
-*第二步：连接TPYBoard-esp8266开发板*
+**第二步：连接TPYBoard v202开发板**
 
 通过USB数据线将电脑和TPYBoard-esp8266开发板连接起来，会自动安装USB转串的驱动。安装完毕后，查看设备管理器，是否正确创建串口(我的电脑是COM44)
 

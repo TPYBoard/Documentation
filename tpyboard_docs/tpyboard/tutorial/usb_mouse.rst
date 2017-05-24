@@ -1,10 +1,10 @@
 使TPYBoard作为USB鼠标
 =====================================
 
-该 TPYBoard 是一个USB设备，可配置为用作鼠标而不是默认的USB闪存驱动器。
+该TPYBoard 是一个USB设备，可配置为用作鼠标而不是默认的USB闪存驱动器。
 
 为此，我们必须首先编辑boot.py文件以更改USB配置。
-如果你还没有触到你的boot.py文件，那么它将会是这样的：::
+如果你还没有触到你的boot.py文件，那么它将会是这样的：:
 
     # boot.py -- run on boot-up
     # can run arbitrary Python, but best to keep it minimal
@@ -14,11 +14,11 @@
     #pyb.usb_mode('VCP+MSC') # act as a serial and a storage device
     #pyb.usb_mode('VCP+HID') # act as a serial device and a mouse
 
-启用鼠标模式，请取消注释文件的最后一行，使其看起来像：::
+启用鼠标模式，请取消注释文件的最后一行，使其看起来像：:
 
     pyb.usb_mode('VCP+HID') # act as a serial device and a mouse
 
-如果您已经更改了boot.py文件，则需要使用的最小代码是：::
+如果您已经更改了boot.py文件，则需要使用的最小代码是：:
 
     import pyb
     pyb.usb_mode('VCP+HID')
@@ -31,7 +31,7 @@
 ----------------------------
 
 为了让鼠标做任何事情，我们需要将鼠标事件发送到PC。
-我们将首先使用REPL提示手动进行此操作。使用串行程序连接到您的TPYBoard，并键入以下内容：::
+我们将首先使用REPL提示手动进行此操作。使用串行程序连接到您的TPYBoard，并键入以下内容：:
 
     >>> hid = pyb.USB_HID()
     >>> hid.send((0, 10, 0, 0))
@@ -39,7 +39,7 @@
 你的鼠标应该向右移动10像素！在上面的命令中，您将发送4条信息：按钮状态，x，y和滚动。
 数字10告诉PC机鼠标在x方向移动10个像素。
 
-让我们让鼠标左右摆动：::
+让我们让鼠标左右摆动：:
 
     >>> import math
     >>> def osc(n, d):
@@ -77,7 +77,7 @@
 在安全模式下，boot.py并且main.py文件不被执行，因此TPYBoard启动时使用默认设置。
 这意味着您现在可以访问文件系统（USB驱动器应该出现），您可以编辑main.py。（boot.py按原样离开，因为我们完成编辑后仍然要回到HID模式main.py。）
 
-在main.py下面的代码中：::
+在main.py下面的代码中：:
 
     import pyb
 
@@ -101,7 +101,7 @@
 
 如果你按原样离开你的TPYBoard，每当你插入它，它就会像鼠标一样表现出来。
 你可能想把它改成正常。要做到这一点，您需要先进入安全模式（见上文），然后编辑boot.py文件。
-在boot.py文件中，注释掉（放在＃前面）的行与 VCP+HID设置，所以它看起来像：::
+在boot.py文件中，注释掉（放在＃前面）的行与 VCP+HID设置，所以它看起来像：:
 
     #pyb.usb_mode('VCP+HID') # act as a serial device and a mouse
 

@@ -37,7 +37,7 @@ TPYBoard(Micropython)开发板上有搭建的文件系统，但是TPYBoard v202�
 查看和修改文件
 -----------------------------------------
 
-*首先打开工具，进入调试串口页面*
+**首先打开工具，进入调试串口页面**
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489559117996837.png
 
@@ -55,7 +55,7 @@ TPYBoard(Micropython)开发板上有搭建的文件系统，但是TPYBoard v202�
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489559482825552.png
 
-*查看文件内容*
+**查看文件内容**
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489559501609896.png
 
@@ -71,7 +71,7 @@ TPYBoard(Micropython)开发板上有搭建的文件系统，但是TPYBoard v202�
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489559542326782.png
 
-*修改文件内容*
+**修改文件内容**
 
 我们将hello.py中的内容修改为hello TurnipSmart，this is tpyboard V202
 

@@ -3,9 +3,9 @@
 
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
 
-TPYBoard V202简介
+TPYBoard v202简介
 -------------------------
-TPYBoard V202是遵照MIT协议，以MicroPython为基础，研发的一款支持Python和lua语言的Wifi通信开发板，TPYBoard V202有9个通用GPIO口，1费ADC接口，1个SPI接口，1个I2C 接口，1个USART接口。
+TPYBoard v202是遵照MIT协议，以MicroPython为基础，研发的一款支持Python和lua语言的Wifi通信开发板，TPYBoard v202有9个通用GPIO口，1费ADC接口，1个SPI接口，1个I2C 接口，1个USART接口。
 
 通用方法
 machine类库：

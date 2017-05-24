@@ -17,7 +17,7 @@
     - 电脑 1台（本次实验以win7为例）
     - 所需软件 ESPlorer
 
-LED灯的发光原理
+GPIO的介绍
 ----------------------
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170427/1493271806734258.png

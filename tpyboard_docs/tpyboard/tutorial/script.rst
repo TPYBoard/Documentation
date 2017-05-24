@@ -58,7 +58,7 @@ Mac 和 linux 下使用你喜欢的文本编辑器即可。
     # main.py -- put your code here!
 
 该行以 # 字符开始，意味着只是一个注释。
-这样的命令行不会被执行，仅为代码提供信息用在这个 main.py 加多两行，如下所示:::
+这样的命令行不会被执行，仅为代码提供信息用在这个 main.py 加多两行，如下所示::
 
     # main.py -- put your code here!
     import pyb

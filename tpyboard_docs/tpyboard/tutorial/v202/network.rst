@@ -12,16 +12,16 @@
 准备工作
 -------------
 
-    - TPYBoard V202一块
-    - 数据线一条
+    - TPYBoard v202 1块
+    - micro USB数据线 1条
     - 电脑 1台（本次实验以win7为例）
     - 所需软件 ESPlorer `点击下载 <http://www.tpyboard.com/download/tool/169.html>`_
 
-    *Network库的使用方法*
+**Network库的使用方法**
 
     网络模块用于配置WiFi连接。一共两种模式，模式一:是TPYBoard v202当STA节点，即连接路由器的节点。模式二，是TPYBoard v202做为AP，充当路由。
 
-*TPYBoard v202 STA节点模式*
+**TPYBoard v202 STA节点模式**
 
 .. code-block:: python
 
@@ -79,7 +79,7 @@ TPYBoard v202自动连接本地网络:
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489562186715918.png
 
-*TPYBoard v202 AP模式:
+**TPYBoard v202 AP模式**
 
 .. code-block:: python
 
@@ -110,7 +110,7 @@ TPYBoard v202自动连接本地网络:
 实验一
 ----------
 
-*实验要求*
+**实验要求**
 
 当TPYBoard v202未连接到网络时，led亮起警示，当连接成功后，熄灭。
 
@@ -136,14 +136,14 @@ main.py程序代码
 		p2.high()
 		print('network config:', sta_if.ifconfig())
 
-*实验效果*
+**实验效果**
 
 当我们复位，把程序写进去的时候会看到TPYBoard V202板载的蓝灯亮起来，当连接成功后蓝灯熄灭，控制台打印connect success。
 
 实验二
 -----------
 
-*实验要求*
+**实验要求**
 当TPYBoard v202连接网络成功后，通过get方式向网址http://www.tpyboard.com/esp8266/test.php?val=A发送字符A,网站接到后，页面显示begin，并返回bigin，TPYBoard V202收到bigin，LED快闪2次。
 
 main.py程序代码
@@ -202,7 +202,7 @@ main.py程序代码
 	do_connect()
 	http_get('http://www.tpyboard.com/esp8266/test.php?val=A')
 
-*实验效果*
+**实验效果**
 
 当点击Send to ESP时，控制台显示从页面上传过来的内容为begin，并且led灯交替闪烁两次。
 

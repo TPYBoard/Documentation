@@ -17,7 +17,7 @@
 实现方法
 ---------------
 
-*增加一个执行一次的定时器*
+**增加一个执行一次的定时器**
 
 .. code-block:: python
 
@@ -27,19 +27,20 @@
     #此处执行时程序会等待5秒打印1，period=5000 以毫秒为单位，mode=Timer.ONE_SHOT 表示只执行一次
     callback=lambda 回调函数(period=5000, mode=Timer.ONE_SHOT,t:print(1))
 
-*增加一个循环定时器*
+**增加一个循环定时器**
 
 .. code-block:: python
 
     from machine import Timer
     tim = Timer(-1)  #新建一个虚拟定时器
-    tim.init(period=2000, mode=Timer.PERIODIC, callback=lambda t:print(2))#此方法执行时系统会每隔两秒无限打印2。
+    #此方法执行时系统会每隔两秒无限打印2
+    tim.init(period=2000, mode=Timer.PERIODIC, callback=lambda t:print(2))
 
 
 利用定时器来获取温湿度
 -----------------------------
 
-*硬件实物图*
+**硬件实物图**
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489561580775098.png
 

@@ -44,10 +44,15 @@
 
 第六步：按下图命令操作
 
+运行命令：:
+
+import esp
+esp.check_fw()
+
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489557784930344.png
 
 如果最后显示True，代表固件是完整的，否则可能存在问题。如果显示False，最好重新刷一次固件。
-详情请参考：http://www.tpyboard.com/support/tutorial22/269.html
+详情可参考下一篇文档进行固件的烧写。
 
 固件的擦除
 ----------------------
