@@ -168,3 +168,6 @@
 					M3.low()
 					print('ZUO')
 					pyb.delay(250)
+
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_

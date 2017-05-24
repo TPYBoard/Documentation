@@ -73,3 +73,6 @@ Putty连接方法
 当界面出现红色方框中的内容时说明TPYBoard v102开发板已经安装成功。现在可以编写python代码，如图：
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556846690984.png
+
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v20x>`_

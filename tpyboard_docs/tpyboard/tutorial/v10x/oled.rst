@@ -101,4 +101,4 @@ OLED接口定义
 .. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20170211/1486776202255121.png
 
 
-源代码下载: http://www.micropython.net.cn/ueditor/php/upload/file/20170211/1486776338127363.zip
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_

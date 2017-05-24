@@ -5,7 +5,8 @@ TPYBoard v202 典型实例
 
 .. toctree::
    :maxdepth: 1
-
+   :numbered:
+   
    quickref.rst
    firmwipe.rst
    firmware.rst

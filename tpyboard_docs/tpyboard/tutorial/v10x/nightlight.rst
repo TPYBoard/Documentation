@@ -1,4 +1,4 @@
-[Micropython]TPYBoard v10x DIY声光电控小夜灯
+[Micropython]TPYBoard v10x DIY声光控小夜灯
 ==========================================
 
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
@@ -30,7 +30,7 @@
 	2.模块在环境光线亮度达不到设定阈值时，DO端输出高电平，当外界环境光线亮度超过设定阈值时，DO端输出低电平；
 	3.DO输出端可以与单片机直接相连，通过单片机来检测高低电平，由此来检测环境的光线亮度改变；
 	4.DO输出端可以直接驱动本店继电器模块，由此可以组成一个光控开关。
-	
+
 	光敏传感器实物图：
 
 .. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161119/1479545872307793.png
@@ -89,3 +89,6 @@
 			pyb.LED(2).off()
 			pyb.LED(4).off()
 			led.value(0)
+
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_

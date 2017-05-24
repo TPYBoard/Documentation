@@ -117,3 +117,5 @@ TPYBoard v10x驱动舵机
   `观看视频: <http://v.youku.com/v_show/id_XMTY1MzE5ODIyOA==.html>`_
 
   虽然舵机只是能实现转动指定的角度，看起来功能很单一，但是单一的功能结合起来，就能完成很复杂的任务。
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_

@@ -104,4 +104,4 @@ DS3231的接线方法
       pyb.delay(1000)
 
 
-`源码下载地址：<http://www.tpyboard.com/ueditor/php/upload/file/20170111/1484102983654809.rar>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_

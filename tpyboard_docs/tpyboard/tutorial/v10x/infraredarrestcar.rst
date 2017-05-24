@@ -129,3 +129,6 @@ TPYBoard v102开发板
 			pyb.delay(200)
 			pyb.LED(3).on()
 			pyb.LED(2).off()
+
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_

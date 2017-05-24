@@ -79,3 +79,6 @@ http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v201/cloudadder.html#v201
       pyb.delay(2000)#做延时是为了让给模拟服务器一个反应时间
       ulan.write('wet is:'+hum+'%'+'\r\n')#上传湿度
       pyb.delay(12000)
+
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v20x>`_

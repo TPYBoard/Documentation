@@ -106,4 +106,5 @@ main.py源代码：
 	#if __name__ == "__main__":
 	main()
 
-源代码下载: http://www.tpyboard.com/ueditor/php/upload/file/20161226/1482730903268160.zip
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_

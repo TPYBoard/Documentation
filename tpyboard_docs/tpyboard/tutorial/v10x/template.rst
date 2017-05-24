@@ -139,3 +139,5 @@ main.py源代码：
 			display(60,l_n,r_n)
 			for i in x_PIN:
 				i.value(0)
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_

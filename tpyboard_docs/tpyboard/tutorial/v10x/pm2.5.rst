@@ -282,3 +282,6 @@ PM2.5粉尘传感器的采样频率
 		lcd_5110.lcd_write_string(str(Quality),0,1)
 		lcd_5110.lcd_write_string('PM2.5:',0,2)
 		lcd_5110.lcd_write_string(str(SHUCHU),0,3)
+
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_

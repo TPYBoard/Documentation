@@ -72,3 +72,5 @@ LJ12A3-4-Z/BX 接近开关工作原理
 		else:
 			print(y1.value())
 			x1.value(1)
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_

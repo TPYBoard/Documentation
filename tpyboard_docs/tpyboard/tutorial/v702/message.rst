@@ -245,3 +245,6 @@ TPYBoard v702是山东萝卜电子科技有限公司最新开发的，目前市�
 													pyb.delay(24000)
 		r=10
 		E=0
+
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v70x>`_

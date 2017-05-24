@@ -140,3 +140,6 @@ TPYBoard v702的开发板的整体整体亮点就是能进行定位，可以获�
 		lcd_5110.lcd_write_string('WEIDU:',0,2)
 		#利用5110显示屏类库中的显示函数，进行数据显示
 		lcd_5110.lcd_write_string(str(WD),0,3)
+
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v70x>`_

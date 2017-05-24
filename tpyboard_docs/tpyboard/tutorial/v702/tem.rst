@@ -123,3 +123,6 @@ TPYBoard v702开发板上板载了一个光敏传感的系统，利用stm32的AD
 		lcd_5110.lcd_write_string('LIANGDU:',0,4)
 		lcd_5110.lcd_write_string(str(a),0,5)
 		N2.low()
+
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v70x>`_

@@ -241,3 +241,6 @@
 ------------------------------------
 
   `点击观看视频<http://v.youku.com/v_show/id_XMTY1MzY5NDExNg==.html>`_
+
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_

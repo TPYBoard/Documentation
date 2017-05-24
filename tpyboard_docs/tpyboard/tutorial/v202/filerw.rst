@@ -104,3 +104,6 @@ TPYBoard v202网络配置
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489559613516829.png
 
 页面会返回True，我们即配置成功
+
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v20x>`_
