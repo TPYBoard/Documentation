@@ -71,7 +71,7 @@ TPYBoard v102开发板
 接线其实很简单四路红外探头接线很简单，虽然有十八根线，但是有十二根是三根三根的分成四组的，对应着很好接线，剩下的六根，VCC和GND不多说了，还有四根是直接接到单片结IO口上就可以的。L298N的接线更简单了，这里不多介绍。
 上个简单的帮助理解的原理图 （其实我们做实验都是插线，不做PCB图和原理图的）。
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20170211/1486776004559236.png
+.. image:: http://tpyboard.com/ueditor/php/upload/image/20161104/1478249487231057.png
 
 
 再上个实物图给大家看看

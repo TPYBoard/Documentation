@@ -1,4 +1,4 @@
-[Micropython]TPYBoard v10x心形8*8点阵
+[Micropython]TPYBoard v10x 心形8*8点阵
 =========================================
 
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
@@ -69,3 +69,6 @@
 			pyb.delay(2)
 	while 1:
 		displayLED()
+
+
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_
