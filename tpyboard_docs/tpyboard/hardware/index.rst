@@ -28,4 +28,4 @@ TPYBoard主要数据手册
 * MCU: `STM32F405RGT6 <http://www.st.com/web/catalog/mmc/FM141/SC1169/SS1577/LN1035/PF252144>`_ (链接至MCU官网)
 * 加速度传感器: `Freescale MMA7660 <http://micropython.org/resources/datasheets/MMA7660FC.pdf>`_ (800kiB PDF)
 * LDO稳压芯片: `Microchip MCP1802 <http://micropython.org/resources/datasheets/MCP1802-22053C.pdf>`_ (400kiB PDF)
-* USR-K2: `软件资料 <https://github.com/TPYBoard/Documentation/tree/master/tpyboard_docs/tpyboard/tutorial/doc/USR-K2资料.rar>`_ (400kiB PDF)
+* USR-K2: `软件资料 <https://github.com/TPYBoard/Documentation/tree/master/tpyboard_docs/tpyboard/tutorial/doc/USR-K2资料.rar>`_ 

@@ -1,6 +1,11 @@
-[Micropython]TPYBoardV202快速入门
+[Micropython]TPYBoard v202 快速入门
 ==================================
 
+版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
+
+TPYBoard V202简介
+-------------------------
+TPYBoard V202是遵照MIT协议，以MicroPython为基础，研发的一款支持Python和lua语言的Wifi通信开发板，TPYBoard V202有9个通用GPIO口，1费ADC接口，1个SPI接口，1个I2C 接口，1个USART接口。
 
 通用方法
 machine类库：
@@ -10,7 +15,7 @@ machine类库：
 	import machine
 	machine.freq()          # get the current frequency of the CPU
 	machine.freq(160000000) # set the CPU frequency to 160 MHz
-		
+
 esp类库：
 
 .. code-block:: python
@@ -18,7 +23,7 @@ esp类库：
 	import esp
 	esp.osdebug(None)       # turn off vendor O/S debugging messages
 	esp.osdebug(0)          # redirect vendor O/S debugging messages to UART(0)
-    
+
 联网
 network类库：
 
@@ -35,7 +40,7 @@ network类库：
 	ap = network.WLAN(network.AP_IF) # create access-point interface
 	ap.active(True)         # activate the interface
 	ap.config(essid='ESP-AP') # set the ESSID of the access point
-    
+
 连接到本地WiFi网络：
 
 .. code-block:: python
@@ -50,7 +55,7 @@ network类库：
 			while not wlan.isconnected():
 				pass
 		print('network config:', wlan.ifconfig())
-		
+
 延迟和时间
 time 类库
 
@@ -62,7 +67,7 @@ time 类库
 	time.sleep_us(10)       # sleep for 10 microseconds
 	start = time.ticks_ms() # get millisecond counter
 	delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
-    
+
 计时器
 
 .. code-block:: python
@@ -73,7 +78,7 @@ time 类库
 	time.sleep_us(10)       # sleep for 10 microseconds
 	start = time.ticks_ms() # get millisecond counter
 	delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
-    
+
 	周期以毫秒为单位。
 
 引脚和GPIO
@@ -90,7 +95,7 @@ time 类库
 	print(p2.value())       # get value, 0 or 1
 	p4 = Pin(4, Pin.IN, Pin.PULL_UP) # enable internal pull-up resistor
 	p5 = Pin(5, Pin.OUT, value=1) # set pin high on creation
-		
+
 
 可用引脚为：0,1,2,3,4,5,12,13,14,15,16，其对应于ESP8266芯片的实际GPIO引脚号。请注意，许多终端用户板使用自己的adhoc引脚编号（标记为D0，D1，...）。由于MicroPython支持不同的单板和模块，所以选择物理引脚编号作为最低的公分母。对于逻辑引脚和物理芯片引脚之间的映射，请参阅电路板文档。
 
@@ -111,7 +116,7 @@ PWM（脉宽调制）
 	pwm0.duty(200)          # set duty cycle
 	pwm0.deinit()           # turn off PWM on the pin
 	pwm2 = PWM(Pin(2), freq=500, duty=512) # create and configure in one go
-    
+
 ADC（模数转换）
 ADC在专用引脚上可用。请注意，ADC引脚上的输入电压必须在0v和1.0v之间。
 
@@ -122,7 +127,7 @@ ADC在专用引脚上可用。请注意，ADC引脚上的输入电压必须在0v
 	from machine import ADC
 	adc = ADC(0)            # create ADC object on ADC pin
 	adc.read()              # read value, 0-1024
-    
+
 SPI总线
 有两个SPI驱动程序。一个在软件（bit-banging）中实现，并可在所有引脚上工作：
 
@@ -146,7 +151,7 @@ SPI总线
 
 	from machine import Pin, SPI
 	hspi = SPI(1, baudrate=80000000, polarity=0, phase=0)
-    
+
 I2C总线
 I2C驱动程序通过以下程序来实现，并可在TPYBoard v202所有引脚上工作：
 
@@ -173,7 +178,7 @@ I2C驱动程序通过以下程序来实现，并可在TPYBoard v202所有引脚�
 	rtc.alarm(rtc.ALARM0, 10000)
 	# put the device to sleep
 	machine.deepsleep()
-    
+
 OneWire驱动
 OneWire驱动程序通过以下程序实现，并可在TPYBoard v202所有引脚上工作：
 
@@ -187,7 +192,7 @@ OneWire驱动程序通过以下程序实现，并可在TPYBoard v202所有引脚
 	ow.writebyte(0x12)      # write a byte on the bus
 	ow.write('123')         # write bytes on the bus
 	ow.select_rom(b'12345678') # select a specific device by its ROM code
-    
+
 DS18S20和DS18B20的驱动程序：
 
 .. code-block:: python
@@ -199,9 +204,9 @@ DS18S20和DS18B20的驱动程序：
 	time.sleep_ms(750)
 	for rom in roms:
 		print(ds.read_temp(rom))
-    
+
 确保在数据线上放置4.7k的上拉电阻。请注意，convert_temp()每次要采样温度时都必须调用该方法。
-    
+
 NeoPixel驱动
 使用neopixel类库：
 
@@ -214,14 +219,14 @@ NeoPixel驱动
 	np[0] = (255, 255, 255) # set the first pixel to white
 	np.write()              # write data to all pixels
 	r, g, b = np[0]         # get first pixel colour
-    
+
 对于NeoPixel的入门使用：
 
 .. code-block:: python
 
 	import esp
 	esp.neopixel_write(pin, grb_buf, is800khz)
-    
+
 APA102驱动
 使用apa102类库：
 
@@ -234,14 +239,14 @@ APA102驱动
 	apa = APA102(clock, data, 8) # create APA102 driver on the clock and the data pin for 8 pixels
 	apa[0] = (255, 255, 255, 31) # set the first pixel to white with a maximum brightness of 31apa.write()                  # write data to all pixels
 	r, g, b, brightness = apa[0] # get first pixel colour
-    
+
 对于APA102的入门使用：
 
 .. code-block:: python
 
 	import esp
 	esp.apa102_write(clock_pin, data_pin, rgbi_buf)
-   
+
 DHT驱动
 DHT驱动程序通过以下代码实现，并可在TPYBoard v202所有引脚上工作：
 

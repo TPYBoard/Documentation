@@ -37,7 +37,8 @@ DHT11数字温湿度传感器是一款含有已校准数字信号输出的温湿
 配置 v201网口
 -------------------
 
-详细的配置说明详见上一篇教程：http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v201/cloudadder.html#v201
+详细的配置说明详见上一篇教程
+http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v201/cloudadder.html#v201
 
 实物图
 
