@@ -1,21 +1,20 @@
 .. _quickref:
 
-Quick reference for the ESP8266
+ESP8266快速参考手册
 ===============================
 
 .. image:: img/adafruit_products_pinoutstop.jpg
-    :alt: Adafruit Feather HUZZAH board
-    :width: 640px
+    :alt: Adafruit Feather TPYBoard
+    :width: 640px
 
-The Adafruit Feather HUZZAH board (image attribution: Adafruit).
+The Adafruit Feather TPYBoard (图片属性: Adafruit).
 
-Installing MicroPython
+安装MicroPython
 ----------------------
 
-See the corresponding section of tutorial: :ref:`intro`. It also includes
-a troubleshooting subsection.
+参考教程的相关部分: :ref:`intro`. 也有故障排除部分。
 
-General board control
+开发板基本控制
 ---------------------
 
 The MicroPython REPL is on UART0 (GPIO1=TX, GPIO3=RX) at baudrate 115200.
