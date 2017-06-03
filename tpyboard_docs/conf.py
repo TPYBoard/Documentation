@@ -26,9 +26,7 @@ from collections import OrderedDict
 micropy_port = os.getenv('MICROPY_PORT') or 'tpyboard'
 tags.add('port_' + micropy_port)
 ports = OrderedDict((
-    ('unix', 'unix'),
     ('tpyboard', 'the tpyboard'),
-    ('wipy', 'the WiPy'),
     ('esp8266', 'the ESP8266'),
 ))
 
@@ -322,7 +320,6 @@ exclude_patterns.extend([port + '*' for port in ports if port != micropy_port])
 
 modules_port_specific = {
     'tpyboard': ['tpyb'],
-    'wipy': ['wipy'],
     'esp8266': ['esp'],
 }
 
@@ -335,5 +332,4 @@ for p, l in modules_port_specific.items():
 # Exclude extra modules per port
 modindex_exclude += {
     'esp8266': ['cmath', 'select'],
-    'wipy': ['cmath'],
 }.get(micropy_port, [])
