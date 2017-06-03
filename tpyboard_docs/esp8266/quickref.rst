@@ -66,13 +66,12 @@ Tab标签查找对象方法，粘贴(ctrl-E)用语粘贴大量Python代码到REP
                 pass
         print('network config:', wlan.ifconfig())
 
-Once the network is established the :mod:`socket <usocket>` module can be used
-to create and use TCP/UDP sockets as usual.
+一旦网络建立可像往常一样创建和使用:mod:`socket <usocket>`模块。
 
-Delay and timing
+延时和定时
 ----------------
 
-Use the :mod:`time <utime>` module::
+使用:mod:`time <utime>` 模块::
 
     import time
 
@@ -82,11 +81,10 @@ Use the :mod:`time <utime>` module::
     start = time.ticks_ms() # get millisecond counter
     delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
 
-Timers
+定时器
 ------
 
-Virtual (RTOS-based) timers are supported. Use the :ref:`machine.Timer <machine.Timer>` class
-with timer ID of -1::
+支持虚拟（RTOS）定时器。使用:ref:`machine.Timer <machine.Timer>` 类timerID为-1::
 
     from machine import Timer
 
@@ -94,12 +92,12 @@ with timer ID of -1::
     tim.init(period=5000, mode=Timer.ONE_SHOT, callback=lambda t:print(1))
     tim.init(period=2000, mode=Timer.PERIODIC, callback=lambda t:print(2))
 
-The period is in milliseconds.
+周期以毫秒为单位。
 
-Pins and GPIO
--------------
+引脚和通用输入输出接口
+---------------------
 
-Use the :ref:`machine.Pin <machine.Pin>` class::
+使用:ref:`machine.Pin <machine.Pin>` 类::
 
     from machine import Pin
 
@@ -126,14 +124,14 @@ Also note that Pin(16) is a special pin (used for wakeup from deepsleep
 mode) and may be not available for use with higher-level classes like
 ``Neopixel``.
 
-PWM (pulse width modulation)
+脉冲宽度调制PWM (pulse width modulation)
 ----------------------------
 
 PWM can be enabled on all pins except Pin(16).  There is a single frequency
 for all channels, with range between 1 and 1000 (measured in Hz).  The duty
 cycle is between 0 and 1023 inclusive.
 
-Use the ``machine.PWM`` class::
+使用``machine.PWM`` 类::
 
     from machine import Pin, PWM
 
