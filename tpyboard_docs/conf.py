@@ -316,18 +316,18 @@ texinfo_documents = [
 intersphinx_mapping = {'http://docs.python.org/': None}
 
 # Append the other ports' specific folders/files to the exclude pattern
-exclude_patterns.extend([port + '*' for port in ports if port != micropy_port])
+#exclude_patterns.extend([port + '*' for port in ports if port != micropy_port])
 
-modules_port_specific = {
-    'tpyboard': ['tpyb'],
-    'esp8266': ['esp'],
-}
+#modules_port_specific = {
+#    'tpyboard': ['tpyb'],
+#    'esp8266': ['esp'],
+#}
 
-modindex_exclude = []
+#modindex_exclude = []
 
-for p, l in modules_port_specific.items():
-    if p != micropy_port:
-        modindex_exclude += l
+#for p, l in modules_port_specific.items():
+#    if p != micropy_port:
+#        modindex_exclude += l
 
 # Exclude extra modules per port
 #modindex_exclude += {
