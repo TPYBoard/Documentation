@@ -17,29 +17,27 @@ The Adafruit Feather TPYBoard (图片属性: Adafruit).
 开发板基本控制
 ---------------------
 
-The MicroPython REPL is on UART0 (GPIO1=TX, GPIO3=RX) at baudrate 115200.
-Tab-completion is useful to find out what methods an object has.
-Paste mode (ctrl-E) is useful to paste a large slab of Python code into
-the REPL.
+MicroPython REPL是UART0 (GPIO1=TX, GPIO3=RX)波特率115200。
+Tab标签查找对象方法，粘贴(ctrl-E)用语粘贴大量Python代码到REPL（交互式解释器）。
 
-The :mod:`machine` module::
+:mod:`machine` 模块::
 
     import machine
 
     machine.freq()          # get the current frequency of the CPU
     machine.freq(160000000) # set the CPU frequency to 160 MHz
 
-The :mod:`esp` module::
+:mod:`esp`模块::
 
     import esp
 
     esp.osdebug(None)       # turn off vendor O/S debugging messages
     esp.osdebug(0)          # redirect vendor O/S debugging messages to UART(0)
 
-Networking
+网络
 ----------
 
-The :mod:`network` module::
+:mod:`network`模块::
 
     import network
 
@@ -55,7 +53,7 @@ The :mod:`network` module::
     ap.active(True)         # activate the interface
     ap.config(essid='ESP-AP') # set the ESSID of the access point
 
-A useful function for connecting to your local WiFi network is::
+连接到您的本地WIFI网络::
 
     def do_connect():
         import network
