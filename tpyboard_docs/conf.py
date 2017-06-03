@@ -331,5 +331,6 @@ for p, l in modules_port_specific.items():
 
 # Exclude extra modules per port
 modindex_exclude += {
-    'esp8266': ['cmath', 'select'],
+    'tpyboard': ['tpyb'],
+    'esp8266': ['esp8266'],
 }.get(micropy_port, [])
