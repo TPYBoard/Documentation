@@ -12,7 +12,6 @@ TPYBoard Document
     license.rst
     tpyboard_contents.rst
     
-    esp8266_index.rst
 
 Indices and tables
 ==================
