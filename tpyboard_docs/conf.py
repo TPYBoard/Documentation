@@ -39,7 +39,7 @@ micropy_version = os.getenv('MICROPY_VERSION') or 'latest'
 micropy_all_versions = (os.getenv('MICROPY_ALL_VERSIONS') or 'latest').split(',')
 url_pattern = '%s/en/%%s/%%s' % (os.getenv('MICROPY_URL_PREFIX') or '/',)
 html_context = {
-    'tt':os.getcwd(),
+    'tt':os.getenv('MICROPY_PORT'),
     'port':micropy_port,
     'port_name':ports[micropy_port],
     'port_version':micropy_version,
