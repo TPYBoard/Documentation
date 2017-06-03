@@ -24,9 +24,6 @@ sys.path.insert(0, os.path.abspath('.'))
 # Work out the port to generate the docs for
 from collections import OrderedDict
 micropy_port = os.getenv('MICROPY_PORT') or 'tpyboard'
-fileml = os.getcwd()
-if fileml.find('esp8266')>-1:
-    micropy_port = 'esp8266'
 
 tags.add('port_' + micropy_port)
 ports = OrderedDict((
@@ -39,7 +36,6 @@ micropy_version = os.getenv('MICROPY_VERSION') or 'latest'
 micropy_all_versions = (os.getenv('MICROPY_ALL_VERSIONS') or 'latest').split(',')
 url_pattern = '%s/en/%%s/%%s' % (os.getenv('MICROPY_URL_PREFIX') or '/',)
 html_context = {
-    'tt':os.getenv('MICROPY_PORT'),
     'port':micropy_port,
     'port_name':ports[micropy_port],
     'port_version':micropy_version,
@@ -321,21 +317,20 @@ texinfo_documents = [
 intersphinx_mapping = {'http://docs.python.org/': None}
 
 # Append the other ports' specific folders/files to the exclude pattern
-#exclude_patterns.extend([port + '*' for port in ports if port != micropy_port])
+exclude_patterns.extend([port + '*' for port in ports if port != micropy_port])
 
-#modules_port_specific = {
-#    'tpyboard': ['tpyb'],
-#    'esp8266': ['esp'],
-#}
+modules_port_specific = {
+    'esp8266': ['esp'],
+}
 
-#modindex_exclude = []
+modindex_exclude = []
 
-#for p, l in modules_port_specific.items():
-#    if p != micropy_port:
-#        modindex_exclude += l
+for p, l in modules_port_specific.items():
+    if p != micropy_port:
+        modindex_exclude += l
 
 # Exclude extra modules per port
-#modindex_exclude += {
-#    'esp8266': ['cmath', 'select'],
-#    'wipy': ['cmath'],
-#}.get(micropy_port, [])
+modindex_exclude += {
+    'esp8266': ['cmath', 'select'],
+    'wipy': ['cmath'],
+}.get(micropy_port, [])
