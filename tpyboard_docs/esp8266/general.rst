@@ -1,9 +1,9 @@
-General information about the ESP8266 port
+ESP8266概述
 ==========================================
 
-ESP8266 is a popular WiFi-enabled System-on-Chip (SoC) by Espressif Systems.
+ESP8266是常用的WiFi-enabled System-on-Chip (SoC) 的Espressif系统。
 
-Multitude of boards
+常用的开发板
 -------------------
 
 There are a multitude of modules and boards from different sources which carry
