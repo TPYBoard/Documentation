@@ -16,3 +16,4 @@ TPYBoard 实例教程
    tpyboard/tutorial/v201/index.rst
    tpyboard/tutorial/v202/index.rst
    tpyboard/tutorial/v702/index.rst
+   tpyboard/tutorial/v405/index.rst
