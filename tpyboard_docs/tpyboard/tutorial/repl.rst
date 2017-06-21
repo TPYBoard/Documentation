@@ -58,6 +58,7 @@ Linux
 
 
    “ >>> print("hello pyboard!")“
+   
    “hello pyboard!“
 
 在上面的例程中用户不需要敲入 >>> 字符，而是应该在解释器中写入内容。
@@ -68,13 +69,21 @@ Linux
 如果打印不成功，尝试下边的硬件复位或者软件复位的方法。可以继续打入其他指令如：
 
     “>>> pyb.LED(1).on()“
+    
     “>>> pyb.LED(2).on()“
+    
     “>>> 1 + 2“
+    
     “3“
+    
     “>>> 1 / 2“
+    
     “0.5“
+    
     “>>> 20 * 'py'“
+    
     “'pypypypypypypypypypypypypypypypypypypypy'“
+    
 
 复位
 -------------------
@@ -83,11 +92,17 @@ Linux
 其一是在 MicroPython 解释器中打入 CTRL-D 进行软件复位。出现的消息如下所示：
 
     “>>>“
+    
     “TPYB: sync filesystems“
+    
     “TPYB: soft reboot“
+    
     “Micro Python v1.0 on 2014-05-03; TPYBoard v10x with STM32F405RG“
+    
     “Type "help()" for more information.“
+    
     “>>>“
+    
 
 如果这是行不通的，你可以执行一个硬复位（关闭和再次打开）按RST按键硬件复位（开发板上USB接线下的黑色按键）。
 这将断开与 TPYBoard的任何端口连接
