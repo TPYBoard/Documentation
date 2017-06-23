@@ -1,0 +1,254 @@
+[Micropython][TPYBoard v701]Arduino TPLoRa v1.0 常用方法
+=================================================================
+
+原创版权归山东萝卜科技有限公司所有,转载必须以链接形式注明作者和原始出处。
+
+    (1)引入库文件
+----------------------
+1
+----
+#include <LoRa.h>
+
+   （2）
+   ---------
+
+LoRa.begin(frequency);
+ * `frequency` - frequency in Hz (`433E6`, `866E6`, `915E6`)
+    返回`1` 表示成功, `0` 表示失败
+    
+   （3）设置针脚
+   ---------------------
+
+LoRa.setPins(ss, reset, dio0);
+```
+ * `ss` -默认为`10` 直接接上跳线帽
+ * `reset` - 默认为`9` 直接接上跳线帽
+ * `dio0` - 默认为`2` 直接接上跳线帽
+
+    （4）设置SPI频率
+-----------------------------
+
+LoRa.setSPIFrequency(frequency);
+```
+ * `frequency` - 默认为 `10E6`，即10MHZ
+
+     (5) 结束
+	 ------------------------
+	 LoRa.end()
+	 
+    （6）开始打包
+	--------------------------
+	
+	LoRa.beginPacket();
+
+LoRa.beginPacket(implicitHeader);
+```
+  
+ * `implicitHeader` - (optional) `true` enables implicit header mode, `false` enables explicit header mode (default)
+    返回 `1` 表示成功, `0` 表示失败。
+	
+   （7）将数据写入包
+   ---------------------------
+
+LoRa.write(byte);
+  
+LoRa.write(buffer, length);
+```
+* `byte` - 单字节写入
+
+    或者多字节写入
+
+* `buffer` - 数据
+* `length` - 数据长度
+Returns the number of bytes written.
+
+    （8）结束打包
+--------------------------------------
+
+LoRa.endPacket()
+    返回 `1` 表示成功, `0` 表示失败.
+    （9）接收数据，判断数据是否接收成功
+
+	t packetSize = LoRa.parsePacket();
+  
+int packetSize = LoRa.parsePacket(size);
+ * `size` - (optional) if `> 0` implicit header mode is enabled with the expected a packet of `size` bytes, default mode is explicit header mode
+    如果成功接收到，返回包长度，如果返回0表示没有接收到数据。
+    （10）当接收到数据时中断callback
+
+LoRa.onReceive(onReceive);
+  
+void onReceive(int packetSize) {
+ // ...
+}
+```
+  
+ * `onReceive` - function to call when a packet is received.
+ 
+    （11）进入连接接收模式
+	-----------------------------------
+
+LoRa.receive();
+  
+LoRa.receive(int size);
+```
+  
+ * `size` - (optional) if `> 0` implicit header mode is enabled with the expected a packet of `size` bytes, default mode is explicit header mode
+  
+The `onReceive` callback will be called when a packet is received.
+
+    （12）RSSI
+	-------------------------
+
+int rssi = LoRa.packetRssi();
+    返回接收包的RSSI
+
+    (13) SNR
+	----------------------
+     
+    arduino
+float snr = LoRa.packetSnr();
+    返回接收包的SNR(DB)
+	
+    （14）Available
+	------------------------
+
+```arduino
+int availableBytes = LoRa.available()
+```
+  
+Returns number of bytes available for reading.
+
+    （15）Peeking
+	-------------------------------
+
+byte b = LoRa.peek();
+  
+Returns the next byte in the packet or `-1` if no bytes are available.
+
+    （16）Reading
+	--------------------------
+
+byte b = LoRa.read();
+  
+Returns the next byte in the packet or `-1` if no bytes are available.
+
+    （17）Idle mode
+	-------------------------
+	
+    进入idle标准模式
+
+arduino
+LoRa.idle();
+
+    （18）进入睡眠模式
+	-----------------------
+
+LoRa.sleep();
+ 
+   （19）TX Power
+   --------------------------
+    
+   Change the TX power of the radio.
+  
+```arduino
+LoRa.setTxPower(txPower);
+  
+LoRa.setTxPower(txPower, outputPin);
+```
+ * `txPower` - TX power in dB, defaults to `17`
+ * `outputPin` - (optional) PA output pin, supported values are `PA_OUTPUT_RFO_PIN` and `PA_OUTPUT_PA_BOOST_PIN`, defaults to `PA_OUTPUT_PA_BOOST_PIN`.
+  
+Supported values are between `2` and `17` for `PA_OUTPUT_PA_BOOST_PIN`, `0` and `14` for `PA_OUTPUT_RFO_PIN`.
+  
+Most modules have the PA output pin connected to PA BOOST,
+
+    （20）频率设置
+	------------------------
+
+LoRa.setFrequency(frequency);
+```
+ * `frequency` - frequency in MHz (`433E6`)  433MHZ
+ 
+    （21） Spreading Factor
+	-------------------------------
+
+Change the spreading factor of the radio.
+  
+```arduino
+LoRa.setSpreadingFactor(spreadingFactor);
+```
+ * `spreadingFactor` - spreading factor, defaults to `7`
+  
+Supported values are between `6` and `12`. If a spreading factor of `6` is set, implicit header mode must be used to transmit and receive packets.
+
+    （22）Signal Bandwidth
+	-----------------------------
+
+Change the signal bandwidth of the radio.
+  
+```arduino
+LoRa.setSignalBandwidth(signalBandwidth);
+```
+  
+ * `signalBandwidth` - signal bandwidth in Hz, defaults to `125E3`.
+  
+Supported values are `7.8E3`, `10.4E3`, `15.6E3`, `20.8E3`, `31.25E3`, `41.7E3`, `62.5E3`, `125E3`, and `250E3`.
+
+    （23）Coding Rate
+	----------------------------
+
+Change the coding rate of the radio.
+  
+```arduino
+LoRa.setCodingRate4(codingRateDenominator);
+```
+  
+ * `codingRateDenominator` - denominator of the coding rate, defaults to `5`
+  
+Supported values are between `5` and `8`, these correspond to coding rates of `4/5` and `4/8`. The coding rate numerator is fixed at `4`.
+
+    （24） Preamble Length
+	------------------------------
+
+Change the preamble length of the radio.
+  
+```arduino
+LoRa.setPreambleLength(preambleLength);
+```
+  
+ * `preambleLength` - preamble length in symbols, defaults to `8`
+  
+Supported values are between `6` and `65535`.
+
+    （25）Sync Word
+	-----------------------
+
+Change the sync word of the radio.
+  
+```arduino
+LoRa.setSyncWord(syncWord);
+```
+  
+ * `syncWord` - byte value to use as the sync word, defaults to `0x34`
+ 
+    （26）CRC
+	------------------
+
+Enable or disable CRC usage, by default a CRC is not used.
+  
+```arduino
+LoRa.crc();
+  
+LoRa.noCrc();
+
+    （27）Random
+	----------------------
+
+Generate a random byte, based on the Wideband RSSI measurement.
+  
+```
+byte b = LoRa.random();
+```
+  
+Returns random byte.
