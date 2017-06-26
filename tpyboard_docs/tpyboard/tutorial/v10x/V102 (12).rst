@@ -19,8 +19,6 @@ REPL（交互式解释器？）全称是 Read Evaluate Print Loop， tpyboard �
 
 打开终端并运行：
 
-1
-
 - screen /dev/tty.usbmodem*
 - 当想要终止退出界面时，使用快捷键 CTPL-A CTRL-\
 
@@ -28,8 +26,6 @@ REPL（交互式解释器？）全称是 Read Evaluate Print Loop， tpyboard �
 --------------------------
 
 打开终端并运行：
-
-1
 
 - screen /dev/ttyACM0
 - 也可以尝试 piocom 或者 minicom 的连接方式而非终端界面。用户需使用 /dev/ttyACM1或者更高的ttyACM数字。而且，用户需要给自己正确的权限连接该设备（例如组 uucp 或者 dialout，或者权限 sudo）
@@ -41,33 +37,33 @@ REPL（交互式解释器？）全称是 Read Evaluate Print Loop， tpyboard �
 
 - 打开串口程序（例如Putty，终端界面，piocom等等）可以看到一个光标闪烁着的空屏幕。按下任意按键进入MicroPython 解释器，显示为 >>>。可以通过下面的程序确认是否进入::
 
->>> print("hello tpyboard!")
-hello tpyboard!
+		>>> print("hello tpyboard!")
+		hello tpyboard!
 
 上面的例程中用户不需要敲入 >>> 字符，而是应该在解释器中写入内容。在最后，一旦输入 print("hello world!")文本并按下回车键，输出结果将在屏幕上如上呈现。
 
 熟悉 python 语言可以尝试写入不同的指令。如果打印不成功，尝试下边的硬件复位或者软件复位的方法。可以继续打入其他指令如::
 
->>> pyb.LED(1).on()
->>> pyb.LED(2).on()
->>> 1 + 2
-3
->>> 1 / 2
-0.5
->>> 20 * 'py'
-'pypypypypypypypypypypypypypypypypypypypy'
+		>>> pyb.LED(1).on()
+		>>> pyb.LED(2).on()
+		>>> 1 + 2
+		3
+		>>> 1 / 2
+		0.5
+		>>> 20 * 'py'
+		'pypypypypypypypypypypypypypypypypypypypy'
 
 5、复位
 --------------------
 
 出错的情况下可以通过两种方式复位开发板。其一为在 MicroPython 解释器中打入 CTRL-D 进行软件复位。出现的消息如下所示::
 
->>>
-PYB: sync filesystems
-PYB: soft reboot
-Micro Python v1.0 on 2014-05-03; PYBv1.0 with STM32F405RG
-Type "help()" for more information.
->>>
+		>>>
+		PYB: sync filesystems
+		PYB: soft reboot
+		Micro Python v1.0 on 2014-05-03; PYBv1.0 with STM32F405RG
+		Type "help()" for more information.
+		>>>
 
 如果不奏效可以通过按下 RTS 按键硬件复位（开发板上USB接线下的黑色按键）。这将断开与 tpyboard 的任何端口连接
 如果准备进行硬件复位，强烈建议关闭串口程序和与退出/卸载 tpyboard 设备。
