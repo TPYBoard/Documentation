@@ -46,13 +46,13 @@
 
 	检查是否连接是否建立::
 
-	wlan.isconnected()
+		wlan.isconnected()
 
-		检查接口是否活动::
+	检查接口是否活动::
 
 		wlan.active()
 
-		检查接口的网络设置::
+	检查接口的网络设置::
 
 		wlan.ifconfig()
 
