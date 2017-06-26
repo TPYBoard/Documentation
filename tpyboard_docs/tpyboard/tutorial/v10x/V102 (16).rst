@@ -79,10 +79,10 @@
 
 	效果展示：
 
-.. image::http://www.tpyboard.com/ueditor/php/upload/image/20160622/1466586763759252.png
+.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20160622/1466586763759252.png
 
-.. image::http://www.tpyboard.com/ueditor/php/upload/image/20160622/1466586770917523.png
+.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20160622/1466586770917523.png
 
-.. image::http://www.tpyboard.com/ueditor/php/upload/image/20160622/1466586774747375.png
+.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20160622/1466586774747375.png
 
-.. image::http://www.tpyboard.com/ueditor/php/upload/image/20160622/1466586778992398.png
+.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20160622/1466586778992398.png
