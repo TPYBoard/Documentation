@@ -15,11 +15,11 @@ myled.off()
 
 	::
 	
-led = pyb.LED(2)
-while True:
-	led.toggle()
-	pyb.delay(1000)
-   
+		led = pyb.LED(2)
+		while True:
+			led.toggle()
+			pyb.delay(1000)
+
 当你保存了文件后，tpyboard 上的红色 LED 将在约一秒后亮起。为运行脚本程序，先以 CTRL -D 进行软件复位。tpyboard 将被重启且能够看到绿色的 LED 持续闪烁。至此先恭喜你在“the army of evil robot”的路途上迈出了重要的一步！当需要关闭烦人的闪灯时，直接在终端界面按下 CLRT -C 即可。
 到目前为止代码做了什么事情呢？首先我们需要引用一些术语。Python 是一门面向对象语言（object-oriented），pyhon 中一切几乎都是类（class）和通过声明得到的类的对象（object）。通过方法（methods，也称为成员函数）我们连接类，并和对象相交互或者控制它。
 程序的第一行我们通过实例化了LED对象并命名为led。当这个对象被创建时，它唯一的参数必须在1和4之间，与开发板上四颗LED相呼应。pyb.LED这个类有三个我们使用的重要成员函数：on( ), off( ) 以及 toggle( )。另一个使用到的函数pyb.delay( ) 仅是一个简单的毫秒级别的延时。一旦我们创建了 LED 对象，while True 这个声明将创建一个无限循环等待一秒时间的 led亮灭翻转。
@@ -32,27 +32,27 @@ leds = [pyb.LED(i) for i in range(1,5)]
 
 如果没有用 1，2，3，4 的数字作为 pyb.LED( ) 的形参，我们将会得到错误的信息。接下来我们将添加每个 LED 亮灭的无限循环::
 
-	n = 0
-	while True:
-		n = (n + 1) % 4
-		leds[n].toggle()
-		pyb.delay(50)
+		n = 0
+		while True:
+			n = (n + 1) % 4
+			leds[n].toggle()
+			pyb.delay(50)
   
 在这里，n 代表了当前的 LED 且每次循环执行后我们可以得到下一个 n 的值（求余符号%保证了 n 的值在0和3之间）。然后我们就可以控制第 n 颗 led 灯的翻转亮灭了。执行该程序将可见一排的 led 同时亮和灭。
 你可能会发现一旦停下当前脚本的运行并重新启动，开发板上的 LED 灯将从之前运行的状态突然进入到我们精心设计的迪斯科。可以通过在脚本初始化时关闭所有的 LED 灯并使用  try/finally 块的方式解决这个问题。当打入 CTRL-C，MicroPython 将产生一个 VCP 中断异常。异常通常意味着某些不对劲的东西，所以你可以通过 try:command 指令“抓取”一个异常。这种情况属于用户打断了脚本的运行，所以我们不需要抓取错误而是简单告诉 MicroPython 当我们退出时要做些什么。最终的程序块如下所示，且我们确保了所有的 LED灯 熄灭。完整的代码如下所示::
 
-	leds = [pyb.LED(i) for i in range(1,5)]
-	for l in leds:
-		l.off()
-
-	n = 0try:
-	while True:
-		n = (n + 1) % 4
-		leds[n].toggle()
-		pyb.delay(50)
-	finally:
+		leds = [pyb.LED(i) for i in range(1,5)]
 		for l in leds:
 			l.off()
+
+		n = 0try:
+		while True:
+			n = (n + 1) % 4
+			leds[n].toggle()
+			pyb.delay(50)
+		finally:
+			for l in leds:
+				l.off()
 
 2、特殊的第四颗灯
 -----------------------------
@@ -61,11 +61,11 @@ leds = [pyb.LED(i) for i in range(1,5)]
 
 ::
 
-	led = pyb.LED(4)
-	intensity = 0
-	while True:
-		intensity = (intensity + 1) % 255
-		led.intensity(intensity)
-		pyb.delay(20)
+		led = pyb.LED(4)
+		intensity = 0
+		while True:
+			intensity = (intensity + 1) % 255
+			led.intensity(intensity)
+			pyb.delay(20)
 
 你可以对其他LED灯调用 instensity( ) 的方法不过其只能被熄灭或被点亮。0 值将使之熄灭而最多到达255的其他值只能点亮该LED。
