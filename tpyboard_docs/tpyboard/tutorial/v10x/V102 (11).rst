@@ -42,9 +42,9 @@
 
 	该行以 # 字符开始，意味着只是一个注释。这样的命令行不会被执行，仅为代码提供信息用在这个 main.py 加多两行，如下所示::
 
-	# main.py -- put your code here!
-import pyb
-pyb.LED(4).on()
+		# main.py -- put your code here!
+		import pyb
+		pyb.LED(4).on()
 
 	第一行表明使用 pyb 模块，这个模块包含了控制开发板的所有函数和类。
 
