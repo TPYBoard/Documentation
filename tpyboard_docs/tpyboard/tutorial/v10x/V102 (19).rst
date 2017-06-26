@@ -120,7 +120,9 @@
 		3、实例
 ----------------------------------
 
-		（1）向TF卡写入一个log文件，在tf卡上写入boot.py和main.py文件，修改tf卡上的main.py。代码：
+		（1）向TF卡写入一个log文件，在tf卡上写入boot.py和main.py文件，修改tf卡上的main.py。
+		
+		代码::
 
 			#main.py
 			# main.py -- put your code here!
