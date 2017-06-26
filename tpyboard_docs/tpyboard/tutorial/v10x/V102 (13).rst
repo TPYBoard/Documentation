@@ -5,9 +5,9 @@
 
 tpyboard 板上最容易实现的事情莫过于点亮板上附带的小灯。连接开发板，按照上篇教程中提到的登录方法，就可与在解释器中开始点亮 LED 灯了，代码如下::
 
-myled = pyb.LED(1)
-myled.on()
-myled.off()
+		myled = pyb.LED(1)
+		myled.on()
+		myled.off()
 
 这些命令将控制 LED 的亮和灭。
 
