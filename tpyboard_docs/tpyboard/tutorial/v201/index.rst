@@ -10,4 +10,3 @@ TPYBoard v201 典型实例
    cloudadder.rst
    temperaturehumidity.rst
    V102 (5).rst
-   V102 (6).rst
