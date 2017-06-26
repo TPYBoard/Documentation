@@ -212,7 +212,6 @@
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20160623/1466642507125721.jpg
 
-		 
 		可以看出，在第24个字节写入了HH。如果这里的open里，把w改成a，结果又会是怎样？大家自己试吧。
 		 
 		（4）判断文件是否存在，如果存在，删除文件
