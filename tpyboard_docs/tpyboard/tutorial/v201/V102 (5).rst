@@ -9,35 +9,35 @@
 
 	用户需要预设的参数有：
 
-	 1.工作模式：TCP Client、TCP Server、UDP Client、UDP Server
-	 
-	 2.默认 TCP/UDP连接参数
-	 
-	 3.连接类型（Server或Client）
-	 
-	 4.目标端口
-	 
-	 5.目标IP地址
-	 
-	 6.本地端口
-	 
-	 7.串口参数
-	 
-	 8.波特率
-	 
-	 9.数据位
-	 
-	 10.检验位
-	 
-	 11.停止位
-	 
-	 12.RS485等功能的选择
-	 
-	 13.IP地址和模块密码等
-	 
-	 14.IP地址获取方式
-	 
-	 15.模块名称、用户名和密码的设置
+	1.工作模式：TCP Client、TCP Server、UDP Client、UDP Server
+
+	2.默认 TCP/UDP连接参数
+
+	3.连接类型（Server或Client）
+
+	4.目标端口
+
+	5.目标IP地址
+
+	6.本地端口
+
+	7.串口参数
+
+	8.波特率
+
+	9.数据位
+
+	10.检验位
+
+	11.停止位
+
+	12.RS485等功能的选择
+
+	13.IP地址和模块密码等
+
+	14.IP地址获取方式
+
+	15.模块名称、用户名和密码的设置
 
 	用户配置完所有参数后重启，模块就可以按照设置的参数工作了。
 
@@ -69,7 +69,7 @@
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170415/1492219680890988.png
 
 	6.这里我们需要在端口设置里面进行各个参数的设置，然后点击保存参数，结果如图
-   
+
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170415/1492219702772241.png
 
 	二.串口设置
