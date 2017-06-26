@@ -79,7 +79,7 @@
 			os.rename(old_path, new_path)   文件改名
 			os.stat(path)           文件/目录状态，具体解释如下：
 
-		1.jpg
+.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20160623/1466642004109911.jpg
 		
 		以下为Python中关于os.stat()输出解释::
 		
@@ -139,7 +139,7 @@
 		
 		板子通电后，可看到led2亮起，此时开始写入log.txt文件，然后len2熄灭，说明文件操作完成。结果如下：
 			
-		2.jpg
+.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20160623/1466642269338229.jpg
 		
 		（2）查看文件指针位置
 		
@@ -187,7 +187,7 @@
 		
 		为了便于观察，先在log.txt写入30个1，如图
 		
-		3.jpg
+.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20160623/1466642454130343.jpg
 		
 		代码::
 
@@ -210,7 +210,7 @@
 			
 		安全退出来，点reset看运行结果：
 		 
-		4.jpg
+.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20160623/1466642507125721.jpg
 		 
 		可以看出，在第24个字节写入了HH。如果这里的open里，把w改成a，结果又会是怎样？大家自己试吧。
 		 
