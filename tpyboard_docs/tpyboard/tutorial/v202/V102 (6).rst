@@ -41,15 +41,15 @@
 
 	先上个图，下面再开始说代码的问题。
 
-	.. image::http://www.tpyboard.com/ueditor/php/upload/image/20170428/1493349856713838.png
+	.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170428/1493349856713838.png
 
 	V202实物图
 	　　
-	.. image::http://www.tpyboard.com/ueditor/php/upload/image/20170428/1493349883148588.png
+	.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170428/1493349883148588.png
 
 	V202数据打印截图
 
-	.. image::http://www.tpyboard.com/ueditor/php/upload/image/20170428/1493349916351620.png
+	.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170428/1493349916351620.png
 
 	V202温湿度上传测试网页
 
