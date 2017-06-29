@@ -146,7 +146,7 @@
 				p2.high()
 				print('network config:', sta_if.ifconfig())
 
-		（3）实验效果
+	（3）实验效果
 ----------------------------------
 
 		当我们复位，把程序写进去的时候会看到TPYBoard V202板载的蓝灯亮起来，当连接成功后蓝灯熄灭，控制台打印connect success。
