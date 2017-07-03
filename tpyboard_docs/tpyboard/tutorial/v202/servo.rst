@@ -63,7 +63,7 @@
     
     - 实物图
     
-        .. image:: ../img/test_31.png
+        .. image:: ../img/sg90.jpg
         
 
         
@@ -89,4 +89,4 @@ main.py程序代码
 
 
 
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v20x>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
