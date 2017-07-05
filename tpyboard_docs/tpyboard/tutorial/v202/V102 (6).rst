@@ -44,7 +44,7 @@
 	.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170428/1493349856713838.png
 
 	V202实物图
-	　　
+
 	.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170428/1493349883148588.png
 
 	V202数据打印截图
