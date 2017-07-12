@@ -67,7 +67,7 @@
 
 	这是STM32数据手册上对TIM3通用定时器复用功能重映象的描述，假设让PA6作为PWM输出，从图中可以看出PA6对应TIM3的通道1，使能TIM3通道1的函数为：TIM_OC1Init();同样的,如果想要使能PA7,它对应的是TIM3的通道2，那么使能通道2的函数便是：TIM_OC2Init();以此类推，需要注意，使能不同定时器不同通道的函数是有一点小差别的，防止在程序中调用TIM_OC1Init()函数来使能TIM3通道2这种情况的发生。
 
-		2、具体代码：：
+		2、具体代码::
 
 			#include "public.h"
 			#include "pwm.h"
@@ -82,4 +82,4 @@
 				  }
 			}
 			
-		..LINK:http://www.tpyboard.com/ueditor/php/upload/file/20170502/1493725726707079.zip
+	..LINK:http://www.tpyboard.com/ueditor/php/upload/file/20170502/1493725726707079.zip
