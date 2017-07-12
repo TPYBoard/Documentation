@@ -10,11 +10,11 @@ class ADC -- 数模转换
 
         import pyb
     
-        adc = pyb.ADC(pin)              # create an analog object from a pin
+        adc = pyb.ADC(Pin('Y11'))       # create an analog object from a pin
         val = adc.read()                # read an analog value
     
-        adc = pyb.ADCAll(resolution)    # create an ADCAll object
-        val = adc.read_channel(channel) # read the given channel
+        adc = pyb.ADCAll(resolution)    # create an ADCAll object,分辨率（resolution=12）
+        val = adc.read_channel(channel) # read the given channel
         val = adc.read_core_temp()      # read MCU temperature
         val = adc.read_core_vbat()      # read MCU VBAT
         val = adc.read_core_vref()      # read MCU VREF
@@ -75,20 +75,56 @@ AdCall对象
 
     实例化这个改变所有ADC引脚模拟输入。原单片机温度，VREF和VBAT的数据可以在ADC通道16访问，分别为17和18。适当的缩放将需要应用。芯片上的温度传感器的绝对精度差，仅适用于检测温度变化。
 
-    ``read_core_vbat()`` and ``read_core_vref()``方法读的后备电池电压和（1.21v名义）使用3.3V电源作为参考基准电压。假设ADCALL对象被实例化的``adc = pyb.ADCAll(12)``3.3V电源电压可以计算:
+    .. method:: pyb.ADCAll(resolution)
+    
+       定义ADC的分辨率，可以设置为8/10/12。
+
+    .. method:: adc.read()
+    
+       读取adc的值，返回值与adc分辨率有关，8位最大255，10位最大1023，12位最大4095。
+
+    .. method:: adc.read_channel(channel)
+    
+       读取指定adc通道的值。
+
+    .. method:: adc.read_core_temp()
+    
+       读取内部温度传感器。
+
+    .. method:: adc.read_core_vbat()
+    
+       读取vbat电压 vback = adc.read_core_vbat() * 1.21 / adc.read_core_vref()。
+
+    .. method:: adc.read_core_vref()
+    
+       读取vref电压（1.21V参考）3V3 = 3.3 * 1.21 / adc.read_core_vref()
+。
+
+    .. method:: adc.read_core_vbat()
+    
+       读取vbat电压 vback = adc.read_core_vbat() * 1.21 / adc.read_core_vref()。
+
+    .. method:: adc.read_core_vbat()
+    
+       读取vbat电压 vback = adc.read_core_vbat() * 1.21 / adc.read_core_vref()。
+       
+    ``read_core_vbat()`` and ``read_core_vref()`` 方法读的后备电池电压和（1.21v参考）使用3.3V电源作为参考基准电压。假设ADCALL对象被实例化的``adc = pyb.ADCAll(12)``3.3V电源电压可以计算:
     
     ``v33 = 3.3 * 1.21 / adc.read_core_vref()``
 
-    If the 3.3V supply is correct the value of ``adc.read_core_vbat()`` will be
-    valid. If the supply voltage can drop below 3.3V, for example in in battery
-    powered systems with a discharging battery, the regulator will fail to preserve
-    the 3.3V supply resulting in an incorrect reading. To produce a value which will
-    remain valid under these circumstances use the following:
+    如果3.3V 是正确的话读取 ``adc.read_core_vbat()`` 将会是有效。如果电源电压降到3.3V以下，
+    例如，在电池供电的放电电池系统中, 该稳压器将无法保持3.3V电源，导致读取不正确。 
+    在这种情况下，读取的值仍然有效，使用以下内容:
 
     ``vback = adc.read_core_vbat() * 1.21 / adc.read_core_vref()``
 
-    It is possible to access these values without incurring the side effects of ``ADCAll``::
+    可以访问这些值不产生副作用 ``ADCAll``::
     
+        import pyb
+        import time
+        import stm
+        from pyb import Pin
+        
         def adcread(chan):                              # 16 temp 17 vbat 18 vref
             assert chan >= 16 and chan <= 18, 'Invalid ADC channel'
             start = pyb.millis()
@@ -126,4 +162,9 @@ AdCall对象
         def temperature():
             return 25 + 400 * (3.3 * adcread(16) / 4096 - 0.76)
 
-    
+        pyb.delay(50)
+        print('v33:',v33())
+        print('vbat:',vbat())
+        print('vref:',vref())
+        print('temperature:',temperature())
+
