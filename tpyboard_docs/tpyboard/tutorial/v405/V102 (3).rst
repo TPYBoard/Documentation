@@ -38,9 +38,6 @@
 
 	将板子boot0与GND用跳线帽短接，PC0-PC7接D0-D7，PA0接E，PA1接RW，PA2接RS。Vss和K接GND,Vdd和A接5V电源。Vo接电位器中间脚，电位器其余两脚分别接5V和GND。
 
-　
-	.. image:: images/c1.png
-
 	.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170502/1493724662218164.png
 
 	.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170502/1493724672460581.png
