@@ -7,7 +7,6 @@ TPYBoard Basic 典型实例
    :maxdepth: 1
    :numbered:
    
-   GPIO.rst
    V102 (1).rst
    V102 (2).rst
    V102 (3).rst
