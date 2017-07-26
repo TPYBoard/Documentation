@@ -18,4 +18,5 @@ TPYBoard v202 典型实例
    V102 (8).rst
    V102 (9).rst
    V102 (6).rst
+   202WEIXIN.rst
    servo.rst
