@@ -61,9 +61,9 @@
 		首先，编辑一个main.py文件。v202 开机自启动main.py 文件
 
 	try::
-			import usocket as socket
+		import usocket as socket
 		except:
-			import socket
+		import socket
 		import network
 		from machine import UART
 		from machine import Pin
