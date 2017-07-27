@@ -268,7 +268,7 @@
 ----------------------------------
 
 	使用MicroPython File Uploader 工具，将源代码下载到v202中。
-	
+
 	工具下载地址: http://tpyboard.com/download/tool/170.html
 
 	- 1、使用usb数据线将v202接入到电脑，打开设备管理器，查看加载的端口。我的是COM44
