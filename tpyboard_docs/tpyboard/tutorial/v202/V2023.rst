@@ -277,7 +277,6 @@
 
 	CH340驱动下载地址：http://tpyboard.com/download/drive/163.html
 
-
 	.. image:: images2/05.jpg
 
 	- 2、打开MicroPython File Uploader 选择端口，点击[Open]。
