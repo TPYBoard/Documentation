@@ -58,7 +58,7 @@
 0x04 利用micropython实现web服务器
 ----------------------------------------------
 
-		首先，编辑一个main.py文件。v202 开机自启动main.py 文件
+	首先，编辑一个main.py文件。v202 开机自启动main.py 文件
 
 	try::
 		import usocket as socket
