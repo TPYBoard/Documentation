@@ -76,7 +76,7 @@ TPYBoard v102+v202 家庭无线温湿度检测
 
 	TPYBoard v102 源代码
 
-.. image:: images/V102.png
+	.. image:: images/V102.png
 
 	TPYBoard v102 main.py文件内容
 
