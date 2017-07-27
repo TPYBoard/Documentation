@@ -20,6 +20,7 @@ TPYBoard v202 典型实例
 	V102 (6).rst
 	202WEIXIN.rst
 	102+202temp.rst
+	202wifi1.rst
 	202wifi2.rst
 	V2023.rst
 	V2024.rst
