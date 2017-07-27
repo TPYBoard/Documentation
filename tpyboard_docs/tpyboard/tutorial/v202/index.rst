@@ -4,22 +4,22 @@ TPYBoard v202 典型实例
 =========================================
 
 .. toctree::
-   :maxdepth: 1
-   :numbered:
-   
-   quickref.rst
-   firmwipe.rst
-   firmware.rst
-   filerw.rst
-   gpio.rst
-   network.rst
-   putty.rst
-   timer.rst
-   V102 (8).rst
-   V102 (9).rst
-   V102 (6).rst
-   202WEIXIN.rst
-   102+202temp.rst
-   202wifi2.rst
-   V2023.rst
-   servo.rst
+	:maxdepth: 1
+	:numbered:
+
+	quickref.rst
+	firmwipe.rst
+	firmware.rst
+	filerw.rst
+	gpio.rst
+	network.rst
+	putty.rst
+	timer.rst
+	V102 (8).rst
+	V102 (9).rst
+	V102 (6).rst
+	202WEIXIN.rst
+	102+202temp.rst
+	202wifi2.rst
+	V2023.rst
+	servo.rst
