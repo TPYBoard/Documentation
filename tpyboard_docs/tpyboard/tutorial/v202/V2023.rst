@@ -52,7 +52,7 @@
 
 	我的实物连接图
 
-	.. image:: images2/04.jpg
+	.. image:: images2/04.png
 
 
 0x04 利用micropython实现web服务器
