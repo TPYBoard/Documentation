@@ -22,4 +22,5 @@ TPYBoard v202 典型实例
 	102+202temp.rst
 	202wifi2.rst
 	V2023.rst
+	V2024.rst
 	servo.rst
