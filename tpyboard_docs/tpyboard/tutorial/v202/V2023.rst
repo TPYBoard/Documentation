@@ -277,19 +277,19 @@
 
 	CH340驱动下载地址：http://tpyboard.com/download/drive/163.html
 
-	.. image:: images2/05.jpg
+	.. image:: images2/05.png
 
 	- 2、打开MicroPython File Uploader 选择端口，点击[Open]。
 
-	.. image:: images2/06.jpg
+	.. image:: images2/06.png
 
 	- 3、取消[Autorun]的打钩，点击红框的文件夹图标，选择源码，点击[Send]等待发送成功。
 
-	.. image:: images2/07.jpg
+	.. image:: images2/07.png
 
 	- 4、将上面的源码文件都下载到v202中，下载完毕后，点击[Run/Reset]就会开始执行代码。
 
-	.. image:: images2/08.jpg
+	.. image:: images2/08.png
 
 	- 5、开始运行后，红色框内打印的是我们存放在info.txt里的用户名和密码，这个可以自定义。
 	- 6、下面桃红色框内打印的是我们v202从路由器那里获取到的IP地址，只要打印了IP地址，说明就成功接入网络了。我的v202获取的IP地址是192.168.1.192。
@@ -300,13 +300,13 @@
 
 	- 1、在家庭局域网内，我们可以选用pc或者手机，通过浏览器，打开192.168.1.192 就可以看到登录界面。
 
-	.. image:: images2/09.jpg
+	.. image:: images2/09.png
 
 	- 2、默认用户名 admin 密码123456 ，大家可以通过修改info.txt 文件来进行修改。
 
 	（1）输入错误的用户名和密码会进入错误界面。
 
-	.. image:: images2/10.jpg
+	.. image:: images2/10.png
 
 	（2） 输入正确的，进入控制平台。
 
