@@ -16,7 +16,7 @@
 
 	- 1.TPYBoard v202
 
-.. image:: images/2021.png
+	.. image:: images/2021.png
 
 	- 2.面包板
 	- 3.数据线
@@ -44,17 +44,17 @@
 
 	OneNET平台创建MQTT协议的产品并添加设备
 
-.. image:: images/O1.png
+	.. image:: images/O1.png
 
 	如果没有产品，点击创建产品即可，上面显示我已经创建完毕。
 
-.. image:: images/O2.png
+	.. image:: images/O2.png
 
 	Smart Boy是我添加的设备，当我们插上TPYBoard v202时，就会看到上图绿点点亮，拔了以后就会变灰，前提是板子里程序已经写入。
 
 	实物接线图
 
-.. image:: images/O3.png
+	.. image:: images/O3.png
 
 	我用的TPYBoard v202的G4引脚，这个引脚可以随便定义，主要看程序里你想用哪个。
 
@@ -138,11 +138,11 @@
 
 	效果展示
 
-.. image:: images/X1.png
+	.. image:: images/X1.png
 
 	这个时候我们OneNET云平台上设备就会显示在线了
 
-.. image:: images/X2.png
+	.. image:: images/X2.png
 
 	当我们发送指令on的时候，就会看到控制台显示
 
@@ -150,7 +150,7 @@
 
 	1并且看到我们面包板上的led会亮起来
 
-.. image:: images/X3.png
+	.. image:: images/X3.png
 
 	当我们发送指令off的时候，就会看到控制台显示
 
@@ -158,7 +158,7 @@
 
 	0并且看到我们面包板上的led灯会熄灭
 
-.. image:: images/X4.png
+	.. image:: images/X4.png
 
 	当我们发送toggle时候，就会看到控制台显示：
 
