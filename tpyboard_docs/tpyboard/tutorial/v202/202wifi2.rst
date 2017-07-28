@@ -17,9 +17,9 @@
 	- 1、首先你的需要TPYBoard v202和TPYBoard V102开发板各一块。
 
 	- 2、网上下载了一个使用esp8266制作Deauth无线攻击的开源固件，是arduino开发的。
-	
+
 	github下载地址：https://github.com/PakchoiFood/TPYBoard-v202-v102-EvilPlans
-	
+
 	里面包含了arduino IDE（arduino-1.8.2-windows.exe）、固件源码（esp8266_wifi.rar）、TPYBoard v102的源码(TPYBoard v102.rar)和串口调试工具(XCOM V2.0.rar)。另外，还需要esp8266开发包（Arduino15-2.rar）可以从下面链接：http://pan.baidu.com/s/1pLnwz7l 下载。
 
 	- 2、下载完毕后，解压如下：
@@ -42,7 +42,7 @@
 ----------------------------------
 
 	- 1、如果你对V102及V202的使用方法不熟悉，可以参考TPYBoard 官方docs网站。
-	
+
 	http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/
 
 	TPYBoard v102 源代码(main.py)::
