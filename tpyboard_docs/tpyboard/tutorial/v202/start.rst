@@ -41,11 +41,12 @@
 
 TPYBoard v202ÓëTPYBoard v102ÓÐËù²»Í¬£¬v202Ã»ÓÐUSBÇý¶¯Æ÷£¬ËùÒÔÔÚµçÄÔÉÏÎÒÃÇ¿´²»µ½Ïñv102ËÆµÃ¼ÓÔØµÄ¿ÉÒÆ¶¯´ÅÅÌ¡£
 
-ÎÒÃÇÐèÒªÒ»Ð©¹¤¾ß£¬½«³ÌÐòÏÂÔØµ½v202 µÄFlashÖÐ²¢ÔËÐÐ¡£±¾´ÎÖ÷Òª½éÉÜMicroPython File Uploader ¹¤¾ß£¨ÒÔÏÂ¼ò³ÆMFU£©`MFUÏÂÔØ <http://tpyboard.com/download/tool/170.html>`_¡£
+ÎÒÃÇÐèÒªÒ»Ð©¹¤¾ß£¬½«³ÌÐòÏÂÔØµ½v202 µÄFlashÖÐ²¢ÔËÐÐ¡£±¾´ÎÖ÷Òª½éÉÜMicroPython File Uploader ¹¤¾ß£¨ÒÔÏÂ¼ò³ÆMFU£©¡£
+
+`MFUÏÂÔØ <http://tpyboard.com/download/tool/170.html>`_
 
 
-
- - Ë«»÷ÔËÐÐMicroPython File Uploader.exe
+ Ë«»÷ÔËÐÐMicroPython File Uploader.exe
  
  .. image:: images/2.png
  
@@ -53,45 +54,46 @@ TPYBoard v202ÓëTPYBoard v102ÓÐËù²»Í¬£¬v202Ã»ÓÐUSBÇý¶¯Æ÷£¬ËùÒÔÔÚµçÄÔÉÏÎÒÃÇ¿´²»µ½Ï
 
 `.NET Framework 4.5ÏÂÔØ <http://www.tpyboard.com/download/drive/174.html>`_
 
- - Í¨¹ýÉè±¸¹ÜÀíÆ÷¿ÉÒÔ¿´µ½COM±àºÅ£¬ÎÒµÄÊÇCOM44£¬ËùÒÔÑ¡ÔñCOM44£¬µã»÷¡¾Open¡¿´ò¿ª´®¿Ú¡£
+ Í¨¹ýÉè±¸¹ÜÀíÆ÷¿ÉÒÔ¿´µ½COM±àºÅ£¬ÎÒµÄÊÇCOM44£¬ËùÒÔÑ¡ÔñCOM44£¬µã»÷¡¾Open¡¿´ò¿ª´®¿Ú¡£
 
  .. image:: images/3.png 
 
- - °´Ò»ÏÂv202ÉÏµÄRST¼ü½øÐÐ¸´Î»¡£
+ °´Ò»ÏÂv202ÉÏµÄRST¼ü½øÐÐ¸´Î»¡£
  
  .. image:: images/4.png 
 
 
  ÎÒÃÇ¿´µ½ÁËÒ»Ð©´òÓ¡µÄÐÅÏ¢£¬²»¹ý¶¼ÊÇÂÒÂë£¬ÕâÊÇv202ÄÚ²¿µÄ±àÂë¸ñÊ½Óë¹¤¾ßÓÐÐ©²»¼æÈÝ£¬²»¹ý²»ÓÃµ£ÐÄ£¬Ò»µã¶¼²»Ó°ÏìÎÒÃÇµÄ¿ª·¢µ÷ÊÔ¡£
 
- - ÎÒÃÇv202³ö³§Ê±£¬»á×Ô´øÒ»¸öºôÎüµÆµÄ³ÌÐò£¬´ó¼Ò´ËÊ±¿ÉÒÔ×ÐÏ¸¹Û²ìÒ»ÏÂ°å×ÓÉÏµÄÐ¡À¶µÆ£¬Ëü»áÊÇ°µµ½ÁÁ£¬ÁÁµ½°µÒ»Ö±Ñ­»·±ä»¯¡£
+ ÎÒÃÇv202³ö³§Ê±£¬»á×Ô´øÒ»¸öºôÎüµÆµÄ³ÌÐò£¬´ó¼Ò´ËÊ±¿ÉÒÔ×ÐÏ¸¹Û²ìÒ»ÏÂ°å×ÓÉÏµÄÐ¡À¶µÆ£¬Ëü»áÊÇ°µµ½ÁÁ£¬ÁÁµ½°µÒ»Ö±Ñ­»·±ä»¯¡£
 
- - ½ÓÏÂÀ´ÎÒÃÇÔÚµçÄÔÉÏÐÂ½¨Ò»¸ömain.py ÎÄ¼þ£¬½«main.pyÏÂÔØµ½v202ÖÐ¡£
+ ½ÓÏÂÀ´ÎÒÃÇÔÚµçÄÔÉÏÐÂ½¨Ò»¸ömain.py ÎÄ¼þ£¬½«main.pyÏÂÔØµ½v202ÖÐ¡£
 
 main.py Ô´Âë
 
+
 .. code-block:: python
 
-import network
+    import network
 
-#½«v202ÉèÖÃ³ÉAPÄ£Ê½
-ap_if = network.WLAN(network.AP_IF) 
-#¼¤»î½Ó¿Ú
-ap_if.active(True)
-#¿ª·ÅWIFI¡£Ãû³Æ:TPYBoard v202 ÃÜÂë:12345678
-ap_if.config(essid='TPYBoard v202',password='12345678')
+    #½«v202ÉèÖÃ³ÉAPÄ£Ê½
+    ap_if = network.WLAN(network.AP_IF) 
+    #¼¤»î½Ó¿Ú
+    ap_if.active(True)
+    #¿ª·ÅWIFI¡£Ãû³Æ:TPYBoard v202 ÃÜÂë:12345678
+    ap_if.config(essid='TPYBoard v202',password='12345678')
 
 
 
- - µã»÷ÓÒ²à²Ëµ¥ÇøµÄÎÄ¼þ¼ÐÍ¼±ê°´Å¥£¬Ñ¡ÔñÎÒÃÇ¸Õ²ÅÐÂ½¨µÄmain.pyÎÄ¼þ¡£È»ºóµã»÷¡¾Send¡¿°´Å¥£¬ÏÂÔØ³ÌÐòÍê±Ïºó£¬×Ô¶¯ÔËÐÐ¡££¨AutorunÈ¡ÏûÑ¡ÔñÔò²»×Ô¶¯ÔËÐÐ£©
+ µã»÷ÓÒ²à²Ëµ¥ÇøµÄÎÄ¼þ¼ÐÍ¼±ê°´Å¥£¬Ñ¡ÔñÎÒÃÇ¸Õ²ÅÐÂ½¨µÄmain.pyÎÄ¼þ¡£È»ºóµã»÷¡¾Send¡¿°´Å¥£¬ÏÂÔØ³ÌÐòÍê±Ïºó£¬×Ô¶¯ÔËÐÐ¡££¨AutorunÈ¡ÏûÑ¡ÔñÔò²»×Ô¶¯ÔËÐÐ£©
 
- - ´ó¼ÒÕâÊ±¾Í¿ÉÒÔËÑË÷µ½ÃûÎª¡°TPYBoard v202¡±µÄWIFI£¬²¢¿ÉÒÔ³É¹¦Á¬½Ó¡£
+ ´ó¼ÒÕâÊ±¾Í¿ÉÒÔËÑË÷µ½ÃûÎª¡°TPYBoard v202¡±µÄWIFI£¬²¢¿ÉÒÔ³É¹¦Á¬½Ó¡£
 
 
 Ïà´¦Óëµ÷ÊÔ
 ----------------------
 
-:MFU¹¤¾ßµÄµ÷ÊÔ²Ëµ¥À¸ÖÐÃ¿¸ö°´Å¥µÄ¹¦ÄÜ½éÉÜ
+ : MFU¹¤¾ßµÄµ÷ÊÔ²Ëµ¥À¸ÖÐÃ¿¸ö°´Å¥µÄ¹¦ÄÜ½éÉÜ
 
  - Send£º½«Ñ¡ÖÐµÄÎÄ¼þ£¬ÏÂÔØµ½Ä£¿éµÄFlashÖÐ¡£
  - Stop£ºÖÐÖ¹³ÌÐòÔËÐÐ¡£
@@ -99,13 +101,13 @@ ap_if.config(essid='TPYBoard v202',password='12345678')
  - Clear£ºÇå¿ÕÊä³öÇø´òÓ¡µÄÐÅÏ¢¡£
 
  
- - µ±³ÌÐòÍ£Ö¹ÔËÐÐÊ±£¬ÐÅÏ¢Êä³öÇø»á³öÏÖ>>>µÄ·ûºÅ¡£
+ µ±³ÌÐòÍ£Ö¹ÔËÐÐÊ±£¬ÐÅÏ¢Êä³öÇø»á³öÏÖ>>>µÄ·ûºÅ¡£
  
  .. image:: images/5.png
  
- - ÕâÊ±ÎÒÃÇ¿ÉÒÔÔÚÃüÁîÊäÈëÇøÄÚÊäÈëµ¥¾ä´úÂë£¬½øÐÐµ¥²½µ÷ÊÔ¡£
+ ÕâÊ±ÎÒÃÇ¿ÉÒÔÔÚÃüÁîÊäÈëÇøÄÚÊäÈëµ¥¾ä´úÂë£¬½øÐÐµ¥²½µ÷ÊÔ¡£
  
-ÎÒÃÇÏÈÊäÈëÒ»¾ä¼òµ¥µÄprint (¡®Hello v202¡¯) »Ø³µ·¢ËÍÖ´ÐÐ¡£
+ ÎÒÃÇÏÈÊäÈëÒ»¾ä¼òµ¥µÄprint (¡®Hello v202¡¯) »Ø³µ·¢ËÍÖ´ÐÐ¡£
  
  .. image:: images/6.png
  
@@ -114,13 +116,11 @@ ap_if.config(essid='TPYBoard v202',password='12345678')
 ÎÄ¼þ²é¿´
 ----------------------
 
-½ÓÏÂÀ´ÎÒÃÇÀ´¿´Ò»ÏÂv202µÄFlashÖÐ´æ´¢ÁËÄÄÐ©ÎÄ¼þ¡£
-
- - ½Ó×ÅÉÏÒ»²½£¬ÎÒÃÇ¼ÌÐøÊäÈë¡£
+½ÓÏÂÀ´ÎÒÃÇÀ´¿´Ò»ÏÂv202µÄFlashÖÐ´æ´¢ÁËÄÄÐ©ÎÄ¼þ£¬½Ó×ÅÉÏÒ»²½£¬ÎÒÃÇ¼ÌÐøÊäÈë¡£
 
 .. code-block:: python
 
-import os
+    import os
 
 
 Ê×ÏÈÎÒÃÇµ¼ÈëÎÄ¼þ²Ù×÷Ààos¡£
@@ -129,7 +129,7 @@ import os
 
 .. code-block:: python
 
-os.listdir()
+    os.listdir()
 
 
 ÁÐ¾Ùµ±Ç°Ä¿Â¼ÏÂËùÓÐµÄÎÄ¼þ
@@ -140,9 +140,9 @@ os.listdir()
 .. code-block:: python
 
 
-f=open(¡°main.py¡±, ¡°r¡±)
-f.read()
-f.close()
+    f=open(¡°main.py¡±, ¡°r¡±)
+    f.read()
+    f.close()
 
 
 ÒÔÖ»¶ÁµÄ·½Ê½´ò¿ªmain.pyÎÄ¼þ£¬¶ÁÈ¡È«²¿ÄÚÈÝ¡££¨ÎÄ¼þ²Ù×÷Ê±¼ÇµÃclose¹Ø±Õ×ÊÔ´£©
@@ -152,7 +152,7 @@ f.close()
 
 .. code-block:: python
 
-help(os)
+    help(os)
 
 
 
