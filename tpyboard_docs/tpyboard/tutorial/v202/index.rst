@@ -7,6 +7,7 @@ TPYBoard v202 典型实例
 	:maxdepth: 1
 	:numbered:
 
+    start.rst
 	quickref.rst
 	firmwipe.rst
 	firmware.rst
