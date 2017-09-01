@@ -24,7 +24,7 @@ I2C的基本介绍
 
     I2C总线类型是由飞利浦半导体公司在八十年代初设计出来的一种简单、双向、二线制、同步串行总线，主要是用来连接整体电路(ICS)。
     
-    IIC是一种多向控制总线，也就是说多个芯片可以连接到同一总线结构下，同时每个芯片都可以作为实时数据传输的控制源。
+    I2C是一种多向控制总线，也就是说多个芯片可以连接到同一总线结构下，同时每个芯片都可以作为实时数据传输的控制源。
 
     
 MicroPython中I2C类库介绍
@@ -92,7 +92,7 @@ main.py程序代码
         time.sleep(5)
 
 
-ds3231.py预览地址:
+ds3231.py `预览地址 <https://github.com/TPYBoard/developmentBoard/blob/master/TPYBoard-v20x-master/TPYBoard%20v202%20%E5%85%B8%E5%9E%8B%E5%AE%9E%E4%BE%8B/05.I2C%E6%93%8D%E4%BD%9CDS3231%E6%A8%A1%E5%9D%97/ds3231.py>`_
 
 
 - `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
