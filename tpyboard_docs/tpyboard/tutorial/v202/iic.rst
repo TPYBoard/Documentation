@@ -30,13 +30,24 @@ I2C的基本介绍
 MicroPython中I2C类库介绍
 --------------------------------
 
-    请参考：http://docs.micropython.org/en/latest/esp8266/esp8266/quickref.html?highlight=i2c
-    
     .. code-block:: python
     
+        from machine import Pin, I2C
+
+        # construct an I2C bus
         i2c = I2C(scl=Pin(5), sda=Pin(4), freq=100000)
+
+        i2c.readfrom(0x3a, 4)   # read 4 bytes from slave device with address 0x3a
+        i2c.writeto(0x3a, '12') # write '12' to slave device with address 0x3a
+
+        buf = bytearray(10)     # create a buffer with 10 bytes
+        i2c.writeto(0x3a, buf)  # write the given buffer to the slave
     
-    本次实验I2C中SCL=Pin(14),SDA=Pin(2)，I2C初始化修改为如下：
+    
+    请参考：http://docs.micropython.org/en/latest/esp8266/esp8266/quickref.html?highlight=i2c
+
+    
+    TPYBoard v202的I2C接口中SCL=Pin(14),SDA=Pin(2)，I2C初始化修改为如下：
     
     .. code-block:: python
     
@@ -92,7 +103,7 @@ main.py程序代码
         time.sleep(5)
 
 
-ds3231.py `预览地址 <https://github.com/TPYBoard/developmentBoard/blob/master/TPYBoard-v20x-master/TPYBoard%20v202%20%E5%85%B8%E5%9E%8B%E5%AE%9E%E4%BE%8B/05.I2C%E6%93%8D%E4%BD%9CDS3231%E6%A8%A1%E5%9D%97/ds3231.py>`_
+ds3231.py `点击预览 <https://github.com/TPYBoard/developmentBoard/blob/master/TPYBoard-v20x-master/TPYBoard%20v202%20%E5%85%B8%E5%9E%8B%E5%AE%9E%E4%BE%8B/05.I2C%E6%93%8D%E4%BD%9CDS3231%E6%A8%A1%E5%9D%97/ds3231.py>`_
 
 
 - `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
