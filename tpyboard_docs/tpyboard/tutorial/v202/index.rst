@@ -26,4 +26,4 @@ TPYBoard v202 典型实例
 	V2023.rst
 	V2024.rst
 	servo.rst
-    iic.rst
+	iic.rst
