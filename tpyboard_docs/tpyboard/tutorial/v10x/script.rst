@@ -42,8 +42,6 @@ LCD5110显示屏的针脚含义
 
   .. image:: ../img/test_21.png
 
-  当小数点在你的右下角时，上面一排5个引脚，从左至右依次为g,f,GND,a,b，下面一排五个引脚，从左至右依次为 e,d,GND,c,dp。
-  如果我们想让数码管显示数字8的话，需要将a,b,c,d,e,f,g所连接的TPYBoard v10x的引脚拉高，把GND与TPYBoard v10x的GND引脚接起来就可以了。
 
   main.py 内容如下::
 
