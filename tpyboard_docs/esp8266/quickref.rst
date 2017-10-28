@@ -19,6 +19,7 @@ TPYBoard v202[ESP8266]快速参考手册
 MicroPython REPL是UART0 (GPIO1=TX, GPIO3=RX)波特率115200。
 Tab标签查找对象方法，粘贴(ctrl-E)用语粘贴大量Python代码到REPL（交互式解释器）。
 
+
 :mod:`machine` 模块::
 
     import machine
@@ -26,6 +27,7 @@ Tab标签查找对象方法，粘贴(ctrl-E)用语粘贴大量Python代码到REP
     machine.freq()          # get the current frequency of the CPU
     machine.freq(160000000) # set the CPU frequency to 160 MHz
 
+    
 :mod:`esp` 模块::
 
     import esp
