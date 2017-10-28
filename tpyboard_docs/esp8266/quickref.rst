@@ -62,12 +62,12 @@ Tab标签查找对象方法，粘贴(ctrl-E)用语粘贴大量Python代码到REP
                 pass
         print('network config:', wlan.ifconfig())
 
-一旦网络建立可像往常一样创建和使用: mod:`socket <usocket>` 模块。
+一旦网络建立可像往常一样创建和使用 :mod:`socket <usocket>` 模块。
 
 延时和定时
 ----------------
 
-使用: mod:`time <utime>` 模块::
+使用 :mod:`time <utime>` 模块::
 
     import time
 
@@ -80,7 +80,7 @@ Tab标签查找对象方法，粘贴(ctrl-E)用语粘贴大量Python代码到REP
 定时器
 ------
 
-支持虚拟（RTOS）定时器。使用:ref:`machine.Timer <machine.Timer>` 类timerID为-1::
+支持虚拟（RTOS）定时器。使用 :ref:`machine.Timer <machine.Timer>` 类timerID为-1::
 
     from machine import Timer
 
@@ -93,7 +93,7 @@ Tab标签查找对象方法，粘贴(ctrl-E)用语粘贴大量Python代码到REP
 引脚和通用输入输出接口
 ---------------------
 
-使用: ref:`machine.Pin <machine.Pin>` 类::
+使用 :ref:`machine.Pin <machine.Pin>` 类::
 
     from machine import Pin
 
@@ -127,7 +127,7 @@ PWM can be enabled on all pins except Pin(16).  There is a single frequency
 for all channels, with range between 1 and 1000 (measured in Hz).  The duty
 cycle is between 0 and 1023 inclusive.
 
-使用``machine.PWM`` 类::
+使用 ``machine.PWM`` 类::
 
     from machine import Pin, PWM
 
@@ -206,7 +206,7 @@ and is accessed via the :ref:`machine.I2C <machine.I2C>` class::
     from machine import Pin, I2C
 
     # construct an I2C bus
-    i2c = I2C(scl=Pin(5), sda=Pin(4), freq=100000)
+    i2c = I2C(scl=Pin(14), sda=Pin(2), freq=100000)
 
     i2c.readfrom(0x3a, 4)   # read 4 bytes from slave device with address 0x3a
     i2c.writeto(0x3a, '12') # write '12' to slave device with address 0x3a
