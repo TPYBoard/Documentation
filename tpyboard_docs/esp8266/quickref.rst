@@ -5,7 +5,7 @@ TPYBoard v202[ESP8266]快速参考手册
 
 .. image:: img/tpyboardv202.png
     :alt: Adafruit Feather TPYBoard
-    :width: 640px
+    :width: 300px
  
 
 开发板基本控制
