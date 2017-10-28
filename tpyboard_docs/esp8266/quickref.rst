@@ -1,13 +1,12 @@
 .. _quickref:
 
-ESP8266快速参考手册
+TPYBoard v202[ESP8266]快速参考手册
 ===============================
 
-.. image:: img/adafruit_products_pinoutstop.jpg
+.. image:: img/tpyboardv202.png
     :alt: Adafruit Feather TPYBoard
     :width: 640px
-
-The Adafruit Feather TPYBoard (图片属性: Adafruit).
+ 
 
 安装MicroPython
 ----------------------
@@ -27,7 +26,7 @@ Tab标签查找对象方法，粘贴(ctrl-E)用语粘贴大量Python代码到REP
     machine.freq()          # get the current frequency of the CPU
     machine.freq(160000000) # set the CPU frequency to 160 MHz
 
-:mod:`esp`模块::
+:mod:`esp` 模块::
 
     import esp
 
@@ -37,7 +36,7 @@ Tab标签查找对象方法，粘贴(ctrl-E)用语粘贴大量Python代码到REP
 网络
 ----------
 
-:mod:`network`模块::
+:mod:`network` 模块::
 
     import network
 
@@ -66,12 +65,12 @@ Tab标签查找对象方法，粘贴(ctrl-E)用语粘贴大量Python代码到REP
                 pass
         print('network config:', wlan.ifconfig())
 
-一旦网络建立可像往常一样创建和使用:mod:`socket <usocket>`模块。
+一旦网络建立可像往常一样创建和使用: mod:`socket <usocket>` 模块。
 
 延时和定时
 ----------------
 
-使用:mod:`time <utime>` 模块::
+使用: mod:`time <utime>` 模块::
 
     import time
 
@@ -97,7 +96,7 @@ Tab标签查找对象方法，粘贴(ctrl-E)用语粘贴大量Python代码到REP
 引脚和通用输入输出接口
 ---------------------
 
-使用:ref:`machine.Pin <machine.Pin>` 类::
+使用: ref:`machine.Pin <machine.Pin>` 类::
 
     from machine import Pin
 
