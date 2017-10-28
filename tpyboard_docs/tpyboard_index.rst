@@ -4,6 +4,7 @@ TPYBoard Document
 .. toctree::
 
     tpyboard/quickref.rst
+    esp8266/quickref.rst
     tpyboard/general.rst
     tpyboard/tutorial/index.rst
     library/index.rst
