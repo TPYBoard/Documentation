@@ -39,3 +39,4 @@ TPYBoard v10x 典型实例
    V102 (21).rst
    thread.rst
    STM32T.rst
+   bluetoothcar_app.rst
