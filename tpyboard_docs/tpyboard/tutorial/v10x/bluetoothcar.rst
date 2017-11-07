@@ -16,7 +16,7 @@
 ------------------
 
 	- TPYBoard v102板子 1块
-	- 蓝牙串口模块 1个
+	- 蓝牙串口透传模块(HC-06) 1个
 	- L298N电机驱动板模块 1个
 	- 智能小车底盘 1个
 	- 数据线 1条
@@ -44,7 +44,7 @@
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20161215/1481791212316208.jpg
 
-接线OK后，编写main.py，给TOYBoard通电就ok了，下面是源代码。
+接线OK后，编写main.py，给TPYBoard通电就ok了，下面是源代码。
 
 源代码
 --------------------
@@ -106,4 +106,4 @@
 				N3.high()
 				N4.low()
 
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master>`_
