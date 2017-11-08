@@ -152,11 +152,11 @@
                 Stop()
             if data.find('3')>-1:
                 Left()
-                pyb.delay(500)
+                pyb.delay(250)
                 Stop()
             if data.find('4')>-1:
                 Right()
-                pyb.delay(500)
+                pyb.delay(250)
                 Stop()
             if data.find('5')>-1:
                 mode="1"
@@ -168,6 +168,7 @@
                 print('循迹模式')
                 if(M1.value() and M2.value() and M3.value()):
                     Stop()
+                    mode="1"
                 if(M2.value() or M3.value()):
                     pyb.LED(2).on()
                     pyb.LED(3).off()
@@ -178,13 +179,13 @@
                     pyb.LED(2).off()
                     pyb.LED(4).off()
                     Right()
-                    pyb.delay(20)
+                    pyb.delay(10)
                 if M4.value():
                     pyb.LED(4).on()
                     pyb.LED(2).off()
                     pyb.LED(3).off()
                     Left()
-                    pyb.delay(20)
+                    pyb.delay(10)
 
                 
 - `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_
