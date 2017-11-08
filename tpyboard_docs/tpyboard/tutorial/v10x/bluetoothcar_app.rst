@@ -21,7 +21,7 @@
 	- 智能小车底盘 1个
 	- 数据线 1条
 	- 杜邦线 若干
-    - 智能蓝牙小车APP(Android版) `点击下载 <http://tpyboard.com/download/tool/188.html>`_
+    	- 智能蓝牙小车APP(Android版) `点击下载 <http://tpyboard.com/download/tool/188.html>`_
 
 .. image:: img/car.png
 
