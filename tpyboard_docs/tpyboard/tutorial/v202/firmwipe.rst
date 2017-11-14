@@ -73,7 +73,6 @@ esp.check_fw()
 
 运行的指令:
 
-.. code-block:: python
 esptool.py --port COM3 erase_flash 
 
 (注意：执行擦除的指令前，需要像烧录固件一样，让esp8266进入烧写模式)即按住板上的flash键不放，按下rst键，等待两秒，松开rst键，再松开flash键。
