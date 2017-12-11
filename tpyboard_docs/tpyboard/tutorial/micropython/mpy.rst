@@ -28,7 +28,11 @@ micropython中提供了类似的功能，可以将.py文件编译成.mpy文件�
 
 .. image::img/2.png
 
-4.在mpy-cross目录新建一下test.py文件，输入一句打印Hello world，用于测试。
+4.在mpy-cross目录新建一下test.py文件，输入点亮LED4，用于测试。
+   
+   import pyb
+
+   pyb.LED(4).on()
 
 5.执行编译mpy文件的命令。
 
@@ -42,3 +46,11 @@ micropython中提供了类似的功能，可以将.py文件编译成.mpy文件�
 6.命令执行成功后，你就能发现同目录下出现了一个test.mpy文件。
 
 .. image:: img/3.png
+
+7.将test.mpy文件拷贝放到TPYBoard v10x的TPFLASH中，直接在main.py中import即可。
+
+  import test
+
+.. image:: img/4.png
+  
+8.重置TPYBoard使其重新运行程序，大家就会看到LED4亮起来了。
