@@ -19,7 +19,7 @@ sudo apt-get install gcc
 
 git clone --recursive https://github.com/micropython/micropython.git
 
-3.切换到/home/micropython/mpy-cross目录执行make，编译生成mpy-cross工具:::
+3.切换到/home/micropython/mpy-cross目录执行make，编译生成mpy-cross工具::
 
 make
 
@@ -33,7 +33,7 @@ make
 
 mpy-cross test.py
 
-如果提示“mpy-cross: command not found”，那就把mpy-cross的整个目录都输上，例如我的就是:::
+如果提示“mpy-cross: command not found”，那就把mpy-cross的整个目录都输上，例如我的就是::
 
 /home/micropython/mpy-cross/mpy-cross test.py
 
