@@ -26,9 +26,7 @@ TPYBoard Micropython 添加自定义类库
 MicroPython的源码结构
 ---------------------------
 
-
-.. image::img/add1.png
-
+.. image:: img/add1.png
 
 +--------------+---------------------------------------------+
 | docs/        | micropython的说明文档(restructuredText)     |
@@ -52,9 +50,7 @@ MicroPython的源码结构
 
 进入ports目录下你会发现，micropython根据不同的MCU运行平台进行了分类，比如esp8266就是运行在esp8266-WIFI模块上的micropython，stm32是运行在stm32上的，还有cc3200等。
 
-
-.. image::img/add2.png
-
+.. image:: img/add2.png
 
 然后进入stm32/boards目录下,里面又根据stm32不同的系列进行了划分。
 
@@ -81,15 +77,11 @@ BOARD参数为stm32/boards/目录下相应的开发板名称。
 若是TPYBoardv102（绿色）基础板，同样选择PYBV10。
 若是TPYBoardv102（黑色）开发板，需选择PYBV11。
 
-
-.. image::img/add3.png
-
+.. image:: img/add3.png
 
 生成的固件在stm32/build-PYBV10/目录下的firmware.dfu和firmware.hex文件。
 
-
-.. image::img/add4.png
-
+.. image:: img/add4.png
 
 5.将dfu和hex文件拷贝到本地，进行烧写。
 
