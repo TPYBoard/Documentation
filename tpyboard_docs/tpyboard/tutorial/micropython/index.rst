@@ -8,3 +8,4 @@ TPYBoard micropython 固件开发教程
    :numbered:
 
    mpy.rst
+   add.rst
