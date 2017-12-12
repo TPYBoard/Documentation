@@ -1,7 +1,9 @@
 .. _quickref:
 
-TPYBoard Micropython 保护Python脚本
-====================================
+TPYBoard Micropython 使用mpy-cross工具生成mpy文件
+========================================================
+
+版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
 
 接触过Python语言的人都知道，Python可以编译成.pyc文件，它是一种二进制文件，可以提高程序的加载速度，同时
 也是一种保护源代码的有效方法。那么在micropython中，又该如何保护源程序呢？
@@ -19,6 +21,8 @@ TPYBoard Micropython 保护Python脚本
 
   git clone --recursive https://github.com/micropython/micropython.git
 
+生成mpy文件
+-------------------------
 3.切换到/home/micropython/mpy-cross目录执行make，编译生成mpy-cross工具。
 
 
@@ -52,12 +56,14 @@ TPYBoard Micropython 保护Python脚本
   
 8.重置TPYBoard使其重新运行程序，大家就会看到LED4亮起来了。
 
-
 **注意：**
-如果运行时出现“ValueError: invalid .mpy file”错误的话，更新一下TPYboard的micropython固件就好了。
+如果运行时出现“ValueError: invalid .mpy file”错误的话，需要更新一下TPYboard的micropython固件(最新版本是1.9.3)。
 
 micropython官方下载地址：http://micropython.org/download
 
 DFU-USB接口烧写固件参考：http://tpyboard.com/support/reference11/302.html
 
 ST-LINK烧写固件参考：http://tpyboard.com/support/reference11/239.html
+
+虽然是进行了加密编译成了mpy文件，但是还有一些缺陷，毕竟mpy文件仍然是存放在TPFLASH或TF卡中，很容易被别人拷贝，也很有可能会被反编译出来。
+是否可以直接将Python脚本文件直接编译在固件中呢？答案显然是可以！想知道的话，点击右下角Next参考下一篇《TPYBoard Micropython 添加自定义类库》。
