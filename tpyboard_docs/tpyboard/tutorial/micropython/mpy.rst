@@ -5,7 +5,7 @@ TPYBoard Micropython 保护Python脚本
 
 接触过Python语言的人都知道，Python可以编译成.pyc文件，它是一种二进制文件，可以提高程序的加载速度，同时
 也是一种保护源代码的有效方法。那么在micropython中，又该如何保护源程序呢？
-micropython中提供了类似的功能，可以将.py文件编译成.mpy文件。接下来，介绍一下具体的实现步骤。（本文主要以Linux Ubuntu系统为例）
+贴心的micropython创始人也提供了类似的功能，可以将.py文件编译成.mpy文件。接下来，介绍一下具体的实现步骤。（本文主要以Linux Ubuntu系统为例）
 
 
 搭建micropython编译环境
@@ -38,7 +38,7 @@ micropython中提供了类似的功能，可以将.py文件编译成.mpy文件�
 
   ./mpy-cross test.py
 
-其他相关功能可查看同目录下的READ.md文件。
+其他相关功能可查看同目录下的README.md文件。
 
 6.命令执行成功后，你就能发现同目录下出现了一个test.mpy文件。
 
