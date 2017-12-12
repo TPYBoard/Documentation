@@ -1,6 +1,6 @@
 .. _TPYBoardv10x-index:
 
-TPYBoard micropython 固件开发教程
+TPYBoard MicroPython 固件开发教程
 =============================================
 
 .. toctree::

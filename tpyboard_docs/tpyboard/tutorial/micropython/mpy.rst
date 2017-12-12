@@ -1,6 +1,6 @@
 .. _quickref:
 
-TPYBoard Micropython 使用mpy-cross工具生成mpy文件
+[MicroPython]TPYBoard 使用mpy-cross工具生成mpy文件
 ========================================================
 
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
