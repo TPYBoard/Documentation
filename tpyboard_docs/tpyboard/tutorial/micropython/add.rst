@@ -16,10 +16,15 @@ TPYBoard Micropython 添加自定义类库
 -------------------------
 1.安装arm-none-eabi-gcc交叉编译工具和gcc编译器。
 
+.. code-block::
+
   sudo apt-get install gcc-arm-none-eabi
+  
   sudo apt-get install gcc
 
 2.下载micropython源码包到本地，我下载到了home目录下。
+
+.. code-block::
 
   sudo git clone --recursive https://github.com/micropython/micropython.git
 
@@ -69,6 +74,8 @@ MicroPython的源码结构
 
 
 4.执行编译命令，等待编译完成。
+
+.. code-block::
 
   sudo make BOARD=PYBV10
 

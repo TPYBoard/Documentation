@@ -14,10 +14,15 @@ TPYBoard Micropython 使用mpy-cross工具生成mpy文件
 -------------------------
 1.安装arm-none-eabi-gcc交叉编译工具和gcc编译器。
 
+.. code-block::
+
   sudo apt-get install gcc-arm-none-eabi
+  
   sudo apt-get install gcc
 
 2.下载micropython源码包到本地，我下载到了home目录下。
+
+.. code-block::
 
   git clone --recursive https://github.com/micropython/micropython.git
 
@@ -25,6 +30,7 @@ TPYBoard Micropython 使用mpy-cross工具生成mpy文件
 -------------------------
 3.切换到/home/micropython/mpy-cross目录执行make，编译生成mpy-cross工具。
 
+.. code-block::
 
   make
 
@@ -33,12 +39,16 @@ TPYBoard Micropython 使用mpy-cross工具生成mpy文件
 .. image::img/2.png
 
 4.在mpy-cross目录新建一下test.py文件，输入点亮LED4，用于测试。
-   
+ 
+.. code-block:: python
+ 
    import pyb
 
    pyb.LED(4).on()
 
 5.执行编译mpy文件的命令。
+
+.. code-block::
 
   ./mpy-cross test.py
 
@@ -50,7 +60,9 @@ TPYBoard Micropython 使用mpy-cross工具生成mpy文件
 
 7.将test.mpy文件拷贝放到TPYBoard v10x的TPFLASH中，直接在main.py中import即可。
 
-  import test
+.. code-block:: python
+
+    import test
 
 .. image:: img/4.png
   
