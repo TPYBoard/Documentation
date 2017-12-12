@@ -36,12 +36,9 @@ micropython中提供了类似的功能，可以将.py文件编译成.mpy文件�
 
 5.执行编译mpy文件的命令。
 
-  mpy-cross test.py
+  ./mpy-cross test.py
 
-
-如果提示“mpy-cross: command not found”，那就把mpy-cross的整个目录都输上，例如我的就是:
-
-  /home/micropython/mpy-cross/mpy-cross test.py
+其他相关功能可查看同目录下的READ.md文件。
 
 6.命令执行成功后，你就能发现同目录下出现了一个test.mpy文件。
 
@@ -54,3 +51,13 @@ micropython中提供了类似的功能，可以将.py文件编译成.mpy文件�
 .. image:: img/4.png
   
 8.重置TPYBoard使其重新运行程序，大家就会看到LED4亮起来了。
+
+
+**注意：**
+如果运行时出现“ValueError: invalid .mpy file”错误的话，更新一下TPYboard的micropython固件就好了。
+
+micropython官方下载地址：http://micropython.org/download
+
+DFU-USB接口烧写固件参考：http://tpyboard.com/support/reference11/302.html
+
+ST-LINK烧写固件参考：http://tpyboard.com/support/reference11/239.html
