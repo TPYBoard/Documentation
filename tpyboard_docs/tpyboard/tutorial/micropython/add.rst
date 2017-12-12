@@ -58,7 +58,7 @@ MicroPython的源码结构
 -------------------------
 3.回到stm32/目录下，将需要添加到固件中的Python脚本类库放到modules/目录下。编译之前，请确保程序运行无误。为了测试新建了一个test.py文件，简单写了两个函数。如下:
 
-.. code::python
+.. code-block:: python
 
     import pyb
     
@@ -66,6 +66,7 @@ MicroPython的源码结构
         pyb.LED(4).on()
     def off():
         pyb.LED(4).off()
+
 
 4.执行编译命令，等待编译完成。
 
@@ -90,7 +91,8 @@ hex文件的烧写需要借助ST-LINK工具，请参考：http://tpyboard.com/su
 
 6.测试完毕后进行测试，在main.py文件输入以下内容:
 
-.. code::python
+.. code-block:: python
+
     import pyb
     import test
     test.on()
