@@ -96,7 +96,7 @@ dfu文件的烧写教程，请参考：http://tpyboard.com/support/reference11/3
 
 hex文件的烧写需要借助ST-LINK工具，请参考：http://tpyboard.com/support/reference11/239.html
 
-6.测试完毕后进行测试，在main.py文件输入以下内容:
+6.烧写完毕后进行测试，在main.py文件输入以下内容:
 
 .. code-block:: python
 
