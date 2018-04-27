@@ -38,6 +38,7 @@ MFRC522与开发板接线对应引脚：
 		+------------+---------+
 
 程序示例：
+.. code-block:: python
 
 		import pyb
 		import mfrc522
