@@ -11,10 +11,16 @@
 .. function:: SeekCard(order)
 
    寻卡函数，搜索范围内指定的卡或者所有的卡，参数为0x26（未休眠的卡）或0x52（所有的卡）。
+   返回值为：读卡状态，卡的类型
 
 .. function:: Anticoll()
 
    读卡函数，读出卡ID号。
+   返回值为：读卡状态，卡的ID
+
+.. function:: init_spi(SPI,RC522_RST,RC522_SDA)
+
+   MFRC522初始化函数，参数为SPI号，RST引脚，SDA引脚
 
 MFRC522与开发板接线对应引脚：
 ----------------------
