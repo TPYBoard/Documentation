@@ -41,8 +41,8 @@ MFRC522与开发板接线对应引脚：
 ----------
 
 .. code-block:: python
- 
-import pyb
+
+  import pyb
 import mfrc522
 from machine import SPI,Pin
 
