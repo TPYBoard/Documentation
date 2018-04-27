@@ -157,7 +157,7 @@ MicroPython的特有功能如下。
 
       pyb.rst
       lcd160cr.rst
-	  mfrc522.rst
+	  in.rst
 
 .. only:: port_wipy
 
