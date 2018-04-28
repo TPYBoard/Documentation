@@ -10,6 +10,7 @@ TPYBoard Document
     library/index.rst
     example_index.rst
     tpyboard/hardware/index.rst
+    firmware/index.rst
     license.rst
     tpyboard_contents.rst
     
