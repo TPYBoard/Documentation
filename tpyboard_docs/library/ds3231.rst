@@ -1,43 +1,30 @@
-:mod:`DS3221` --- 开发板关联功能函数
+:mod:`DS18B20` --- 开发板关联功能函数
 =============================================
 
-.. module:: DS3221
+.. module:: DS18B20
    :synopsis: 开发板关联功能函数
 
 `` DS3221`` 模块的主要功能与函数
 功能相关函数
 ----------------------
 
-.. function:: DATE(self, dat=[])
+.. function:: read_temp()
 
-   设置/读取年月日函数，当dat为空的时候读取年月日，当dat为[a,b,c]的时候设置为a年b月c日
+   读取温度值，返回值为浮点型
 
-.. function:: TIME(self, dat=[])
-
-   设置/读取时间函数，当dat为空的时候读取时间，当dat为[a,b,c]的时候设置为a时b分c秒
-
-.. function:: DateTime(self, dat=[])
-
-   设置/读取年月日时分秒函数，当dat为空的时候读取年月日时分秒，当dat为[a,b,c,d,e,f]的时候设置为a年b月c日d时e分f秒
-
-.. function:: TEMP(self)
-
-   读取温度函数
-
-DS3221与开发板接线对应引脚：
+DS18B20与开发板接线对应引脚：
 ----------------------
 
 		+------------+---------+
-		| TPYBoard   | DS3221  |
+		| TPYBoard   | DS18B20 |
 		+============+=========+
 		| GND        | GND     |
 		+------------+---------+
 		| 3V3        | VCC     |
 		+------------+---------+
-		| X9         | SCL     |
+		| Y10        | D0      |
 		+------------+---------+
-		| X10        | SDA     |
-		+------------+---------+
+
 
 程序示例：
 ----------
@@ -45,14 +32,10 @@ DS3221与开发板接线对应引脚：
 .. code-block:: python
 
   # main.py -- put your code here!
-  import pyb
-  from machine import SPI,Pin
-  from DS3231 import DS323
-  ds=DS3231(1)
-  ds.DATE([16,11,26])
-  ds.TIME([16,14,6])
+  from pyb import Pin
+  from ds18x20 import DS18X20
+  wd = DS18X20(Pin('Y10'))
+
   while True:
-    print('Date',str(ds.DATE()),0,1)
-    print('Time',str(ds.TIME()),0,3)
-    print('Tem'str(ds.TEMP()),0,5)
+    print(当前温度:',wd.read_temp())
     pyb.delay(1000)
