@@ -244,7 +244,19 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-#'preamble': '',
+'preamble': '''
+\documentclass{article}
+
+\usepackage{CJK}
+
+\begin{document}
+
+\begin{CJK*}{UTF8}{gbsn}
+  你好
+\end{CJK*}
+
+\end{document}
+'''
 # 'preamble': ('\\DeclareUnicodeCharacter{2264}{\\ensuremath{\\le}}'
                  # '\\DeclareUnicodeCharacter{2265}{\\ensuremath{\\ge}}'
 				 # '\\usepackage{xeCJK}')
