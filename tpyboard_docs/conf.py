@@ -246,7 +246,8 @@ latex_elements = {
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
 'preamble': ('\\DeclareUnicodeCharacter{2264}{\\ensuremath{\\le}}'
-                 '\\DeclareUnicodeCharacter{2265}{\\ensuremath{\\ge}}')
+                 '\\DeclareUnicodeCharacter{2265}{\\ensuremath{\\ge}}'
+				 '\newpage')
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -299,7 +300,7 @@ man_pages = [
 texinfo_documents = [
   (master_doc, 'MicroPython', 'MicroPython Documentation',
    'Damien P. George, Paul Sokolovsky, and contributors', 'MicroPython', 'One line description of project.',
-   'Miscellaneous'),
+   'Miscellaneous'),False
 ]
 
 # Documents to append as an appendix to all manuals.
