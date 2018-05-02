@@ -245,8 +245,8 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
-'papersize': 'a4paper',
-'preamble': ''
+'preamble': ('\\DeclareUnicodeCharacter{2264}{\\ensuremath{\\le}}'
+                 '\\DeclareUnicodeCharacter{2265}{\\ensuremath{\\ge}}')
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
