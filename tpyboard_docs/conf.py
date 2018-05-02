@@ -247,8 +247,6 @@ latex_elements = {
 #'preamble': '',
 'papersize': 'a4paper',
 'preamble': '',
-\hypersetup{unicode=true}
-\usepackage{CJKutf8}
 \DeclareUnicodeCharacter{00A0}{\\nobreakspace}
 \DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}
 \DeclareUnicodeCharacter{2286}{\ensuremath{\subseteq}}
