@@ -276,11 +276,11 @@ latex_elements = {
 # \\begin{CJK}{UTF8}{gbsn}
 # \AtEndDocument{\end{CJK}}
 # '''
-		'babel':'',
-        'fontpkg':'',
-        'inputenc':'',
-        'fontenc':'',
-        'utf8extra':''
+		# 'babel':'',
+        # 'fontpkg':'',
+        # 'inputenc':'',
+        # 'fontenc':'',
+        # 'utf8extra':''
 }
 
 latex_docclass = {
