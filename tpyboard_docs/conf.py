@@ -247,7 +247,7 @@ latex_elements = {
 #'preamble': '',
 'preamble': ('\\DeclareUnicodeCharacter{2264}{\\ensuremath{\\le}}'
                  '\\DeclareUnicodeCharacter{2265}{\\ensuremath{\\ge}}'
-				 '\newpage')
+				 '\usepackage{xeCJK}')
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
