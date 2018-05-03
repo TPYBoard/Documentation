@@ -155,19 +155,16 @@ MicroPython的特有功能如下。
    .. toctree::
       :maxdepth: 5
 
-      pyb.rst
-      lcd160cr.rst
-<<<<<<< HEAD
-	  mfrc522.rst
-	  lcd1602.rst
-	  lcd5110.rst
-	  lcd12864.rst
-	  ds18b20.rst
-	  ds3231.rst
-	  vs1838.rst
-=======
-      mfrc522.rst
->>>>>>> origin/master
+        pyb.rst
+        lcd160cr.rst
+        mfrc522.rst
+        lcd1602.rst
+        lcd5110.rst
+        lcd12864.rst
+        ds18b20.rst
+        ds3231.rst
+        vs1838.rst
+      
 
 .. only:: port_wipy
 
