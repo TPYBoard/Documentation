@@ -145,13 +145,15 @@ MicroPython的特有功能如下。
    network.rst
    uctypes.rst
 
+.. only:: port_tpyboard
+
 MicroPython类库详述
 ------------------------------
 
 MicroPython的特有功能如下。
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    mfrc522.rst
    lcd1602.rst
@@ -166,7 +168,7 @@ TPYBoard类库详述
 ---------------------------------
 
 以下是TPYBoard的具体类库。
-.. only:: port_tpyboard
+
 
     .. toctree::
        :maxdepth: 1
