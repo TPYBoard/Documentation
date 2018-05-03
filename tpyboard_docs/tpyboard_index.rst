@@ -8,11 +8,11 @@ TPYBoard Document
     tpyboard/general.rst
     tpyboard/tutorial/index.rst
     library/index.rst
+	tpyboard/driver/index.rst
     example_index.rst
     tpyboard/hardware/index.rst
     firmware/index.rst
     license.rst
-	tpyboard/driver/index.rst
     tpyboard_contents.rst
 
 
