@@ -145,6 +145,20 @@ MicroPython的特有功能如下。
    network.rst
    uctypes.rst
 
+MicroPython类库详述
+------------------------------
+
+MicroPython的特有功能如下。
+
+.. toctree::
+   :maxdepth: 1
+
+   btree.rst
+   framebuf.rst
+   machine.rst
+   lcd1602.rst
+   ds18b20.rst
+   uctypes.rst
 
 TPYBoard类库详述
 ---------------------------------
