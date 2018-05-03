@@ -1,20 +1,21 @@
-.. _firmware_index:
+.. _port_tpyboard:
 
-TPYBoard 固件更新记录
-=======================
+TPYBoard类库
+=====================
 
-本文章记录了TPYBoard系列开发板的固件更新记录，方便大家查阅。
+TPYBoard类库详述
+------------------------------
 
-
-TPYBoard系列开发板
-----------------------------
+TPYBoard的特有功能如下。
 
 .. toctree::
    :maxdepth: 1
-   :numbered:
 
-   UpdateLog_v10x.rst
-   UpdateLog_v20x.rst
-   UpdateLog_v70x.rst
-   UpdateLog_tpdog.rst
-   
+   mfrc522.rst
+   lcd1602.rst
+   lcd5110.rst
+   lcd12864.rst
+   ds18b20.rst
+   ds3231.rst
+   vs1838.rst
+   nrf24l01.rst
