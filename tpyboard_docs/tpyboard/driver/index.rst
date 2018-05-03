@@ -21,3 +21,4 @@ TPYBoard的特有功能如下。
    nrf24l01.rst
    syn6288.rst
    at24c0x.rst
+   smg.rst
