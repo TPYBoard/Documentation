@@ -1,8 +1,8 @@
 
-TPYBoardv10x ¹Ì¼þ¸üÐÂ¼ÇÂ¼
+TPYBoardv10x å›ºä»¶æ›´æ–°è®°å½•
 ============================
 
-2018Äê04ÔÂ28ÈÕ °æ±¾ºÅ **TPYBoardv10x-v1.9.3-0.0.1**
+2018å¹´04æœˆ28æ—¥ ç‰ˆæœ¬å· **TPYBoardv10x-v1.9.3-0.0.1**
 
-    - micropython°æ±¾¸üÐÂµ½v1.9.3
-    - Ôö¼ÓMFRC522Ä£¿éµÄÀàÐÍ
+    - micropythonç‰ˆæœ¬æ›´æ–°åˆ°v1.9.3
+    - å¢žåŠ MFRC522æ¨¡å—çš„ç±»åž‹
