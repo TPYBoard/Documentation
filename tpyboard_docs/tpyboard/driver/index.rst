@@ -19,3 +19,5 @@ TPYBoard的特有功能如下。
    ds3231.rst
    vs1838.rst
    nrf24l01.rst
+   syn6288.rst
+   at24c0x.rst
