@@ -22,3 +22,4 @@ TPYBoard的特有功能如下。
    syn6288.rst
    at24c0x.rst
    smg.rst
+   步进电机.rst
