@@ -1,4 +1,4 @@
-@@ -1,192 +0,0 @@
+
 MicroPython类库
 =====================
 
@@ -154,7 +154,7 @@ TPYBoard类库详述
 以下是TPYBoard的具体类库。
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
 	pyb.rst
 	lcd160cr.rst
