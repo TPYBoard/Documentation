@@ -12,6 +12,7 @@ TPYBoard Document
     tpyboard/hardware/index.rst
     firmware/index.rst
     license.rst
+	tpyboard/driver/index.rst
     tpyboard_contents.rst
     
 
