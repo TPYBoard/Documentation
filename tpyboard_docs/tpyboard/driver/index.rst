@@ -1,4 +1,4 @@
-.. only:: port_tpyboard
+.. port_tpyboard:
 
 TPYBoard类库
 =====================

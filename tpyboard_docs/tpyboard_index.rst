@@ -14,7 +14,7 @@ TPYBoard Document
     license.rst
 	tpyboard/driver/index.rst
     tpyboard_contents.rst
-    
+
 
 Indices and tables
 ==================
