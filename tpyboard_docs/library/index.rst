@@ -157,6 +157,7 @@ MicroPython的特有功能如下。
 
       pyb.rst
       lcd160cr.rst
+<<<<<<< HEAD
 	  mfrc522.rst
 	  lcd1602.rst
 	  lcd5110.rst
@@ -164,6 +165,9 @@ MicroPython的特有功能如下。
 	  ds18b20.rst
 	  ds3231.rst
 	  vs1838.rst
+=======
+      mfrc522.rst
+>>>>>>> origin/master
 
 .. only:: port_wipy
 
