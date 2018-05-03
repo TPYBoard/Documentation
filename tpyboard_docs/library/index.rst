@@ -145,25 +145,6 @@ MicroPython的特有功能如下。
    network.rst
    uctypes.rst
 
-.. only:: port_tpyboard
-
-TPYBoard类库详述
-------------------------------
-
-TPYBoard的特有功能如下。
-
-.. toctree::
-   :maxdepth: 1
-
-   mfrc522.rst
-   lcd1602.rst
-   lcd5110.rst
-   lcd12864.rst
-   ds18b20.rst
-   ds3231.rst
-   vs1838.rst
-   nrf24l01.rst
-
 .. only:: port_wipy
 
    Libraries specific to the WiPy
