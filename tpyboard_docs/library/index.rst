@@ -151,14 +151,16 @@ MicroPython类库详述
 MicroPython的特有功能如下。
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   btree.rst
-   framebuf.rst
-   machine.rst
+   mfrc522.rst
    lcd1602.rst
+   lcd5110.rst
+   lcd12864.rst
    ds18b20.rst
-   uctypes.rst
+   ds3231.rst
+   vs1838.rst
+   nrf24l01.rst
 
 TPYBoard类库详述
 ---------------------------------
