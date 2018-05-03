@@ -153,7 +153,7 @@ MicroPython的特有功能如下。
    以下是TPYBoard的具体类库。
 
    .. toctree::
-      :maxdepth: 2
+      :maxdepth: 5
 
       pyb.rst
       lcd160cr.rst
