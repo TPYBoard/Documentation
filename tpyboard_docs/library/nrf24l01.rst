@@ -9,13 +9,13 @@
 功能相关函数
 ------------------------------------
 
-.. function:: master(data)
+.. function:: master(spi,data)
 
-  发射函数，设置为发送端，并发送data
+  发射函数，设置为发送端，并发送data。输入参数spi为SPI接口号,data为待发送数据
 
-.. function::slave():
+.. function::slave(spi):
 
-   接收函数，返回值为接收到的数据
+   接收函数，返回值为接收到的数据,输入参数为SPI接口号
 
 NRF24L01与开发板接线对应引脚：
 ---------------------------------------------------------
@@ -50,7 +50,7 @@ NRF24L01与开发板接线对应引脚：
 
   def main():
 	while True:
-		slave()           #接收模式
-       #master(0XAB)      #发射模式,发送0xab
+		slave(1)           #接收模式
+       #master(1,0XAB)      #发射模式,发送0xab
 
   main()

@@ -4,7 +4,7 @@
 .. module:: LCD5110
    :synopsis: 5110液晶屏关联功能函数
 
-`` LCD5110`` 模块的主要功能与函数
+``LCD5110`` 模块的主要功能与函数
 
 功能相关函数
 ----------------------
@@ -47,7 +47,11 @@
   读缓存函数，读出缓存区全部缓存并送去显示，显示内容为一整屏
 
 LCD5110与开发板接线对应引脚：
+<<<<<<< HEAD
 -------------------------------
+=======
+----------------------------------
+>>>>>>> origin/master
 
 		+------------+---------+
 		| TPYBoard   | LCD5110 |
@@ -88,7 +92,7 @@ LCD5110与开发板接线对应引脚：
     CE     = pyb.Pin('Y11')
     DC     = pyb.Pin('Y9')
     LIGHT  = pyb.Pin('Y12')
-    lcd_5110 = lcd5110.LCD5110(SPI, RST, CE, DC, LIGHT)
+    lcd_5110 = lcd5110.LCD5110(SPI, RST, CE, DC, LIGHT)	#设置LCD5110使用SPI1及其它功能引脚
 
     lcd_5110.lcd_write_string('Hello Python!',0,0)
     lcd_5110.lcd_write_string('Micropython',6,1)

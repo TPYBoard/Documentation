@@ -58,7 +58,7 @@ MFRC522与开发板接线对应引脚：
   	RC522_SDA='X4'
   	RC522_RST='X2'
   	rc52=rc522.MFRC522()
-  	rc52.init_spi(SPI,RC522_RST,RC522_SDA)
+  	rc52.init_spi(SPI,RC522_RST,RC522_SDA)      #设置rc522功能引脚
   	while True:
   		(status,backBits)=rc52.SeekCard(0x52)   #寻找区范围内所有能识别的卡
   		if(status==0):                          #判断是否找到卡

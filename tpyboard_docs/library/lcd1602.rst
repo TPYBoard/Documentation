@@ -4,7 +4,7 @@
 .. module:: LCD1602
    :synopsis: 1602液晶屏关联功能函数
 
-`` LCD1602`` 模块的主要功能与函数
+``LCD1602`` 模块的主要功能与函数
 
 功能相关函数
 ----------------------
@@ -84,7 +84,7 @@ LCD1602与开发板接线对应引脚：
 
 
   def main():
-        lcd = TPYBoardGpioLcd1602(rs_pin=Pin.board.Y10,
+        lcd = TPYBoardGpioLcd1602(rs_pin=Pin.board.Y10,			#设置引脚
                                   enable_pin=Pin.board.Y9,
                                   d4_pin=Pin.board.Y5,
                                   d5_pin=Pin.board.Y6,

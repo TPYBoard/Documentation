@@ -4,7 +4,7 @@
 .. module:: LCD12864B
    :synopsis: 12864液晶屏关联功能函数
 
-`` LCD12864B`` 模块的主要功能与函数
+``LCD12864B`` 模块的主要功能与函数
 
 功能相关函数
 ----------------------
@@ -23,7 +23,11 @@
 
 
 LCD12864B与开发板接线对应引脚：
+<<<<<<< HEAD
 --------------------------------
+=======
+----------------------------------
+>>>>>>> origin/master
 
 		+------------+---------+
 		| TPYBoard   |LCD12864B|
@@ -72,7 +76,7 @@ LCD12864B与开发板接线对应引脚：
   import pyb
   import LCD12864
   def main():
-	lcd=LCD12864.lcd12864(RS='Y2',E='Y1')
+	lcd=LCD12864.lcd12864(RS='Y2',E='Y1')		#设置LCD12864功能引脚
 	lcd.lcd_write_string(0x82,"MicroPyton",1)
 	lcd.lcd_write_string(0x91,"By TurnipSmart",1)
 	lcd.lcd_write_string(0x8a,"萝卜电子",2)
