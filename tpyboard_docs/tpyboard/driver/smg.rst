@@ -9,9 +9,9 @@
 功能相关函数
 ----------------------
 
-.. function:: smg_xs(com,port,data)
+.. function:: smg_xs(com,port,data,ponit)
 
-   显示函数，输入参数com为选择供阳(1)\共阴(0)，port设置数码管a脚，data为显示的内容
+   显示函数，输入参数com为选择供阳(1)\共阴(0),port设置数码管a脚,data为显示的内容,ponit为是(1)\否(0)显示小数点
 
 数码管与开发板接线对应引脚：（供阳COM接3V3，共阴COM接GND）
 -------------------------------
@@ -50,7 +50,7 @@
   def main():
 	ds=0
 	while True:	
-		smg.smg_xs(1,'X1',ds)  #共阳数码管,a脚为X1,显示ds计数
+		smg.smg_xs(1,'X1',ds,0)  #共阳数码管,a脚为X1,显示ds计数,不显示小数点
 		pyb.delay(500)
 		ds+=1
 		if ds==10:

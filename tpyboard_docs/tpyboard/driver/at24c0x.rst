@@ -9,15 +9,12 @@
 功能相关函数
 ----------------------
 
-.. function:: initAT24C0X(self,i2c_num)
 
-   初始化函数，输入参数为i2c号
-
-.. function:: writeAT24C0X(self,addr,data)
+.. function:: writeAT24C0x(self,addr,data)
 
    写入函数，输入参数addr为写入地址,data为写入数据
 
-.. function:: readAT24C0X(self,add,bit_len)
+.. function:: readAT24C0x(self,add,bit_len)
 
    读取函数，输入参数addr为读取地址,bit_len为读取字节数
 
@@ -43,8 +40,11 @@ AT24C0X与开发板接线对应引脚：
 
   # main.py -- put your code here!
   import at24c0x
-  at24c=at24c0x.AT24C0X(2)
+
   def main():
-		at24c.writeAT24C0X(0,'abc')
-		print(at24c.readAT24C0X(0,3))
+	at24c=at24c0x.AT24C(1)
+	at24c.writeAT24C0x(0,'qxw')
+	print(at24c.readAT24C0x(0,3))
+	while True:
+		a=0
   main()
