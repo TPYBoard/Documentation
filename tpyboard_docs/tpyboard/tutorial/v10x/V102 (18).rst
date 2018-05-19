@@ -24,25 +24,25 @@ TPYBoard v10x作为鼠标的应用可以参考micropython官方实例中的usb-m
         #pyb.usb_mode('VCP+MSC') # act as a serial and a storage device
         pyb.usb_mode('VCP+HID') # act as a serial device and a mouse
     
-    其实就是去掉了pyb.usb_mode('CDC+HID')前的注释符。这里pyb.usb_mode()，定义了HID的设备，默认为mouse，也可以用pyb.usb_mode('CDC+HID',hid=pyb.hid_mouse)。如果是键盘，应改为pyb.usb_mode('CDC+HID',hid=pyb.hid_keyboard)。
+其实就是去掉了pyb.usb_mode('CDC+HID')前的注释符。这里pyb.usb_mode()，定义了HID的设备，默认为mouse，也可以用pyb.usb_mode('CDC+HID',hid=pyb.hid_mouse)。
+如果是键盘，应改为pyb.usb_mode('CDC+HID',hid=pyb.hid_keyboard)。
 
 	- REPL调试鼠标事件
 
-	这里依然用PuTTY进行REPL调试。当进行完(1)再次启动时，会发现原本会出现的U盘没有了，此时设备的串口也可能发生了改变，因此在连接PuTTY前要先确认一下串口。在PuTTY中，输入:
+这里依然用PuTTY进行REPL调试。当进行完(1)再次启动时，会发现原本会出现的U盘没有了，此时设备的串口也可能发生了改变，因此在连接PuTTY前要先确认一下串口。
+在PuTTY中，输入:
     
     .. code-block:: python
     
         pyb.hid((0,10,0,0))  #注意这里两层括号
-    
-	
-    回车后，会发现鼠标向右移动了10个像素。pyb.hid()的具体用法:
+    	
+回车后，会发现鼠标向右移动了10个像素。pyb.hid()的具体用法:
 
     .. code-block:: python
         
         pyb.hid((buttons, x, y, z))
-
         
-	这里buttons取0,1,2,3分别表示0移动，1按下左键，2按下中键，3按下右键。这句也可以用pyb.USB_HID().send((buttons, x, y, z))，效果是一样的。
+这里buttons取0,1,2,3分别表示0移动，1按下左键，2按下中键，3按下右键。这句也可以用pyb.USB_HID().send((buttons, x, y, z))，效果是一样的。
 
 	- 鼠标左右摇晃
 
@@ -56,8 +56,8 @@ TPYBoard v10x作为鼠标的应用可以参考micropython官方实例中的usb-m
         ...
         >>> osc(100, 50)
 
-        
-	这段代码也可以写到main.py中，这时大家可能会问，u盘没了，main.py怎么编辑啊。这里需要进入TPYBoard v10x的安全模式。按住usr键，按一下reset，此时led2与led3交替亮，当led3亮起，led2没亮时，松开usr，此时led3快闪后，可以发现u盘挂载出来了，这时可以修改main.py文件::
+这段代码也可以写到main.py中，这时大家可能会问，u盘没了，main.py怎么编辑啊。这里需要进入TPYBoard v10x的安全模式。
+按住usr键，按一下reset，此时led2与led3交替亮，当led3亮起，led2没亮时，松开usr，此时led3快闪后，可以发现u盘挂载出来了，这时可以修改main.py文件:
 
     .. code-block:: python
     
