@@ -14,7 +14,7 @@ TPYBoard v10x作为鼠标应用
 
 TPYBoard v10x作为鼠标的应用可以参考micropython官方实例中的usb-mouse应用。这里以官方实例为例。
 
-编辑 boot.py 文件以更改 USB_mouse 的确认方式。具体如下:
+编辑 boot.py 文件以更改 usb_mouse 的确认方式。具体如下:
     
     .. code-block:: python
     
@@ -29,7 +29,7 @@ TPYBoard v10x作为鼠标的应用可以参考micropython官方实例中的usb-m
   
 **REPL调试鼠标事件**
 
-这里依然用PuTTY进行REPL调试。当进行完(1)再次启动时，会发现原本会出现的U盘没有了，此时设备的串口也可能发生了改变，因此在连接PuTTY前要先确认一下串口。
+这里依然用PuTTY进行REPL调试。修改完boot.py文件后复位一下，会发现原本会出现的U盘没有了，此时设备的串口也可能发生了改变，因此在连接PuTTY前要先确认一下串口。
 在PuTTY中，输入:
     
     .. code-block:: python
@@ -74,7 +74,7 @@ TPYBoard v10x作为鼠标的应用可以参考micropython官方实例中的usb-m
 
 **加速度传感器的鼠标**
 
-用加速度传感器制作一个能根据 tpyboard 板角度移动而移动的鼠标。相关的代码可以直接在交互式解释器里边完成，或者放入 main.py 文件中。在这里我们选择放入 main.py 文件。
+用加速度传感器制作一个能根据TPYBoard开发板角度移动而移动的鼠标。相关的代码可以直接在交互式解释器里边完成，或者放入 main.py 文件中。在这里我们选择放入 main.py 文件。
 
 在 main.py 中代码:
     
@@ -87,13 +87,13 @@ TPYBoard v10x作为鼠标的应用可以参考micropython官方实例中的usb-m
             pyb.hid((0, accel.x(), accel.y(), 0))
             pyb.delay(20）
 			
-保存文件，退出或卸载 tpyboard 设备。通过复位按键重置，其将再次成为鼠标，且根据板的倾斜角度移动鼠标。
-你应该能注意到 y轴方向是颠倒的。这个问题很容易解决：在上述的 pyb.hid( )行里，y 轴方向前边加上负号即可。
+保存文件，退出或卸载TPYBoard设备。通过复位按键重置，其将再次成为鼠标，且根据板的倾斜角度移动鼠标。
+你应该能注意到 y轴方向是颠倒的。这个问题很容易解决：在上述的pyb.hid()行里，y 轴方向前边加上负号即可。
 
 TPYBoard v10x作为键盘应用
 -------------------------------------
 
-编辑 boot.py 文件，定义usb-keyboard:
+编辑 boot.py 文件，定义usb_keyboard:
 
     .. code-block:: python
     
