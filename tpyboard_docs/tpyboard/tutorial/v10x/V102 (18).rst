@@ -14,13 +14,14 @@ TPYBoard v10x作为鼠标应用
 
 TPYBoard v10x作为鼠标的应用可以参考micropython官方实例中的usb-mouse应用。这里以官方实例为例。
 
-    - (1)编辑 boot.py 文件以更改 USB—mouse 的确认方式。具体如下:
-.. code-block:: python
-    import machine
-    import pyb
-    #pyb.main('main.py') # main script to run after this one
-    #pyb.usb_mode('VCP+MSC') # act as a serial and a storage device
-    pyb.usb_mode('VCP+HID') # act as a serial device and a mouse
+    - 编辑 boot.py 文件以更改 USB—mouse 的确认方式。具体如下:
+    
+    .. code-block:: python
+        import machine
+        import pyb
+        #pyb.main('main.py') # main script to run after this one
+        #pyb.usb_mode('VCP+MSC') # act as a serial and a storage device
+        pyb.usb_mode('VCP+HID') # act as a serial device and a mouse
     
     其实就是去掉了pyb.usb_mode('CDC+HID')前的注释符。这里pyb.usb_mode()，定义了HID的设备，默认为mouse，也可以用pyb.usb_mode('CDC+HID',hid=pyb.hid_mouse)。如果是键盘，应改为pyb.usb_mode('CDC+HID',hid=pyb.hid_keyboard)。
 
