@@ -16,7 +16,7 @@ TPYBoard v10x作为鼠标的应用可以参考micropython官方实例中的usb-m
 
 编辑 boot.py 文件以更改 usb_mouse 的确认方式。具体如下:
     
-.. code-block::python
+.. code-block:: python
 
     import machine
     import pyb
@@ -32,7 +32,7 @@ TPYBoard v10x作为鼠标的应用可以参考micropython官方实例中的usb-m
 这里依然用PuTTY进行REPL调试。修改完boot.py文件后复位一下，会发现原本会出现的U盘没有了，此时设备的串口也可能发生了改变，因此在连接PuTTY前要先确认一下串口。
 在PuTTY中，输入:
     
-.. code-block::python
+.. code-block:: python
 
     pyb.hid((0,10,0,0))  #注意这里两层括号
     	
