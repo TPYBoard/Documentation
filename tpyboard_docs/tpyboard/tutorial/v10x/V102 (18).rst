@@ -1,73 +1,68 @@
 [Micropython]TPYBoardV10X教程9 USB－HID应用
 =====================================================
+版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
 
-	原创版权归山东萝卜科技有限公司所有,转载必须以链接形式注明作者和原始出处。
+本部分重点讲述如果将TPYBoard v10x作为USB-HID来应用。
 
-	本部分重点讲述如果将TPYBV101作为USB-HID来应用。
+引言
+--------------
 
-	1、引言
---------------------
+USB－HID是Human Interface Device的缩写，属于人机交互操作的设备，如USB鼠标，USB键盘，USB游戏操纵杆，USB触摸板，USB轨迹球、电话拨号设备、VCR遥控等等设备。 TPYBoard v10x除了具有usb host功能以外，还可作为USB－HID设备来应用，这里重点讲述如果作为鼠标和键盘使用。
 
-	USB－HID是Human Interface Device的缩写，属于人机交互操作的设备，如USB鼠标，USB键盘，USB游戏操纵杆，USB触摸板，USB轨迹球、电话拨号设备、VCR遥控等等设备。 TPYBV101除了具有usb host功能以外，还可作为USB－HID设备来应用，这里重点讲述如果作为鼠标和键盘使用。
-
-	2、TPYBV101作为鼠标应用
+TPYBoard v10x作为鼠标应用
 -------------------------------
 
-		TPYBV101作为鼠标的应用可以参考micropython官方实例中的usb-mouse应用。这里以官方实例为例。
+TPYBoard v10x作为鼠标的应用可以参考micropython官方实例中的usb-mouse应用。这里以官方实例为例。
 
-		（1）编辑 boot.py 文件以更改 USB—mouse 的确认方式。具体如下::
+    - (1)编辑 boot.py 文件以更改 USB—mouse 的确认方式。具体如下::
 
-			<span style="font-family: 宋体, SimSun; font-size: 12px;"># boot.py -
-			- run on boot-up<br># can run arbitrary Python,
-			but best to keep it minimal<br>import pyb<br>
-			#pyb.main('main.py')<br>
-			# main script to run after this one
-			#pyb.usb_mode('CDC+MSC')<br>
-			# act as a serial and a storage device<br>pyb.usb_mode('CDC+HID')<br>
-			# act as a serial device and a mouse<br></span>
 		
-		其实就是去掉了pyb.usb_mode('CDC+HID')前的注释符。这里pyb.usb_mode()，定义了HID的设备，默认为mouse，也可以用pyb.usb_mode('CDC+HID',hid=pyb.hid_mouse)。如果是键盘，应改为pyb.usb_mode('CDC+HID',hid=pyb.hid_keyboard)。
+	其实就是去掉了pyb.usb_mode('CDC+HID')前的注释符。这里pyb.usb_mode()，定义了HID的设备，默认为mouse，也可以用pyb.usb_mode('CDC+HID',hid=pyb.hid_mouse)。如果是键盘，应改为pyb.usb_mode('CDC+HID',hid=pyb.hid_keyboard)。
 
-		（2）REPL调试鼠标事件
---------------------------------------
+	- (2)REPL调试鼠标事件
 
-		这里依然用putty进行REPL调试。当进行完（1）再次启动时，会发现原本会出现的u盘没有了，此时设备的串口也可能发生了改变，因此在连接Putty前要先确认一下串口。在putty中，输入::
+	这里依然用PuTTY进行REPL调试。当进行完(1)再次启动时，会发现原本会出现的U盘没有了，此时设备的串口也可能发生了改变，因此在连接PuTTY前要先确认一下串口。在PuTTY中，输入:
+    
+    .. code-block:: python
+    
+        pyb.hid((0,10,0,0))  #注意这里两层括号
 
-			pyb.hid((0,10,0,0))  #注意这里两层括号
+	回车后，会发现鼠标向右移动了10个像素。pyb.hid()的具体用法::
 
-		回车后，会发现鼠标向右移动了10个像素。pyb.hid()的具体用法::
+    .. code-block:: python
+        
+        pyb.hid((buttons, x, y, z))
 
-			pyb.hid((buttons, x, y, z))
+	这里buttons取0,1,2,3分别表示0移动，1按下左键，2按下中键，3按下右键。这句也可以用pyb.USB_HID().send((buttons, x, y, z))，效果是一样的。
 
-		这里buttons取0,1,2,3分别表示0移动，1按下左键，2按下中键，3按下右键。这句也可以用pyb.USB_HID().send((buttons, x, y, z))，效果是一样的。
+	- (3)鼠标左右摇晃
 
-		（3）鼠标左右摇晃
------------------------------
+	.. code-block:: python
+    
+		import math
+		def osc(n, d):
+			for i in range(n):
+				pyb.hid((0, int(20 * math.sin(i / 10)), 0, 0))
+				pyb.delay(d)
+        osc(100, 50)
 
-		代码如下::
+	这段代码也可以写到main.py中，这时大家可能会问，u盘没了，main.py怎么编辑啊。这里需要进入TPYBoard v10x的安全模式。按住usr键，按一下reset，此时led2与led3交替亮，当led3亮起，led2没亮时，松开usr，此时led3快闪后，可以发现u盘挂载出来了，这时可以修改main.py文件::
 
-			>>> import math
-			>>> def osc(n, d):
-				for i in range(n):
-					pyb.hid((0, int(20 * math.sin(i / 10)), 0, 0))
-					pyb.delay(d)
-			>>> osc(100, 50)
-
-		这段代码也可以写到main.py中，这时大家可能会问，u盘没了，main.py怎么编辑啊。这里需要进入TPYBV101的安全模式。按住usr键，按一下reset，此时led2与led3交替亮，当led3亮起，led2没亮时，松开usr，此时led3快闪后，可以发现u盘挂载出来了，这时可以修改main.py文件::
-
-				#main.py
-				import math
-				import pyb
-				def osc(n, d):
-				for i in range(n):
-					pyb.hid((0, int(20 * math.sin(i / 10)), 0, 0))
-					pyb.delay(d)
-				osc(100, 50)
+    .. code-block:: python
+    
+        #main.py
+        import math
+        import pyb
+        def osc(n, d):
+        for i in range(n):
+            pyb.hid((0, int(20 * math.sin(i / 10)), 0, 0))
+            pyb.delay(d)
+        osc(100, 50)
 			
-		保存后，按reset重启后，就可以看到效果了。
+    保存后，按RST重启后，就可以看到效果了。
 
-		（4）加上加速度传感器的鼠标（官方例程）
-------------------------------------------------------------
+	- (4)加上加速度传感器的鼠标（官方例程）
+
 
 		用加速度传感器制作一个能根据 tpyboard 板角度移动而移动的鼠标。相关的代码可以直接在交互式解释器里边完成，或者放入 main.py 文件中。在这里我们选择放入 main.py 文件。
 
@@ -82,10 +77,10 @@
 			
 		保存文件，退出或卸载 tpyboard 设备。通过复位按键重置，其将再次成为鼠标，且根据板的倾斜角度移动鼠标。你应该能注意到 y轴方向是颠倒的。这个问题很容易解决：在上述的 pyb.hid( )行里，y 轴方向前边加上负号即可。
 
-	3、TPYBV101作为键盘应用
+TPYBoard v10x作为键盘应用
 -------------------------------------
 
-	（1） 编辑 boot.py 文件，定义usb-keyboard::
+	- (1)编辑 boot.py 文件，定义usb-keyboard::
 
 		# boot.py -- run on boot-up
 		# can run arbitrary Python, but best to keep it minimal
@@ -96,7 +91,7 @@
 		#pyb.usb_mode('CDC+MSC') # act as a serial and a storage device
 		pyb.usb_mode('CDC+HID',hid=pyb.hid_keyboard) # act as a serial device and a keyboard
 
-	（2）按键测试，这里为了便于查看，我们修改main.py文件::
+	- (2)按键测试，这里为了便于查看，我们修改main.py文件::
 
 			 # main.py -- put your code here!
 			 hid=pyb.USB_HID()
@@ -376,4 +371,4 @@
 	4、恢复正常模式
 -----------------------------
 
-	TPYBV101退出CDC+HID模式的方法有两个，一个是进入安全模式，将boot.py文件的pyb.usb_mode('CDC+HID'）注释掉，另一种是恢复出厂设置，这种方法是按住usr键，按一下reset，然后led2和led3交替亮，当两个灯交替亮到三次，且均亮起时，松开usr，两个灯会快闪多次，然后TPYBV101恢复到出厂设置，此时main.py里的内容也都清空了。
+	TPYBoard v10x退出CDC+HID模式的方法有两个，一个是进入安全模式，将boot.py文件的pyb.usb_mode('CDC+HID'）注释掉，另一种是恢复出厂设置，这种方法是按住usr键，按一下reset，然后led2和led3交替亮，当两个灯交替亮到三次，且均亮起时，松开usr，两个灯会快闪多次，然后TPYBoard v10x恢复到出厂设置，此时main.py里的内容也都清空了。
