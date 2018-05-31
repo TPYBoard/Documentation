@@ -15,3 +15,4 @@ TPYBoardv10x 固件更新记录
 	- 增加VS1838B红外接收模块的类库
 	
 使用方法参照 http://docs.tpyboard.com/zh/latest/tpyboard/driver/
+.. 固件下载: https://github.com/TPYBoard/Documentation/blob/master/tpyboard_docs/tpyboard/gujian
