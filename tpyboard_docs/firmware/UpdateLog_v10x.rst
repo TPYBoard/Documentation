@@ -16,4 +16,4 @@ TPYBoardv10x 固件更新记录
 	
 使用方法参照 http://docs.tpyboard.com/zh/latest/tpyboard/driver/
 
-visit `固件下载 <https://github.com/TPYBoard/Documentation/blob/master/tpyboard_docs/tpyboard/gujian>`_
+`固件下载 <https://github.com/TPYBoard/Documentation/blob/master/tpyboard_docs/tpyboard/gujian>`_
