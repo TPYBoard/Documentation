@@ -6,3 +6,7 @@ TPYBoardv10x 固件更新记录
 
     - micropython版本更新到v1.9.3
     - 增加MFRC522模块的类库
+
+2018年05月31日 版本号 **TPYBoardv10x-v1.9.3-0.0.2**
+
+	- 增加VS1838B模块的类库
