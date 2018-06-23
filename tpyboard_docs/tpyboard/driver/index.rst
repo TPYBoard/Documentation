@@ -24,3 +24,5 @@ TPYBoard的特有功能如下。
    smg.rst
    步进电机.rst
    gu620.rst
+   PS2手柄.rst
+   AS608指纹识别.rst
