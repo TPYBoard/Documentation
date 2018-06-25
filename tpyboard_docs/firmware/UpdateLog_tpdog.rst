@@ -16,6 +16,11 @@ TurnipDog 固件更新记录
 
 	- 增加了AT24C系列EEPROM存储器驱动类库
 	
+2018年06月25日 版本号 **TurnipDog-v1.9.3-0.0.4**
+
+	- 增加了单个数码管驱动类库
+	- 增加了DS3231驱动类库
+	
 使用方法参照 http://docs.tpyboard.com/zh/latest/tpyboard/driver/
 
 `固件下载 <https://github.com/TPYBoard/Documentation/blob/master/tpyboard_docs/tpyboard/gujian>`_
