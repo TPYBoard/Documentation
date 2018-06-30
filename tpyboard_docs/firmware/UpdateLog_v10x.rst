@@ -23,6 +23,11 @@ TPYBoardv10x 固件更新记录
 	- 增加了单个数码管驱动类库
 	- 增加了DS3231驱动类库
 	
+2018年06月30日 版本号 **TPYBoardv10x-v1.9.3-0.0.5**
+
+	- 增加了LCD5110驱动类库
+	- 增加了DS18B20驱动类库
+	
 使用方法参照 http://docs.tpyboard.com/zh/latest/tpyboard/driver/
 
 `固件下载 <https://github.com/TPYBoard/Documentation/blob/master/tpyboard_docs/tpyboard/gujian>`_
