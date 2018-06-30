@@ -78,7 +78,7 @@ LCD5110与开发板接线对应引脚：
   # main.py -- put your code here!
   import pyb
   import lcd5110
-  from machine import SPI,Pin
+  from pyb import SPI,Pin
 
   def main():
     SPI    = pyb.SPI(1) #DIN=>X8-MOSI/CLK=>X6-SCK
