@@ -26,3 +26,7 @@ TPYBoard的特有功能如下。
    gu620.rst
    PS2手柄.rst
    AS608指纹识别.rst
+   AM2320.rst
+   GY-30.rst
+   GY-39.rst
+   TFT液晶屏.rst
