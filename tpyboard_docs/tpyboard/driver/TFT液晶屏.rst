@@ -29,7 +29,7 @@
 
    设置显示区域函数，x,y为开始坐标，w,h为终点坐标(显示内容的尺寸)
  
-.. function:: writecolor(self,color):
+.. function:: writecolor(self,color)
 
    写颜色函数，功能为写入一个颜色，color为要写入的颜色
  
@@ -41,40 +41,40 @@
 
    画线函数，xs,ys为起点坐标，xe,ye为终点坐标，color为线的颜色
  
-.. function:: fill(self,xs,ys,xe,ye,color):
+.. function:: fill(self,xs,ys,xe,ye,color)
 
    画填充矩形函数，xs,ys为起点坐标，xe,ye为终点坐标，color为填充的颜色
  
-.. function:: rectangle(self,x1,y1,x2,y2,color):
+.. function:: rectangle(self,x1,y1,x2,y2,color)
 
    画空心矩形函数,xs,ys为起点坐标，xe,ye为终点坐标，color为矩形线的颜色
  
-.. function:: round(self,x0,y0,r,color):
+.. function:: round(self,x0,y0,r,color)
 
    画圆函数，x0,y0为圆心坐标，r为半径，color为圆边框的颜色
  
-.. function:: data8(self,data,color):
+.. function:: data8(self,data,color)
 
    写入一字节函数，功能为写入8个点，data为写入数据，color为点的颜色
  
-.. function:: write(self,x,y,a,b,fist,color):
+.. function:: write(self,x,y,a,b,fist,color)
 
    指定位置写数据函数，x,y为起点坐标，a,b为数据尺寸，fist为字库指针，color为数据颜色
    功能为在指定位置写入指定尺寸的数据，可指定颜色
  
-.. function:: write_str(self,x,y,wight,high,string,color):
+.. function:: write_str(self,x,y,wight,high,string,color)
 
    显示字符串函数，x,y为起点坐标，wight,high为字符尺寸，string为显示内容，color为字符串颜色
  
-.. function:: write_pictuer(self,x,y,wight,high,pictuer,color):
+.. function:: write_pictuer(self,x,y,wight,high,pictuer,color)
 
    显示指定颜色的黑白图像，x,y为起点坐标，wight,high为图像尺寸，pictuer为图像数组，color为图像颜色
  
-.. function:: init_str(self,font,indexes):
+.. function:: init_str(self,font,indexes)
 
    字库与索引表初始化函数，font为字符库，indexes为字符索引表
  
-.. function:: displayfile(self,name,x,y,width,height):
+.. function:: displayfile(self,name,x,y,width,height)
 
    bmp图像显示函数，name为图像文件名称，x,y为图像起点，width,height为图像尺寸
  
