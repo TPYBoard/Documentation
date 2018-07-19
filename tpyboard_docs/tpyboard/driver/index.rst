@@ -30,3 +30,4 @@ TPYBoard的特有功能如下。
    GY-30.rst
    GY-39.rst
    TFT液晶屏.rst
+   nrf905.rst
