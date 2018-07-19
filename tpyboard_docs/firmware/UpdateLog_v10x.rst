@@ -28,6 +28,12 @@ TPYBoardv10x 固件更新记录
 	- 增加了LCD5110驱动类库
 	- 增加了DS18B20驱动类库
 	
+2018年07月19日 版本号 **TPYBoardv10x-v1.9.3-0.0.6**
+
+	- 增加了AM2320驱动类库
+	- 增加了GY-30驱动类库
+	- 修复了一些BUG
+	
 使用方法参照 http://docs.tpyboard.com/zh/latest/tpyboard/driver/
 
 `固件下载 <https://github.com/TPYBoard/Documentation/blob/master/tpyboard_docs/tpyboard/gujian>`_
