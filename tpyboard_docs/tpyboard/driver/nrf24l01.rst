@@ -9,13 +9,13 @@
 功能相关函数
 ------------------------------------
 
-.. function:: master(spi,data)
+.. function:: master(data)
 
-  发射函数，设置为发送端，并发送data。输入参数spi为SPI接口号,data为待发送数据
+  发射函数，设置为发送端，并发送data。data为待发送数据。
 
-.. function::slave(spi):
+.. function::slave():
 
-   接收函数，返回值为接收到的数据,输入参数为SPI接口号
+   接收函数，返回值为接收到的数据。
 
 NRF24L01与开发板接线对应引脚：
 ---------------------------------------------------------
@@ -45,12 +45,17 @@ NRF24L01与开发板接线对应引脚：
 .. code-block:: python
 
   # main.py -- put your code here!
-  from nrf24l01use import master
-  from nrf24l01use import slave
-
-  def main():
-	while True:
-		slave(1)           #接收模式
-       #master(1,0XAB)      #发射模式,发送0xab
-
-  main()
+  import nrf24l01use
+  
+  nrf=nrf24l01use.nrf24l01(spi=2,csn='Y5',ce='Y4')	#设置SPI2接口csn引脚与ce引脚
+  
+  while True:
+  	print(nrf.slave())			#接收内容
+	
+  import nrf24l01use
+  
+  nrf=nrf24l01use.nrf24l01(spi=2,csn='Y5',ce='Y4')
+  i=0
+  while True:
+  	nrf.master(i)				#发送内容
+  	i+=1

@@ -20,6 +20,7 @@ TPYBoard的特有功能如下。
    AM2320.rst
    GY-30.rst
    GY-39.rst
+   bmp180.rst
    ds3231.rst
    vs1838.rst
    nrf24l01.rst
