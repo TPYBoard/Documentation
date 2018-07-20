@@ -51,7 +51,8 @@ NRF24L01与开发板接线对应引脚：
   
   while True:
   	print(nrf.slave())			#接收内容
-	
+
+.. code-block:: python
   import nrf24l01use
   
   nrf=nrf24l01use.nrf24l01(spi=2,csn='Y5',ce='Y4')
