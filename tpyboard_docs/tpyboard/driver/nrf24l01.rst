@@ -13,7 +13,7 @@
 
   发射函数，设置为发送端，并发送data。data为待发送数据。
 
-.. function::slave():
+.. function:: slave():
 
    接收函数，返回值为接收到的数据。
 
