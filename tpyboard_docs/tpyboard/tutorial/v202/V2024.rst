@@ -44,14 +44,20 @@
 
 	OneNET平台创建MQTT协议的产品并添加设备
 
-	.. image:: images/O1.png
+	.. image:: images/set up.gif
 
-	如果没有产品，点击创建产品即可，上面显示我已经创建完毕。
+	修改配置代码
 
+	.. image:: images/set.gif
+	
 	.. image:: images/O2.png
 
 	Smart Boy是我添加的设备，当我们插上TPYBoard v202时，就会看到上图绿点点亮，拔了以后就会变灰，前提是板子里程序已经写入。
 
+	如果此时202有数据上传可以在数据展示中查看
+	
+	.. image:: images/201.bmp
+	
 	实物接线图
 
 	.. image:: images/O3.png
