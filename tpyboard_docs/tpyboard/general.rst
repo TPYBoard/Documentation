@@ -1,6 +1,23 @@
 TPYBoard概述
 =====================================
 
+TPYBoard的连接与下载
+----------------------------
+
+首先我们通过USB连接线将TPYBoard和PC连接起来
+
+	.. image:: images/1.png
+	
+等待驱动自动安装完毕后，打开我的电脑-TPYBFLASH
+
+	.. image:: images/2.bmp
+	
+将编写好的main文件替换到TPYBFLASH里的mian文件
+
+	.. image:: images/3.gif
+	
+等待TPYBoard上的红灯亮灭两次以后程序下载完毕，按下RST键即可运行最新下载的程序
+
 本地文件系统和SD卡
 ----------------------------
 
