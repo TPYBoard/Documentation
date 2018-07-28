@@ -46,9 +46,12 @@
 
 	.. image:: images/set up.gif
 
+	
 	修改配置代码
 
 	.. image:: images/set.gif
+	
+	
 	
 	.. image:: images/O2.png
 
