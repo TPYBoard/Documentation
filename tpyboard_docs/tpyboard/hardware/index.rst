@@ -20,6 +20,10 @@ TPYBoard 资料:
 * `TPYBv702 原理图 <http://www.tpyboard.com/document/documents/702/TPYBoardv702.pdf>`_ (96.2KiB PDF)
 * `TPYBv702  PCB图 <http://www.tpyboard.com/document/documents/702/TPYBoardv702PCB.pdf>`_ (1.6MiB PDF)
 * `TPYBv702 引脚图 <http://www.tpyboard.com/document/documents/702/TPYBoardv702PCB.png>`_ (853KiB PNG)
+*
+* `TPBasic407 原理图 <http://old.tpyboard.com/document/documents/tb407/407_sch.pdf>`_ (543KiB PDF)
+* `TPBasic407  PCB图 <http://old.tpyboard.com/document/documents/tb407/407_pcb.pdf>`_ (529KiB PDF)
+* `TPBasic407 引脚图 <http://old.tpyboard.com/document/documents/tb407/407_pin.pdf>`_ (508KiB PDF)
 
 
 TPYBoard主要数据手册
