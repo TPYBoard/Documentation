@@ -80,3 +80,5 @@ while 1:
         pyb.LED(2).off()
         pyb.LED(4).off()
         led.value(0)
+
+* `обтьт╢бК <http://old.tpyboard.com/document/documents/tb407/diylight.rar>`_ 

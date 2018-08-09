@@ -84,3 +84,4 @@ IIC接口2的接线方法（程序中ds=DS3231(2)调用iic接口2）
 	print(ds.TEMP())
 
 
+* `下载源码 <http://old.tpyboard.com/document/documents/tb407/ds3231.rar>`_ 

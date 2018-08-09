@@ -81,3 +81,5 @@ Putty调试工具
 		tem = DQ.read_temp()
 		print(tem)
 		pyb.delay(1000)
+
+* `下载源码 <http://old.tpyboard.com/document/documents/tb407/18b20tem.rar>`_ 
