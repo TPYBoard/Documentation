@@ -1,0 +1,83 @@
+.. _TPYBoard_tutorial_18b20tem:
+
+F407Micropython控制DS18B20检测温度
+=====================================
+
+1.实验目的
+----------------
+
+   1. 学习在PC机系统中扩展简单I/O 接口的方法。
+   2. 进一步学习编制数据输出程序的设计方法。  
+   3. 学习DS18B20的接线方法，并利用DS18B20检测当前温度。
+
+2.所需元器件
+-------------------
+
+F407Micropython开发板1块
+数据线1条
+DS18b20温度传感器1个
+DS18B20测温模块(不含DS18B20)1个
+杜邦线若干
+Putty调试工具
+
+ 
+3.学习DS18B20的接线方法，检测当前温度 
+------------------------------------------
+
+  先看一下DS18B20针脚含义,如下图：
+  
+.. image:: http://old.tpyboard.com/document/documents/tb407/18b20tem_0.png
+              
+  将DS18B20温度传感器直接插DS18B20模块上。如图
+  
+.. image:: http://old.tpyboard.com/document/documents/tb407/18b20tem_1.jpg
+
+.. image:: http://old.tpyboard.com/document/documents/tb407/18b20tem_2.jpg
+
+.. image:: http://old.tpyboard.com/document/documents/tb407/18b20tem_3.gif
+
+   DS18B20扩展板的针脚与F407 Micropython开发板的针脚对应关系如下：
+
+.. image:: http://old.tpyboard.com/document/documents/tb407/18b20tem_4.jpg
+
++------------------------+----------------+
+| F407 Micropython开发板 |    DS18B20     |
++========================+================+
+|  # 3V3   or any Pin    |      VDD       |
++------------------------+----------------+
+|  # any   Pin           |      DO        |
++------------------------+----------------+
+|  #   GND               |      GND       |
++------------------------+----------------+
+
++------------------------+----------------+
+| F407 Micropython开发板 |    DS18B20     |
++========================+================+
+|     3V3                |      VDD       |
++------------------------+----------------+
+|     GND                |      GND       |
++------------------------+----------------+
+|     Y12                |      DO        |
++------------------------+----------------+
+
+
+3.源代码 
+----------------------
+
+接线ok后，将ds18b20.py和one_wire.py复制到PYBFLASH磁盘的根目录。将下面代码拷进main.py保存，等红灯熄灭后，rst开发板，用Putty可以看到当前的温度。
+
+.. image:: http://old.tpyboard.com/document/documents/tb407/18b20tem_5.png
+ 
+.. code-block:: python
+
+	main.py源代码：
+	#main.py
+	import pyb
+	from pyb import Pin
+	from ds18b20 import DS18X20
+
+	DQ=DS18X20(Pin('Y12'))#DQ
+	while True:
+		tem = DQ.read_temp()
+		print(tem)
+		pyb.delay(1000)
