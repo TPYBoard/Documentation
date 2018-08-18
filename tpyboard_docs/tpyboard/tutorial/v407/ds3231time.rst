@@ -1,36 +1,36 @@
 .. _TPYBoard_tutorial_18b20tem:
 
-F407 Micropython¿ØÖÆDS3231¶ÁÈ¡Ê±¼ä¡¢ÎÂ¶È
+F407 MicropythonæŽ§åˆ¶DS3231è¯»å–æ—¶é—´ã€æ¸©åº¦
 =============================================
 
-1.ÊµÑéÄ¿µÄ
+1.å®žéªŒç›®çš„
 --------------
 
-   1. Ñ§Ï°ÔÚPC»úÏµÍ³ÖÐÀ©Õ¹¼òµ¥I/O ½Ó¿ÚµÄ·½·¨¡£
-   2. Ñ§Ï°Ó²¼þ½ÓÏß·½·¨¡£
-   3. Ñ§Ï°F407Micropython¿ª·¢°å I2C½Ó¿ÚµÄÓÃ·¨¡£
+   1. å­¦ä¹ åœ¨PCæœºç³»ç»Ÿä¸­æ‰©å±•ç®€å•I/O æŽ¥å£çš„æ–¹æ³•ã€‚
+   2. å­¦ä¹ ç¡¬ä»¶æŽ¥çº¿æ–¹æ³•ã€‚
+   3. å­¦ä¹ F407Micropythonå¼€å‘æ¿ I2CæŽ¥å£çš„ç”¨æ³•ã€‚
    
-2.ËùÐèÔªÆ÷¼þ
+2.æ‰€éœ€å…ƒå™¨ä»¶
 -------------
 
-   F407 Micropython¿ª·¢°åÒ»¿é
-   DS3231Ê±ÖÓÄ£¿éÒ»¸ö
-   Êý¾ÝÏßÒ»Ìõ
-   ¶Å°îÏßÈô¸É
-   Puttyµ÷ÊÔ¹¤¾ß
+   F407 Micropythonå¼€å‘æ¿ä¸€å—
+   DS3231æ—¶é’Ÿæ¨¡å—ä¸€ä¸ª
+   æ•°æ®çº¿ä¸€æ¡
+   æœé‚¦çº¿è‹¥å¹²
+   Puttyè°ƒè¯•å·¥å…·
  
-3.DS3231µÄ½ÓÏß·½·¨
+3.DS3231çš„æŽ¥çº¿æ–¹æ³•
 -------------------------
 
-  DS3231Ê±ÖÓÄ£¿é£¬Í¨ÐÅÓÃµÄÊÇIIC½Ó¿ÚÔÚÕâÖ»ÓÃµ½DS3231Ê±ÖÓÄ£¿éµÄSCL,SDA,VCC,GNDËÄ¸öÕë½Å¼´¿ÉÉè¶¨¶Á³öÊ±¼äºÍÎÂ¶È£¬ÏÂÃæÊÇ½ÓÏß·½·¨¡£
+  DS3231æ—¶é’Ÿæ¨¡å—ï¼Œé€šä¿¡ç”¨çš„æ˜¯IICæŽ¥å£åœ¨è¿™åªç”¨åˆ°DS3231æ—¶é’Ÿæ¨¡å—çš„SCL,SDA,VCC,GNDå››ä¸ªé’ˆè„šå³å¯è®¾å®šè¯»å‡ºæ—¶é—´å’Œæ¸©åº¦ï¼Œä¸‹é¢æ˜¯æŽ¥çº¿æ–¹æ³•ã€‚
 
 .. image:: http://old.tpyboard.com/document/documents/tb407/3231time_1.png
 
-F407 Micropython¿ª·¢°åºÍDS3231Ê±ÖÓÄ£¿éµÄÕë½Å¶ÔÓ¦¹ØÏµÈçÏÂ£º
-IIC½Ó¿Ú1µÄ½ÓÏß·½·¨£¨³ÌÐòÖÐds=DS3231(1)µ÷ÓÃiic½Ó¿Ú1£©
+F407 Micropythonå¼€å‘æ¿å’ŒDS3231æ—¶é’Ÿæ¨¡å—çš„é’ˆè„šå¯¹åº”å…³ç³»å¦‚ä¸‹ï¼š
+IICæŽ¥å£1çš„æŽ¥çº¿æ–¹æ³•ï¼ˆç¨‹åºä¸­ds=DS3231(1)è°ƒç”¨iicæŽ¥å£1ï¼‰
 
 +------------------------+----------------+
-| F407 Micropython¿ª·¢°å | DS3231Ê±ÖÓÄ£¿é |
+| F407 Micropythonå¼€å‘æ¿ | DS3231æ—¶é’Ÿæ¨¡å— |
 +========================+================+
 |    Y6                  |  SCL           |
 +------------------------+----------------+
@@ -41,10 +41,10 @@ IIC½Ó¿Ú1µÄ½ÓÏß·½·¨£¨³ÌÐòÖÐds=DS3231(1)µ÷ÓÃiic½Ó¿Ú1£©
 |    GND                 |  GND           |
 +------------------------+----------------+
 
-IIC½Ó¿Ú2µÄ½ÓÏß·½·¨£¨³ÌÐòÖÐds=DS3231(2)µ÷ÓÃiic½Ó¿Ú2£©
+IICæŽ¥å£2çš„æŽ¥çº¿æ–¹æ³•ï¼ˆç¨‹åºä¸­ds=DS3231(2)è°ƒç”¨iicæŽ¥å£2ï¼‰
 
 +------------------------+----------------+
-| F407 Micropython¿ª·¢°å | DS3231Ê±ÖÓÄ£¿é |
+| F407 Micropythonå¼€å‘æ¿ | DS3231æ—¶é’Ÿæ¨¡å— |
 +========================+================+
 |   X32                  |  SCL           |
 +------------------------+----------------+
@@ -56,10 +56,10 @@ IIC½Ó¿Ú2µÄ½ÓÏß·½·¨£¨³ÌÐòÖÐds=DS3231(2)µ÷ÓÃiic½Ó¿Ú2£©
 +------------------------+----------------+
 
               
-4.Ô´´úÂë
+4.æºä»£ç 
 ---------------
 
-   ½ÓÏßokºó£¬µ¼ÈëDS3231.py£¬±àÐ´main.py±£´æ£¬µÈºìµÆÏ¨Ãðºó£¬rst¿ª·¢°å£¬ÓÃPutty¿ÉÒÔ¿´µ½Ê±¼äºÍÎÂ¶È¡£
+   æŽ¥çº¿okåŽï¼Œå¯¼å…¥DS3231.pyï¼Œç¼–å†™main.pyä¿å­˜ï¼Œç­‰çº¢ç¯ç†„ç­åŽï¼Œrstå¼€å‘æ¿ï¼Œç”¨Puttyå¯ä»¥çœ‹åˆ°æ—¶é—´å’Œæ¸©åº¦ã€‚
 
  
 .. code-block:: python
@@ -67,21 +67,21 @@ IIC½Ó¿Ú2µÄ½ÓÏß·½·¨£¨³ÌÐòÖÐds=DS3231(2)µ÷ÓÃiic½Ó¿Ú2£©
 	import pyb
 	from DS3231 import DS3231  
 	ds=DS3231(1)
-	#ÉèÖÃÊ±¼ä
+	#è®¾ç½®æ—¶é—´
 	#ds.TIME([17,40,30])
 
-	#¶ÁÈ¡Ãë
+	#è¯»å–ç§’
 	ds.sec()
 	print(ds.sec())
-	#¶ÁÈ¡Ê±¼ä
+	#è¯»å–æ—¶é—´
 	ds.TIME()
 	print(ds.TIME())
-	#¶ÁÈ¡ÈÕÆÚ
+	#è¯»å–æ—¥æœŸ
 	ds.DATE()
 	print(ds.DATE())
-	#¶ÁÈ¡ÎÂ¶È
+	#è¯»å–æ¸©åº¦
 	ds.TEMP()
 	print(ds.TEMP())
 
 
-* `ÏÂÔØÔ´Âë <http://old.tpyboard.com/document/documents/tb407/ds3231.rar>`_ 
+* `ä¸‹è½½æºç  <http://old.tpyboard.com/document/documents/tb407/ds3231.rar>`_ 

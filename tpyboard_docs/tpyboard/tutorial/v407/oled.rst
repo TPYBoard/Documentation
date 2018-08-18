@@ -1,66 +1,66 @@
 .. _TPYBoard_tutorial_oled:
 
-F407 Micropython����OLEDҺ����
+F407 Micropython驱动OLED液晶屏
 ==================================
 
-1.ʵ��Ŀ��
+1.实验目的
 ------------
 
-     1.ѧϰ��PC��ϵͳ����չ��I/O �ӿڵķ����� 
-     2.��һ��ѧϰ������������������Ʒ�����
-     3.ѧϰ F407 Micropython���������OLED��ʾ�ַ���
+     1.学习在PC机系统中扩展简单I/O 接口的方法。 
+     2.进一步学习编制数据输出程序的设计方法。
+     3.学习 F407 Micropython开发板控制OLED显示字符。
 	 
-2.����Ԫ����
+2.所需元器件
 ------------------
 
-   	F407 Micropython������һ��
-  	 ������һ�� 
-   	�Ű�������
-   	OLEDҺ����һ��
+   	F407 Micropython开发板一块
+  	 数据线一条 
+   	杜邦线若干
+   	OLED液晶屏一块
  
-3.ʲô��OLED��ʾ��
+3.什么是OLED显示屏
 -----------------------
 
-  1.OLED��ʾ�����
+  1.OLED显示屏简介
 --------------------
 
-    �л���������ܣ�organic light-emitting diode��OLED����һ���ɿ´﹫˾������ӵ��ר������ʾ�����������ʹ���л��ۺϲ�����Ϊ����������еİ뵼�壨semiconductor�����ϡ��ۺϲ��Ͽ�������Ȼ�ģ�Ҳ�������˹��ϳɵģ����ܳߴ�ܴ�Ҳ���ܳߴ��С����㷺�������ֻ��������������DVD������������������PDA�����ʼǱ����ԡ���������͵��ӡ�OLED��ʾ���ܱ����ᣬ��Ϊ����ʹ�ñ��⡣
-	    ������ʹ��0.96 ��OLED��ʾ�����������и����ȣ��͹���������ʾ��ɫ���������������кܺõĿ���Ч����ģ�鹩�������3.3V Ҳ������5V������Ҫ�޸�ģ���·��ͬʱ����3��ͨ�ŷ�ʽ��4 ��SPI��3��SPI�� IIC��ͨ��ģʽ��ѡ����Ը����ṩ��BOM��������ѡ����ģ��һ����������ɫ����ɫ����ɫ������˫ɫ��OLED �����ж������ָ����Կ���OLED �����ȡ��Աȶȡ�������ѹ��·��ָ��������㣬���ܷḻ��ͬʱΪ�˷���Ӧ���ڲ�Ʒ�ϣ�Ԥ��4��M2 �̶��ף������û��̶��ڻ����ϡ�0.96��OLED��ʾ��������оƬΪ��SSD1306(�Ѽ���������)�� 
+    有机发光二极管（organic light-emitting diode，OLED）是一种由柯达公司开发并拥有专利的显示技术，这项技术使用有机聚合材料作为发光二极管中的半导体（semiconductor）材料。聚合材料可以是天然的，也可能是人工合成的，可能尺寸很大，也可能尺寸很小。其广泛运用于手机、数码摄像机、DVD机、个人数字助理（PDA）、笔记本电脑、汽车音响和电视。OLED显示器很薄很轻，因为它不使用背光。
+	    本例中使用0.96 寸OLED显示屏，该屏具有高亮度，低功耗屏，显示颜色纯正，在阳光下有很好的可视效果。模块供电可以是3.3V 也可以是5V，不需要修改模块电路，同时兼容3种通信方式：4 线SPI、3线SPI、 IIC，通信模式的选择可以根据提供的BOM表进行跳选。该模块一共有三种颜色：蓝色、白色、黄蓝双色。OLED 屏具有多个控制指令，可以控制OLED 的亮度、对比度、开关升压电路等指令。操作方便，功能丰富。同时为了方便应用在产品上，预留4个M2 固定孔，方便用户固定在机壳上。0.96寸OLED显示屏的驱动芯片为：SSD1306(已集成在屏中)。 
 
-  2. ʵ����ʾЧ��
+  2. 实际显示效果
 ---------------------
 
 .. image:: http://old.tpyboard.com/document/documents/tb407/oled_1.png
 
-  3.OLED�ӿڶ���
+  3.OLED接口定义
 ---------------------
 
 +-----+----------------------+
-| GND |  ��Դ��              |
+| GND |  电源地              |
 +=====+======================+
-| VCC |  ��Դ�أ�2.8V~5.5V�� |
+| VCC |  电源地（2.8V~5.5V） |
 +-----+----------------------+
-| DO  |  ʱ����              |
+| DO  |  时钟线              |
 +-----+----------------------+
-| DI  |  ������              |
+| DI  |  数据线              |
 +-----+----------------------+
-| RES | ��λ��               |
+| RES | 复位线               |
 +-----+----------------------+
-| DC  | ����/����            |
+| DC  | 数据/命令            |
 +-----+----------------------+
-| CS  | Ƭѡ                 |
+| CS  | 片选                 |
 +-----+----------------------+
 
-  4.Ӳ���Ľ��߷���
+  4.硬件的接线方法
 ---------------------
 
-     ����OLED��ҪSPI�ӿ���F407 Micropython������������Ӵ������ݣ�SPI�ӿ�����CPU����Χ��������֮�����ͬ���������ݴ��䣬F407 Micropython�������Դ�����SPI�ӿڣ���ʵ���������õ�F407 Micropython�������SPI1�ӿڡ�
+     在这OLED需要SPI接口与F407 Micropython开发板进行连接传输数据，SPI接口是在CPU和外围低速器件之间进行同步串行数据传输，F407 Micropython开发板自带两个SPI接口，本实验中我们用的F407 Micropython开发板的SPI1接口。
 
-  5.������߷���
+  5.具体接线方法
 ---------------
 
 +------------+-----------------------------------+
-| OLEDҺ���� |  F407 Micropython������(SPI1)     |
+| OLED液晶屏 |  F407 Micropython开发板(SPI1)     |
 +============+===================================+
 | GND        | GND                               |
 +------------+-----------------------------------+
@@ -74,18 +74,18 @@ F407 Micropython����OLEDҺ����
 +------------+-----------------------------------+
 | DC         | X36                               |
 +------------+-----------------------------------+
-| CS         | ����                              |
+| CS         | 悬空                              |
 +------------+-----------------------------------+
 
    
-  6.ʵ�����ͼ
+  6.实物接线图
 ------------------
 
 .. image:: http://old.tpyboard.com/document/documents/tb407/oled_2.jpg
 
-����ok�󣬲��ҵ���font_.py�ļ���ssd1306.py�ļ����ٿ�����main.py�ˡ�
+接线ok后，并且导入font_.py文件和ssd1306.py文件，再可运行main.py了。
 
-4.����Դ����
+4.程序源代码
 -------------------
 
 .. code-block:: python
@@ -106,7 +106,7 @@ F407 Micropython����OLEDҺ����
 	display.draw_text(1,1,'Hello EveryOne',size=1,space=1)
 	display.draw_text(1,10,'Micropython F407',size=1,space=1)
 	display.draw_text(1,20,'Let Us Do it',size=1,space=1)
-	# ��ʾ������Ҫ��ʾ������
+	# 显示出你想要显示的内容
 	display.display()
 	 
-* `����Դ�� <http://old.tpyboard.com/document/documents/tb407/oled.rar>`_ 
+* `下载源码 <http://old.tpyboard.com/document/documents/tb407/oled.rar>`_ 

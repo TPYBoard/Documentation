@@ -1,36 +1,36 @@
 .. _TPYBoard_tutorial_bmp180:
 
-F407 Micropython¿ØÖÆBMP180²âÁ¿ÆøÑ¹
+F407 MicropythonæŽ§åˆ¶BMP180æµ‹é‡æ°”åŽ‹
 =====================================
 
-1.ÊµÑéÄ¿µÄ
+1.å®žéªŒç›®çš„
 ---------------
 
-   1. Ñ§Ï°ÔÚPC»úÏµÍ³ÖÐÀ©Õ¹¼òµ¥I/O ½Ó¿ÚµÄ·½·¨¡£
-   2. Ñ§Ï°BMP180²âÁ¿ÆøÑ¹µÄ·½·¨¡£
-   3. Ñ§Ï°F407 Micropython¿ª·¢°å I2C½Ó¿ÚµÄÓÃ·¨¡£
+   1. å­¦ä¹ åœ¨PCæœºç³»ç»Ÿä¸­æ‰©å±•ç®€å•I/O æŽ¥å£çš„æ–¹æ³•ã€‚
+   2. å­¦ä¹ BMP180æµ‹é‡æ°”åŽ‹çš„æ–¹æ³•ã€‚
+   3. å­¦ä¹ F407 Micropythonå¼€å‘æ¿ I2CæŽ¥å£çš„ç”¨æ³•ã€‚
    
-2.ËùÐèÔªÆ÷¼þ
+2.æ‰€éœ€å…ƒå™¨ä»¶
 ---------------
 
-   F407 Micropython¿ª·¢°åÒ»¿é
-   BMP180ÆøÑ¹Ä£¿éÒ»¸ö
-   Êý¾ÝÏßÒ»Ìõ
-   ¶Å°îÏßÈô¸É
-   Puttyµ÷ÊÔ¹¤¾ß
+   F407 Micropythonå¼€å‘æ¿ä¸€å—
+   BMP180æ°”åŽ‹æ¨¡å—ä¸€ä¸ª
+   æ•°æ®çº¿ä¸€æ¡
+   æœé‚¦çº¿è‹¥å¹²
+   Puttyè°ƒè¯•å·¥å…·
  
-3.BMP180ÆøÑ¹´«¸ÐÆ÷µÄ½ÓÏß·½·¨
+3.BMP180æ°”åŽ‹ä¼ æ„Ÿå™¨çš„æŽ¥çº¿æ–¹æ³•
 -------------------------------
 
-BMP180ÊÇÒ»Ö±³£¼ûµÄÆøÑ¹´«¸ÐÆ÷£¬BMP180ÊÇÒ»¿î¸ß¾«¶È¡¢Ð¡Ìå»ý¡¢³¬µÍÄÜºÄµÄÑ¹Á¦´«¸ÐÆ÷£¬¿ÉÒÔÓ¦ÓÃÔÚÒÆ¶¯Éè±¸ÖÐ,ËüµÄÐÔÄÜ×¿Ô½£¬¾«¶È×îµÍ¿ÉÒÔ´ïµ½0.03hPa£¬²¢ÇÒºÄµç¼«µÍ£¬Ö»ÓÐ3¦ÌA£»BMP180²ÉÓÃÇ¿´óµÄ8-pinÌÕ´ÉÎÞÒýÏßÐ¾Æ¬³ÐÔØ£¨LCC£©³¬±¡·â×°£¬¿ÉÒÔÍ¨¹ýI2C×ÜÏßÖ±½ÓÓë¸÷ÖÖÎ¢´¦ÀíÆ÷ÏàÁ¬¡£
+BMP180æ˜¯ä¸€ç›´å¸¸è§çš„æ°”åŽ‹ä¼ æ„Ÿå™¨ï¼ŒBMP180æ˜¯ä¸€æ¬¾é«˜ç²¾åº¦ã€å°ä½“ç§¯ã€è¶…ä½Žèƒ½è€—çš„åŽ‹åŠ›ä¼ æ„Ÿå™¨ï¼Œå¯ä»¥åº”ç”¨åœ¨ç§»åŠ¨è®¾å¤‡ä¸­,å®ƒçš„æ€§èƒ½å“è¶Šï¼Œç²¾åº¦æœ€ä½Žå¯ä»¥è¾¾åˆ°0.03hPaï¼Œå¹¶ä¸”è€—ç”µæžä½Žï¼Œåªæœ‰3Î¼Aï¼›BMP180é‡‡ç”¨å¼ºå¤§çš„8-piné™¶ç“·æ— å¼•çº¿èŠ¯ç‰‡æ‰¿è½½ï¼ˆLCCï¼‰è¶…è–„å°è£…ï¼Œå¯ä»¥é€šè¿‡I2Cæ€»çº¿ç›´æŽ¥ä¸Žå„ç§å¾®å¤„ç†å™¨ç›¸è¿žã€‚
  
 .. image:: http://old.tpyboard.com/document/documents/tb407/bmp180_1.jpg
 
-F407 Micropython¿ª·¢°åºÍBMP180ÆøÑ¹Ä£¿éµÄÕë½Å¶ÔÓ¦¹ØÏµÈçÏÂ£º
-IIC½Ó¿Ú1µÄ½ÓÏß·½·¨£¨³ÌÐòÖÐbmp=BMP180(1)µ÷ÓÃiic½Ó¿Ú1£©
+F407 Micropythonå¼€å‘æ¿å’ŒBMP180æ°”åŽ‹æ¨¡å—çš„é’ˆè„šå¯¹åº”å…³ç³»å¦‚ä¸‹ï¼š
+IICæŽ¥å£1çš„æŽ¥çº¿æ–¹æ³•ï¼ˆç¨‹åºä¸­bmp=BMP180(1)è°ƒç”¨iicæŽ¥å£1ï¼‰
 
 +----------------------------+--------------------+
-|  F407 Micropython¿ª·¢°å    |  BMP180ÆøÑ¹Ä£¿é    |
+|  F407 Micropythonå¼€å‘æ¿    |  BMP180æ°”åŽ‹æ¨¡å—    |
 +============================+====================+
 |  Y6                        |  SCL               |
 +----------------------------+--------------------+
@@ -41,10 +41,10 @@ IIC½Ó¿Ú1µÄ½ÓÏß·½·¨£¨³ÌÐòÖÐbmp=BMP180(1)µ÷ÓÃiic½Ó¿Ú1£©
 |  GND                       |  GND               |
 +----------------------------+--------------------+
 
-IIC½Ó¿Ú2µÄ½ÓÏß·½·¨£¨³ÌÐòÖÐbmp=BMP180(2)µ÷ÓÃiic½Ó¿Ú2£©
+IICæŽ¥å£2çš„æŽ¥çº¿æ–¹æ³•ï¼ˆç¨‹åºä¸­bmp=BMP180(2)è°ƒç”¨iicæŽ¥å£2ï¼‰
 
 +-------------------------+------------------+
-|  F407 Micropython¿ª·¢°å |  BMP180ÆøÑ¹Ä£¿é  |
+|  F407 Micropythonå¼€å‘æ¿ |  BMP180æ°”åŽ‹æ¨¡å—  |
 +=========================+==================+
 |  X32                    |  SCL             |
 +-------------------------+------------------+
@@ -56,9 +56,9 @@ IIC½Ó¿Ú2µÄ½ÓÏß·½·¨£¨³ÌÐòÖÐbmp=BMP180(2)µ÷ÓÃiic½Ó¿Ú2£©
 +-------------------------+------------------+
 
               
-4.Ô´´úÂë
+4.æºä»£ç 
 ------------
-   ½ÓÏßokºó£¬µ¼Èëbmp180.py£¬±àÐ´main.py±£´æ£¬µÈºìµÆÏ¨Ãðºó£¬rst¿ª·¢°å£¬ÓÃPutty¿ÉÒÔ¿´µ½Ê±¼äºÍÎÂ¶È¡£
+   æŽ¥çº¿okåŽï¼Œå¯¼å…¥bmp180.pyï¼Œç¼–å†™main.pyä¿å­˜ï¼Œç­‰çº¢ç¯ç†„ç­åŽï¼Œrstå¼€å‘æ¿ï¼Œç”¨Puttyå¯ä»¥çœ‹åˆ°æ—¶é—´å’Œæ¸©åº¦ã€‚
 
 .. image:: http://old.tpyboard.com/document/documents/tb407/bmp180_2.png
  
@@ -75,4 +75,4 @@ IIC½Ó¿Ú2µÄ½ÓÏß·½·¨£¨³ÌÐòÖÐbmp=BMP180(2)µ÷ÓÃiic½Ó¿Ú2£©
 	print('altude:',altitude)
 	
 	
-* `ÏÂÔØÔ´Âë <http://old.tpyboard.com/document/documents/tb407/bmp180.rar>`_ 
+* `ä¸‹è½½æºç  <http://old.tpyboard.com/document/documents/tb407/bmp180.rar>`_ 
