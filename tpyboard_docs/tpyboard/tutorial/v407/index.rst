@@ -1,6 +1,6 @@
 .. _TPYBoard v407-index:
 
-TPYBoard v407 典型实例
+TPYBoard F407 典型实例
 =========================================
 
 .. toctree::
