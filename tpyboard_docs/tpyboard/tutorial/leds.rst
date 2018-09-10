@@ -11,7 +11,7 @@
 这些命令将控制 LED 的亮和灭。
 
 这种方式不错，不过我们将尝试让其更智能化。在你擅长的文本编辑器里打开 TPYBoard 里边的 main.py 文件，写入或粘贴如下的代码。
-如果你是 python 新手，那么希望从现在开始你能对 python 有正确的认识。:
+如果你是 python 新手，那么希望从现在开始你能对 python 有正确的认识。：
 
     led = pyb.LED(2)
     while True:
@@ -41,13 +41,13 @@ pyb.LED这个类有三个我们使用的重要成员函数：on(), off() 以及 
     leds = [pyb.LED(i) for i in range(1,5)]
 
 如果没有用 1，2，3，4 的数字作为 pyb.LED( ) 的形参，我们将会得到错误的信息。
-接下来我们将添加每个 LED 亮灭的无限循环：:
+接下来我们将添加每个 LED 亮灭的无限循环::
 
     n = 0
     while True:
-      n = (n + 1) % 4
-      leds[n].toggle()
-      pyb.delay(50)
+        n = (n + 1) % 4
+        leds[n].toggle()
+        pyb.delay(50)
 
 在这里，n 代表了当前的 LED 且每次循环执行后我们可以得到下一个 n 的值（求余符号%保证了 n 的值在0和3之间）。
 然后我们就可以控制第 n 颗 led 灯的翻转亮灭了。执行该程序将可见一排的 led 同时亮和灭。
@@ -58,17 +58,17 @@ pyb.LED这个类有三个我们使用的重要成员函数：on(), off() 以及 
 当打入 CTRL-C，MicroPython 将产生一个 VCP 中断异常。
 异常通常意味着某事出了问题，所以你可以通过 try:command 指令“抓取”一个异常。
 这种情况属于用户打断了脚本的运行，所以我们不需要抓取错误而是简单告诉 MicroPython 当我们退出时要做些什么。
-最终的程序块如下所示，且我们确保了所有的 LED灯 熄灭。完整的代码如下所示：:
+最终的程序块如下所示，且我们确保了所有的 LED灯 熄灭。完整的代码如下所示::
 
     leds = [pyb.LED(i) for i in range(1,5)]
     for l in leds:
         l.off()
     n = 0
     try:
-       while True:
-          n = (n + 1) % 4
-          leds[n].toggle()
-          pyb.delay(50)
+        while True:
+            n = (n + 1) % 4
+            leds[n].toggle()
+            pyb.delay(50)
     finally:
         for l in leds:
             l.off()
