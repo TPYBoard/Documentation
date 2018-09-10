@@ -9,7 +9,7 @@ TPYBoard快速参考手册
     :alt: TPYBoard v10x pinout
     :width: 700px
 
-开发板基础控制
+TPYBoard v10x开发板基础控制
 ---------------------
 
 参考 :mod:`pyb`. ::
