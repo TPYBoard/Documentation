@@ -56,21 +56,21 @@ LJ12A3-4-Z/BX 接近开关工作原理
 
 .. code-block:: python
 
-# main.py -- put your code here!
-import pyb
-from machine import Pin
+    # main.py -- put your code here!
+    import pyb
+    from machine import Pin
 
-y1 = Pin('Y1', Pin.IN)
-x1 = Pin('X1', Pin.OUT_PP)
+    y1 = Pin('Y1', Pin.IN)
+    x1 = Pin('X1', Pin.OUT_PP)
 
-while 1:
-    #无金属时
-    if y1.value() == 1 :
-        print(y1.value())
-        x1.value(0)
-    #有金属时
-    else:
-        print(y1.value())
-        x1.value(1)
+    while 1:
+        #无金属时
+        if y1.value() == 1 :
+            print(y1.value())
+            x1.value(0)
+        #有金属时
+        else:
+            print(y1.value())
+            x1.value(1)
 
 - `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master>`_

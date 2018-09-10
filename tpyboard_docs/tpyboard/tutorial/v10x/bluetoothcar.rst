@@ -1,5 +1,5 @@
 [Micropython]TPYBoard v10x 无线蓝牙智能小车
-========================================
+============================================
 
 原创版权归山东萝卜科技有限公司所有,转载必须以链接形式注明作者和原始出处。
 
@@ -68,7 +68,7 @@
 		pyb.LED(2).on()
 		pyb.LED(3).on()
 		pyb.LED(4).on()
-		_dataRead=u2.readall()
+		_dataRead=u2.read()
 		if _dataRead!=None:
 		#停止（读取手机APP传过来的指令，不同的软件指令可能不同，可以自己设定，在这里是默认的，下同）
 			if(_dataRead.find(b'\xa5Z\x04\xb1\xb5\xaa')>-1):

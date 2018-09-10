@@ -28,7 +28,7 @@
 
 LCD1602采用标准的14脚(无背光)或16脚(带背光)接口，各引脚接口说明如下表所示:
 
-.. image:: img/1602.jpg
+.. image:: /img/1602.jpg
 
 
 LCD1602液晶模块引脚说明
@@ -88,23 +88,23 @@ main.py源代码：
 					  d6_pin=Pin.board.Y7,
 					  d7_pin=Pin.board.Y8,
 					  num_lines=2, num_columns=16)
-	   lcd.lcd1602_write_string("Hi,TurnipSmart!\n This TPYBoard!")
-		delay(5000)
-		lcd.clear()
-		lcd.lcd1602_write_string("This  lcd1602!\n Start Work!")
-		delay(5000)
-		lcd.clear()
-		count = 0
-		while True:
-			lcd.move_to(0, 0)
-			#%1d 宽度  返回运行当前程序的累计时间，单位是毫秒
-			lcd.lcd1602_write_string("%1d" % (millis() // 1000))
-			delay(1000)
-			count += 1
-			print(count)
+        lcd.lcd1602_write_string("Hi,TurnipSmart!\n This TPYBoard!")
+        delay(5000)
+        lcd.clear()
+        lcd.lcd1602_write_string("This  lcd1602!\n Start Work!")
+        delay(5000)
+        lcd.clear()
+        count = 0
+        while True:
+            lcd.move_to(0, 0)
+            #%1d 宽度  返回运行当前程序的累计时间，单位是毫秒
+            lcd.lcd1602_write_string("%1d" % (millis() // 1000))
+            delay(1000)
+            count += 1
+            print(count)
 
-	#if __name__ == "__main__":
-	main()
+    if __name__ == "__main__":
+        main()
 
 
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master>`_

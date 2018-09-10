@@ -1,5 +1,5 @@
 [Micropython]TPYBoard v10x 驱动LCD5110显示6x8字符
-==========================================
+==================================================
 
 
 实验目的
@@ -74,4 +74,4 @@ LCD5110显示屏的针脚含义
   .. image:: ../img/test_22.png
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/TPYBoard-v10x-master>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master>`_

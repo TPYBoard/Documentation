@@ -20,17 +20,12 @@
 实验材料
 ---------------
 
-	TPYBoard开发板1块（能跑python语言的开发板，小车的大脑）
-
-	四路红外感应探头（小车的眼睛）
-
-	数据线一根
-
-	充电宝一个（给整个系统供电）
-
-	智能小车底盘（包括驱动模块）
-
-	杜邦线若干
+	- TPYBoard开发板1块（能跑python语言的开发板，小车的大脑）
+	- 四路红外感应探头（小车的眼睛）
+	- 数据线一根
+	- 充电宝一个（给整个系统供电）
+	- 智能小车底盘（包括驱动模块）
+	- 杜邦线若干
 
 
 TPYBoard v102开发板
@@ -131,4 +126,4 @@ TPYBoard v102开发板
 			pyb.LED(2).off()
 
 
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master>`_
