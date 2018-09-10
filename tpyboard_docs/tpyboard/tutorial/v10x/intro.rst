@@ -86,12 +86,14 @@ main.py 内容如下：
 #数码管a~g对应的开发板引脚X1~X7
 d_Pins=[Pin(i,Pin.OUT_PP) for i in ['X1','X2','X3','X4','X5','X6','X7']]
 
+
 列举一下数码管要显示0~9之间的数，对应的每个针脚的高低电平的状态，便于程序的编写，如下图：
 
   .. image:: ../img/test_00.png
 
 根据上面的对应关系表，我们新建一个列表number，用来存放显示每个数字时，7个引脚应设置的电平值。
-::
+
+.. code-block:: python
 
 number=[
 [0,0,0,0,0,0,1],#0
@@ -107,7 +109,8 @@ number=[
 ]
 
 添加一个函数display用于控制数码管显示数字，参数是要显示的数字。
-::
+
+.. code-block:: python
 
 def display(num):
   global number
@@ -122,7 +125,8 @@ def display(num):
 我们按照上面的步骤做完以后，然后通过准备的数据线给TPYBoard v102通电。
 
 main.py 内容如下：
-::
+
+.. code-block:: python
 
 # main.py -- put your code here!
 import pyb
