@@ -76,32 +76,32 @@ DS3231的接线方法
 
 .. code-block:: python
 
-  # main.py -- put your code here!
-  import pyb
-  import upcd8544
-  from machine import SPI,Pin
-  from DS3231 import DS323
-  ds=DS3231(1)
-  ds.DATE([16,11,26])
-  ds.TIME([16,14,6])
-  while True:
-      ds.TEMP()
-      ds.DATE()
-      SPI = pyb.SPI(1) #DIN=>X8-MOSI/CLK=>X6-SCK
-      #DIN =>SPI(1).MOSI 'X8' data flow (Master out, Slave in)
-      #CLK =>SPI(1).SCK  'X6' SPI clock
-      RST    = pyb.Pin('Y10')
-      CE     = pyb.Pin('Y11')
-      DC     = pyb.Pin('Y9')
-      LIGHT  = pyb.Pin('Y12')
-      lcd_5110 = upcd8544.PCD8544(SPI, RST, CE, DC, LIGHT)
-      lcd_5110.lcd_write_string('Date',0,0)
-      lcd_5110.lcd_write_string(str(ds.DATE()),0,1)
-      lcd_5110.lcd_write_string('Time',0,2)
-      lcd_5110.lcd_write_string(str(ds.TIME()),0,3)
-      lcd_5110.lcd_write_string('Tem',0,4 )
-      lcd_5110.lcd_write_string(str(ds.TEMP()),0,5)
-      pyb.delay(1000)
+    # main.py -- put your code here!
+    import pyb
+    import upcd8544
+    from machine import SPI,Pin
+    from DS3231 import DS323
+    ds=DS3231(1)
+    ds.DATE([16,11,26])
+    ds.TIME([16,14,6])
+    while True:
+        ds.TEMP()
+        ds.DATE()
+        SPI = pyb.SPI(1) #DIN=>X8-MOSI/CLK=>X6-SCK
+        #DIN =>SPI(1).MOSI 'X8' data flow (Master out, Slave in)
+        #CLK =>SPI(1).SCK  'X6' SPI clock
+        RST    = pyb.Pin('Y10')
+        CE     = pyb.Pin('Y11')
+        DC     = pyb.Pin('Y9')
+        LIGHT  = pyb.Pin('Y12')
+        lcd_5110 = upcd8544.PCD8544(SPI, RST, CE, DC, LIGHT)
+        lcd_5110.lcd_write_string('Date',0,0)
+        lcd_5110.lcd_write_string(str(ds.DATE()),0,1)
+        lcd_5110.lcd_write_string('Time',0,2)
+        lcd_5110.lcd_write_string(str(ds.TIME()),0,3)
+        lcd_5110.lcd_write_string('Tem',0,4 )
+        lcd_5110.lcd_write_string(str(ds.TEMP()),0,5)
+        pyb.delay(1000)
 
 
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/TPYBoard-v10x-master>`_

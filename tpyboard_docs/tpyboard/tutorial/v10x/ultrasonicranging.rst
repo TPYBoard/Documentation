@@ -127,4 +127,4 @@
 			run=0
 
 
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/TPYBoard-v10x-master>`_

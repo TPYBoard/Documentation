@@ -78,7 +78,9 @@
 这意味着您现在可以访问文件系统（USB驱动器应该出现），您可以编辑main.py。（boot.py按原样离开，因为我们完成编辑后仍然要回到HID模式main.py。）
 
 在main.py下面的代码中：
+
 .. code-block:: python
+
     import pyb
 
     switch = pyb.Switch()

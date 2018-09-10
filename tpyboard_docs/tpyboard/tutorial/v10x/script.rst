@@ -74,4 +74,4 @@ LCD5110显示屏的针脚含义
   .. image:: ../img/test_22.png
 
 
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v10x>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/TPYBoard-v10x-master>`_
