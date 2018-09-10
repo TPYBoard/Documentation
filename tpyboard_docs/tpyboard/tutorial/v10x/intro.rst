@@ -58,6 +58,7 @@ main.py 内容如下：
 共阳数码管是指将所有发光二极管的阳极接到一起形成公共阳极(COM)的数码管，在使用时公共端应接到+5V上，若想点亮a段发光二极管，那么就把对应的a针脚设置为低电平，反之设置为高电平。
 
 具体接线方式如下表：
+
 +--------------+--------+
 | TPYBoardv10x | 数码管 |
 +==============+========+
@@ -77,17 +78,21 @@ main.py 内容如下：
 +--------------+--------+
 | VIN          | COM    |
 +--------------+--------+
+
 *注意：因为我们用的是共阳数码管，所以公共端（COM）应接开发板的VIN（+5V），点亮需置低电平。本次实验没有用到小数点，故dp针脚悬空无需接线。*
 定义7个引脚用于控制数码管中a~g段的发光二极管。
 ::
+
 #数码管a~g对应的开发板引脚X1~X7
 d_Pins=[Pin(i,Pin.OUT_PP) for i in ['X1','X2','X3','X4','X5','X6','X7']]
+
 列举一下数码管要显示0~9之间的数，对应的每个针脚的高低电平的状态，便于程序的编写，如下图：
 
   .. image:: ../img/test_00.png
 
 根据上面的对应关系表，我们新建一个列表number，用来存放显示每个数字时，7个引脚应设置的电平值。
 ::
+
 number=[
 [0,0,0,0,0,0,1],#0
 [1,1,1,1,0,0,1],#1
@@ -103,13 +108,13 @@ number=[
 
 添加一个函数display用于控制数码管显示数字，参数是要显示的数字。
 ::
+
 def display(num):
   global number
   count=0
   for pin in d_Pins:#X1~X7分别设置电平值 动态显示num的值
     pin.value(number[num][count])
     count+=1
-
 
 模拟红绿灯
 ------------------------------------
@@ -118,6 +123,7 @@ def display(num):
 
 main.py 内容如下：
 ::
+
 # main.py -- put your code here!
 import pyb
 from pyb import Pin
@@ -170,6 +176,7 @@ if __name__=='__main__':
             pyb.delay(1000)#1s
         g_LED.value(0)
 
+
 效果演示
 ------------------------------------
     
@@ -177,7 +184,7 @@ if __name__=='__main__':
 
   .. image:: ../img/test_13.png
 
-  `点击观看视频<http://v.youku.com/v_show/id_XMTY1MzY5NDExNg==.html>`_
+  `点击观看视频 <http://v.youku.com/v_show/id_XMTY1MzY5NDExNg==.html>`_
 
 
 - `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master>`_
