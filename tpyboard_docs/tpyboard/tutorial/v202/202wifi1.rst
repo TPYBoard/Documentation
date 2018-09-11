@@ -24,7 +24,7 @@ github下载地址：https://github.com/PakchoiFood/ESP8266_deauther
 
 .. image:: images1/2.png
 
-我的路径是："C:\Users\Administrator\AppData\Local\Arduino15"
+我的路径是：C:\\Users\\Administrator\\AppData\\Local\\Arduino15
 
 将从网盘下载的Arduino15.rar 解压，把里面全部的文件直接覆盖"C:\Users\Administrator\AppData\Local\Arduino15"下文件。
 
