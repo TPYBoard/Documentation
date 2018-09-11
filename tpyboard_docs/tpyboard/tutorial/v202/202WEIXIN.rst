@@ -41,18 +41,17 @@ TPYBoard v202与DHT11的具体接线对应及实物图
 .. image:: images/DHT111.png
 
 .. image:: images/2022.png
+    :width: 50%
 
 三、少不了的编程
 -----------------------------
 
-TPYBoard v202主要有两个文件来控制，一个是boot,py，一个是main.py。我们只需要修改这两个文件就可以完成程序的编写。如果你对如何使用TPYBoard v202还不清楚，可以参照
-
-http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v202/。
+TPYBoard v202主要有两个文件来控制，一个是boot,py，一个是main.py。我们只需要修改这两个文件就可以完成程序的编写。如果你对如何使用TPYBoard v202还不清楚，可以参照此教程：http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v202/start/。
 
 1、编写boot脚本
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-boot()：
+boot.py：
 ::
 
     import network
@@ -72,7 +71,7 @@ boot()：
 2、编写main.py脚本
 >>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-main()：
+main.py：
 ::
 
     import urequests
@@ -124,6 +123,6 @@ main()：
 	到这里，工作完成，方糖就会给你，你就会看到显示的温湿度了。
 
 .. image:: images/2023.png
-    :width:30%
+    :width: 30%
     
 - `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
