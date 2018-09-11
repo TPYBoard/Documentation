@@ -62,7 +62,7 @@
 	N3 = Pin('Y3', Pin.OUT_PP)
 	N4 = Pin('Y4', Pin.OUT_PP)
 
-	u2 = UART(2, 9600)
+	u2 = UART(2, 9600 , timeout = 100)
 
 	while True:
 		pyb.LED(2).on()

@@ -8,22 +8,22 @@
 
 让我们创建一个定时器对象：
 
-    >>> tim = pyb.Timer(4)
+>>> tim = pyb.Timer(4)
 
 现在我们来看看刚刚创建的内容：
 
-    >>> tim
-    Timer(4)
+>>> tim
+Timer(4)
 
 这个TPYboard告诉我们tim是附加到定时器4，但它还没有初始化。
 所以让我们初始化它以10Hz（即每秒10次）触发：
 
-    >>> tim.init(freq=10)
+>>> tim.init(freq=10)
 
 现在，它已初始化，我们可以看到有关定时器的一些信息：
 
-    >>> tim
-    Timer(4, prescaler=624, period=13439, mode=UP, div=1)
+>>> tim
+Timer(4, prescaler=624, period=13439, mode=UP, div=1)
 
 该信息意味着该计时器设置为在外设运行时钟速度除以624 + 1，
 它将从0到13439计数，此时触发中断，然后再次从0开始计数。
@@ -35,8 +35,8 @@
 
 那么我们可以用定时器做什么呢？最基本的是获取其计数器的当前值：
 
-    >>> tim.counter()
-    21504
+>>> tim.counter()
+21504
 
 此计数器将不断变化，并计数。
 
@@ -45,26 +45,26 @@
 
 接下来我们可以注册一个回调函数，使定时器在触发时执行（参见[switch tutorial]（tut-switch）来介绍回调函数）：
 
-    >>> tim.callback(lambda t:pyb.LED(1).toggle())
+>>> tim.callback(lambda t:pyb.LED(1).toggle())
 
 这应该立即开始红色LED闪烁。
 它将以5 Hz闪烁（1闪光灯需要2个切换，因此10 Hz的切换使其以5 Hz闪烁）。
 您可以通过重新初始化定时器来更改频率：
 
-    >>> tim.init(freq=20)
+>>> tim.init(freq=20)
 
 您可以通过传递值来禁用回调：
 
-    >>> tim.callback(None)
+>>> tim.callback(None)
 
 传递给回调的函数必须采用1个参数，即触发的定时器对象。这允许您从回调函数内控制定时器。
 
 我们可以创建2个计时器并独立运行：
 
-    >>> tim4 = pyb.Timer(4, freq=10)
-    >>> tim7 = pyb.Timer(7, freq=20)
-    >>> tim4.callback(lambda t: pyb.LED(1).toggle())
-    >>> tim7.callback(lambda t: pyb.LED(2).toggle())
+>>> tim4 = pyb.Timer(4, freq=10)
+>>> tim7 = pyb.Timer(7, freq=20)
+>>> tim4.callback(lambda t: pyb.LED(1).toggle())
+>>> tim7.callback(lambda t: pyb.LED(2).toggle())
 
 因为回调是正确的硬件中断，所以我们可以在这些计时器运行时继续使用TPYboard来进行其他的操作。
 
@@ -76,7 +76,7 @@
 
 我们设置定时器2如下：
 
-    >>> micros = pyb.Timer(2, prescaler=83, period=0x3fffffff)
+>>> micros = pyb.Timer(2, prescaler=83, period=0x3fffffff)
 
 预分频器设置为83，使定时器计数为1 MHz。
 这是因为运行在168 MHz的CPU时钟除以2，然后由预分频器+ 1分频，为定时器2提供168 MHz / 2 /（83 + 1）= 1 MHz的频率。
@@ -85,12 +85,12 @@
 
 要使用此定时器，最好首先将其重置为0：
 
-    >>> micros.counter(0)
+>>> micros.counter(0)
 
 然后执行你的计时：
 
-    >>> start_micros = micros.counter()
+>>> start_micros = micros.counter()
 
-    ... do some stuff ...
+... do some stuff ...
 
-    >>> end_micros = micros.counter()
+>>> end_micros = micros.counter()
