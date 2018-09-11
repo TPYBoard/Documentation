@@ -42,7 +42,7 @@ TPYBoard v202与DHT11的具体接线对应及实物图
 
 .. image:: images/2022.png
     :alt: ""
-    :width: 50%
+    :width: 500px
 
 三、少不了的编程
 -----------------------------
@@ -124,6 +124,6 @@ main.py：
 	到这里，工作完成，方糖就会给你，你就会看到显示的温湿度了。
 
 .. image:: images/2023.png
-    :width: 30%
+    :width: 500px
     
 - `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
