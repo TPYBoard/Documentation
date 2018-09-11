@@ -41,6 +41,7 @@ TPYBoard v202与DHT11的具体接线对应及实物图
 .. image:: images/DHT111.png
 
 .. image:: images/2022.png
+    :alt: ""
     :width: 50%
 
 三、少不了的编程
