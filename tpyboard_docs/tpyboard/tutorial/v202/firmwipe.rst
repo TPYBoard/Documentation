@@ -44,10 +44,12 @@
 
 第六步：按下图命令操作
 
-运行命令：:
+运行命令：
 
-import esp
-esp.check_fw()
+::
+
+    import esp
+    esp.check_fw()
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489557784930344.png
 
@@ -79,6 +81,3 @@ esp.check_fw()
 否则会出现如下的错误提示：A fatal error occurred: Failed to connect to ESP8226
 
 固件成功擦除后，可参考下一篇文档进行固件的烧写。
-
-
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v20x>`_

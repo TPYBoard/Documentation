@@ -46,6 +46,3 @@
 界面显示下载中... 同时右边区域显示设备的MAC地址，此时只需要等待下载完成即可。
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170222/1487750528571423.png
-
-
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v20x>`_

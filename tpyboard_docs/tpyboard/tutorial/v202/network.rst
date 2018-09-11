@@ -56,7 +56,7 @@ TPYBoard v202自动连接本地网络:
 		time.sleep_ms(500)
 		p2.value(0)
 		time.sleep_ms(500)
-	p2.value(1)
+        p2.value(1)
 		time.sleep_ms(500)
 	def do_connect():
 		sta_if = network.WLAN(network.STA_IF)
@@ -213,4 +213,4 @@ main.py程序代码
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489562400709859.png
 
 
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v20x>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_

@@ -26,7 +26,7 @@ TPYBoard v201是以遵照MIT许可的MicroPython为基础，由TurnipSmart公司
 配置v201网口
 -----------------
 
-这一步是为了设置v201网口模块的目的地址，本地端口，波特率，数据位，校验位等一系列信息，具体配置方向详见： `TPYBoard相关下载(USR-K2) <http://docs.tpyboard.com/zh/latest/tpyboard/hardware/index.html>`_ 。
+这一步是为了设置v201网口模块的目的地址，本地端口，波特率，数据位，校验位等一系列信息，具体配置方向详见： `TPYBoard相关下载(USR-K2) <https://github.com/TPYBoard/Documentation/blob/master/tpyboard_docs/tpyboard/tutorial/doc/USR-K2资料.rar>`_ 。
 
 接着我们来说一下基本的逻辑流程：
 
@@ -77,7 +77,7 @@ TPYBoard v201是以遵照MIT许可的MicroPython为基础，由TurnipSmart公司
 	from ubinascii import hexlify
 	from ubinascii import *
 
-	ulan = UART(6, 9600)#定义连接网口的串口
+	ulan = UART(6, 9600, timeout = 100)#定义连接网口的串口
 	K=1
 	jia=0
 	jie1=0
@@ -105,4 +105,4 @@ TPYBoard v201是以遵照MIT许可的MicroPython为基础，由TurnipSmart公司
 
 
 
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v20x>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master/>`_

@@ -63,7 +63,7 @@ http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v201/cloudadder.html#v201
   from ubinascii import *
   from dht11 import DHT11#定义温湿度传感器的库
 
-  ulan = UART(6, 115200)#定义串口，我的网口设置了115200的波特率
+  ulan = UART(6, 115200,timeout = 100)#定义串口，我的网口设置了115200的波特率
   K=1
   #*******************************主程序**********************************
   print('while')
@@ -81,4 +81,4 @@ http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v201/cloudadder.html#v201
       pyb.delay(12000)
 
 
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v20x>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master/>`_

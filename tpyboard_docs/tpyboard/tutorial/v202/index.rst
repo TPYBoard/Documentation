@@ -16,8 +16,6 @@ TPYBoard v202 典型实例
 	network.rst
 	putty.rst
 	timer.rst
-	V102 (8).rst
-	V102 (9).rst
 	V102 (6).rst
 	202WEIXIN.rst
 	102+202temp.rst

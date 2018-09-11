@@ -56,8 +56,6 @@ Putty连接方法
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556775793306.png
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556786651939.png
-
 点击下图左方框，在右侧Flow control 选项中选择None。
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556798517874.png
@@ -74,5 +72,4 @@ Putty连接方法
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556846690984.png
 
-
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v20x>`_
+还可以使用快捷键Ctrl+C 停止运行程序，Ctrl +D 重新运行程序。

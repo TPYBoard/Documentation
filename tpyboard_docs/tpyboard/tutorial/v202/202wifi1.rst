@@ -1,121 +1,125 @@
 [Micropython]TPYBoard v202 邪恶改装：TPYBoard制作廉价WIFI干扰器
 =============================================================================
 
-0X01 引言
+引言
 ---------------------
 
-		想不想搞个WIFI干扰器？网上搜集了一下资料，发现用esp8266可以实现简单的干扰功能，包括断网、复制、欺骗等等。刚好手上有块Tpyboard V202(30元)，也是esp8266芯片的，也是想换个固件是不是也可完成呢？周末动手试一下。
-0X02 搭建开发环境
+想不想搞个WIFI干扰器？网上搜集了一下资料，发现用esp8266可以实现简单的干扰功能，包括断网、复制、欺骗等等。刚好手上有块Tpyboard V202(30元)，也是esp8266芯片的，也是想换个固件是不是也可完成呢？周末动手试一下。
 
-	- 1、网上下载了一个使用esp8266制作Deauth无线攻击的开源固件，是arduino开发的。
-	
-	github下载地址：https://github.com/PakchoiFood/ESP8266_deauther
-	
-	里面包含了arduino IDE（arduino-1.8.2-windows.exe）和固件源码（esp8266_deauther-master.rar）。另外，还需要esp8266开发包（Arduino15.rar）可以从下面链接：http://pan.baidu.com/s/1bpnJMkn 下载。
+搭建开发环境
+---------------------
 
-	- 2、下载完毕后，解压如下：
+- 网上下载了一个使用esp8266制作Deauth无线攻击的开源固件，是arduino开发的。
 
-	.. image:: images1/1.png
+github下载地址：https://github.com/PakchoiFood/ESP8266_deauther
 
-	- 3、双击arduino-1.8.2-windows.exe 安装arduino IDE。（如果你已经安装过arduino IDE，这步可以省略）
-	- 4、安装完毕后，打开arduino,菜单找到 文件—》首选项，点击红色区域进入SDK目录
+里面包含了arduino IDE（arduino-1.8.2-windows.exe）和固件源码（esp8266_deauther-master.rar）。另外，还需要esp8266开发包（Arduino15.rar）可以从下面链接：http://pan.baidu.com/s/1bpnJMkn 下载。
 
-	.. image:: images1/2.png
+- 下载完毕后，解压如下：
 
-	我的路径是：C:\Users\Administrator\AppData\Local\Arduino15
+.. image:: images1/1.png
 
-	将从网盘下载的Arduino15.rar 解压，把里面全部的文件直接覆盖C:\Users\Administrator\AppData\Local\Arduino15下文件。
+- 双击arduino-1.8.2-windows.exe 安装arduino IDE。（如果你已经安装过arduino IDE，这步可以省略）
+- 安装完毕后，打开arduino,菜单找到 文件—》首选项，点击红色区域进入SDK目录
 
-	.. image:: images1/3.png
+.. image:: images1/2.png
 
-0X03硬件器件的准备
+我的路径是："C:\Users\Administrator\AppData\Local\Arduino15"
+
+将从网盘下载的Arduino15.rar 解压，把里面全部的文件直接覆盖"C:\Users\Administrator\AppData\Local\Arduino15"下文件。
+
+.. image:: images1/3.png
+
+硬件器件的准备
 ----------------------------
 
-	将tpyboard V202与电脑连接，找到arduino IDE菜单里工具—》开发板 在右侧出来的菜单中向下找，会找到一个 TPYBoard v202 点击选中。
+将tpyboard V202与电脑连接，找到arduino IDE菜单里工具—》开发板 在右侧出来的菜单中向下找，会找到一个TPYBoard v202点击选中。
 
-	.. image:: images1/4.png
+.. image:: images1/4.png
 
-0X04编译烧写固件
+编译烧写固件
 ------------------------
 
-	- 1、解压esp8266_deauther-master.rar，arduino IDE菜单栏 文件-》打开esp8266_deauther-master源码包esp8266_deauther\esp8266_deauther.ino
-	- 2、TPYBoard v202 使用micro USB数据线接入电脑。查看安装的usb转串的端口。打开电脑的设备管理器（这里是COM11）
+- 解压esp8266_deauther-master.rar，arduino IDE菜单栏 文件-》打开esp8266_deauther-master源码包"esp8266_deauther\esp8266_deauther.ino"
+- TPYBoard v202 使用micro USB数据线接入电脑。查看安装的usb转串的端口。打开电脑的设备管理器（这里是COM11）
 
-	.. image:: images1/5.png
+.. image:: images1/5.png
 
-	- 3、工具-》端口，选择COM11（根据自己的实际端口号选择）
+- 工具-》端口，选择COM11（根据自己的实际端口号选择）
 
-	.. image:: images1/6.png
+.. image:: images1/6.png
 
-	- 4、菜单栏下面的绿色图标菜单区，选择上传，开始编译，烧写固件
+- 菜单栏下面的绿色图标菜单区，选择上传，开始编译，烧写固件
 
-	.. image:: images1/7.png
+.. image:: images1/7.png
 
-	- 5、查看最下方的日志区域
+- 查看最下方的日志区域
 
-	.. image:: images1/8.png
+.. image:: images1/8.png
 
-	.. image:: images1/9.png
+等待编译完成，出现下图信息（状态：变为“上传”）时，按住FLASH的同时，按一下RST按键并松开，让TPYBoard v202复位一下，进入烧写模式。继续按着FLASH,出现下面的信息时就可以松开FLASH按键了。
 
-	等待编译完成，出现上图信息（状态：变为“上传”）时，按住FLASH的同时，按一下RST按键松开，让TPYBoard v202复位一下，继续按着FLASH,出现下面的信息时就可以松开FLASH按键了。
+.. image:: images1/9.png
 
-	.. image:: images1/81.png
+.. image:: images1/81.png
 
-	烧写固件时，板子上的蓝色小LED灯会一直快速闪烁。
+烧写固件时，板子上的蓝色小LED灯会一直快速闪烁。
 
-	.. image:: images1/10.jpg
+.. image:: images1/10.jpg
+    :width:70%
 
-	烧写完毕后，显示上传成功，板子上的蓝色小LED会停止闪烁。
+烧写完毕后，显示上传成功，板子上的蓝色小LED会停止闪烁。
 
-	.. image:: images1/11.png
+.. image:: images1/11.png
 
-0X05测试攻击效果
+测试攻击效果
 -----------------------
 
-	- 1、成功烧写固件后，打开无线会搜索到名称为TPYBoard v202 的热点，密码默认tpyboard，进行连接。
+- 成功烧写固件后，打开无线会搜索到名称为TPYBoard v202 的热点，密码默认tpyboard，进行连接。
 
-	.. image:: images1/12.png
+.. image:: images1/12.png
 
-	- 2、连接成功后，打开浏览器输入192.168.4.1 。点击[我已阅读并理解上面的通知]（本次实验只用于测试实验，请谨慎使用）。
+- 连接成功后，打开浏览器输入192.168.4.1 。点击[我已阅读并理解上面的通知]（本次实验只用于测试实验，请谨慎使用）。
 
-	网页原版是英文的，为了方便使用，我简单的翻译了一下（wifi SSID和密码也做了修改），下载的压缩包里也有英文原版的。
+网页原版是英文的，为了方便使用，我简单的翻译了一下（wifi SSID和密码也做了修改），下载的压缩包里也有英文原版的。
 
-	.. image:: images1/13.png
+.. image:: images1/13.png
 
-	- 3、点击进来以后，首先扫描一下附近的wifi。点击[扫描]。
+- 点击进来以后，首先扫描一下附近的wifi。点击[扫描]。
 
-	.. image:: images1/14.png
+.. image:: images1/14.png
 
-	- 4、接下来我们选择一个wifi做一下攻击的测试，为了方便测试是否成功，选择平时经常使用的wifi，我的列表中选择boda。
+- 接下来我们选择一个wifi做一下攻击的测试，为了方便测试是否成功，选择平时经常使用的wifi，我的列表中选择boda。
 
-	.. image:: images1/15.png
+.. image:: images1/15.png
 
-	- 5、选择好后，点击最上方菜单栏[攻击]，进入攻击页面。
+- 选择好后，点击最上方菜单栏[攻击]，进入攻击页面。
 
-	.. image:: images1/16.png
+.. image:: images1/16.png
 
-	- 6、攻击方式有3种，Deauther、Beacon和Probe-Request。页面最下方有对这3种方式的介绍，Probe-Request实在不知道怎么翻译，大神们可以指点一下。
+- 攻击方式有3种，Deauther、Beacon和Probe-Request。页面最下方有对这3种方式的介绍，Probe-Request实在不知道怎么翻译，大神们可以指点一下。
 
-	.. image:: images1/17.png
+.. image:: images1/17.png
 
-	- 7、我们这次使用Deauther方式，阻止客户端连接，点击[START]开始攻击。
+- 我们这次使用Deauther方式，阻止客户端连接，点击[START]开始攻击。
 
-	.. image:: images1/18.png
+.. image:: images1/18.png
 
-	- 8、找一个手机做一下实验，看是否还能连上boda。
+- 找一个手机做一下实验，看是否还能连上boda。
 
-	.. image:: images1/19.png
+.. image:: images1/19.png
+    :width:50%
 
-	如果是第一次连接的话，会一直停在正在连接的界面上，无法连接成功。
+如果是第一次连接的话，会一直停在正在连接的界面上，无法连接成功。
 
-	如果原本连接着，会被强迫断线。
+如果原本连接着，会被强迫断线。
 
-	- 9、点击[STOP],停止攻击。停止后，手机成功连接上boda了。
+- 点击[STOP],停止攻击。停止后，手机成功连接上boda了。
 
-	.. image:: images1/20.png
+.. image:: images1/20.png
 
-	- 10、esp8266_deauther里面还带了wifi复制等其他攻击方式，大家自己是吧。
+- esp8266_deauther里面还带了wifi复制等其他攻击方式，大家可以自己尝试一下。
 
-	免责声明
+**免责声明**
 
-	请不要在非合法情况下利用TPYboard实施攻击，这种行为将会被视作非法活动。由本软件所造成的任何不良后果，作者将不承担任何责任，请各位谨慎使用。
+请不要在非合法情况下利用TPYboard实施攻击，这种行为将会被视作非法活动。由本软件所造成的任何不良后果，作者将不承担任何责任，请各位谨慎使用。

@@ -23,9 +23,8 @@
 
     from machine import Timer
     tim = Timer(-1)  #新建一个虚拟定时器
+    #此处执行时程序会等待5秒打印1，period=5000 以毫秒为单位，mode=Timer.ONE_SHOT 表示只执行一次，callback绑定回调函数
     tim.init(period=5000, mode=Timer.ONE_SHOT, callback=lambda t:print(1))
-    #此处执行时程序会等待5秒打印1，period=5000 以毫秒为单位，mode=Timer.ONE_SHOT 表示只执行一次
-    callback=lambda 回调函数(period=5000, mode=Timer.ONE_SHOT,t:print(1))
 
 **增加一个循环定时器**
 
@@ -69,4 +68,4 @@
 若想做一下扩展，可将温湿度显示到OLED显示屏上，这样一个小型的DIY温湿度检测仪就诞生了。
 
 
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v20x>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_

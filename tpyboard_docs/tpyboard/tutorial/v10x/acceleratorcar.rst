@@ -67,7 +67,7 @@
 
 .. code-block:: python
 
-	import pyb
+    import pyb
     xlights = (pyb.LED(2), pyb.LED(3))
     ylights = (pyb.LED(1), pyb.LED(4))
     from pyb import UART
@@ -123,8 +123,8 @@
 **被控制端源代码**
 
 .. code-block:: python
-
-	import pyb
+    
+    import pyb
     from pyb import UART
     from pyb import Pin
     from ubinascii import hexlify
