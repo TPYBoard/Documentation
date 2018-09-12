@@ -30,22 +30,23 @@ esp8266_wifi.rar的固件是在上一篇【邪恶改装：TPYBoard制作廉价WI
 
 - 双击arduino-1.8.2-windows.exe 安装arduino IDE。（如果你已经安装过arduino IDE，这步可以省略）。
 
-- 安装完毕后，打开arduino,菜单找到 文件—》首选项，点击红色区域进入SDK目录。我的路径是：C:\Users\Sen\AppData\Local\Arduino15。
+- 安装完毕后，打开arduino,菜单找到 文件—》首选项，点击红色区域进入SDK目录。我的路径是：C:\\Users\\Sen\\AppData\\Local\\Arduino15。
 
 .. image:: images3/2.png
 
-- 解压Arduino15-2.rar,将里面的全部内容直接覆盖C:\Users\Sen\AppData\Local\Arduino15下的文件。
+- 解压Arduino15-2.rar,将里面的全部内容直接覆盖C:\\Users\\Sen\\AppData\\Local\\Arduino15下的文件。
 
 .. image:: images3/3.png
 
-0x03编译烧写固件
+编译烧写固件
 ----------------------------------
 
 - 1、如果你对V102及V202的使用方法不熟悉，可以参考TPYBoard 官方docs网站。
 
 http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/
 
-TPYBoard v102 源代码(main.py)::
+TPYBoard v102 源代码(main.py)
+.. code-block:: python
 
     import pyb
     from pyb import UART
@@ -77,7 +78,7 @@ TPYBoard v102 源代码(main.py)::
 
 2、本文重点讲解TPYBoard v202的使用方法
 
-- （1）解压esp8266_wifi.rar，arduino IDE菜单栏 文件-》打开esp8266_wifi源码包下的esp8266_deauther\esp8266_deauther.ino
+- （1）解压esp8266_wifi.rar，arduino IDE菜单栏 文件-》打开esp8266_wifi源码包下的esp8266_deauther\\esp8266_deauther.ino
 - （2）TPYBoard v202 使用micro USB数据线接入电脑。查看安装的usb转串的端口。打开电脑的设备管理器（这里是COM44）
 
 .. image:: images3/4.png
@@ -100,9 +101,7 @@ TPYBoard v102 源代码(main.py)::
 
 .. image:: images3/9.png
 
-
-
-0x04硬件的连接
+硬件的连接
 ----------------------------
 
 代码和程序都完成了，接下来需要将TPYBoard v102和TPYBoard v202 的串口连接起来。
@@ -118,7 +117,7 @@ TPYBoard v102 源代码(main.py)::
 .. image:: images3/实物2.jpg
 
 
-0x05 测试效果
+测试效果
 -------------------------
 
 - 1、首先用我自己家的WIFI做测试，我先用手机接入WIFI（Tend_01CB30）。
@@ -126,6 +125,7 @@ TPYBoard v102 源代码(main.py)::
 ps：刚才v202烧写完固件后会马上自启动，所以这里先复位一下v202，按一下RST，这样我们就可以看到从开始到最后的整个过程了。
 
 .. image:: images3/12.jpg
+    :scale: 70%
 
 - 3、大家可以看到，v202启动会搜索到了很多附近的WIFI，然后它就判断出那一个信号最强，我这里肯定是我家的最强了，于是v202开始攻击[Tend_01CB30] 这个WIFI，同时也会建立一个开放的[Tend_01CB30]热点。攻击时，v202上的小蓝灯会常亮。
 

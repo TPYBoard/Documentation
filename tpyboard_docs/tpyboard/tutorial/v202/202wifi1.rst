@@ -26,7 +26,7 @@ github下载地址：https://github.com/PakchoiFood/ESP8266_deauther
 
 我的路径是：C:\\Users\\Administrator\\AppData\\Local\\Arduino15
 
-将从网盘下载的Arduino15.rar 解压，把里面全部的文件直接覆盖"C:\Users\Administrator\AppData\Local\Arduino15"下文件。
+将从网盘下载的Arduino15.rar 解压，把里面全部的文件直接覆盖C:\\Users\\Administrator\\AppData\\Local\\Arduino15下文件。
 
 .. image:: images1/3.png
 
@@ -40,7 +40,7 @@ github下载地址：https://github.com/PakchoiFood/ESP8266_deauther
 编译烧写固件
 ------------------------
 
-- 解压esp8266_deauther-master.rar，arduino IDE菜单栏 文件-》打开esp8266_deauther-master源码包"esp8266_deauther\esp8266_deauther.ino"
+- 解压esp8266_deauther-master.rar，arduino IDE菜单栏 文件-》打开esp8266_deauther-master源码包esp8266_deauther\\esp8266_deauther.ino
 - TPYBoard v202 使用micro USB数据线接入电脑。查看安装的usb转串的端口。打开电脑的设备管理器（这里是COM11）
 
 .. image:: images1/5.png
@@ -66,7 +66,7 @@ github下载地址：https://github.com/PakchoiFood/ESP8266_deauther
 烧写固件时，板子上的蓝色小LED灯会一直快速闪烁。
 
 .. image:: images1/10.jpg
-    :width:70%
+    :scale: 70%
 
 烧写完毕后，显示上传成功，板子上的蓝色小LED会停止闪烁。
 
@@ -108,7 +108,7 @@ github下载地址：https://github.com/PakchoiFood/ESP8266_deauther
 - 找一个手机做一下实验，看是否还能连上boda。
 
 .. image:: images1/19.png
-    :width:50%
+    :scale: 50%
 
 如果是第一次连接的话，会一直停在正在连接的界面上，无法连接成功。
 
