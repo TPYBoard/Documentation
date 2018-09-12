@@ -37,31 +37,31 @@ GPIO（General Purpose I/O Ports）意思为通用输入/输出端口，通俗�
 
 通过USB数据线将电脑和TPYBoard-esp8266开发板连接起来，会自动安装USB转串的驱动。安装完毕后，查看设备管理器，是否正确创建串口。
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489560644598749.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489560644598749.png
 
 第三步：双击ESPlorer的ESPlorer.jar，根据下图标记的红色框进行设置。
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489560660603166.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489560660603166.png
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489560674907087.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489560674907087.png
 
 第四步：设置完成后，单击open按钮。
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489560688651356.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489560688651356.png
 
 第五步：按下上记板子上标记的3，进行重置。
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489560706861108.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489560706861108.png
 
 第六步：书写测试代码，点击Send to ESP进行测试。
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489560724105195.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489560724105195.png
 
 运行结果：每隔3秒，LED灯进行<亮-灭>切换
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489560910187276.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489560910187276.png
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489560920923300.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489560920923300.png
 
 
 源代码

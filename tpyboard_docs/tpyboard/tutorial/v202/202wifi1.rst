@@ -59,14 +59,14 @@ github下载地址：https://github.com/PakchoiFood/ESP8266_deauther
 
 等待编译完成，出现下图信息（状态：变为“上传”）时，按住FLASH的同时，按一下RST按键并松开，让TPYBoard v202复位一下，进入烧写模式。继续按着FLASH,出现下面的信息时就可以松开FLASH按键了。
 
-.. image:: images1/9.png
-
 .. image:: images1/81.png
+
+.. image:: images1/9.png
 
 烧写固件时，板子上的蓝色小LED灯会一直快速闪烁。
 
 .. image:: images1/10.jpg
-    :scale: 70%
+    :width: 200px
 
 烧写完毕后，显示上传成功，板子上的蓝色小LED会停止闪烁。
 
@@ -108,7 +108,7 @@ github下载地址：https://github.com/PakchoiFood/ESP8266_deauther
 - 找一个手机做一下实验，看是否还能连上boda。
 
 .. image:: images1/19.png
-    :scale: 50%
+    :higth: 200px
 
 如果是第一次连接的话，会一直停在正在连接的界面上，无法连接成功。
 

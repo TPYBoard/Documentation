@@ -8,7 +8,8 @@
 
 能否实现微信推送服务的平台有很多，这里我就不一一解释了。我选用了「Server酱」，英文名「ServerChan」。你完全可以选用你认为比较好用的平台。「Server酱」的申请方法：
 	
-打开该网址http://sc.ftqq.com/3.version，开通并使用：
+打开该网址 http://sc.ftqq.com/3.version
+开通并使用。
 
  - 1.登入：用GitHub账号登入网站，点击进入“发送消息”页面，就能获得一个SCKEY。具体见：http://sc.ftqq.com/?c=code
  - 2.绑定：点击“微信推送”页面，扫码关注同时即可完成绑定
@@ -41,8 +42,7 @@ TPYBoard v202与DHT11的具体接线对应及实物图
 .. image:: images/DHT111.png
 
 .. image:: images/2022.png
-    :alt: ""
-    :width: 300px
+    :width: 200px
 
 三、少不了的编程
 -----------------------------
@@ -121,9 +121,9 @@ main.py：
 四、成果分享
 -------------------------
 
-	到这里，工作完成，方糖就会给你，你就会看到显示的温湿度了。
+到这里，工作完成，方糖就会给你，你就会看到显示的温湿度了。
 
 .. image:: images/2023.png
-    :width: 300px
+    :width: 200px
     
 - `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_

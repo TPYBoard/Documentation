@@ -69,6 +69,7 @@ TPYBoard v102连接TPYBoard v202
 -----------------------
 
 .. image:: images/5110+102+202.png
+    :width: 300px
     :scale: 50%
 
 四、源代码
@@ -113,8 +114,6 @@ TPYBoard v102 main.py文件内容如下：
         while True:
             main(lcd_5110,dht,u6)
             pyb.delay(2000)
-
-TPYBoard v202 源代码
 
 TPYBoard v202 main.py文件内容，如下：
 
@@ -168,7 +167,7 @@ TPYBoard v202 main.py文件内容，如下：
 
 **服务器源码**
 
-页面下方下载源码中，获取SensorData.php和SensorTest.php文件。
+页面下方点击下载源码，获取SensorData.php和SensorTest.php文件。
 
 五、效果图
 ----------------------------

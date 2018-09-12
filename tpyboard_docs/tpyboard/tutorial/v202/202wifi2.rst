@@ -46,6 +46,7 @@ esp8266_wifi.rar的固件是在上一篇【邪恶改装：TPYBoard制作廉价WI
 http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/
 
 TPYBoard v102 源代码(main.py)
+
 .. code-block:: python
 
     import pyb
@@ -75,6 +76,7 @@ TPYBoard v102 源代码(main.py)
             if _mag!='':
                 f.write(_mag)#将获取到的SSID和PWD 保存在日志文件中
             f.close()
+
 
 2、本文重点讲解TPYBoard v202的使用方法
 
@@ -125,7 +127,7 @@ TPYBoard v102 源代码(main.py)
 ps：刚才v202烧写完固件后会马上自启动，所以这里先复位一下v202，按一下RST，这样我们就可以看到从开始到最后的整个过程了。
 
 .. image:: images3/12.jpg
-    :scale: 70%
+    :width: 100px
 
 - 3、大家可以看到，v202启动会搜索到了很多附近的WIFI，然后它就判断出那一个信号最强，我这里肯定是我家的最强了，于是v202开始攻击[Tend_01CB30] 这个WIFI，同时也会建立一个开放的[Tend_01CB30]热点。攻击时，v202上的小蓝灯会常亮。
 

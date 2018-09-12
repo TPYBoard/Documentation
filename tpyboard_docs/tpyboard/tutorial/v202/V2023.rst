@@ -50,7 +50,7 @@
 0x04 利用micropython实现web服务器
 ----------------------------------------------
 
-首先，编辑一个main.py文件。v202 开机自启动main.py 文件
+首先，编辑一个main.py文件。v202 开机自启动main.py 文件。
 
 .. code_block:: python
 
@@ -170,6 +170,7 @@
     myip_=do_connect('essid','pwd')#家中网络的WIFI名称和密码
     print(myip_)
     main(myip_,dev_html,login_html,name,pwd)
+
 
 其他文件login.html、fail.html、device.html，点击下面的下载源码进行下载。
 

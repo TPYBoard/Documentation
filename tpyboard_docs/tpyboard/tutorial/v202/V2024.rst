@@ -45,13 +45,15 @@ OneNET平台官网地址：https://open.iot.10086.cn/，登录成功进入开发
 实物接线图
 
 .. image:: images/O3.png
+    :scale: 50%
 
 我用的TPYBoard v202的G4引脚，这个引脚可以随便定义，主要看程序里你想用哪个。
 
 编写程序
 >>>>>>>>>>>>>>>>>>>>
 
-程序源代码，`下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
+`点击下载程序源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
+
 首先，需要修改一下boot.py文件，连接上无线网络。
 
 boot.py源码::
@@ -130,8 +132,6 @@ main.py源码::
 
 simple.py文件不用更改。依次将这4个文件下载到TPYBoard v202开发板中。
 
-.. image:: images/online.png
-
 效果展示
 >>>>>>>>>>>>>>>>>>>>
 
@@ -147,7 +147,7 @@ simple.py文件不用更改。依次将这4个文件下载到TPYBoard v202开发
 
 .. image:: images/cmd.gif
 
-在这只是给大家演示了TPYBoard v202怎么用MQTT协议接入OneNet云平台，并教大家如何控制一个外围电路点亮一个led，大家可以利用TPYBoard v202接入更复杂，更好玩的东西。
+在这只是给大家演示了TPYBoard v202怎么用MQTT协议接入OneNET云平台，并教大家如何控制一个外围电路点亮一个LED，大家可以利用TPYBoard v202接入更复杂，更好玩的东西。
 
 
 

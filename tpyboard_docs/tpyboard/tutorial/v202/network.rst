@@ -144,7 +144,9 @@ main.py程序代码
 -----------
 
 **实验要求**
-当TPYBoard v202连接网络成功后，通过get方式向网址http://www.tpyboard.com/esp8266/test.php?val=A发送字符A,网站接到后，页面显示begin，并返回bigin，TPYBoard V202收到bigin，LED快闪2次。
+当TPYBoard v202连接网络成功后，通过get方式向网址http://www.tpyboard.com/esp8266/test.php?val=A
+
+发送字符A,网站接到后，页面显示begin，并返回bigin，TPYBoard V202收到bigin，LED快闪2次。
 
 main.py程序代码
 
@@ -208,7 +210,8 @@ main.py程序代码
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489562363252568.png
 
-当访问的网址http://www.tpyboard.com/esp8266/test.php?val=X后面参数不是A的时候，页面会提示 This is not ‘A’。
+当访问的网址 http://www.tpyboard.com/esp8266/test.php?val=X
+后面参数不是A的时候，页面会提示 This is not ‘A’。
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489562400709859.png
 
