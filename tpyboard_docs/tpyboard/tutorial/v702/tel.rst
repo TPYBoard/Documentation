@@ -21,9 +21,9 @@ TPYBoard v702实现来电显示
 
 **所需器件**
 
-	- TPYBoard v702开发板 1块
-	- LCD5110显示屏 1块
-	- SIM卡 1张(支持移动、联通)
+- TPYBoard v702开发板 1块
+- LCD5110显示屏 1块
+- SIM卡 1张(支持移动、联通)
 
 
 板载通信功能及使用介绍
@@ -38,90 +38,73 @@ TPYBoard v702的开发板的整体整体亮点置一就是能板载通信功能�
 **效果图**
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170425/1493092006716181.png
-
+   :width: 300px
 
 `观看演示视频 <http://v.youku.com/v_show/id_XMjQ4MjgyMjI2OA==.html?spm=a2h3j.8428770.3416059.1>`_
 
 **制作过程**
 
-	（1）首选我们需要做的是把5100显示屏插到702开发板的5110显示屏接口处；
+（1）首选我们需要做的是把5100显示屏插到702开发板的5110显示屏接口处；
 
-	（2）在上面工作完成后，我们这里需要用到主要的类库，5110的类库，我们需要把这个类库的.py文件拷贝到开发板的盘符中；
+（2）在上面工作完成后，我们这里需要用到主要的类库，5110的类库，我们需要把这个类库的.py文件拷贝到开发板的盘符中；
 
-	（3）完成以上工作后，我们开始main（）.py文件代码的编辑；
+（3）完成以上工作后，我们开始main（）.py文件代码的编辑；
 
-	（4）对需要用到的类库进行声明和定义；
+（4）对需要用到的类库进行声明和定义；
 
-	（5）把我们需要使用的变量进行一下定义；
+（5）把我们需要使用的变量进行一下定义；
 
-	（6）把我们需要用到的接口进行声明和定义，这里我们主要用到了spi1和串口4这两个接口，声明串口4的时候，需要把串口波特率设置为115200；
+（6）把我们需要用到的接口进行声明和定义，这里我们主要用到了spi1和串口4这两个接口，声明串口4的时候，需要把串口波特率设置为115200；
 
-	（7）下面开始主函数的编写，这个实验里面我们用到了显示，我们在程序的开始部分先进行显示部分的初始化；
+（7）下面开始主函数的编写，这个实验里面我们用到了显示，我们在程序的开始部分先进行显示部分的初始化；
 
-	（8）完成显示部分初始化之后，我们需要做一个最重要的事情，那就是定义“Y6”引脚为输出，然后把：“Y6”引脚拉低两秒以上，之后把此引脚拉高。因为“Y6”引脚是控制整个板载通信系统开启的开关，如果平时我们没有用到通信系统的话，为了节省功耗，板载通信系统是处于关闭状态的，需要使用时只需要拉低“Y6”引脚两秒以上；
+（8）完成显示部分初始化之后，我们需要做一个最重要的事情，那就是定义“Y6”引脚为输出，然后把：“Y6”引脚拉低两秒以上，之后把此引脚拉高。因为“Y6”引脚是控制整个板载通信系统开启的开关，如果平时我们没有用到通信系统的话，为了节省功耗，板载通信系统是处于关闭状态的，需要使用时只需要拉低“Y6”引脚两秒以上；
 
-	（9）当看到开发板上的红色直插LED灯快速闪烁的时候，说明板载通信系统正在启动，当这个红色直插指示灯结束快闪（如果插在开发板卡槽上的手机可用，指示灯处于慢闪状态）说明板载通信系统已经启动；
+（9）当看到开发板上的红色直插LED灯快速闪烁的时候，说明板载通信系统正在启动，当这个红色直插指示灯结束快闪（如果插在开发板卡槽上的手机可用，指示灯处于慢闪状态）说明板载通信系统已经启动；
 
-	（10）完成以上工作后，准备工作就已经完成了，剩下需要做的就是监控串口4是否有数据发送过来，当检测到串口4有数据发送过来，对数据进行相应的判断及处理，并显示到显示屏上即可。
+（10）完成以上工作后，准备工作就已经完成了，剩下需要做的就是监控串口4是否有数据发送过来，当检测到串口4有数据发送过来，对数据进行相应的判断及处理，并显示到显示屏上即可。
 
 **具体代码**
 
 .. code-block:: python
 
-	import pyb
-	import upcd8544
-	from machine import SPI,Pin
-	from pyb import UART
-	from ubinascii import hexlify
-	from ubinascii import *#以上内容为声明所使用的类库
+    import pyb
+    import upcd8544
+    from machine import SPI,Pin
+    from pyb import UART
+     
+    SPI = pyb.SPI(1) #DIN=>X8-MOSI/CLK=>X6-SCK
+    #DIN =>SPI(1).MOSI 'X8' data flow (Master out, Slave in)
+    #CLK =>SPI(1).SCK  'X6' SPI clock
+    RST    = pyb.Pin('X20')
+    CE     = pyb.Pin('X19')
+    DC     = pyb.Pin('X18')
+    LIGHT  = pyb.Pin('X17')
+    lcd_5110 = upcd8544.PCD8544(SPI, RST, CE, DC, LIGHT)
+    N2 = Pin('Y3', Pin.OUT_PP)
+    N1 = Pin('Y6', Pin.OUT_PP)
+    N1.low()
+    pyb.delay(2000)
+    N1.high()
+    pyb.delay(10000)
+    u2 = UART(4, 115200,timeout=100)
+     
+    while True:
+        N2.low()
+        if u2.any()>0:
+            _dataRead=u2.read()
+            if _dataRead!=None:
+                print('原始数据=',_dataRead)
+                print('原始数据长度:',len(_dataRead))
+                print('123',_dataRead[2:6])
+                RING=_dataRead[2:6]
+                print('111',_dataRead[18:29])
+                HM=_dataRead[18:29]
+                if(RING==b'RING'):
+                    N2.high()
+                    lcd_5110.lcd_write_string('Phone Number:',0,0)
+                    lcd_5110.lcd_write_string(HM.decode("utf8"),2,1)
+            pyb.delay(1000)
 
 
-	leds = [pyb.LED(i) for i in range(1,5)]
-	P,L,SHUCHU=0,0,0
-	SPI = pyb.SPI(1) #DIN=>X8-MOSI/CLK=>X6-SCK
-	#DIN =>SPI(1).MOSI 'X8' data flow (Master out, Slave in)
-	#CLK =>SPI(1).SCK  'X6' SPI clock
-	RST    = pyb.Pin('X20')
-	CE     = pyb.Pin('X19')
-	DC     = pyb.Pin('X18')
-	LIGHT  = pyb.Pin('X17')
-	lcd_5110 = upcd8544.PCD8544(SPI, RST, CE, DC, LIGHT)#以上内容为声明并初始化显示屏
-	count_=0
-	N2 = Pin('Y3', Pin.OUT_PP)#定义“Y3”为输出模式，这个引脚是控制蜂鸣器的，来电话了需要响铃的
-	N1 = Pin('Y6', Pin.OUT_PP)#定义“Y6”位输出模式，“Y6”引脚是板载通信系统的开关控制引脚
-	N1.low()
-	pyb.delay(2000)
-	N1.high()
-	pyb.delay(10000)#通过拉低拉高开光控制引脚，启动通信系统
-	u2 = UART(4, 115200)#设置串口4，并设置串口波特率为115200
-	i='0'
-	w=0
-	d=0
-	q=0
-	G=0
-	j=0
-	while 0<1:
-		N2.low()#设置蜂鸣器控制引脚为低电平，不让蜂鸣器响
-		if(u2.any()>0):#检测串口4是否有数据，如果有数据执行以下
-			_dataRead=u2.readall()
-			if _dataRead!=None:#判断串口4的数据是否为空，不为空执行以下代码
-				print('原始数据=',_dataRead)
-				print('原始数据长度:',len(_dataRead))
-				print('123',_dataRead[2:6])
-				RING=_dataRead[2:6]#截取包头，这个包头是为了判断数据是否正确的重要依据
-				print('111',_dataRead[18:29])
-				HM=_dataRead[18:29]#数据的18至29位是数据中携带的手机号码，我们把它们保存出来
-				WD='No such person'#设置一个变量，这个变量我们可以称为是电话本类比变量
-				if(RING==b'RING'):#判断包头正确，执行下面代码
-					if(HM==b'18654868920'):#判断来电是否是一个已经存储的号码
-						WD='TPYBoard_GPS'#如果是，显示存储名称,如果没有存储显示'Nosuch person'
-	#**********************时间************************
-					N2.high()#拉高蜂鸣器控制引脚，使蜂鸣器响铃
-					lcd_5110.lcd_write_string('Phone Number:',0,0)
-					lcd_5110.lcd_write_string(HM.decode("utf8"),2,1)
-					lcd_5110.lcd_write_string('The contact:',0,2)
-					lcd_5110.lcd_write_string(str(WD),0,3)#显示相应的来电号码，来电人称谓                                                                              #等
-			pyb.delay(1000)
-
-
-- `下载源码 <https://github.com/TPYBoard/TPYBoard-v70x>`_
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v70x-master>`_
