@@ -6,20 +6,20 @@
 实验目的
 -------------
 
-    - 学习在PC机系统中网络（network）的使用方法
-    - 学习TPYBoard V202连接网络的使用
+- 学习在PC机系统中网络（network）的使用方法
+- 学习TPYBoard V202连接网络的使用
 
 准备工作
 -------------
 
-    - TPYBoard v202 1块
-    - micro USB数据线 1条
-    - 电脑 1台（本次实验以win7为例）
-    - 所需软件 ESPlorer `点击下载 <http://www.tpyboard.com/download/tool/169.html>`_
+- TPYBoard v202 1块
+- micro USB数据线 1条
+- 电脑 1台（本次实验以win7为例）
+- 所需软件 ESPlorer `点击下载 <http://www.tpyboard.com/download/tool/169.html>`_
 
 **Network库的使用方法**
 
-    网络模块用于配置WiFi连接。一共两种模式，模式一:是TPYBoard v202当STA节点，即连接路由器的节点。模式二，是TPYBoard v202做为AP，充当路由。
+网络模块用于配置WiFi连接。一共两种模式，模式一:是TPYBoard v202当STA节点，即连接路由器的节点。模式二，是TPYBoard v202做为AP，充当路由。
 
 **TPYBoard v202 STA节点模式**
 

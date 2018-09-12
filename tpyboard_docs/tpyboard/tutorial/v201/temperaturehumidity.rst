@@ -43,11 +43,12 @@ http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v201/cloudadder.html#v201
 实物图
 
 .. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20170415/1492220610497650.jpg
+    :width: 400px
 
 数据监控图
 
 .. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20170415/1492220644727630.png
-
+    :width: 400px
 
 源代码
 ----------

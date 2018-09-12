@@ -6,16 +6,16 @@
 实验目的
 --------------
 
-    - 学习在PC机系统中GPIO（General Purpose I/O Ports，即通用输入/输出端口）的使用方法
-    - 学会用TPYBoard接收GPIO的高低电平，控制板子上LED灯的发光与否
+- 学习在PC机系统中GPIO（General Purpose I/O Ports，即通用输入/输出端口）的使用方法
+- 学会用TPYBoard接收GPIO的高低电平，控制板子上LED灯的发光与否
 
 准备工作
 ----------------
 
-    - TPYBoard板子 1块
-    - micro USB数据线 1条
-    - 电脑 1台（本次实验以win7为例）
-    - 所需软件 ESPlorer
+- TPYBoard板子 1块
+- micro USB数据线 1条
+- 电脑 1台（本次实验以win7为例）
+- 所需软件 ESPlorer
 
 GPIO的介绍
 ----------------------

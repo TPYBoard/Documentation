@@ -76,7 +76,7 @@ Putty下载地址:
 
 http://tpyboard.com/download/tool/3.html
 
-*若有的小伙伴的电脑不能自动安装CH340驱动的话，这里提供一个下载地址，可自行进行安装。下载地址：http://tpyboard.com/download/drive/163.html
+若有的小伙伴的电脑不能自动安装CH340驱动的话，这里提供一个下载地址，可自行进行安装。下载地址：http://tpyboard.com/download/drive/163.html
 
 Putty的使用技巧
 >>>>>>>>>>>>>>>>>>>>>>>>>>

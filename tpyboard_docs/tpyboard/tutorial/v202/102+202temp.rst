@@ -70,7 +70,6 @@ TPYBoard v102连接TPYBoard v202
 
 .. image:: images/5110+102+202.png
     :width: 300px
-    :scale: 50%
 
 四、源代码
 --------------------------

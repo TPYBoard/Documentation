@@ -33,13 +33,15 @@ os.mkdir("demos")
 
 命令就是创建一个demos的目录，档执行os.listdir()时会显示['boot.py', 'main.py', 'demos']说明已经在开发板中建立了一个demos的目录。
 
+
 删除指定文件
 
->>>os.remove()
+>>> os.remove()
 
 删除指定目录
 
->>>os.rmdir()
+>>> os.rmdir()
+
 
 查看和修改文件
 -----------------------------------------

@@ -52,7 +52,7 @@
 
 首先，编辑一个main.py文件。v202 开机自启动main.py 文件。
 
-.. code_block:: python
+.. code-block:: python
 
     try:
 

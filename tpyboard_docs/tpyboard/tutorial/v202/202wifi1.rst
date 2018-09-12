@@ -108,7 +108,7 @@ github下载地址：https://github.com/PakchoiFood/ESP8266_deauther
 - 找一个手机做一下实验，看是否还能连上boda。
 
 .. image:: images1/19.png
-    :higth: 200px
+    :height: 200px
 
 如果是第一次连接的话，会一直停在正在连接的界面上，无法连接成功。
 
