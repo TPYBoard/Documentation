@@ -12,6 +12,7 @@ TPYBoard v202的主控模块是什么？
 TPYBoard v202采用ESP8266-12E/12F作为主控模块。
 
 ESP8266-12E/12F 技术参数：
+
 - Flash大小：32Mbit（4MBit）
 - 温度范围：-20～80°C
 - 天线封装：PCB
@@ -44,7 +45,6 @@ TPYBoard v202如何使用串口？
     u2.readall()#读取串口全部数据
     u2.write(‘hello’)#写入串口数据
 
-
 TPYBoard v202的例程资料
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -63,7 +63,6 @@ http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v202/firmware/
 若因为一些操作或意外，导致v202不能正常工作时，可尝试重新烧写固件试试，如果不起作用的话，可以先进行擦除在烧写。
 
 擦除请参考：http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v202/firmwipe/
-
 
 TPYBoard v202的调试工具
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -84,7 +83,6 @@ Putty的使用技巧
 - 组合键 Ctrl+C 停止运行
 - 组合键 Ctrl+D 重新运行
 - 输入help(object) 可以查看相关类库对象的说明
-
 
 TPYBoard v202下载程序的工具
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
