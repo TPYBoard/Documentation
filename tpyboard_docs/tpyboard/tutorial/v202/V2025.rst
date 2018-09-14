@@ -57,7 +57,7 @@ OneNET平台官网地址：https://open.iot.10086.cn/。
 
 .. image:: img/06.png
  
-了解完publish报文格式后，找到之前[接入OneNET平台]教程的程序，添加上上传数据点的功能即可。`点击下载源程序 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master/TPYBoard v202 典型实例/09.MQTT协议接入OneNET平台>`_
+了解完publish报文格式后，找到之前[接入OneNET平台]教程的程序，添加上上传数据点的功能即可。`点击下载源程序 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master/TPYBoard%20v202%20%E5%85%B8%E5%9E%8B%E5%AE%9E%E4%BE%8B>`_
 
 
 修改mqtt.py文件，如下：
