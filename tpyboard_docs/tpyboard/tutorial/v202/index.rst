@@ -4,8 +4,8 @@ TPYBoard v202 典型实例
 =========================================
 
 .. toctree::
-	:maxdepth: 1
-	:numbered:
+     :maxdepth: 1
+     :numbered:
 
     start.rst
     quickref.rst
