@@ -26,6 +26,7 @@ TPYBoard v10x 典型实例
 	template.rst
 	script.rst
 	pm2.5.rst
+	photo.rst
 	ultrasonicranging.rst
 	diytime.rst
 	5110.rst
@@ -40,4 +41,4 @@ TPYBoard v10x 典型实例
 	thread.rst
 	STM32T.rst
 	bluetoothcar_app.rst
-	photo.rst
+	
