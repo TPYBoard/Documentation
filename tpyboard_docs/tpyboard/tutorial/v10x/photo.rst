@@ -90,10 +90,8 @@ GND-------------------GND
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 此时所有器件已连接完毕，只需要给我们核心板TPYBoard v102 编写代码，并
-导入fond.py 和upcd8544.py就可以运行了。fond.py 和upcd8544.py下载地址：
-https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-
-master/06.%E9%A9%B1%E5%8A%A8LCD5110%E6%98%BE%E7%A4%BA
-6x8%E5%AD%97%E7%AC%A6（此地址main.py非此实验代码 main.py代码如下）
+导入fond.py 和upcd8544.py就可以运行了。
+
 
 源代码
 ---------------------
