@@ -15,7 +15,7 @@ TPYBoard的特有功能如下。
    lcd1602.rst
    lcd5110.rst
    lcd12864.rst
-   TFT液晶屏.rst
+   tft.rst
    ds18b20.rst
    AM2320.rst
    GY-30.rst

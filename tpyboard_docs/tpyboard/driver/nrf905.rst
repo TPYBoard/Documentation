@@ -1,45 +1,61 @@
-:mod:`nrf905` --- 无线收发模块关联功能函数
+:mod:`NRF905` --- 2.4G无线收发模块关联功能函数
 =============================================
 
-.. module:: nrf905
-   :synopsis: 无线收发模块关联功能函数
+.. module:: NRF905
+   :synopsis: 4G无线收发模块关联功能函数
 
 ``nrf905`` 模块的主要功能与函数
 
 功能相关函数
 ----------------------
 
-.. function:: Config905(self)
+.. only:: port_tpyboard
 
-   设置nrf905寄存器函数
-
-.. function:: setTXmode(self)
-
-   设置nrf905为发送模式
+    .. class:: nrf905.NRF905(spi,ce,txen,pwr,cd,dr,cs,RFConf,TxAddress)
  
-.. function:: txpacket(self,buf)
+    创建一个NRF905对象。
+        
+        - ``spi`` pyb.SPI对象
+        - ``ce`` 引脚编号
+        - ``txen`` 引脚编号
+        - ``pwr`` 引脚编号
+        - ``cd`` 引脚编号
+        - ``dr`` 引脚编号
+        - ``cs`` 引脚编号
+        - ``RFConf`` 模块相关配置参数，list类型
+        - ``TxAddress`` 接收方的地址，list类型
+        
+    .. method:: NRF905.Config905()
 
-   发送数据函数，buf为发送的内容
- 
-.. function:: sender_bruff(self,buf)
+       设置nrf905寄存器函数
 
-   发送函数，buf为发送的内容
- 
-.. function:: checkDR(self)
+    .. method:: NRF905.setTXmode()
 
-   读取DR引脚状态，返回值为DR引脚的状态，用于判断是否接收完毕数据包
- 
-.. function:: setRXmode(self)
+       设置nrf905为发送模式
+     
+    .. method:: NRF905.txpacket(,buf)
 
-   设置nrf905为接收模式
- 
-.. function:: rxpacket(self)
+       发送数据函数，buf为发送的内容
+     
+    .. method:: NRF905.sender_bruff(,buf)
 
-   接收数据函数，返回值为list
- 
-.. function:: recvrx(self)
+       发送函数，buf为发送的内容
+     
+    .. method:: NRF905.checkDR()
 
-   接收函数，返回值为list
+       读取DR引脚状态，返回值为DR引脚的状态，用于判断是否接收完毕数据包
+     
+    .. method:: NRF905.setRXmode()
+
+       设置nrf905为接收模式
+     
+    .. method:: NRF905.rxpacket()
+
+       接收数据函数，返回值为list
+     
+    .. method:: NRF905.recvrx()
+
+       接收函数，返回值为list
 
 nrf905与开发板接线对应引脚：
 ------------------------------------
@@ -76,7 +92,7 @@ nrf905与开发板接线对应引脚：
 .. code-block:: python
 
   import pyb					#发送模式
-  import NRF905
+  from nrf905 import NRF905
   import time
   from pyb import SPI
   
@@ -93,7 +109,7 @@ nrf905与开发板接线对应引脚：
   buf=[0x06,0xa0,0xb0,0x01,0x02,0]	#发送内容
   
   spi=pyb.SPI(2)
-  n=NRF905.nrf905(spi=spi,ce='Y1',txen='Y2',pwr='Y3',cd='Y4',dr='Y12',cs='Y11',
+  n=NRF905(spi=spi,ce='Y1',txen='Y2',pwr='Y3',cd='Y4',dr='Y12',cs='Y11',
   				RFConf=RFConf,TxAddress=TxAddress)
   i=0
   while True:
@@ -107,7 +123,7 @@ nrf905与开发板接线对应引脚：
 .. code-block:: python
 
   import pyb					#接收模式
-  import NRF905
+  from nrf905 import NRF905
   import time
   import pyb
   
@@ -121,7 +137,7 @@ nrf905与开发板接线对应引脚：
   		]
   
   spi=pyb.SPI(2)
-  n=NRF905.nrf905(spi=spi,ce='Y1',txen='Y2',pwr='Y3',cd='Y4',dr='X9',cs='X10',
+  n=NRF905(spi=spi,ce='Y1',txen='Y2',pwr='Y3',cd='Y4',dr='X9',cs='X10',
   				RFConf=RFConf,TxAddress=None)
   while True:
   	buf=n.recvrx()				#接收内容存储到buf

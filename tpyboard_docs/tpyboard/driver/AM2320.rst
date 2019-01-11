@@ -4,22 +4,30 @@
 .. module:: AM2320
    :synopsis: 高精度温湿度传感器关联功能函数
 
-``AM2320`` 模块的主要功能与函数
+``am2320`` 模块的主要功能与函数
 
 功能相关函数
 ----------------------
 
-.. function:: measure(self)
+.. only:: port_tpyboard
 
-   温湿度获取函数，读取温湿度之前要调用
+    .. class:: am2320.AM2320(id)
+    
+    创建AM2320对象。
+    
+        - ``id`` 硬件连接的I2C编号 
+    
+    .. method:: AM2320.measure()
 
-.. function:: temperature(self)
+       温湿度获取函数，读取温湿度之前要调用
 
-   温度获取函数，返回读取到的温度
+    .. method:: AM2320.temperature()
 
-.. function:: humidity()
+       温度获取函数，返回读取到的温度
 
-   湿度获取函数，返回读取到的湿度
+    .. method:: AM2320.humidity()
+
+       湿度获取函数，返回读取到的湿度
 
 AM2320与开发板接线对应引脚：
 ------------------------------------
@@ -42,11 +50,11 @@ AM2320与开发板接线对应引脚：
 .. code-block:: python
 
   import time
-  import AM2320
-  am2320 = AM2320.AM2320(1)	#I2C1接口
+  import am2320
+  am_2320 = am2320.AM2320(1)	#I2C1接口
 
   while True:
-  	am2320.measure()
-  	print('温度:',am2320.temperature())
-  	print('湿度:',am2320.humidity())
+  	am_2320.measure()
+  	print('温度:',am_2320.temperature())
+  	print('湿度:',am_2320.humidity())
   	time.sleep_ms(500)

@@ -2,20 +2,30 @@
 =============================================
 
 .. module:: NRF24L01
-   :synopsis: 红外接收关联函数
+   :synopsis: 2.4G无线收发模块关联函数
 
-``NRF24L01`` 模块的主要功能与函数
+``nrf24l01use`` 模块的主要功能与函数
 
 功能相关函数
 ------------------------------------
 
-.. function:: master(data)
+.. only:: port_tpyboard
 
-  发射函数，设置为发送端，并发送data。data为待发送数据。
+    .. class:: nrf24l01use.NRF24L01(spi, cs, ce)
+ 
+    创建一个NRF24L01对象。
+    
+        - ``spi`` pyb.SPI对象
+        - ``cs`` pyb.Pin对象
+        - ``ce``  pyb.Pin对象
+    
+    .. method:: NRF24L01.master(data)
 
-.. function:: slave()
+      发射函数，设置为发送端，并发送data。data为待发送数据。
 
-   接收函数，返回值为接收到的数据。
+    .. method:: NRF24L01.slave()
+
+       接收函数，返回值为接收到的数据。
 
 NRF24L01与开发板接线对应引脚：
 ---------------------------------------------------------
@@ -47,18 +57,18 @@ NRF24L01与开发板接线对应引脚：
   # main.py -- put your code here!
   import nrf24l01use
   
-  nrf=nrf24l01use.nrf24l01(spi=2,csn='Y5',ce='Y4')	#设置SPI2接口csn引脚与ce引脚
+  nrf=nrf24l01use.NRF24L01(spi=2,csn='Y5',ce='Y4')	#设置SPI2接口csn引脚与ce引脚
   
   while True:
-  	print(nrf.slave())			#接收内容
+  	print(nrf.slave())#接收内容
 
 	
 .. code-block:: python
 
   import nrf24l01use
   
-  nrf=nrf24l01use.nrf24l01(spi=2,csn='Y5',ce='Y4')
+  nrf=nrf24l01use.NRF24L01(spi=2,csn='Y5',ce='Y4')
   i=0
   while True:
-  	nrf.master(i)				#发送内容
+  	nrf.master(i)#发送内容
   	i+=1
