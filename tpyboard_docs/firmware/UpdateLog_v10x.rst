@@ -4,7 +4,7 @@ TPYBoardv10x 固件更新记录
 
 以下更新不包括 TPYBoardv101
 
-2019年01月09日 版本号 **TPYBoardv10x-v1.9.4-0.0.7**
+2019年01月11日 版本号 **TPYBoardv10x-v1.9.4-0.0.7**
 
     - MicroPython版本更新到v1.9.4
     - 增加LCD1602显示屏驱动类库

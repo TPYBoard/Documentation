@@ -9,42 +9,41 @@
 功能相关函数
 ----------------------
 
-.. function:: clear(self)
+.. class:: lcd5110.LCD5110(spi,rst,ce,dc,light)
+    
+    创建一个LCD5110对象。
+    
+    - ``spi`` pyb.SPI对象
+    - ``rst`` pyb.Pin对象
+    - ``ce``  pyb.Pin对象
+    - ``dc``  pyb.Pin对象
+    - ``light`` pyb.Pin对象
+    
+
+.. function:: LCD5110.clear()
 
    清屏函数，擦除屏幕上所有内容
 
-.. function:: reset(self)
+.. function:: LCD5110.reset()
 
    复位函数，复位LCD5110
 
-.. function:: light_on(self)
+.. function:: LCD5110.light_on()
 
    打开背光LED
 
-.. function:: light_off(self)
+.. function:: LCD5110.light_off()
 
    关闭背光LED
 
-.. function:: lcd_write_string(self, string, x, y)
+.. function:: LCD5110.lcd_write_string(string, x, y)
 
-   写字符串函数，string为字符串内容，x为横向地址范围0-83，y为纵向地址范围0-5
+   写字符串函数。
+   
+   - ``string`` 显示的字符串
+   - ``x`` 横向坐标，范围0-83
+   - ``y`` 纵向坐标，范围0-5
 
-.. function:: lcd_write_draw_x(self, xstart, ystart, xend, yend)
-
-   画线函数，参数分别为起点坐标x,y与终点坐标x,y
-
-.. function:: lcd_write_pictuer(self, x, y, a, b)
-
-   载图函数，将载入图片并显示出来，参数x,y为开始绘制的起点坐标，a,b为图片数组内开始的数据位置及步进量
-
-.. function:: lcd_write_hc(self, x, y, a)
-
-   写缓存函数，参数x,y为坐标值，a为数据
-   此函数用于将待显示的值存入缓存区备用
-
-.. function:: lcd_read_hc(self)
-
-  读缓存函数，读出缓存区全部缓存并送去显示，显示内容为一整屏
 
 LCD5110与开发板接线对应引脚：
 -------------------------------
