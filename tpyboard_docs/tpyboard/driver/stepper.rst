@@ -1,25 +1,28 @@
-:mod:`StepperMotor` --- 四相步进电机关联功能函数
+:mod:`SteperMotor` --- 四相步进电机关联功能函数
 ==================================================
 
-.. module:: Stepper motor
+.. module:: SteperMotor
    :synopsis: 四相步进电机关联功能函数
 
-``stepmotor`` 模块的主要功能与函数
+``stepermotor`` 模块的主要功能与函数
 
 功能相关函数
 ----------------------
 
 .. only:: port_tpyboard
     
-    .. function:: stepmotor.stepping(a,b,c,d,dir,speed)
+    .. class:: stepermotor.SteperMotor(pin,speed)
 
-    步进电机旋转函数。
-        - ``a`` 驱动板IN1连接的引脚编号
-        - ``b`` 驱动板IN2连接的引脚编号
-        - ``c`` 驱动板IN3连接的引脚编号
-        - ``d`` 驱动板IN4连接的引脚编号
-        - ``dir`` 旋转的方向（1：顺时针，0：逆时针）
-        - ``speed`` 旋转速度，最小值为2
+    创建一个SteperMotor对象。
+
+        - ``pin`` 驱动板IN1~IN4连接的引脚对象集合，类型list
+        - ``speed`` 旋转速度，单位毫秒，最小值为2
+    
+    .. method:: SteperMotor.steperRun(angle)
+    
+    控制步进电机旋转指定的角度。
+    
+    - ``angle`` 旋转的角度，范围在-360~360之间（负：逆时针转动）
 
 四相步进电机与开发板接线对应引脚：
 ------------------------------------
@@ -45,12 +48,13 @@
 
 .. code-block:: python
 
-  # main.py -- put your code here!
-  import pyb
-  from stepmotor import stepping
+  from pyb import Pin
+  from stepermotor import SteperMotor
 
-  def main():
-	while True:
-	stepping('X1','X2','X3','X4',0,2)
+  Pin_All=[Pin(p,Pin.OUT_PP) for p in ['X1','X2','X3','X4']]
 
-  main()
+  if __name__=='__main__':
+    #转速(ms) 数值越大转速越慢 最小值2ms
+    sm = SteperMotor(pin = Pin_All,speed=2)
+    sm.steperRun(-360)
+    sm.steperRun(360)
