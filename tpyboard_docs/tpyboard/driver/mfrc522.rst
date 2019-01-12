@@ -1,7 +1,7 @@
-:mod:`mfrc522` --- 射频卡关联功能函数
+:mod:`MFRC522` --- 射频卡关联功能函数
 =============================================
 
-.. module:: mfrc522
+.. module:: MFRC522
    :synopsis: 射频卡关联功能函数
 
 ``mfrc522`` 模块的主要功能与函数
@@ -9,19 +9,33 @@
 功能相关函数
 ----------------------
 
-.. function:: SeekCard(order)
+.. only:: port_tpyboard
 
-   寻卡函数，搜索范围内指定的卡或者所有的卡，参数为0x26（未休眠的卡）或0x52（所有的卡）。
-   返回值为：读卡状态，卡的类型
+    .. class:: mfrc522.MFRC522()
+    
+    创建一个MFRC522对象。
+    
+    .. method:: MFRC522.init_spi(SPI,RC522_RST,RC522_SDA)
 
-.. function:: Anticoll()
+    MFRC522初始化函数。
+    
+        - ``SPI`` 硬件连接的SPI接口对象，类型pyb.SPI
+        - ``RST`` RST连接的引脚编号
+        - ``SDA`` SDA连接的引脚编号
+    
+    .. method:: MFRC522.SeekCard(order)
 
-   读卡函数，读出卡ID号。
-   返回值为：读卡状态，卡的ID
+    寻卡函数，搜索范围内指定的卡或者所有的卡。
+    
+        - ``order`` 搜索未休眠的卡：0x26，搜索所有的卡：0x52
+    返回值为：读卡状态，卡的类型
 
-.. function:: init_spi(SPI,RC522_RST,RC522_SDA)
+    .. method:: MFRC522.Anticoll()
 
-   MFRC522初始化函数，参数为SPI号，RST引脚，SDA引脚
+    读卡函数，读出卡ID号。
+    返回值为：读卡状态，卡的ID
+
+
 
 MFRC522与开发板接线对应引脚：
 ------------------------------------

@@ -1,22 +1,30 @@
-:mod:`四相步进电机` --- 四相步进电机关联功能函数
+:mod:`StepperMotor` --- 四相步进电机关联功能函数
 ==================================================
 
-.. module:: 四相步进电机
+.. module:: Stepper motor
    :synopsis: 四相步进电机关联功能函数
 
-``四相步进电机`` 模块的主要功能与函数
+``stepmotor`` 模块的主要功能与函数
 
 功能相关函数
 ----------------------
 
-.. function:: stepping(a,b,c,d,dir,speed)
+.. only:: port_tpyboard
+    
+    .. function:: stepmotor.stepping(a,b,c,d,dir,speed)
 
-   步进电机旋转函数，输入参数a,b,c,d分别对应步进电机四相,dir为旋转方向(0或1)，speed为旋转速度最低为2
+    步进电机旋转函数。
+        - ``a`` 驱动板IN1连接的引脚编号
+        - ``b`` 驱动板IN2连接的引脚编号
+        - ``c`` 驱动板IN3连接的引脚编号
+        - ``d`` 驱动板IN4连接的引脚编号
+        - ``dir`` 旋转的方向（1：顺时针，0：逆时针）
+        - ``speed`` 旋转速度，最小值为2
 
 四相步进电机与开发板接线对应引脚：
 ------------------------------------
 
-		+------------+-----------+
+		+------------+--- --------+
 		| TPYBoard   | 步进电机  |
 		+============+===========+
 		| VIN        |   ＋      |
@@ -39,7 +47,7 @@
 
   # main.py -- put your code here!
   import pyb
-  from stepping motor import stepping
+  from stepmotor import stepping
 
   def main():
 	while True:

@@ -1,20 +1,33 @@
-:mod:`数码管` --- 数码管关联功能函数
+:mod:`NixieTube` --- 数码管关联功能函数
 =============================================
 
-.. module:: 数码管
+.. module:: NixieTube
    :synopsis: 数码管关联功能函数
 
-``数码管`` 模块的主要功能与函数
+``digital`` 模块的主要功能与函数
 
 功能相关函数
 ----------------------
 
-.. function:: smg_xs(com,port,data,ponit)
+.. only:: port_tpyboard
 
-   显示函数，输入参数com为选择供阳(1)\共阴(0),port设置数码管a脚,data为显示的内容,ponit为是(1)\否(0)显示小数点
+    .. class:: digital.Digital(type,pins)
+ 
+    创建一个Digital对象。
+    
+        - ``type`` 数码管类型。1：共阳，2：共阴
+        - ``pins`` 数码管a~g脚连接的引脚对象，类型pyb.Pin
+        
+    .. method:: Digital.display(data)
 
-数码管与开发板接线对应引脚：（供阳COM接3V3，共阴COM接GND）
+       显示函数。
+     
+       -``data`` 要显示的数字（0~9）
+
+数码管与开发板接线对应引脚：
 -------------------------------
+
+共阳数码管的COM接3V3，共阴数码管的COM接GND
 
 		+------------+---------+
 		| TPYBoard   | 数码管  |
@@ -35,7 +48,7 @@
 		+------------+---------+
 		| X8         |   h     |
 		+------------+---------+
-		| GND/3V3    |COM      |
+		| GND/3V3    |  COM    |
 		+------------+---------+
 
 程序示例：
@@ -43,17 +56,16 @@
 
 .. code-block:: python
 
-  # main.py -- put your code here!
-  import pyb
-  from smg import smg_xs
+    import pyb
+    from pyb import Pin
+    from digital import Digital
 
-  def main():
-	ds=0
-	while True:	
-		smg.smg_xs(1,'X1',ds,0)  #共阳数码管,a脚为X1,显示ds计数,不显示小数点
-		pyb.delay(500)
-		ds+=1
-		if ds==10:
-			ds=0
+    def main():
+        pins = [Pin('X' + str(p),Pin.OUT_PP) for p in range(1,9)]
+        d = Digital(1,pins)
+        while True:
+            for i in range(10):
+                d.display(i)
+                pyb.delay(500)
 
-  main()
+    main()
