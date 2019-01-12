@@ -1,7 +1,7 @@
-:mod:`tftlcd` --- TFT液晶屏关联功能函数
+:mod:`TFTLCD` --- TFT液晶屏关联功能函数
 =============================================
 
-.. module:: tftlcd
+.. module:: TFTLCD
    :synopsis: TFT液晶屏关联功能函数
 
 ``tftlcd`` 模块的主要功能与函数

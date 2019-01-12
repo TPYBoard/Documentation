@@ -48,9 +48,9 @@ AS608与开发板接线对应引脚：
 .. code-block:: python
 
   # main.py -- put your code here!
-  import AS608
+  import as608
   
-  fig=AS608.FIG(4)	#使用串口4
+  fig=as608.FIG(4)	#使用串口4
   
   fig.savefig(37)	#录入指纹存储到37地址
   user=fig.disfig()	#识别指纹

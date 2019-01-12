@@ -1,29 +1,40 @@
-:mod:`lcd1602` --- LCD1602液晶屏关联功能函数
+:mod:`LCD1602` --- LCD1602液晶屏关联功能函数
 =============================================
 
-.. module:: lcd1602
-   :synopsis: lcd1602液晶屏关联功能函数
+.. module:: LCD1602
+   :synopsis: LCD1602液晶屏关联功能函数
 
 ``lcd1602`` 模块的主要功能与函数
 
 功能相关函数
 ----------------------
 
-.. function:: TPYBoardGpioLcd1602(rs_pin,enable_pin,d4_pin,d5_pin,d6_pin,d7_pin,num_lines=2, num_columns=16)
+.. only:: port_tpyboard
 
-   设置lcd1602引脚与行列最大值
+    .. class:: TPYBoardGpioLcd1602(rs_pin,enable_pin,d4_pin,d5_pin,d6_pin,d7_pin,num_lines=2, num_columns=16)
 
-.. function:: clear()
+    创建一个LCD1602对象，初始化显示屏配置参数。
+    
+        - ``rs_pin`` 显示屏RS连接的引脚对象，类型pyb.Pin
+        - ``enable_pin`` 显示屏E连接的引脚对象，类型pyb.Pin
+        - ``d4_pin`` 显示屏D4连接的引脚对象，类型pyb.Pin
+        - ``d5_pin`` 显示屏D5连接的引脚对象，类型pyb.Pin
+        - ``d6_pin`` 显示屏D6连接的引脚对象，类型pyb.Pin
+        - ``d7_pin`` 显示屏D7连接的引脚对象，类型pyb.Pin
+        - ``num_lines`` 行数最大值
+        - ``num_columns`` 列数最大值
 
-   清屏函数，清除屏幕上显示的所有字符
+    .. method:: clear()
 
-.. function:: move_to(x, y)
+       清屏函数，清除屏幕上显示的所有字符
 
-   设置写入地址，x为行位置，y为列位置
+    .. method:: move_to(x, y)
 
-.. function:: lcd1602_write_string(string)
+       设置写入地址，x为行位置，y为列位置
 
-   显示函数，输入参数为字符串
+    .. method:: lcd1602_write_string(string)
+
+       显示函数，输入参数为字符串
 
 LCD1602与开发板接线对应引脚：
 --------------------------------
@@ -77,29 +88,24 @@ LCD1602与开发板接线对应引脚：
   from tpyb_lcd1602 import TPYBoardLcd1602Api
   from tpyb_gpio_lcd1602 import TPYBoardGpioLcd1602
 
-
-  def main():
-        lcd = TPYBoardGpioLcd1602(rs_pin=Pin.board.Y10,			#设置引脚
-                                  enable_pin=Pin.board.Y9,
-                                  d4_pin=Pin.board.Y5,
-                                  d5_pin=Pin.board.Y6,
-                                  d6_pin=Pin.board.Y7,
-                                  d7_pin=Pin.board.Y8,
-                                  num_lines=2, num_columns=16)
-   lcd.lcd1602_write_string("Hi,TurnipSmart!\n This TPYBoard!")
-        delay(5000)
-        lcd.clear()
-        lcd.lcd1602_write_string("This  lcd1602!\n Start Work!")
-        delay(5000)
-        lcd.clear()
-        count = 0
-        while True:
-                lcd.move_to(0, 0)
-                #%1d 宽度  返回运行当前程序的累计时间，单位是毫秒
-                lcd.lcd1602_write_string("%1d" % (millis() // 1000))
-                delay(1000)
-                count += 1
-                print(count)
-
-  #if __name__ == "__main__":
-  main()
+  lcd = TPYBoardGpioLcd1602(rs_pin=Pin.board.Y10,			#设置引脚
+                          enable_pin=Pin.board.Y9,
+                          d4_pin=Pin.board.Y5,
+                          d5_pin=Pin.board.Y6,
+                          d6_pin=Pin.board.Y7,
+                          d7_pin=Pin.board.Y8,
+                          num_lines=2, num_columns=16)
+  lcd.lcd1602_write_string("Hi,TurnipSmart!\n This TPYBoard!")
+  delay(5000)
+  lcd.clear()
+  lcd.lcd1602_write_string("This  lcd1602!\n Start Work!")
+  delay(5000)
+  lcd.clear()
+  count = 0
+  while True:
+    lcd.move_to(0, 0)
+    #%1d 宽度  返回运行当前程序的累计时间，单位是毫秒
+    lcd.lcd1602_write_string("%1d" % (millis() // 1000))
+    delay(1000)
+    count += 1
+    print(count)
