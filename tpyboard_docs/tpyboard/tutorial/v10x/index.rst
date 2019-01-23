@@ -41,3 +41,5 @@ TPYBoard v10x 典型实例
     thread.rst
     STM32T.rst
     bluetoothcar_app.rst
+    esp82661.rst
+    esp82662.rst
