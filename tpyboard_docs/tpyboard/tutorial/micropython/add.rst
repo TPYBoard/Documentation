@@ -16,7 +16,7 @@
 -------------------------
 1.安装arm-none-eabi-gcc交叉编译工具和gcc编译器。
 
-.. code-block::
+.. code-block:: c
 
   sudo apt-get install gcc-arm-none-eabi
   
@@ -24,7 +24,7 @@
 
 2.下载micropython源码包到本地，我下载到了home目录下。
 
-.. code-block::
+.. code-block:: c
 
   sudo git clone --recursive https://github.com/micropython/micropython.git
 
