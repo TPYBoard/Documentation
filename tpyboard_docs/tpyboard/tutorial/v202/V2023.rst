@@ -234,3 +234,6 @@ CH340驱动下载地址：http://tpyboard.com/download/drive/163.html
 3、接下来，我们就可以通过网页开控制灯光和小风扇了。
 
 这里，我只是做了一个实例，受时间限制，没有再做更深入的开发。大家可以自己结合自己的创意再深入去做。如果能够通过路由器给tpyboard v202设一个外网Ip，这样就可以从外网进行访问，从而完成外网对家内设备的控制。
+
+
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_

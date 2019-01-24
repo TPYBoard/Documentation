@@ -8,7 +8,7 @@
 
 TPYBoard_V202是以遵照MIT许可的MicroPython为基础，由TurnipSmart公司制作的一款MicroPython开发板，它基于ESP8266，通过USB接口进行数据传输,可在3.5V-6V之间的电压正常工作。让您零基础也能灵活掌握8266模块通信技术！支持Python语言的WiFi通信开发板。
 
-.. image::http://www.tpyboard.com/ueditor/php/upload/image/20170428/1493349820293706.png
+.. image::http://old.tpyboard.com/ueditor/php/upload/image/20170428/1493349820293706.png
 
 二、利用TPYBoardV202完成检测温湿度并上传
 ----------------------------------------------------
@@ -39,15 +39,15 @@ TPYBoard_V202是以遵照MIT许可的MicroPython为基础，由TurnipSmart公司
 
 先上个图，下面再开始说代码的问题。
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170428/1493349856713838.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170428/1493349856713838.png
 
 V202实物图
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170428/1493349883148588.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170428/1493349883148588.png
 
 V202数据打印截图
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170428/1493349916351620.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170428/1493349916351620.png
 
 V202温湿度上传测试网页
 
@@ -124,7 +124,9 @@ V202温湿度上传测试网页
         hum_=str(d.humidity())#读取measure()函数中的湿度数据
         count+=1#计数变量+1
         print('eg:',temp_,'-',hum_)
-        http_get('http://www.tpyboard.com/esp8266/SensorTest.php?t='+temp_+'&h='+hum_+'')
+        http_get('http://old.tpyboard.com/esp8266/SensorTest.php?t='+temp_+'&h='+hum_+'')
         #调用数据上传函数，把最新测量得到的数据进行上传
         print('Count:',count)
         time.sleep(5)
+        
+- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_

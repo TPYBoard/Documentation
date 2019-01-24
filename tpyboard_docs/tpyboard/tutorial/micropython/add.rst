@@ -1,6 +1,6 @@
 .. _quickref:
 
-[MicroPython]TPYBoard v10x 在micropython中增加自定义的py模块
+[MicroPython]TPYBoard v10x 在micropython中增加py模块
 ===============================================================
 
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明

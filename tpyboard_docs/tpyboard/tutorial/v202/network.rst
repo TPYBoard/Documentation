@@ -15,7 +15,7 @@
 - TPYBoard v202 1块
 - micro USB数据线 1条
 - 电脑 1台（本次实验以win7为例）
-- 所需软件 ESPlorer `点击下载 <http://www.tpyboard.com/download/tool/169.html>`_
+- 所需软件 ESPlorer `点击下载 <http://old.tpyboard.com/download/tool/169.html>`_
 
 **Network库的使用方法**
 
@@ -49,15 +49,15 @@ TPYBoard v202自动连接本地网络:
 	import network
 	import time
 	def led_state():
-		p2 = Pin(2, Pin.OUT)
-		p2.value(0)
-		time.sleep_ms(500)
-		p2.value(1)
-		time.sleep_ms(500)
-		p2.value(0)
-		time.sleep_ms(500)
+        p2 = Pin(2, Pin.OUT)
+        p2.value(0)
+        time.sleep_ms(500)
         p2.value(1)
-		time.sleep_ms(500)
+        time.sleep_ms(500)
+        p2.value(0)
+        time.sleep_ms(500)
+        p2.value(1)
+        time.sleep_ms(500)
 	def do_connect():
 		sta_if = network.WLAN(network.STA_IF)
 		p2 = Pin(2, Pin.OUT)
@@ -77,7 +77,7 @@ TPYBoard v202自动连接本地网络:
 
 只需要将上面代码写入boot.py,在开发板上电后，就看到蓝灯常亮（正在连接网络），然后蓝灯交替闪烁两次，控制台打印connect success，证明已经连接到本地网络。
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489562186715918.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489562186715918.png
 
 **TPYBoard v202 AP模式**
 
@@ -86,7 +86,7 @@ TPYBoard v202自动连接本地网络:
 	import network
 	ap = network.WLAN(network.AP_IF) ＃创建接入点接口
 	ap.active(True)         # 激活接口
-	ap.config(essid='ESP-AP') # 设计接入点的ESSID
+	ap.config(essid='ESP-AP',authmode=0) # 设计接入点的ESSID
 
 
 向指定地址发送数据的方法：
@@ -144,9 +144,9 @@ main.py程序代码
 -----------
 
 **实验要求**
-当TPYBoard v202连接网络成功后，通过get方式向网址http://www.tpyboard.com/esp8266/test.php?val=A
+当TPYBoard v202连接网络成功后，通过get方式向网址http://old.tpyboard.com/esp8266/test.php?val=A
 
-发送字符A,网站接到后，页面显示begin，并返回bigin，TPYBoard V202收到bigin，LED快闪2次。
+发送字符A,网站接到后，页面显示begin，并返回begin，TPYBoard V202收到bigin，LED快闪2次。
 
 main.py程序代码
 
@@ -202,18 +202,18 @@ main.py程序代码
 				break
 		s.close()
 	do_connect()
-	http_get('http://www.tpyboard.com/esp8266/test.php?val=A')
+	http_get('http://old.tpyboard.com/esp8266/test.php?val=A')
 
 **实验效果**
 
 当点击Send to ESP时，控制台显示从页面上传过来的内容为begin，并且led灯交替闪烁两次。
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489562363252568.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489562363252568.png
 
-当访问的网址 http://www.tpyboard.com/esp8266/test.php?val=X
-后面参数不是A的时候，页面会提示 This is not ‘A’。
+当访问的网址 http://old.tpyboard.com/esp8266/test.php?val=X
+后面参数不是A的时候，页面会提示 This is not 'A'。
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489562400709859.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489562400709859.png
 
 
 - `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_

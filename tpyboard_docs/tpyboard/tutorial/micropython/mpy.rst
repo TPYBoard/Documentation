@@ -14,7 +14,7 @@
 -------------------------
 1.安装arm-none-eabi-gcc交叉编译工具和gcc编译器。
 
-.. code-block::
+.. code-block:: c
 
   sudo apt-get install gcc-arm-none-eabi
   
@@ -22,7 +22,7 @@
 
 2.下载micropython源码包到本地，我下载到了home目录下。
 
-.. code-block::
+.. code-block:: c
 
   git clone --recursive https://github.com/micropython/micropython.git
 
@@ -30,7 +30,7 @@
 -------------------------
 3.切换到/home/micropython/mpy-cross目录执行make，编译生成mpy-cross工具。
 
-.. code-block::
+.. code-block:: c
 
   make
 
@@ -48,7 +48,7 @@
 
 5.执行编译mpy文件的命令。
 
-.. code-block::
+.. code-block:: c
 
   ./mpy-cross test.py
 
@@ -78,4 +78,4 @@ DFU-USB接口烧写固件参考：http://tpyboard.com/support/reference11/302.ht
 ST-LINK烧写固件参考：http://tpyboard.com/support/reference11/239.html
 
 虽然是进行了加密编译成了mpy文件，但是还有一些缺陷，毕竟mpy文件仍然是存放在TPFLASH或TF卡中，很容易被别人拷贝，也很有可能会被反编译出来。
-是否可以直接将Python脚本文件直接编译在固件中呢？答案显然是可以！想知道的话，点击右下角Next参考下一篇《TPYBoard Micropython 添加自定义类库》。
+是否可以直接将Python脚本文件直接编译在固件中呢？答案显然是可以！想知道的话，点击右下角Next参考下一篇《TPYBoard Micropython中增加模块》。
