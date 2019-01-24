@@ -142,6 +142,7 @@ AT指令说明文档、AT固件、烧写工具。`点击下载 <http://old.tpybo
 
 **查询固件版本**
 
+
 *发送指令：AT+GMR*
  
 
@@ -182,7 +183,7 @@ ESP-01作为TCP Client连接Server。发送指令AT+CIPSTART="TCP","192.168.101.
 .. image:: img/esp8266/11.png
 
 
-TCP链接建立，开始发送数据。单路链接时发送指令为AT+CIPSEND=x，x为发送的字节数。
+TCP链接建立，开始发送数据。单路链接时发送指令为AT+CIPSEND=x，x为发送的字节数。出现符号">"后就可以发送数据了。
 
 
 .. image:: img/esp8266/12.png
