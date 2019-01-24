@@ -1,7 +1,7 @@
 .. _quickref:
 
-[MicroPython]TPYBoard 添加自定义类库
-======================================
+[MicroPython]TPYBoard v10x 在micropython中增加自定义的py模块
+===============================================================
 
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
 
@@ -75,7 +75,7 @@ MicroPython的源码结构
 
 4.执行编译命令，等待编译完成。
 
-.. code-block::
+.. code-block:: c
 
   sudo make BOARD=PYBV10
 
