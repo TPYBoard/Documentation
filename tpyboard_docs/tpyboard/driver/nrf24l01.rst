@@ -11,7 +11,7 @@
 
 .. only:: port_tpyboard
 
-    .. class:: nrf24l01use.NRF24L01(spi, cs, ce)
+    .. class:: nrf24l01use.nrf24l01(spi, cs, ce)
  
     创建一个NRF24L01对象。
     
@@ -19,11 +19,11 @@
         - ``cs`` pyb.Pin对象
         - ``ce``  pyb.Pin对象
     
-    .. method:: NRF24L01.master(data)
+    .. method:: nrf24l01.master(data)
 
       发射函数，设置为发送端，并发送data。data为待发送数据。
 
-    .. method:: NRF24L01.slave()
+    .. method:: nrf24l01.slave()
 
        接收函数，返回值为接收到的数据。
 
@@ -57,7 +57,7 @@ NRF24L01与开发板接线对应引脚：
   # main.py -- put your code here!
   import nrf24l01use
   
-  nrf=nrf24l01use.NRF24L01(spi=2,csn='Y5',ce='Y4')	#设置SPI2接口csn引脚与ce引脚
+  nrf=nrf24l01use.nrf24l01(spi=2,csn='Y5',ce='Y4')	#设置SPI2接口csn引脚与ce引脚
   
   while True:
   	print(nrf.slave())#接收内容
@@ -67,7 +67,7 @@ NRF24L01与开发板接线对应引脚：
 
   import nrf24l01use
   
-  nrf=nrf24l01use.NRF24L01(spi=2,csn='Y5',ce='Y4')
+  nrf=nrf24l01use.nrf24l01(spi=2,csn='Y5',ce='Y4')
   i=0
   while True:
   	nrf.master(i)#发送内容
