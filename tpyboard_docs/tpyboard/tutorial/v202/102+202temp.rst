@@ -127,7 +127,7 @@ TPYBoard v202 main.py文件内容，如下：
     u2=UART(0,115200)#串口初始化
     led = Pin(2, Pin.OUT).value(1)#板载小蓝灯 默认关闭
     def http_get(temp,hum):
-        url='http://www.tpyboard.com/esp8266/SensorTest.php?t='+temp+'&h='+hum+''
+        url='http://old.tpyboard.com/esp8266/SensorTest.php?t='+temp+'&h='+hum+''
         _, _, host, path = url.split('/', 3)
         addr = socket.getaddrinfo(host, 80)[0][-1]
         s = socket.socket()
@@ -166,6 +166,11 @@ TPYBoard v202 main.py文件内容，如下：
 
 **服务器源码**
 
+
+SensorTest.php 用于接收TPYBoard v202提交的数据。
+
+SensorData.php 用于显示TPYBoard v202上传的数据。
+
 页面下方点击下载源码，获取SensorData.php和SensorTest.php文件。
 
 五、效果图
@@ -178,6 +183,8 @@ TPYBoard v202 main.py文件内容，如下：
 
 2、网页效果图
 >>>>>>>>>>>>>>>>>>>>>
+
+访问网址：http://old.tpyboard.com/esp8266/SensorData.php
 
 .. image:: images/WY1.png
 

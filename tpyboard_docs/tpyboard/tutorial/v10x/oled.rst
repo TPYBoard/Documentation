@@ -77,7 +77,6 @@ OLED接口定义
 
     #main.py
     import pyb
-    import upcd8544
     from ssd1306 import SSD1306
 
     display = SSD1306(pinout={'dc': 'Y9',
