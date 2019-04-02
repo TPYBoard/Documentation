@@ -59,11 +59,14 @@ TPYBoard v102连接LCD5110
 
 TPYBoard v102连接DHT11
 
-.. image:: images/DHT112.png
+.. image:: images/102+DHT11.png
 
 TPYBoard v102连接TPYBoard v202
 
 .. image:: images/202+102.png
+
+
+**注意:** TPYBoard v202只有一个串口，在使用时比较麻烦。因为REPL也是通过串口输出的，有些字符会导致v202的程序停止，或者支持REPL（puuty）等工具会无法使用。使用时，应多注意冲突。
 
 2、实物连接图
 -----------------------
