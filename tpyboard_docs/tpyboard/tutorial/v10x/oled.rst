@@ -77,7 +77,7 @@ OLED接口定义
 
     #main.py
     import pyb
-    from ssd1306 import SSD1306
+    from ssd1306_lib import SSD1306
 
     display = SSD1306(pinout={'dc': 'Y9',
                           'res': 'Y10'},
