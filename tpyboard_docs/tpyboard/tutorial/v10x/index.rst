@@ -22,6 +22,7 @@ TPYBoard v10x 典型实例
     intro.rst
     metaldetector.rst
     nightlight.rst
+    dht11.rst
     88led.rst
     template.rst
     script.rst

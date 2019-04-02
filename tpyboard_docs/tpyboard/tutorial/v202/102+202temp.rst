@@ -74,7 +74,7 @@ TPYBoard v102连接TPYBoard v202
 .. image:: images/5110+102+202.png
     :width: 300px
 
-四、源代码
+五、源代码
 --------------------------
 
 TPYBoard v102 源代码
@@ -176,7 +176,7 @@ SensorData.php 用于显示TPYBoard v202上传的数据。
 
 页面下方点击下载源码，获取SensorData.php和SensorTest.php文件。
 
-五、效果图
+六、效果图
 ----------------------------
 
 1、实物效果图
