@@ -7,6 +7,8 @@ TPYBoard v10x 典型实例
     :maxdepth: 1
     :numbered:
 	
+    start.rst
+    repl.rst
     V102 (10).rst
     V102 (11).rst
     V102 (12).rst
@@ -34,7 +36,7 @@ TPYBoard v10x 典型实例
     oled.rst
     1602.rst
     airfan.rst
-    repl.rst
+    servo.rst
     infraredarrestcar.rst
     infraredcar.rst
     bluetoothcar.rst
