@@ -67,17 +67,17 @@
 
 第二步：安装esptool和pyserial
 
-在命令行里运行：pip install esptool和pip install pyserial
+在CMD命令行里运行：pip install esptool和pip install pyserial
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489557851831033.png
 
 第三步：擦除flash
 
-运行的指令::
+打开CMD命令行，运行指令::
 
 	esptool.py --port COM3 erase_flash 
 
-(注意：执行擦除的指令前，需要像烧录固件一样，让esp8266进入烧写模式)即按住板上的flash键不放，按下rst键，等待两秒，松开rst键，再松开flash键。
-否则会出现如下的错误提示：A fatal error occurred: Failed to connect to ESP8226
+(注意：执行擦除的指令前，需要像烧录固件一样，让esp8266进入烧写模式)即按住板上的FLASH键不放，按下RST键松开，当界面显示出MAC地址后，即可松开FLASH按键等待擦除完毕。如果在超时时间内没有让板子进入烧写模式的话
+，就会出现如下的错误提示：A fatal error occurred: Failed to connect to ESP8226
 
 固件成功擦除后，可参考下一篇文档进行固件的烧写。
