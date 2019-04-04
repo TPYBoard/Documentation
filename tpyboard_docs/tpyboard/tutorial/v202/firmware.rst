@@ -30,9 +30,6 @@
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170222/1487749376138909.png
 
 打开ESPFlashDownloadTool_v3.3.4软件，根据下图进行设置。
-
-`flash_download_tools_v3.3.4_win.zip <http://www.tpyboard.com/ueditor/php/upload/file/20170222/1487750849450572.rar>`__
-
 选择bin格式的固件文件，固件可以去micropython官网下，`点击进入 <http://micropython.org/download#esp8266>`_。
 地址设置为0x00000，串口根据自己的实际情况选择，小编我的是COM44，波特率115200(必须设置为115200)
 
