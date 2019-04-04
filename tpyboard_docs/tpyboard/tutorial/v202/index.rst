@@ -9,8 +9,6 @@ TPYBoard v202 典型实例
 
     start.rst
     quickref.rst
-    firmwipe.rst
-    firmware.rst
     filerw.rst
     gpio.rst
     network.rst
@@ -27,3 +25,5 @@ TPYBoard v202 典型实例
     V2025.rst
     servo.rst
     iic.rst
+    firmwipe.rst
+    firmware.rst

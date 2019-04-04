@@ -1,6 +1,6 @@
 
 [Micropython]TPYBoard v102 获取REPL提示
-======================================================================
+=============================================
 
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
 
@@ -22,24 +22,24 @@ Windows
 
 .. image:: img/win10.png
 
-其他情况下，就会出现下面的提示。
+其他情况下，会出现下面的提示。
 
 .. image:: img/q1.png
 
-这时就需要我们去【设备管理器】进行手动安装。【其他设备】下看到一个带黄色感叹号图标的设备，右键选择更新驱动程序文件，定位到``TPYBFLASH``目录即可。
+这时就需要我们去【设备管理器】进行手动安装。【其他设备】下看到一个带黄色感叹号图标的设备，右键选择更新驱动程序文件，定位到    ``TPYBFLASH`` 目录即可。
 
 .. image:: img/qu.gif
 
 但是，有的朋友的电脑可能会安装失败，主要有两种情况：
 
- - 提示“没有INF签名的驱动程序”。这是因为有的电脑开启了驱动强制签名的设置，把此设置关闭即可。`解决方案 <http://docs.tpyboard.com/zh/latest/tpyboard/general/#win10>`_
+ - 提示“没有INF签名的驱动程序”，这是因为有的电脑开启了驱动强制签名的设置，把此设置关闭即可。`解决方案 <http://docs.tpyboard.com/zh/latest/tpyboard/general/#win10>`_
 
- - 提示“系统找不到指定的文件”等类似的问题。`解决方法 <http://old.tpyboard.com/download/tool/197.html>`_
+ - 提示“系统找不到指定的文件”等类似的问题，这时因为有些电脑是通过GHOST方式装的系统，它会删减一些系统文件。`解决方法 <http://old.tpyboard.com/download/tool/197.html>`_
 
+Windows下我们使用PuTTY软件进行REPL交互。
 `下载PuTTY软件 <http://old.tpyboard.com/download/tool/3.html>`_
 
-
-打开Putty软件，【Connection type】分类中选择【Serial】串口模式，输入串口端口号和波特率（默认波特率：9600）。例如端口号是COM10。
+打开Putty软件，【Connection type】分类中选择【Serial】串口模式，输入串口端口号和波特率（默认波特率：9600）。例如端口号是COM10 *（这里的端口号是指自己设备管理器对应的端口号）* 。
 
 .. image:: img/putty.png
 
@@ -55,7 +55,7 @@ Windows
 
  - Ctrl+D：软复位
 
-``注意：`` 有时必须按下RST键进行硬件复位时，需先关闭PuTTY再进行操作，否则下次连接会出错。如果出错了，就再复位一次重新打开PuTTY就好了。
+注意：有时必须按下RST键进行硬件复位时，需先关闭PuTTY再进行操作，否则下次连接会出错。如果出错了，就再复位一次重新打开PuTTY就好了。
 
 Linux(Ubuntu)
 >>>>>>>>>>>>>>>
@@ -87,58 +87,13 @@ Linux(Ubuntu)
 
 退出关闭-组合键Ctrl+A+Q。
 
-深入了解
-----------------------
+MacOS
+>>>>>>>>>>>>>>>
 
-打开 ``TPYBFLASH`` 可以看到里面默认有4个文件：
+打开一个终端并运行
 
- - ``boot.py`` 开发板启动配置文件，例如可以设置开发板USB设备的模式（CDC、MSC、HID）或者指定第一个运行的脚本等。
- - ``main.py`` 默认第一个运行的脚本，可在boot.py中进行设置。
- - ``README.txt`` 一些帮助信息。
- - ``tpybcdc.inf`` 开发板的USB转虚拟串口的驱动，可用于repl调试。（下一篇讲解如何使用REPL调试）
+.. code-block:: c
 
-编辑器的选择
->>>>>>>>>>>>>>>>>
+  screen /dev/tty.usbmodem*
 
-在后面的开发中，主要是在main.py进行编程实现功能。那我们该如何挑选合适的编辑器呢？
-
-其实对于一个脚本文件来说，任何一个编辑工具都可以。但最好别直接使用文本文档，这样会使代码格式乱掉。你要明白Python是通过缩进来区分代码块的，有的人会使用空格缩进，而大部分的人会使用tab键缩进，只要保证整体一致即可。不同的编辑器会有不同的缩进规则，这样就会导致，直接拷贝过来的程序运行会出错等。
-
-如果出现“SyntaxError: invalid syntax“错误：可能就是tab和空格没对齐的问题。
-如果出现“IndentationError: unindent does not match any outer indentation level”错误：可能就是使用的缩进方式不一致。
-
-不在REPL调试模式下，我们是看不到错误信息的，但是当你发现开发板上出现了红色、绿色LED交替闪烁几次后熄灭的情况，说明程序出现了错误。
-
-*PythonEditor拼插编辑器*
-
-对于零基础编程的小伙伴，推荐我们自主开发的一款拼插编辑器 `点击进入 <http://www.tpyboard.com/pythoneditor/>`_。它同时支持拼插和代码两种方式，方便编程入门。
-
-*代码编辑器*
-
-推荐Visual Studio Code、Notepad++、PyCharm、Python IDLE。vscode和PyCharm都可以安装micropython的插件，支持代码提示补全和REPL调试。Notepad++在win10下会出现文件损坏的BUG。
-
-和谐相处
-----------------------------
-
-为了防止代码丢失，养成良好的编程习惯，建议在电脑本地编写好main.py后直接覆盖``TPYBFLASH``中的main.py文件，不要直接在 ``TPYBFLASH`` 中编辑。
-
-接下来，我们写一段代码，点亮板载的第4个LED。main.py:
-
-.. code-block:: python
-
-    import pyb
-    pyb.LED(4).on()
-
-将编写好的main文件替换到``TPYBFLASH``里的mian文件。
-
-.. image:: img/copy.gif
-
-**注意：文件覆盖、修改保存时，板载的红色LED会亮起，说明正在写入板子内部FLASH，需等待熄灭后再进行其他操作。** 
-
-保存完毕后，按下板载的RST按键进行复位，板载的蓝色LED就会亮起。
-
-`点击进入TPYBoard v102视频教程 <http://tpyboard.com/Home/Courses/index?uid=37>`_ (建议使用谷歌浏览器观看，效果更佳哦)
-
-`点击进入TPYBoard v102快速参考手册 <http://docs.tpyboard.com/zh/latest/tpyboard/quickref/>`_
-
-
+退出关闭-快捷键 CTRL-A CTRL-\。

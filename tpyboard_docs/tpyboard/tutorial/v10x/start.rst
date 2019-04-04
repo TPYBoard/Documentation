@@ -24,12 +24,9 @@
  
 .. image:: img/flash.png
 
-
 也有可能有的小伙伴的电脑，不能自动安装时，可安装驱动人生进行USB驱动的修复。
 
-`CH34x驱动下载 <http://tpyboard.com/download/drive/163.html>`_
-
- 
+`可参考教程 <https://www.kafan.cn/edu/86015156.html>`_
 
 深入了解
 ----------------------
@@ -44,14 +41,14 @@
 编辑器的选择
 >>>>>>>>>>>>>>>>>
 
-在后面的开发中，主要是在main.py进行编程实现功能。那我们该如何挑选合适的编辑器呢？
+在后面的开发中，主要是在main.py文件中进行编程实现功能。那我们该如何挑选合适的编辑器呢？
 
-其实对于一个脚本文件来说，任何一个编辑工具都可以。但最好别直接使用文本文档，这样会使代码格式乱掉。你要明白Python是通过缩进来区分代码块的，有的人会使用空格缩进，而大部分的人会使用tab键缩进，只要保证整体一致即可。不同的编辑器会有不同的缩进规则，这样就会导致，直接拷贝过来的程序运行会出错等。
+其实对于一个脚本文件来说，任何一个编辑工具都可以。但最好别直接使用文本文档，这样会使代码格式乱掉。你要明白Python是通过缩进来区分代码块的，有的人会使用空格缩进，而大部分的人会使用tab键缩进，不同的编辑器会有不同的tab缩进规则，所以就会导致直接拷贝过来的程序运行会出错等。无论是哪一种缩进方式，只要保证整体一致即可。
 
 如果出现“SyntaxError: invalid syntax“错误：可能就是tab和空格没对齐的问题。
 如果出现“IndentationError: unindent does not match any outer indentation level”错误：可能就是使用的缩进方式不一致。
 
-不在REPL调试模式下，我们是看不到错误信息的，但是当你发现开发板上出现了红色、绿色LED交替闪烁几次后熄灭的情况，说明程序出现了错误。
+**不在REPL调试模式下，我们是看不到错误信息的，但是当你发现开发板上出现了红、绿色LED交替闪烁几次后熄灭的情况，就说明程序出现了错误。**
 
 *PythonEditor拼插编辑器*
 
@@ -59,21 +56,21 @@
 
 *代码编辑器*
 
-推荐Visual Studio Code、Notepad++、PyCharm、Python IDLE。vscode和PyCharm都可以安装micropython的插件，支持代码提示补全和REPL调试。Notepad++在win10下会出现文件损坏的BUG。
+推荐Visual Studio Code、Notepad++、PyCharm、Python IDLE。VSCode和PyCharm都可以安装micropython的插件，支持代码提示补全和REPL调试。Notepad++在win10下会出现文件损坏的BUG。
 
 和谐相处
 ----------------------------
 
-为了防止代码丢失，养成良好的编程习惯，建议在电脑本地编写好main.py后直接覆盖``TPYBFLASH``中的main.py文件，不要直接在 ``TPYBFLASH`` 中编辑。
+为了防止代码丢失，养成良好的编程习惯，建议在电脑本地编写好main.py后直接覆盖 ``TPYBFLASH`` 中的main.py文件，不要直接在 ``TPYBFLASH`` 中编辑。
 
-接下来，我们写一段代码，点亮板载的第4个LED。main.py:
+接下来，我们写一段代码，点亮板载的第4个LED。新建一个main.py文件，输入下面的代码。
 
 .. code-block:: python
 
     import pyb
     pyb.LED(4).on()
 
-将编写好的main文件替换到``TPYBFLASH``里的mian文件。
+将编写好的main.py文件拷贝替换到 ``TPYBFLASH`` 里的mian.py文件。
 
 .. image:: img/copy.gif
 
@@ -81,7 +78,7 @@
 
 保存完毕后，按下板载的RST按键进行复位，板载的蓝色LED就会亮起。
 
-`点击进入TPYBoard v102视频教程 <http://tpyboard.com/Home/Courses/index?uid=37>`_ (建议使用谷歌浏览器观看，效果更佳哦)
+`点击进入TPYBoard v102视频教程 <http://tpyboard.com/Home/Courses/index?uid=37>`_ *(建议使用谷歌浏览器观看，效果更佳哦)*
 
 `点击进入TPYBoard v102快速参考手册 <http://docs.tpyboard.com/zh/latest/tpyboard/quickref/>`_
 
