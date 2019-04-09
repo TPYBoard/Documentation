@@ -8,6 +8,7 @@ TPYBoard 资料:
 * `TPYBv10x 原理图 <http://www.tpyboard.com/document/documents/10x/TPYBoardv10x.pdf>`_ (98KiB PDF)
 * `TPYBv10x  PCB图 <http://www.tpyboard.com/document/documents/10x/TPYBoardv10xPCB.pdf>`_ (140KiB PDF)
 * `TPYBv10x 引脚图 <http://www.tpyboard.com/document/documents/10x/TPYBoardv10xPCBpng.pdf>`_ (209KiB PDF)
+* `TPYBv10x 尺寸图 <http://old.tpyboard.com/document/documents/10x/TPYBoardv10xSize.pdf>`_ (475KiB PDF)
 *
 * `TPYBv201 原理图 <http://www.tpyboard.com/document/documents/201/TPYBoardv201.pdf>`_ (92KiB PDF)
 * `TPYBv201  PCB图 <http://www.tpyboard.com/document/documents/201/TPYBoardv201PCB.pdf>`_ (105KiB PDF)
