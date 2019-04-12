@@ -59,29 +59,29 @@ IIC接口2的接线方法（程序中ds=DS3231(2)调用IIC接口2）
 源代码
 ---------------
 
-接线OK后，导入DS3231.py，编写main.py保存，等红灯熄灭后，RST开发板，用PuTTY可以看到时间和温度。
+接线OK后，导入ds3231.py，编写main.py保存，等红灯熄灭后，RST开发板，用PuTTY可以看到时间和温度。
 
 .. code-block:: python
 
 	# main.py -- put your code here!
-	import pyb
-	from DS3231 import DS3231  
-	ds=DS3231(1)
-	#设置时间
-	#ds.TIME([17,40,30])
+    import pyb
+    from ds3231 import DS3231  
+    ds=DS3231(1)
+    #设置日期
+    ds.DATE([19,04,01])
+    #设置时间
+    ds.TIME([15,10,10])
+    #延时5秒查看效果
+    pyb.delay(5000)
+    #读取秒并打印
+    print(ds.sec())
+    #读取日期
+    print(ds.DATE())
+    #读取时间
+    print(ds.TIME())
 
-	#读取秒
-	ds.sec()
-	print(ds.sec())
-	#读取时间
-	ds.TIME()
-	print(ds.TIME())
-	#读取日期
-	ds.DATE()
-	print(ds.DATE())
-	#读取温度
-	ds.TEMP()
-	print(ds.TEMP())
+    #读取温度
+    print(ds.TEMP())
 
 
 * `下载源码 <http://old.tpyboard.com/document/documents/tb407/ds3231.rar>`_ 
