@@ -68,4 +68,4 @@
 若想做一下扩展，可将温湿度显示到OLED显示屏上，这样一个小型的DIY温湿度检测仪就诞生了。
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v202>`_

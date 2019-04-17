@@ -107,4 +107,4 @@ TPYBoard v702的开发板的整体整体亮点置一就是能板载通信功能�
             pyb.delay(1000)
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v70x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v702>`_

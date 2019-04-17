@@ -82,4 +82,4 @@ http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v201/cloudadder.html#v201
       pyb.delay(12000)
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master/>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v201>`_

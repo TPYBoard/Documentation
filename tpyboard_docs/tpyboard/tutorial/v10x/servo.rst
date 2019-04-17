@@ -98,4 +98,4 @@ main.py 内容如下:
 
   虽然舵机只是能实现转动指定的角度，看起来功能很单一，但是单一的功能结合起来，就能完成很复杂的任务。
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v102>`_

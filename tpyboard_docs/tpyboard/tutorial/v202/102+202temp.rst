@@ -191,4 +191,4 @@ SensorData.php 用于显示TPYBoard v202上传的数据。
 
 .. image:: images/WY1.png
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v202>`_

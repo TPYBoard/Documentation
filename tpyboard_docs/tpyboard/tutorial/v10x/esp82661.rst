@@ -281,4 +281,4 @@ TCP链接建立，开始发送数据。单路链接时发送指令为AT+CIPSEND=
 
 综上，TCP的测试实验完毕。本实验只是做了一些简单的示例，大家可根据自己的想法结合文档开发出更有意思的作品，比如智能控制开关、智能WIFI小车等。
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v102>`_

@@ -120,4 +120,4 @@ Putty数据监控图
                     break
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v70x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v702>`_

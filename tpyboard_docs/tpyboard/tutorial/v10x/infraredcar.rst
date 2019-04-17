@@ -135,4 +135,4 @@ MicroPython是在单片机上可以跑的Python，也就是说，你可以通过
 			pyb.delay(70)
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master>`_
+- `下载源码 <- `下载源码 <https://github.com/TPYBoard/TPYBoard-v102>`_>`_

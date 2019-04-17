@@ -164,4 +164,4 @@
                 pyb.delay(250)
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v102>`_

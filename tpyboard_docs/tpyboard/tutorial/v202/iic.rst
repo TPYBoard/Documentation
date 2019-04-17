@@ -106,4 +106,4 @@ main.py程序代码
 ds3231.py `点击预览 <https://github.com/TPYBoard/developmentBoard/blob/master/TPYBoard-v20x-master/TPYBoard%20v202%20%E5%85%B8%E5%9E%8B%E5%AE%9E%E4%BE%8B/05.I2C%E6%93%8D%E4%BD%9CDS3231%E6%A8%A1%E5%9D%97/ds3231.py>`_
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v202>`_

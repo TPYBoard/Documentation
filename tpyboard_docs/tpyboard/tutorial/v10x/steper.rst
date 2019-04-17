@@ -166,4 +166,4 @@ TPYBoard v102驱动板与驱动板的接线图，如下：
         SteperRun(180)
         SteperRun(-180)
         
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v102>`_

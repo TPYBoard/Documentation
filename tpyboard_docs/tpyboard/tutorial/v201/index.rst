@@ -7,7 +7,7 @@ TPYBoard v201 典型实例
    :maxdepth: 1
    :numbered:
    
-   V102 (5).rst
+   set.rst
    cloudadder.rst
    temperaturehumidity.rst
    

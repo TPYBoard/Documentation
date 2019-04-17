@@ -103,4 +103,4 @@ TPYBoard的针脚与5110的针脚对应关系如下：
         pyb.delay(1000)
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v102>`_

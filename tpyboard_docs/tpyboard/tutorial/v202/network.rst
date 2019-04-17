@@ -86,8 +86,15 @@ TPYBoard v202自动连接本地网络:
 	import network
 	ap = network.WLAN(network.AP_IF) ＃创建接入点接口
 	ap.active(True)         # 激活接口
-	ap.config(essid='ESP-AP',authmode=0) # 设计接入点的ESSID
+	ap.config(essid='ESP-AP',authmode=0) # 设计接入点的ESSID，开放无密码模式
 
+AuthMode有五种模式：
+
+ - 0 : OPEN
+ - 1 : WEP
+ - 2 : WPA-PSK
+ - 3 : WPA2-PSK
+ - 4 : WPA/WPA2-PSK
 
 向指定地址发送数据的方法：
 
@@ -176,7 +183,7 @@ main.py程序代码
 			p2.low()
 			print('connecting to network...')
 			sta_if.active(True)
-			sta_if.connect('TurnipSmart', 'turnip2016')
+			sta_if.connect('essid', 'pwd')
 			while not sta_if.isconnected():
 				pass
 		if sta_if.isconnected():
@@ -216,4 +223,4 @@ main.py程序代码
 .. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489562400709859.png
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v202>`_

@@ -105,4 +105,4 @@ TPYBoard v201是以遵照MIT许可的MicroPython为基础，由TurnipSmart公司
 
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master/>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v201>`_

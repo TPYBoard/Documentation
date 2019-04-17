@@ -244,4 +244,4 @@ GND-------------------GND
 				   print('-----data lengtherror-----')
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v10x-master/36.%E7%85%A7%E7%9B%B8%E6%9C%BA>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v102>`_

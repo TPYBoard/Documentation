@@ -221,4 +221,4 @@
 
 .. image:: img/6.png
 
-- `演示视频 <http://pan.baidu.com/s/1i4I7QXf>`_
+- `演示视频 <https://github.com/TPYBoard/TPYBoard-v102>`_

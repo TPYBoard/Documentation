@@ -127,4 +127,4 @@ TPYBoard v702的开发板的整体整体亮点就是能进行定位，可以获�
         lcd_5110.lcd_write_string(str(WD),0,3)
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v70x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v702>`_

@@ -84,4 +84,4 @@ GPIO（General Purpose I/O Ports）意思为通用输入/输出端口，通俗�
 	  time.sleep(3)           # sleep for 3 second
 
 
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v202>`_

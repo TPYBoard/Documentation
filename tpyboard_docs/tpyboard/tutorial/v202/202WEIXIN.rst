@@ -128,4 +128,4 @@ main.py：
 .. image:: images/2023.png
     :width: 200px
     
-- `下载源码 <https://github.com/TPYBoard/developmentBoard/tree/master/TPYBoard-v20x-master>`_
+- `下载源码 <https://github.com/TPYBoard/TPYBoard-v202>`_
