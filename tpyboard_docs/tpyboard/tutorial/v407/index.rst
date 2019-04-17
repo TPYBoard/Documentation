@@ -8,9 +8,13 @@ TPYBoard F407 典型实例
 	:numbered:
 
 	helloworld.rst
-	18b20tem.rst
-	bmp180.rst
 	diylight.rst
+    18b20tem.rst
+	bmp180.rst
 	ds3231time.rst
 	oled.rst
 	supwave.rst
+    adc.rst
+    dac.rst
+    timer.rst
+    bluetooth.rst
