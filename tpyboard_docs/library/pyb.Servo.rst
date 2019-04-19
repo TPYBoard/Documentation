@@ -1,38 +1,34 @@
 .. currentmodule:: pyb
 .. _pyb.Servo:
 
-class Servo -- 3-wire hobby servo driver
+class Servo -- 三线伺服舵机控制模块
 ========================================
 
-Servo objects control standard hobby servo motors with 3-wires (ground, power,
-signal).  There are 4 positions on the pyboard where these motors can be plugged
-in: pins X1 through X4 are the signal pins, and next to them are 4 sets of power
-and ground pins.
+``Servo`` 对象用于控制标准的三线伺服舵机设备（电源地、电源正、信号）。在TPYBoard v102
+开发板上有4个引脚可直接使用：X1、X2、X3和X4引脚。
 
-Example usage::
+程序示例::
 
     import pyb
 
-    s1 = pyb.Servo(1)   # create a servo object on position X1
-    s2 = pyb.Servo(2)   # create a servo object on position X2
+    s1 = pyb.Servo(1)   # 在X1引脚上创建伺服对象
+    s2 = pyb.Servo(2)   # 在X2引脚上创建伺服对象
 
-    s1.angle(45)        # move servo 1 to 45 degrees
-    s2.angle(0)         # move servo 2 to 0 degrees
+    s1.angle(45)        # 转动到45度
+    s2.angle(0)         # 转动到0度
 
-    # move servo1 and servo2 synchronously, taking 1500ms
+    # 移动舵机指定角度，在1500毫秒内完成
     s1.angle(-60, 1500)
     s2.angle(30, 1500)
 
-.. note:: The Servo objects use Timer(5) to produce the PWM output.  You can
-   use Timer(5) for Servo control, or your own purposes, but not both at the
-   same time.
+.. note:: 舵机的驱动是通过Timer(5)产生PWM输出来实现的。使用时需注意避免冲突。
 
 Constructors
 ------------
 
 .. class:: pyb.Servo(id)
 
-   Create a servo object.  ``id`` is 1-4, and corresponds to pins X1 through X4.
+   创建一个伺服对象。  ``id`` is 1-4, 对应的引脚为 X1~X4.
 
 
 Methods
@@ -40,41 +36,36 @@ Methods
 
 .. method:: Servo.angle([angle, time=0])
 
-   If no arguments are given, this function returns the current angle.
+   不传参数，返回当前角度。
 
-   If arguments are given, this function sets the angle of the servo:
+   传递参数, 设置角度:
 
-     - ``angle`` is the angle to move to in degrees.
-     - ``time`` is the number of milliseconds to take to get to the specified
-       angle.  If omitted, then the servo moves as quickly as possible to its
-       new position.
+     - ``angle`` 指定转动的角度。
+     - ``time`` 达到指定角度所需的毫秒数。若忽略，将以最快的速度。
 
 .. method:: Servo.speed([speed, time=0])
 
-   If no arguments are given, this function returns the current speed.
+   不传参数，返回当前转动速度。
 
-   If arguments are given, this function sets the speed of the servo:
+   传递参数, 设置转动速度:
 
-     - ``speed`` is the speed to change to, between -100 and 100.
-     - ``time`` is the number of milliseconds to take to get to the specified
-       speed.  If omitted, then the servo accelerates as quickly as possible.
+     - ``speed`` 要设置的转动速度,介于-100到100之间。
+     - ``time`` 达到指定速度所需的毫秒数。若忽略，将以最短的时间。
 
 .. method:: Servo.pulse_width([value])
 
-   If no arguments are given, this function returns the current raw pulse-width
-   value.
+   不传参数，返回原始的脉冲宽度值。
 
-   If an argument is given, this function sets the raw pulse-width value.
+   传递参数，设置脉冲宽度值。
 
 .. method:: Servo.calibration([pulse_min, pulse_max, pulse_centre, [pulse_angle_90, pulse_speed_100]])
 
-   If no arguments are given, this function returns the current calibration
-   data, as a 5-tuple.
+   不传参数，返回当前校准的数据。数据类型为元组，内含5个元素。
 
-   If arguments are given, this function sets the timing calibration:
+   传递参数，设置定时校准:
 
-     - ``pulse_min`` is the minimum allowed pulse width.
-     - ``pulse_max`` is the maximum allowed pulse width.
-     - ``pulse_centre`` is the pulse width corresponding to the centre/zero position.
-     - ``pulse_angle_90`` is the pulse width corresponding to 90 degrees.
-     - ``pulse_speed_100`` is the pulse width corresponding to a speed of 100.
+     - ``pulse_min`` 允许的最小脉冲宽度。
+     - ``pulse_max`` 允许的最大脉冲宽度。
+     - ``pulse_centre`` 与中心/零位相对应的脉冲宽度。
+     - ``pulse_angle_90`` 90度角的脉冲宽度。
+     - ``pulse_speed_100`` 与速度100相对应的脉冲宽度。
