@@ -17,4 +17,5 @@ TPYBoard F407 典型实例
     adc.rst
     dac.rst
     timer.rst
+	servo.rst
     bluetooth.rst
