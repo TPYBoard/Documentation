@@ -7,15 +7,16 @@ TPYBoard F407 典型实例
 	:maxdepth: 1
 	:numbered:
 
-	helloworld.rst
+	start.rst
+	repl.rst
 	diylight.rst
-    18b20tem.rst
+	18b20tem.rst
 	bmp180.rst
 	ds3231time.rst
 	oled.rst
 	supwave.rst
-    adc.rst
-    dac.rst
-    timer.rst
+	adc.rst
+	dac.rst
+	timer.rst
 	servo.rst
-    bluetooth.rst
+	bluetooth.rst
