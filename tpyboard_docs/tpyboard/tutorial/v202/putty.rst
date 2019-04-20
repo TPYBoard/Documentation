@@ -38,7 +38,7 @@ Putty连接方法
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556719107216.png
 
-通过数据线将TPYBoard v102开发板连接电脑。打开桌面，右键点击我的电脑选择设备管理器。单击端口选项，会出现如下效果：
+通过数据线将TPYBoard v202开发板连接电脑。打开桌面，右键点击我的电脑选择设备管理器。单击端口选项，会出现如下效果：
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556741930279.png
 
@@ -47,10 +47,10 @@ Putty连接方法
 如果在端口中没有出现红色方框中的选项，请确认以下几点：
 
 	- 检查驱动程序（CH341SER）是否安装成功。
-	- 安装驱动精灵且将TPYBoard v102开发板连接电脑的同时自动搜索与其匹配的驱动进行安装。
+	- 安装驱动精灵且将TPYBoard v202开发板连接电脑的同时自动搜索与其匹配的驱动进行安装。
 	- 检查TPYBoard-esp8266开发板与电脑的连接是否有误。
 
-通过PUTTY连接TPYBoard v102开发板
+通过PUTTY连接TPYBoard v202开发板
 
 双击下载后的PuTTY_0.67.0.0.exe软件，点击运行。红色方框中Host Name 填写端口中新加入的端口名字（这里可以写括号中的COM4）Port中填写115200。Connection type 中选择Serial选项。
 
@@ -64,11 +64,11 @@ Putty连接方法
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556809372737.png
 
-点击TPYBoard v102开发板中的RST键，会出现如下界面：
+点击TPYBoard v202开发板中的RST键，会出现如下界面：
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556824915207.png
 
-当界面出现红色方框中的内容时说明TPYBoard v102开发板已经安装成功。现在可以编写python代码，如图：
+当界面出现红色方框中的内容时说明TPYBoard v202开发板已经安装成功。现在可以编写python代码，如图：
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556846690984.png
 
