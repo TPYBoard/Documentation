@@ -1,5 +1,3 @@
-.. _TPYBoard_tutorial_oled:
-
 [Micropython]TPYBoard F407 驱动OLED液晶屏
 ==========================================
 

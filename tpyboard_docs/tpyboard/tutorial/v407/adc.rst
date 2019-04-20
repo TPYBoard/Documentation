@@ -1,5 +1,3 @@
-.. _TPYBoard_tutorial_adc:
-
 [Micropython]TPYBoard F407 通过ADC读取光照值
 ==============================================================
 

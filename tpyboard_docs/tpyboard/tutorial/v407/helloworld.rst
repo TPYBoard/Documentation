@@ -1,5 +1,3 @@
-.. _TPYBoard_tutorial_helloworld:
-
 [Micropython]TPYBoard F407 运行第一个脚本
 ============================================
 

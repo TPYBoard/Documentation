@@ -1,5 +1,3 @@
-.. _TPYBoard_tutorial_18b20tem:
-
 [Micropython]TPYBoard F407 驱动DS3231读取时间、温度
 =====================================================
 

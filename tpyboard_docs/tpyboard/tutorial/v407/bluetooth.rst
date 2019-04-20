@@ -1,5 +1,3 @@
-.. _TPYBoard_tutorial_bluetooth:
-
 [Micropython]TPYBoard F407 手机远程控制板载LED（蓝牙通信）
 ==============================================================
 

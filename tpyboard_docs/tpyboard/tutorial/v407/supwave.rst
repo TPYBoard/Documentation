@@ -1,5 +1,3 @@
-.. _TPYBoard_tutorial_supwave:
-
 [Micropython]TPYBoard F407 超声波测距
 ======================================
 

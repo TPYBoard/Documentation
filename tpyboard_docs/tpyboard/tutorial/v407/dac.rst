@@ -1,5 +1,3 @@
-.. _TPYBoard_tutorial_dac:
-
 [Micropython]TPYBoard F407 DAC数模转换
 ==============================================================
 

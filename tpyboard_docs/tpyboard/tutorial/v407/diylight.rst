@@ -1,5 +1,3 @@
-.. _TPYBoard_tutorial_diylight:
-
 [Micropython]TPYBoard F407 DIY声光控开关
 =========================================
 

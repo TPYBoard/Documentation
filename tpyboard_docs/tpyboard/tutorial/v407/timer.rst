@@ -1,5 +1,3 @@
-.. _TPYBoard_tutorial_timer:
-
 [Micropython]TPYBoard F407 定时器和呼吸灯（PWM）
 ==============================================================
 
