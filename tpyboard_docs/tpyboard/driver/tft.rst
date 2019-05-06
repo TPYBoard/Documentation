@@ -114,40 +114,42 @@ TFT与开发板接线对应引脚：
 
 .. code-block:: python
 
-  import pyb
-  import tftlcd
-  import font1
-  import gc
-  from pyb import SPI,Pin
-  spi=SPI(2)
-  tft=tftlcd.TFT(spi,cs='X11',rst='X9',rs='X10',color=2000)	#初始化液晶屏
-  tft.clean(2000)	#清屏
-  # tft.point(10,20,100)	#画点
-  # tft.line(2,3,20,40,255)	#画线
-  # tft.fill(0,0,30,10,0)	#画填充矩形
-  # tft.rectangle(20,20,60,60,0)	#画空心矩形
-  # tft.round(50,50,10,50)	#画圆
-  
-  indexes_chinese16="液晶屏测试"	#16*16汉字索引表
-  indexes_chinese12="文字测试"		#12*16汉字索引表
-  indexes_roman="0123456789"		# 8*16数字索引表
-  
-  tft.init_str(font1.FONT().f16,indexes_chinese16)	#设置字库及索引表
-  tft.write_str(75,82,16,16,"液晶屏",0)				#显示16*16汉字
-  
-  tft.init_str(font1.FONT().f12,indexes_chinese12)	#设置字库及索引表
-  tft.write_str(86,104,16,12,"测试",255)			#显示12*16汉字
+    import pyb
+    import tftlcd
+    import font1
+    import gc
+    from pyb import SPI,Pin
+    spi=SPI(2)
+    tft=tftlcd.TFT(spi,cs='X11',rst='X9',rs='X10',color=2000)	#初始化液晶屏
+    tft.clean(2000)	#清屏
+    # tft.point(10,20,100)	#画点
+    # tft.line(2,3,20,40,255)	#画线
+    # tft.fill(0,0,30,10,0)	#画填充矩形
+    # tft.rectangle(20,20,60,60,0)	#画空心矩形
+    # tft.round(50,50,10,50)	#画圆
 
-  tft.init_str(font1.FONT().fnum,indexes_roman)		#设置字库及索引表
-  tft.write_str(86,122,8,16,"149",tftlcd.RED)			#显示8*16数字
-  
-  tft.write_pictuer(0,80,72,75,font1.image().pictuer,tftlcd.BRED)	#显示黑白图像
-  
-  gc.enable()	#打开自动清理内存
-  gc.collect()	#手动清理内存
-				
-  tft.displayfile("55.bmp", 0,0,67, 75)		#显示bmp图片55
+    indexes_chinese16="液晶屏测试"	#16*16汉字索引表
+    indexes_chinese12="文字测试"		#12*16汉字索引表
+    indexes_roman="0123456789"		# 8*16数字索引表
 
- - 55.bmp
+    tft.init_str(font1.FONT().f16,indexes_chinese16)	#设置字库及索引表
+    tft.write_str(75,82,16,16,"液晶屏",0)				#显示16*16汉字
+
+    tft.init_str(font1.FONT().f12,indexes_chinese12)	#设置字库及索引表
+    tft.write_str(86,104,16,12,"测试",255)			#显示12*16汉字
+
+    tft.init_str(font1.FONT().fnum,indexes_roman)		#设置字库及索引表
+    tft.write_str(86,122,8,16,"149",tftlcd.RED)			#显示8*16数字
+
+    tft.write_pictuer(0,80,72,75,font1.image().pictuer,tftlcd.BRED)	#显示黑白图像
+
+    gc.enable()	#打开自动清理内存
+    gc.collect()	#手动清理内存
+                
+    tft.displayfile("55.bmp", 0,0,67, 75)		#显示bmp图片55
+
+
+
+- 55.bmp
  
- .. image:: 55.bmp
+.. image:: 55.bmp
