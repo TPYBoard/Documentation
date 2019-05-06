@@ -139,12 +139,15 @@ TFT与开发板接线对应引脚：
   tft.write_str(86,104,16,12,"测试",255)			#显示12*16汉字
 
   tft.init_str(font1.FONT().fnum,indexes_roman)		#设置字库及索引表
-  tft.write_str(86,122,8,16,"149",TFT.RED)			#显示8*16数字
+  tft.write_str(86,122,8,16,"149",tftlcd.RED)			#显示8*16数字
   
-  tft.write_pictuer(0,80,72,75,font1.image().pictuer,TFT.BRED)	#显示黑白图像
+  tft.write_pictuer(0,80,72,75,font1.image().pictuer,tftlcd.BRED)	#显示黑白图像
   
   gc.enable()	#打开自动清理内存
   gc.collect()	#手动清理内存
 				
   tft.displayfile("55.bmp", 0,0,67, 75)		#显示bmp图片55
-  tft.displayfile("44.bmp", 65,0,67, 75)	#显示BMP图片44
+
+ - 55.bmp
+ 
+ .. image:: 55.bmp
