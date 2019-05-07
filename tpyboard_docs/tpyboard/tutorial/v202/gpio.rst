@@ -7,7 +7,7 @@
 --------------
 
 - 学习在PC机系统中GPIO（General Purpose I/O Ports，即通用输入/输出端口）的使用方法
-- 学会用TPYBoard接收GPIO的高低电平，控制板子上LED灯的发光与否
+- 学会用TPYBoard v202开发板读取GPIO的电平值，控制板载的LED点亮/熄灭
 
 准备工作
 ----------------

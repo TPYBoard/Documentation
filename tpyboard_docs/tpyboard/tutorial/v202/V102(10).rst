@@ -50,19 +50,25 @@ TPYBoard v202的例程资料
 
 可直接访问TPYBoard的官方资料网站http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v202/
 
+TPYBoard v202串口使用的一些问题总结
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- MicroPython官方固件中除了v1.8.3版本外，其余版本的固件都能正常使用串口。
+- ESP8266-12E上只有一个串口，主要功能是进行调试和文件的上传和下载。如果你在程序中使用串口接入外设通信时，需先将与外设之前的连接断开，才能对v202进行调试或文件上传的工作。
+
 使用技巧
 -----------------
 
 TPYBoard v202固件的烧写与擦除
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-如果想给v202更新固件时，请参考下面文档进行固件的烧写。
-
-http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v202/firmware/
-
 若因为一些操作或意外，导致v202不能正常工作时，可尝试重新烧写固件试试，如果不起作用的话，可以先进行擦除在烧写。
 
-擦除请参考：http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v202/firmwipe/
+
+`点击查看固件擦除教程 <http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v202/firmwipe/>`_
+
+`点击查看固件烧写教程 <http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/v202/firmware/>`_
+
 
 TPYBoard v202的调试工具
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -88,8 +94,10 @@ TPYBoard v202下载程序的工具
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - TPYBoard v202不像是TPYBoard v102系列的一样，可以自动在电脑上加载一个磁盘，代码文件直接拷贝到磁盘中就可以运行。
+
 - TPYBoard v202需要文件下载工具才能将代码下载到Flash内运行。
-- 网上比较流行有两种工具：
+
+`` 网上比较流行有两种工具 ``
 
 1、ESPlorer 它是用Java开发的，使用前需要安装Java运行库，支持Windows、Linux和Mac OS多种系统平台；
 
@@ -101,8 +109,3 @@ ESPlorer 下载地址：http://tpyboard.com/download/tool/170.html
 
 MicroPython File Uploader下载地址：http://tpyboard.com/download/tool/170.html
 
-TPYBoard v202串口使用的一些问题总结
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-- MicroPython官方固件中除了v1.8.3版本外，其余版本的固件都能正常使用串口。
-- ESP8266-12E上只有一个串口，主要功能是进行调试和文件的上传和下载。如果你在程序中使用串口接入外设通信时，需先将与外设之前的连接断开，才能对v202进行调试或文件上传的工作。

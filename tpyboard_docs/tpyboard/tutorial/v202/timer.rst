@@ -43,27 +43,39 @@
 
 .. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489561580775098.png
 
-只需要将DHT11温湿度传感器的针脚与TPYBoard v202针脚连接起来即可，本次实验我们将DHT11的VCC连接TPYBoard v202的5V,DHT11的DATA连接TPYBoard v202的G4，DHT11的GND连接TPYBoard v202的GND，连接完成后，将下面代码写进TPYBoard v202即可读取当前温湿度的值，下面是源代码:
+**硬件接线图**
+
++----------------+-----------------+
+| TPYBoard v202  | DHT11温湿度模块 |
++================+=================+
+| 5V             | VCC             |
++----------------+-----------------+
+| G4             | DATA            |
++----------------+-----------------+
+| GND            | GND             |
++----------------+-----------------+
+
+连接完成后，将下面代码写进TPYBoard v202即可读取当前温湿度的值，下面是源代码:
 
 .. code-block:: python
 
 	from machine import Timer
 	import dht
 	import machine
+    
+    d=dht.DHT11(machine.Pin(4))
+    
 	def f(t):
-		d=dht.DHT11(machine.Pin(4))
-		d.measure()
-		a=d.temperature()
-		b=d.humidity()
-		print('温度:',a,'°C')
-		print('湿度:',b,'%')
+	  d.measure()
+	  a=d.temperature()
+	  b=d.humidity()
+	  print('温度:',a,'°C')
+	  print('湿度:',b,'%')
 
 	tim = Timer(-1)  #新建一个虚拟定时器
 	tim.init(period=2000, mode=Timer.PERIODIC, callback=f)
 
-用串口调试工具每2秒读取一次温湿度，并打印见下图:
-
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489561615972014.png
+使用TPYBoard v202开发工具-MFU，就可以看到每隔2秒钟就会打印一次温湿度数据。
 
 若想做一下扩展，可将温湿度显示到OLED显示屏上，这样一个小型的DIY温湿度检测仪就诞生了。
 

@@ -25,18 +25,6 @@ Putty连接方法
 
 **安装驱动**
 
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556668728667.png
-
-
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556688121032.png
-
-首先将驱动下载并打开文件进行安装，执行CH341SER.EXE 会出现下图：
-
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556703306179.png
-
-点击安装，安装成功会出现如下效果：
-
-.. image:: http://www.tpyboard.com/ueditor/php/upload/image/20170315/1489556719107216.png
 
 通过数据线将TPYBoard v202开发板连接电脑。打开桌面，右键点击我的电脑选择设备管理器。单击端口选项，会出现如下效果：
 
@@ -48,7 +36,7 @@ Putty连接方法
 
 	- 检查驱动程序（CH341SER）是否安装成功。
 	- 安装驱动精灵且将TPYBoard v202开发板连接电脑的同时自动搜索与其匹配的驱动进行安装。
-	- 检查TPYBoard-esp8266开发板与电脑的连接是否有误。
+	- 检查TPYBoard v202开发板与电脑的连接是否有误。
 
 通过PUTTY连接TPYBoard v202开发板
 

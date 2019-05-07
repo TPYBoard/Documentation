@@ -15,7 +15,7 @@
 - TPYBoard v202 1块
 - micro USB数据线 1条
 - 电脑 1台（本次实验以win7为例）
-- 所需软件 ESPlorer `点击下载 <http://old.tpyboard.com/download/tool/169.html>`_
+- 所需软件 MicroPython File Uploader(MFU) `点击下载 <http://tpyboard.com/download/tool/170.html>`_
 
 **Network库的使用方法**
 
@@ -34,11 +34,11 @@
 	wlan.config('mac')      # 获取接口的MAC地址
 	wlan.ifconfig()         # 获取接口的IP / netmask / gw / DNS地址
 
-	#检查是否连接是否建立:
+	#检查是否连接是否建立
 	wlan.isconnected()
-	#检查接口是否活动：
+	#检查接口是否活动
 	wlan.active()
-	#检查接口的网络设置：
+	#检查接口的网络设置
 	wlan.ifconfig()
 
 TPYBoard v202自动连接本地网络:
@@ -75,7 +75,7 @@ TPYBoard v202自动连接本地网络:
 			print('network config:', sta_if.ifconfig())
 	do_connect()
 
-只需要将上面代码写入boot.py,在开发板上电后，就看到蓝灯常亮（正在连接网络），然后蓝灯交替闪烁两次，控制台打印connect success，证明已经连接到本地网络。
+只需要将上面代码写入到开发板中，复位重新运行程序后，就会看到蓝灯常亮（正在连接网络），然后蓝灯交替闪烁两次，打印connect success，证明已经连接到本地网络。
 
 .. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489562186715918.png
 
@@ -96,7 +96,7 @@ AuthMode有五种模式：
  - 3 : WPA2-PSK
  - 4 : WPA/WPA2-PSK
 
-向指定地址发送数据的方法：
+*发起HTTP GET请求的方法*
 
 .. code-block:: python
 
@@ -119,7 +119,7 @@ AuthMode有五种模式：
 
 **实验要求**
 
-当TPYBoard v202未连接到网络时，led亮起警示，当连接成功后，熄灭。
+当TPYBoard v202未连接到网络时，LED亮起警示，当连接成功后，熄灭。
 
 main.py程序代码
 
@@ -145,7 +145,7 @@ main.py程序代码
 
 **实验效果**
 
-当我们复位，把程序写进去的时候会看到TPYBoard V202板载的蓝灯亮起来，当连接成功后蓝灯熄灭，控制台打印connect success。
+当我们复位，把程序写进去的时候会看到TPYBoard V202板载的蓝灯亮起来，当连接成功后蓝灯熄灭，打印connect success。
 
 实验二
 -----------
@@ -153,7 +153,7 @@ main.py程序代码
 **实验要求**
 当TPYBoard v202连接网络成功后，通过get方式向网址http://old.tpyboard.com/esp8266/test.php?val=A
 
-发送字符A,网站接到后，页面显示begin，并返回begin，TPYBoard V202收到bigin，LED快闪2次。
+发送字符A,网站接收到数据后，判断收到的是否是字符A，是的话返回begin，反之返回error。TPYBoard v202收到begin后LED快闪2次。
 
 main.py程序代码
 
@@ -210,17 +210,6 @@ main.py程序代码
 		s.close()
 	do_connect()
 	http_get('http://old.tpyboard.com/esp8266/test.php?val=A')
-
-**实验效果**
-
-当点击Send to ESP时，控制台显示从页面上传过来的内容为begin，并且led灯交替闪烁两次。
-
-.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489562363252568.png
-
-当访问的网址 http://old.tpyboard.com/esp8266/test.php?val=X
-后面参数不是A的时候，页面会提示 This is not 'A'。
-
-.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170315/1489562400709859.png
 
 
 - `下载源码 <https://github.com/TPYBoard/TPYBoard-v202>`_
