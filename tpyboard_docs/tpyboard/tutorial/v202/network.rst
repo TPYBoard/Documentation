@@ -104,24 +104,6 @@ AuthMode有五种模式：
  - 4 : WPA/WPA2-PSK
 
 
-*发起HTTP GET请求的方法*
-
-.. code-block:: python
-
-	def http_get(url):
-		_, _, host, path = url.split('/', 3)
-		addr = socket.getaddrinfo(host, 80)[0][-1]
-		s = socket.socket()
-		s.connect(addr)
-		s.send(bytes('GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n' % (path, host), 'utf8'))
-		while True:
-			data = s.recv(100)
-			if data:
-				print(str(data, 'utf8'), end='')
-			else:
-				break
-		s.close()
-
 实验一
 ----------
 
@@ -160,9 +142,27 @@ main.py程序代码
 
 **实验要求**
 
-当TPYBoard v202连接网络成功后，通过get方式向网址http://old.tpyboard.com/esp8266/test.php?val=A
+当TPYBoard v202连接网络成功后，通过get方式向网址http://old.tpyboard.com/esp8266/test.php发起请求，添加一个参数val。
+网站接收到请求后，判断参数val的值是否等于字符A，等于的话返回begin，反之返回error。TPYBoard v202收到begin后LED快闪2次。
 
-发送字符A,网站接收到数据后，判断收到的是否是字符A，是的话返回begin，反之返回error。TPYBoard v202收到begin后LED快闪2次。
+
+*发起HTTP GET请求的简单方法*
+
+.. code-block:: python
+
+	def http_get(url):
+		_, _, host, path = url.split('/', 3)
+		addr = socket.getaddrinfo(host, 80)[0][-1]
+		s = socket.socket()
+		s.connect(addr)
+		s.send(bytes('GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n' % (path, host), 'utf8'))
+		while True:
+			data = s.recv(100)
+			if data:
+				print(str(data, 'utf8'), end='')
+			else:
+				break
+		s.close()
 
 main.py程序代码
 
