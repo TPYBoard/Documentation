@@ -88,7 +88,7 @@ TPYBoard v202自动连接本地网络:
     ap.active(True)         # 激活接口
     ap.config(essid='ESP-AP',password='123456') # 设计接入点的ESSID，密码为123456
 
-也可以设置无密码开发模式，如下：
+也可以设置无密码开放模式，如下：
 
 .. code-block:: python
 
