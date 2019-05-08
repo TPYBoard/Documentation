@@ -142,7 +142,8 @@ main.py程序代码
 
 **实验要求**
 
-当TPYBoard v202连接网络成功后，通过get方式向网址http://old.tpyboard.com/esp8266/test.php发起请求，添加一个参数val。
+当TPYBoard v202连接网络成功后，通过get方式向网址 http://old.tpyboard.com/esp8266/test.php 
+发起请求，带有一个参数val。
 网站接收到请求后，判断参数val的值是否等于字符A，等于的话返回begin，反之返回error。TPYBoard v202收到begin后LED快闪2次。
 
 
