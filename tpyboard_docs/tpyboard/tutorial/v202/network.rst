@@ -87,7 +87,13 @@ TPYBoard v202自动连接本地网络:
 	ap = network.WLAN(network.AP_IF) ＃创建接入点接口
 	ap.active(True)         # 激活接口
     ap.config(essid='ESP-AP',password='123456') # 设计接入点的ESSID，密码为123456
-	ap.config(essid='ESP-AP',authmode=0) # 设计接入点的ESSID，开放无密码模式
+
+也可以设置无密码开发模式，如下：
+
+.. code-block:: python
+
+    ap.config(essid='ESP-AP',authmode=0) # 设计接入点的ESSID，开放无密码模式
+    
 
 AuthMode有五种模式：
 
