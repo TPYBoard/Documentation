@@ -151,6 +151,7 @@ main.py程序代码
 -----------
 
 **实验要求**
+
 当TPYBoard v202连接网络成功后，通过get方式向网址http://old.tpyboard.com/esp8266/test.php?val=A
 
 发送字符A,网站接收到数据后，判断收到的是否是字符A，是的话返回begin，反之返回error。TPYBoard v202收到begin后LED快闪2次。
