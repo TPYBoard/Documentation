@@ -45,10 +45,10 @@ TPYBoard v202自动连接本地网络:
 
 .. code-block:: python
 
-	from machine import Pin
-	import network
-	import time
-	def led_state():
+    from machine import Pin
+    import network
+    import time
+    def led_state():
         p2 = Pin(2, Pin.OUT)
         p2.value(0)
         time.sleep_ms(500)
@@ -58,22 +58,22 @@ TPYBoard v202自动连接本地网络:
         time.sleep_ms(500)
         p2.value(1)
         time.sleep_ms(500)
-	def do_connect():
-		sta_if = network.WLAN(network.STA_IF)
-		p2 = Pin(2, Pin.OUT)
-		sta_if.active(False)
-		if not sta_if.isconnected():
-			p2.value(0)
-			print('connecting to network...')
-			sta_if.active(True)
-			sta_if.connect('TurnipSmart', 'turnip2016')
-			while not sta_if.isconnected():
-				pass
-		if sta_if.isconnected():
-			print('connect success')
-			led_state()
-			print('network config:', sta_if.ifconfig())
-	do_connect()
+    def do_connect():
+        sta_if = network.WLAN(network.STA_IF)
+        p2 = Pin(2, Pin.OUT)
+        sta_if.active(False)
+        if not sta_if.isconnected():
+            p2.value(0)
+            print('connecting to network...')
+            sta_if.active(True)
+            sta_if.connect('TurnipSmart', 'turnip2016')
+            while not sta_if.isconnected():
+                pass
+        if sta_if.isconnected():
+            print('connect success')
+            led_state()
+            print('network config:', sta_if.ifconfig())
+    do_connect()
 
 只需要将上面代码写入到开发板中，复位重新运行程序后，就会看到蓝灯常亮（正在连接网络），然后蓝灯交替闪烁两次，打印connect success，证明已经连接到本地网络。
 
