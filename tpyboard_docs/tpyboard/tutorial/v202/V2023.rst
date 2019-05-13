@@ -57,7 +57,6 @@
 .. code-block:: python
 
     try:
-
         import usocket as socket
     except:
         import socket
@@ -69,9 +68,9 @@
     led = Pin(4, Pin.OUT)#发光二极管的控制引脚
     motor = Pin(5, Pin.OUT)#直流电机的控制引脚
     #初始化
-    led.low()
-    motor.low()
-    led_flag.high()
+    led.value(0)
+    motor.value(0)
+    led_flag.value(1)
     def do_connect(ssid,pwd):
         sta_if = network.WLAN(network.STA_IF)#STA 模式
         sta_if.active(False)
@@ -90,22 +89,23 @@
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.bind(addr)
         s.listen(5)
-        led_flag.low()
+        led_flag.value(0)
         #s_data=login_data
         while True:
             res = s.accept()
             client_s = res[0]
             client_addr = res[1]
-            led_flag.high()
+            led_flag.value(1)
             req =client_s.readline()
             while True:
                 h = client_s.readline()
                 if h == b"" or h == b"\r\n":
                     break
                 #print(h)
-                req+=(h.decode('utf-8').lower())
+                req+=(h.decode('utf-8'))
             print("Request:")
-            req=req.decode('utf-8').lower().split('\r\n')
+            req=req.lower()
+            req=req.decode('utf-8').split('\r\n')
             #http header 解析
             req_data=req[0].lstrip().rstrip().replace(' ','')
             print(req_data)
@@ -141,6 +141,7 @@
                                 led.value(1)
                             else:
                                 led.value(0)
+                            print('led:',led.value())
                         #判断是否是控制电机
                         _index=req_data.find('motor=')
                         if _index>-1:
@@ -151,10 +152,11 @@
                                 motor.value(1)
                             else:
                                 motor.value(0)
+                            print('motor:',motor.value())
                 print('-----------')
                 client_s.send(s_data)
                 client_s.close()
-            led_flag.low()
+            led_flag.value(0)
             
     f=open('device.html','r')
     dev_html=f.read()
@@ -169,9 +171,10 @@
     pwd=info.split(',')[1].lstrip().rstrip()
     print('name:',name)
     print('pwd:',pwd)
-    myip_=do_connect('essid','pwd')#家中网络的WIFI名称和密码
+    myip_=do_connect('essid','password')#家中网络的WIFI名称和密码
     print(myip_)
     main(myip_,dev_html,login_html,name,pwd)
+
 
 
 其他文件login.html、fail.html、device.html，点击下面的下载源码进行下载。
