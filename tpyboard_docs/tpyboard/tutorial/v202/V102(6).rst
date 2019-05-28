@@ -128,5 +128,8 @@ V202温湿度上传测试网页
         #调用数据上传函数，把最新测量得到的数据进行上传
         print('Count:',count)
         time.sleep(5)
+
+
+- `点击查看上传的数据 <http://old.tpyboard.com/esp8266/SensorData.php>`_
         
 - `下载源码 <https://github.com/TPYBoard/TPYBoard-v202>`_
