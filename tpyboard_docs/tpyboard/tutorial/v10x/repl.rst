@@ -1,5 +1,5 @@
 
-[Micropython]TPYBoard v102 获取REPL提示
+[Micropython]TPYBoard v102 获取REPL提示信息
 =============================================
 
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
@@ -34,7 +34,7 @@ Windows
 
  - 提示“没有INF签名的驱动程序”，这是因为有的电脑开启了驱动强制签名的设置，把此设置关闭即可。`解决方案 <http://docs.tpyboard.com/zh/latest/tpyboard/general/#win10>`_
 
- - 提示“系统找不到指定的文件”等类似的问题，这时因为有些电脑是通过GHOST方式装的系统，它会删减一些系统文件。`解决方法 <http://old.tpyboard.com/download/tool/197.html>`_
+ - 提示“系统找不到指定的文件”等类似的问题，这是因为有些电脑是通过GHOST方式装的系统，它会删减一些系统文件。`解决方法 <http://old.tpyboard.com/download/tool/197.html>`_
 
 Windows下我们使用PuTTY软件进行REPL交互。
 `下载PuTTY软件 <http://old.tpyboard.com/download/tool/3.html>`_
@@ -47,15 +47,68 @@ Windows下我们使用PuTTY软件进行REPL交互。
 
 .. image:: img/putty1.png
 
-有时打开时无任何信息，按下回车键就好了。
+有时打开时无任何信息，就看见一个光标和空屏幕，如下图：
 
-**PuTTY快捷键**
+.. image:: img/151
+
+出现这种情况下，不用担心，并不是没有连接成功，而是当前没有信息输出而已。这时，你按下CTRL+C键出现">>>"提示符就好了。
+
+.. image:: img/152
+
+有时可能会多输出一些信息，如下图：
+
+.. image:: img/153
+
+这是因为开发板此时正在运行程序，我们通过外部快捷键CTRL+C强行停止运行，所以出现了上图错误的信息，大家可以忽略这个错误，它并不妨碍我们的正常使用。
+
+那么问题来了，我们在PuTTY软件中看到的这些信息都是什么呢？
+
+.. image:: img/154
+
+我们在程序中调用print()函数，打印的信息也会出现在PuTTY上。
+
+.. image:: img/155
+
+REPL交互模式下，我们不仅可以看到输出的信息，也可以输入一些简单的程序进行交互。例如：
+
+.. code-block:: python
+
+    >>> print("hello tpyboard!")
+    hello tpyboard!
+
+在上面的例子中用户不需要敲入">>>"字符，而是应该在">>>"字符后写入内容。输入print("hello tpyboard!")文本并按下回车键，输出结果将在屏幕上，如上。
+如果你已经知道一些Python知识，你也可以尝试一些基本的命令在这里。
+
+.. code-block:: python
+
+    >>> pyb.LED(1).on()
+    >>> pyb.LED(2).on()
+    >>> 1 + 2
+    3
+    >>> 1 / 2
+    0.5
+    >>> 20 * 'py'
+    'pypypypypypypypypypypypypypypypypypypypy'
+
+
+**PuTTY常用快捷键**
 
  - Ctrl+C：停止运行程序
 
- - Ctrl+D：软复位
+ - Ctrl+D：重新运行程序(软复位)
 
-注意：有时必须按下RST键进行硬件复位时，需先关闭PuTTY再进行操作，否则下次连接会出错。如果出错了，就再复位一次重新打开PuTTY就好了。
+**注意：**
+
+  - 1.在使用Ctrl+D快捷键时，需要保证程序是停止运行的状态才会有效。
+  
+  - 2.有时必须按下RST键进行硬件复位时，需先关闭PuTTY再进行操作，否则下次连接会出错。如果出错了，就再硬复位一次重新打开PuTTY就好了。
+
+
+**常见的程序格式错误**
+
+如果出现“SyntaxError: invalid syntax“错误：可能就是tab和空格没对齐的问题。
+
+如果出现“IndentationError: unindent does not match any outer indentation level”错误：可能就是使用的缩进方式不一致。
 
 Linux(Ubuntu)
 >>>>>>>>>>>>>>>
