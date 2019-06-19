@@ -1,4 +1,4 @@
-.. _TPYBoardv102-index:
+.. _TPYBoardv10x-index:
 
 TPYBoard v102 典型实例
 =========================================
