@@ -22,7 +22,6 @@ TPYBoard v102 典型实例
         V102 (15).rst
         V102 (16).rst
         V102 (17).rst
-        V102 (18).rst
         V102 (19).rst
         V102 (20).rst
         V102 (21).rst
@@ -61,7 +60,8 @@ TPYBoard v102 典型实例
 
     .. toctree::
         :maxdepth: 1
-
+        
+        V102 (18).rst
         photo.rst
         5110.rst
         infraredarrestcar.rst
