@@ -27,7 +27,7 @@ TPYBoard v102 典型实例
 进阶训练
 -----------
 
-学习使用TPYBoard v102开发板进行一些简单的实例训练。
+学习使用TPYBoard v102开发板进行一些基础的实例训练。
 
 .. toctree::
    :maxdepth: 1
