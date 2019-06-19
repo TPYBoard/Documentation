@@ -1,4 +1,3 @@
-.. _TPYBoardv10x-index:
 
 TPYBoard v102 典型实例
 =========================================
@@ -12,19 +11,19 @@ TPYBoard v102 典型实例
 .. only:: port_unix
 
     .. toctree::
-        :maxdepth: 1
+       :maxdepth: 1
         
-        start.rst
-        repl.rst
-        V102 (10).rst
-        V102 (13).rst
-        V102 (14).rst
-        V102 (15).rst
-        V102 (16).rst
-        V102 (17).rst
-        V102 (19).rst
-        V102 (20).rst
-        V102 (21).rst
+       start.rst
+       repl.rst
+       V102 (10).rst
+       V102 (13).rst
+       V102 (14).rst
+       V102 (15).rst
+       V102 (16).rst
+       V102 (17).rst
+       V102 (19).rst
+       V102 (20).rst
+       V102 (21).rst
         
 进阶训练
 -----------
@@ -34,22 +33,22 @@ TPYBoard v102 典型实例
 .. only:: port_unix
 
     .. toctree::
-        :maxdepth: 1
+       :maxdepth: 1
         
-        intro.rst
-        metaldetector.rst
-        nightlight.rst
-        dht11.rst
-        88led.rst
-        template.rst
-        script.rst
-        pm2.5.rst
-        ultrasonicranging.rst
-        diytime.rst
-        oled.rst
-        1602.rst
-        airfan.rst
-        servo.rst
+       intro.rst
+       metaldetector.rst
+       nightlight.rst
+       dht11.rst
+       88led.rst
+       template.rst
+       script.rst
+       pm2.5.rst
+       ultrasonicranging.rst
+       diytime.rst
+       oled.rst
+       1602.rst
+       airfan.rst
+       servo.rst
 
 高手专场
 -----------
@@ -59,17 +58,17 @@ TPYBoard v102 典型实例
 .. only:: port_unix
 
     .. toctree::
-        :maxdepth: 1
+       :maxdepth: 1
         
-        V102 (18).rst
-        photo.rst
-        5110.rst
-        infraredarrestcar.rst
-        infraredcar.rst
-        bluetoothcar.rst
-        acceleratorcar.rst
-        thread.rst
-        STM32T.rst
-        bluetoothcar_app.rst
-        esp82661.rst
-        esp82662.rst
+       V102 (18).rst
+       photo.rst
+       5110.rst
+       infraredarrestcar.rst
+       infraredcar.rst
+       bluetoothcar.rst
+       acceleratorcar.rst
+       thread.rst
+       STM32T.rst
+       bluetoothcar_app.rst
+       esp82661.rst
+       esp82662.rst
