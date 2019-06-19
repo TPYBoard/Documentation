@@ -1,6 +1,6 @@
 .. _quickref:
 
-[Micropython]TPYBoard v10X 控制LCD1602显示字符
+[Micropython]TPYBoard v102 控制LCD1602显示字符
 ================================================
 
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明

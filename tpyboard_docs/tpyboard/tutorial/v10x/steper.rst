@@ -1,6 +1,6 @@
 .. _quickref:
 
-[Micropython]TPYBoard v10X 驱动28BYJ-48步进电机
+[Micropython]TPYBoard v102 驱动28BYJ-48步进电机
 ========================================================
 
 

@@ -1,4 +1,4 @@
-[Micropython]TPYBoardV10X 读取芯片上的温度传感器
+[Micropython]TPYBoard v102 读取芯片上的温度传感器
 =============================================
 
 1TPYBoard读取芯片上的温度传感器

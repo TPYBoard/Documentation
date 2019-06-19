@@ -1,4 +1,4 @@
-[Micropython]TPYBoard v10x DIY温度计
+[Micropython]TPYBoard v102 DIY温度计
 =====================================
 
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明

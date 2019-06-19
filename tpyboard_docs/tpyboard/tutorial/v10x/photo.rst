@@ -1,6 +1,6 @@
 .. _quickref:
 
-[Micropython]TPYBoard v10X DIY照相机
+[Micropython]TPYBoard v102 DIY照相机
 ========================================================
 
 

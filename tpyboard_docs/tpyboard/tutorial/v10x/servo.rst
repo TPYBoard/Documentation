@@ -1,4 +1,4 @@
-[Micropython]TPYBoard v10x 驱动舵机教程
+[Micropython]TPYBoard v102 驱动舵机教程
 =======================================
 
 引言

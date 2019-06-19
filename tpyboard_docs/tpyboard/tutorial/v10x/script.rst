@@ -1,4 +1,4 @@
-[Micropython]TPYBoard v10x 驱动LCD5110显示6x8字符
+[Micropython]TPYBoard v102 驱动LCD5110显示6x8字符
 ==================================================
 
 

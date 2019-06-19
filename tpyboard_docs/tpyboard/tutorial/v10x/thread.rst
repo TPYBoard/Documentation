@@ -1,6 +1,6 @@
 .. _quickref:
 
-[Micropython]TPYBoard v10x 线程与锁
+[Micropython]TPYBoard v102 线程与锁
 ========================================================
 
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
