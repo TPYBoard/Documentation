@@ -20,7 +20,7 @@ PyCharm可以说是当今最流行的一款Python IDE了，大部分购买TPYBoard的小伙伴都会使用P
 
  - **可接入网络**
 
-PyCharm 2018专业版 安装和永久激活方法 点击下载。http://old.tpyboard.com/download/tool/201.html
+PyCharm 2018专业版 安装和永久激活方法 `点击下载 <http://old.tpyboard.com/download/tool/201.html>`_ 。
 
 
 动手安装
@@ -49,7 +49,27 @@ PyCharm 2018专业版 安装和永久激活方法 点击下载。http://old.tpyboard.com/download
 若没有遇到此问题的，可自行调到第3步。复制错误信息百度查找解决方法，找到了一个可行的方法就是：找到PyCharm的安装目录下的packaging_tool.py进行修改，packaging_tool.py在\JetBrains\PyCharm 2018.1\helpers目录下。打开packaging_tool.py文件进行修改（别用文本文档容易出错），找到do_install和do_uninstall这两个函数（错误信息里有），改为如下内容：
 
 .. block-code:python
-  
+
+    def do_install(pkgs):
+        try:
+            try:
+                from pip._internal import main
+            except Exception:
+                from pip import main
+        except ImportError:
+            error_no_pip()
+        return main(['install'] + pkgs)
+
+
+    def do_uninstall(pkgs):
+        try:
+            try:
+                from pip._internal import main
+            except Exception:
+                from pip import main
+        except ImportError:
+            error_no_pip()
+        return main(['uninstall', '-y'] + pkgs)
 
 修改保存后，再点安装就好了。
 
@@ -60,8 +80,18 @@ PyCharm 2018专业版 安装和永久激活方法 点击下载。http://old.tpyboard.com/download
 
 .. block-code:python
 
+    from pyb import LED
 
-输入代码时你会发现，PyCharm对于pyb模块并没有代码智能提示的功能，这是因为此micropython插件并没有实现对pyb模块的支持，不过该插件已经包含了文件下载和REPL调试的功能，也是很厉害的贡献了。该插件源码的Github地址：https://github.com/vlasovskikh/intellij-micropython。
+    LED4 = LED(4)
+
+    while True:
+        LED4.toggle()
+        print('Hello')
+        print('-------')
+        pyb.delay(1000)
+
+
+输入代码时你会发现，PyCharm对于pyb模块并没有代码智能提示的功能，这是因为此micropython插件并没有实现对pyb模块的支持，不过该插件已经包含了文件下载和REPL调试的功能，也是很厉害的贡献了。该插件源码的Github地址：`https://github.com/vlasovskikh/intellij-micropython <https://github.com/vlasovskikh/intellij-micropython>`_ 。
 
 
 4. 编写保存后，点击软件右上角选择 *Flash main.py*，点击旁边的绿色箭头进行运行，编写的main.py文件就会下载到板子里，下载完毕后会自动运行程序，软件下方的调试区会显示相关信息。如下：
