@@ -2,13 +2,12 @@
 TPYBoard v102 典型实例
 =========================================
 
+- `TPYBoard相关资料(引脚图、尺寸图等) <http://docs.tpyboard.com/zh/latest/tpyboard/hardware/>`_
 
 新手入门
 -----------
 
 帮助初学者快速掌握TPYBoard v102开发板的使用技巧。
-
-- `TPYBoard相关资料(引脚图、尺寸图等) <http://docs.tpyboard.com/zh/latest/tpyboard/hardware/>`_
  
 .. toctree::
    :maxdepth: 1
