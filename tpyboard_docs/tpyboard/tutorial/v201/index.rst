@@ -5,9 +5,7 @@ TPYBoard v201 典型实例
 
 *TPYBoard v201开发板是在v102基础上增加了以太网的功能，基本使用完全兼容v102的教程，所以这里，我们就直接引用了v102的教程*
 
-**注意：**
- - **v201开发板上并没有板载的三轴加速度传感器**
- - **以太网模块占用了开发板上的UART 6((TX = Y1, RX = Y2)**
+- `TPYBoard相关资料(引脚图、尺寸图等) <http://docs.tpyboard.com/zh/latest/tpyboard/hardware/>`_
 
 新手入门
 -----------
@@ -65,4 +63,8 @@ TPYBoard v201 典型实例
    set.rst
    cloudadder.rst
    temperaturehumidity.rst
+
    
+**注意：**
+ - **v201开发板上并没有板载的三轴加速度传感器**
+ - **以太网模块占用了开发板上的UART 6(TX = Y1, RX = Y2)**

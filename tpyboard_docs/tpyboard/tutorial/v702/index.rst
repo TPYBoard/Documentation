@@ -5,23 +5,12 @@ TPYBoard v702 典型实例
 
 *TPYBoard v702开发板是在v102基础上增加了GPS/GPRS的功能，基本使用完全兼容v102的教程，所以这里，我们就直接引用了v102的教程*
 
-**注意：**
- - **v702开发板增加了板载的SHT20温湿度传感使用开发板上的I2C 1(SCL = X9, SDA = X10)。**
- - v702开发板上的LCD5110的接口连接的是SPI 1。
-    - DIN   = X8(MOSI)
-    - CLK   = X6(SCK)
-    - RST   = X20
-    - CE    = X19
-    - DC    = X18
-    - LIGHT = X17
- - **v702开发板上的GU620模块使用了UART 4((TX = X1, RX = X2)。**
- - **v702开发板上的光敏电阻连接的是引脚Y12。**
- - **v702开发板上的蜂鸣器模块连接的是引脚Y3。**
+- `TPYBoard相关资料(引脚图、尺寸图等) <http://docs.tpyboard.com/zh/latest/tpyboard/hardware/>`_
 
 新手入门
 -----------
 
-帮助初学者快速掌握TPYBoard v201开发板的使用技巧。
+帮助初学者快速掌握TPYBoard v702开发板的使用技巧。
 
 .. toctree::
    :maxdepth: 1
@@ -77,3 +66,16 @@ TPYBoard v702 典型实例
    gprs.rst
    message.rst
    tel.rst
+
+**注意：**
+ - **v702开发板增加了板载的SHT20温湿度传感使用开发板上的I2C 1(SCL = X9, SDA = X10)。**
+ - v702开发板上的LCD5110的接口连接的是SPI 1。
+    - DIN   = X8(MOSI)
+    - CLK   = X6(SCK)
+    - RST   = X20
+    - CE    = X19
+    - DC    = X18
+    - LIGHT = X17
+ - **v702开发板上的GU620模块使用了UART 4(TX = X1, RX = X2)。**
+ - **v702开发板上的光敏电阻连接的是引脚Y12。**
+ - **v702开发板上的蜂鸣器模块连接的是引脚Y3。**
