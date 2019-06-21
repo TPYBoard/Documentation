@@ -46,7 +46,7 @@ PyCharm 2018专业版 安装和永久激活方法 `点击下载 <http://old.tpyb
 .. image:: img/n2.png
 
 
-自己创建一个项目。菜单栏 *File => Settings => Plugins* ,输入 *micropython* 进行搜索，接着点击 *Search in repositories*，弹框出现MicroPython插件时点击 *Install* 进行安装，安装完毕后重启PyCharm软件。
+菜单栏 *File => Settings => Plugins* ,输入 *micropython* 进行搜索，接着点击 *Search in repositories*，弹框出现MicroPython插件时点击 *Install* 进行安装，安装完毕后重启PyCharm软件。
 
 
 .. image:: img/install.gif
