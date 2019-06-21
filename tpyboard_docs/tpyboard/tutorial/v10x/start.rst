@@ -55,8 +55,6 @@
 推荐Visual Studio Code、Notepad++、PyCharm、Python IDLE。VSCode和PyCharm都可以安装micropython的插件，支持代码提示补全和REPL调试。Notepad++在win10下会出现文件损坏的BUG。
 
 
-PyCharm安装MicroPython插件的方法介绍 `点击进入 <http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/pycharm>`_
-
 和谐相处
 ----------------------------
 

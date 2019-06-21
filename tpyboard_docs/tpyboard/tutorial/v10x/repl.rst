@@ -149,3 +149,6 @@ MacOS
   screen /dev/tty.usbmodem*
 
 退出关闭-快捷键 CTRL-A CTRL-\。
+
+
+PyCharm安装MicroPython插件的方法介绍 `点击进入 <http://docs.tpyboard.com/zh/latest/tpyboard/tutorial/pycharm>`_
