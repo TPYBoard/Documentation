@@ -34,44 +34,31 @@ PyCharm 2018专业版 安装和永久激活方法 `点击下载 <http://old.tpyb
 
 **安装MicroPython插件**
 
-
-1. 打开“PyCharm”软件。
+打开“PyCharm”软件。
 
 .. image:: img/n1.png
 
-
 点击 *Create New Project* 创建一个新项目。选择项目保存的路径，选择 *Existing interpreter* 加载本地的Python环境，不使用虚拟环境。点击Create即可完成项目的创建。
-
 
 .. image:: img/n2.png
 
-
 菜单栏 *File => Settings => Plugins* ,输入 *micropython* 进行搜索，接着点击 *Search in repositories*，弹框出现MicroPython插件时点击 *Install* 进行安装，安装完毕后重启PyCharm软件。
-
 
 .. image:: img/install.gif
 
-
 **启用MicroPython的设备**
 
-
-2. 将TPYBoard v102开发板通过USB数据线接入电脑中，然后菜单栏  *File => Settings => Languager & Frameworks => MicroPython* 勾选Enable MicroPython support，Device type选择Pyboard，Device path输入自己电脑上开发板对应的端口号，比如COM19。点击Apply进行应用，点击OK关闭对话框。
-
+将TPYBoard v102开发板通过USB数据线接入电脑中，然后菜单栏  *File => Settings => Languager & Frameworks => MicroPython* 勾选Enable MicroPython support，Device type选择Pyboard，Device path输入自己电脑上开发板对应的端口号，比如COM19。点击Apply进行应用，点击OK关闭对话框。
 
 .. image:: img/COM.gif
 
-
 **REPL调试**
 
-
-3. 安装是不是很简单，接下来测试一下。点击当前项目右键选择创建一个Python File，输入名称main。这时，PyCharm提示我需要升级docopt包，点击安装后提示错误，查看详情后如下图：
-
+安装是不是很简单，接下来测试一下。点击当前项目右键选择创建一个Python File，输入名称main。这时，PyCharm提示我需要升级docopt包，点击安装后提示错误，查看详情后如下图：
 
 .. image:: img/m1.png
 
-
-若没有遇到此问题的，可自行调到第4步。复制错误信息百度查找解决方法，找到了一个可行的方法就是：找到PyCharm的安装目录下的packaging_tool.py进行修改，packaging_tool.py在\JetBrains\PyCharm 2018.1\helpers目录下。打开packaging_tool.py文件进行修改（别用文本文档容易出错），找到do_install和do_uninstall这两个函数（错误信息里有），改为如下内容：
-
+若没有遇到此问题的，可自行调到下一步REPL调试。复制错误信息百度查找解决方法，找到了一个可行的方法就是：找到PyCharm的安装目录下的packaging_tool.py进行修改，packaging_tool.py在\JetBrains\PyCharm 2018.1\helpers目录下。打开packaging_tool.py文件进行修改（别用文本文档容易出错），找到do_install和do_uninstall这两个函数（错误信息里有），改为如下内容：
 
 .. code-block:: python
 
@@ -98,13 +85,9 @@ PyCharm 2018专业版 安装和永久激活方法 `点击下载 <http://old.tpyb
         
 修改保存后，再点安装就好了。
 
-
 .. image:: img/m2.png
 
-
-
-4. 在main.py文件中输入以下的代码，该代码的功能就是每隔1秒反转下LED4的状态同时输出Hello字符。
-
+在main.py文件中输入以下的代码，该代码的功能就是每隔1秒反转下LED4的状态同时输出Hello字符。
 
 .. code-block:: python
 
@@ -117,23 +100,17 @@ PyCharm 2018专业版 安装和永久激活方法 `点击下载 <http://old.tpyb
         print('Hello')
         print('-------')
         pyb.delay(1000)
-
-
         
 输入代码时你会发现，PyCharm对于pyb模块并没有代码智能提示的功能，这是因为此micropython插件并没有实现对pyb模块的支持，不过该插件已经包含了文件下载和REPL调试的功能，也是很厉害的贡献了。该插件源码的Github地址：`https://github.com/vlasovskikh/intellij-micropython <https://github.com/vlasovskikh/intellij-micropython>`_ 。
 
-
-
-5. 编写保存后，点击软件右上角选择 *Flash main.py*，点击旁边的绿色箭头开始运行，main.py文件就会下载到板子里，下载完毕后会自动运行程序，软件下方的调试区会显示相关信息。如下：
-
+编写保存后，点击软件右上角选择 *Flash main.py*，点击旁边的绿色箭头开始运行，main.py文件就会下载到板子里，下载完毕后会自动运行程序，软件下方的调试区会显示相关信息。如下：
 
 .. image:: img/m3.png
 
 .. image:: img/m4.png 
 
 
-6. 菜单栏 *Tools => MicroPython => MicroPython REPL* 可以调出REPL调试界面，使用方法同PuTTY。每次调用时，他会先停止运行程序。
-
+菜单栏 *Tools => MicroPython => MicroPython REPL* 可以调出REPL调试界面，使用方法同PuTTY。每次调用时，他会先停止运行程序。
 
 .. image:: img/m5.png
 
