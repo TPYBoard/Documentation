@@ -73,7 +73,7 @@ PyCharm 2018专业版 安装和永久激活方法 `点击下载 <http://old.tpyb
 若没有遇到此问题的，可自行调到第4步。复制错误信息百度查找解决方法，找到了一个可行的方法就是：找到PyCharm的安装目录下的packaging_tool.py进行修改，packaging_tool.py在\JetBrains\PyCharm 2018.1\helpers目录下。打开packaging_tool.py文件进行修改（别用文本文档容易出错），找到do_install和do_uninstall这两个函数（错误信息里有），改为如下内容：
 
 
-.. code-block: python
+.. code-block:: python
 
     def do_install(pkgs):
         try:
@@ -84,7 +84,6 @@ PyCharm 2018专业版 安装和永久激活方法 `点击下载 <http://old.tpyb
         except ImportError:
             error_no_pip()
         return main(['install'] + pkgs)
-
 
     def do_uninstall(pkgs):
         try:
@@ -107,7 +106,7 @@ PyCharm 2018专业版 安装和永久激活方法 `点击下载 <http://old.tpyb
 4. 在main.py文件中输入以下的代码，该代码的功能就是每隔1秒反转下LED4的状态同时输出Hello字符。
 
 
-.. code-block: python
+.. code-block:: python
 
     from pyb import LED
 
