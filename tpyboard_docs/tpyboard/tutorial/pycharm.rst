@@ -58,7 +58,7 @@ PyCharm 2018专业版 安装和永久激活方法 `点击下载 <http://old.tpyb
 
 .. image:: img/m1.png
 
-若没有遇到此问题的，可自行调到下一步REPL调试。复制错误信息百度查找解决方法，找到了一个可行的方法就是：找到PyCharm的安装目录下的packaging_tool.py进行修改，packaging_tool.py在\JetBrains\PyCharm 2018.1\helpers目录下。打开packaging_tool.py文件进行修改（别用文本文档容易出错），找到do_install和do_uninstall这两个函数（错误信息里有），改为如下内容：
+若没有遇到此问题的，可自行调到下一步。复制错误信息百度查找解决方法，找到了一个可行的方法就是：找到PyCharm的安装目录下的packaging_tool.py进行修改，packaging_tool.py在\JetBrains\PyCharm 2018.1\helpers目录下。打开packaging_tool.py文件进行修改（别用文本文档容易出错），找到do_install和do_uninstall这两个函数（错误信息里有），改为如下内容：
 
 .. code-block:: python
 
