@@ -34,7 +34,7 @@ Pycom插件需要node.js依赖项，所以先要安装node.js。`下载地址 <https://nodejs.org/e
 
 打开VSCode，点击左侧菜单栏 *Extensions* 扩展图标，进入插件搜索界面。
 
-.. image:: img/vs1.png
+.. image:: img/vs0.png
 
 输入 *Pymakr* 进行相关插件搜索，点击 *Install* 进行安装。
 
