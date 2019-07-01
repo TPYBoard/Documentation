@@ -111,7 +111,7 @@ VSCode工具底部蓝色区域，有关于Pycom插件的几个快捷功能。
 
 .. image:: img/vs9.gif
 
-有时会出现连接失败的情况，出现 ** > Failed to connect (Error: Port is not open). Click here to try again.** 提示，这时点击下 *Pycom Console* 就可以了。
+有时会出现连接失败的情况，出现 **> Failed to connect (Error: Port is not open). Click here to try again.** 提示，这时点击下 *Pycom Console* 就可以了。
 
 .. image:: img/vs11.gif
 
@@ -122,7 +122,7 @@ VSCode工具底部蓝色区域，有关于Pycom插件的几个快捷功能。
 使用评价
 ------------------------
 
-总体来说，还是挺不错的，不仅可以上传文件还可以下载。就是每次操作后，都会进行一次硬件复位，端口断开再重连，感觉不太友好。虽然我们在使用micropython中的模块时没有代码提示补全等功能，但是可以去安装Python插件，至少使用Python语法时会比较方便。
+总体来说，还是挺不错的，不仅可以上传文件还可以下载。就是每次操作后，都会进行一次硬件复位，端口断开再重连，感觉不太友好。虽然我们在使用micropython中的模块时没有代码提示补全等功能，但是可以去安装Python插件，至少使用Python语法和模块时会比较方便。
  
 
 
