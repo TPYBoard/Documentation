@@ -25,7 +25,7 @@ VSCode IDE下载 `https://code.visualstudio.com/?wt.mc_id=vscom_downloads <https:/
 Pycom插件需要node.js依赖项，所以先要安装node.js。`下载地址 <https://nodejs.org/en/>`_
 安装完成后，通过CMD命令查看node版本号来确定是否安装成功。
 
-.. code-block::c
+.. code-block:: c
 
     node -v
     
@@ -82,7 +82,7 @@ Pycom插件：https://marketplace.visualstudio.com/items?itemName=dphans.micropytho
 
 写一段简单的控制板载LED的程序用于测试。编写代码时，VSCode会提示错误，这是因为在我们本地没有pyb库，所以错误可以忽略，不影响功能。
 
-.. code-block::python
+.. code-block:: python
 
     from pyb import LED
     
@@ -115,7 +115,7 @@ VSCode工具底部蓝色区域，有关于Pycom插件的几个快捷功能。
 
 .. image:: img/vs11.gif
 
-接下来试一下 *Download* 的功能，点击后它会提醒你发现了两个文件，是否只下载当前的文件还是全部下载。出现这个提示是因为板子里还有一个boot.py文件。选择那个都可以，这里我们选择全部下载。
+接下来试一下 *Download* 的功能，点击后它会提醒你发现了两个文件，是否只下载当前的文件还是全部下载。出现这个提示是因为板子里还有一个boot.py文件。选择那个都可以，这里我们选择全部下载点击Yes。
 
 .. image:: img/vs10.gif
 
