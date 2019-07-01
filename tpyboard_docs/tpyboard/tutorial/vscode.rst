@@ -19,7 +19,6 @@ GitHub地址 `https://github.com/Microsoft/vscode <https://github.com/Microsoft/vs
 
 VSCode IDE下载 `https://code.visualstudio.com/?wt.mc_id=vscom_downloads <https://code.visualstudio.com/?wt.mc_id=vscom_downloads>`_
 
-
 安装Pycom插件
 ---------------------------
 
@@ -44,7 +43,7 @@ Pycom插件需要node.js依赖项，所以先要安装node.js。`下载地址 <https://nodejs.org/e
 
 .. image:: img/vs2.png
 
-默认会自动打开 *pymakr.json* 配置文件，我们需要进行修改。软件下面的控制台也控制连接板子的REPL端口。
+再次打开VSCode后，默认会自动打开 *pymakr.json* 配置文件，我们需要进行修改并保存。
 
 .. image:: img/vs3.png
 
@@ -63,6 +62,8 @@ Pycom插件需要node.js依赖项，所以先要安装node.js。`下载地址 <https://nodejs.org/e
     }
 
 Pycom插件：https://marketplace.visualstudio.com/items?itemName=dphans.micropython-ide-vscode
+
+保存后软件右下角的 *TERMINAL* 终端会自动创建一个Pycom Console并自动连接板子的REPL端口。
 
 如何使用
 ---------------
@@ -110,13 +111,13 @@ VSCode工具底部蓝色区域，有关于Pycom插件的几个快捷功能。
 
 .. image:: img/vs9.gif
 
+有时会出现连接失败的情况，出现 ** > Failed to connect (Error: Port is not open). Click here to try again.** 提示，这时点击下 *Pycom Console* 就可以了。
+
+.. image:: img/vs11.gif
+
 接下来试一下 *Download* 的功能，点击后它会提醒你发现了两个文件，是否只下载当前的文件还是全部下载。出现这个提示是因为板子里还有一个boot.py文件。选择那个都可以，这里我们选择全部下载。
 
 .. image:: img/vs10.gif
-
-上面操作执行完毕后，链接断开了并没有自动连接上，出现了这样的提示 **> Failed to connect (Error: Port is not open). Click here to try again.** ，这时点击下 *Pycom Console* 就可以了。
-
-.. image:: img/vs11.gif
 
 使用评价
 ------------------------
