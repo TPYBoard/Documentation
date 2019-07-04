@@ -1,6 +1,6 @@
 .. _quickref:
 
-[Micropython]TPYBoard v10X 学习使用OLED显示屏
+[Micropython]TPYBoard v102 学习使用OLED显示屏
 ========================================================
 
 

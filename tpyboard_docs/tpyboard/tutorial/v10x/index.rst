@@ -70,3 +70,5 @@ TPYBoard v102 典型实例
    bluetoothcar_app.rst
    esp82661.rst
    esp82662.rst
+   max7219.rst
+   max30102.rst
