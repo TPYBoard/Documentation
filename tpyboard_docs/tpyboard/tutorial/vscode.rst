@@ -1,6 +1,11 @@
 使用Visual Studio Code进行MicroPython编程
 ===============================================
 
+版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
+
+Visual Studio Code
+----------------------
+
 Visual Studio Code(以下简称VSCode)是一个轻量且强大的跨平台开源代码编辑器（IDE），支持Windows，OS 
 X和Linux。内置JavaScript、TypeScript和Node.js支持，而且拥有丰富的插件生态系统，可通过安装插件来支持 
 C++、C#、Python、PHP等其他语言。
