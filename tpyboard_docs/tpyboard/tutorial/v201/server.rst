@@ -23,7 +23,7 @@ TPYBoard v201网络参数配置
 -----------------------------
 
 `USR-K2资料和工具下载 <https://github.com/TPYBoard/Documentation/blob/master/tpyboard_docs/tpyboard/tutorial/doc/USR-K2%E8%B5%84%E6%96%99.rar>`_ 
-下载地址是在GitHub上，如果下载速度多慢的话，你也可以加TPYBoard技术交流/*裙*/;157816561 文件里下载。
+下载地址是在GitHub上，如果下载速度很慢的话，你也可以加TPYBoard技术交流/*裙*/;157816561 文件里下载。
 
 首先，将TPYBoard v201开发板通过网线与你使用的电脑接入同一个局域网内。双击运行<USR-M0_V2.2.1.272.exe>，点击搜索设备，成功的情况下会在上面的列表中显示搜索到的设备。
 
