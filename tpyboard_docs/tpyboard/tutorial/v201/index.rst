@@ -64,6 +64,7 @@ TPYBoard v201 典型实例
    cloudadder.rst
    temperaturehumidity.rst
    server.rst
+   web.rst
 
    
 **注意：**
