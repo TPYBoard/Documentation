@@ -129,7 +129,7 @@ main.py 源码：
 
 .. image:: images/5.png
 
-如果访问时页面出现了乱码，主要有两个地方需要注意下：
+如果访问时页面出现了乱码，主要有以下地方需要注意下：
 
 - 1.main.py文件的编码格式修改为UTF-8 无BOM格式；
 - 2.代码中的HTML字符串中需要添加<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
