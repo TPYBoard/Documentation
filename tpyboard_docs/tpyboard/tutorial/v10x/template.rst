@@ -35,42 +35,28 @@ TPYBoard的针脚与DS18B20的针脚对应关系如下：
 +============+=========+
 | 3V3/Pin    | VDD     |
 +------------+---------+
-| Pin        | DO      |
-+------------+---------+
-| GND        | GND     |
-+------------+---------+
-
-还是看不明白? 直接上针脚编号
-
-+------------+---------+
-| TPYBoard   | LCD5110 |
-+============+=========+
-| 3.3v       | VDD     |
-+------------+---------+
-| GND        | GND     |
-+------------+---------+
 | Y10        | DO      |
 +------------+---------+
+| GND        | GND     |
++------------+---------+
 
-接线OK后，找到MicroPython的源码目录中，进入drivers\onewire\目录，然后将目录下的文件ds18x20.py和onewire.py复制到TPYBFLASH磁盘的根目录。
+
+文章末有源码下载链接，下载到本地后将目录下的文件ds18b20.py和onewire_lib.py复制到TPYBFLASH磁盘的根目录。
 复制文件后要安全退出磁盘，然后重新接入，即可运行main.py文件了。通过Putty可查看打印的温度信息。
 
 main.py源代码：
 
 .. code-block:: python
 
-	#main.py
-	import pyb
-	from pyb import Pin
-	from ds18x20 import DS18X20
-	Pin("Y11",Pin.OUT_PP).low()#GND
-	Pin("Y9",Pin.OUT_PP).high()#VCC
-	pyb.delay(100)
-	DQ=DS18X20(Pin('Y10'))#DQ
-	while True:
-		tem = DQ.read_temp()
-		print(tem)
-		pyb.delay(1000)
+    #main.py
+    import pyb
+    from pyb import Pin
+    from ds18b20 import DS18X20
+    DQ=DS18X20(Pin('Y10'))#DQ
+    while True:
+        tem = DQ.read_temp()
+        print(tem)
+        pyb.delay(1000)
 
 控制8*8LED点阵显示温度
 ----------------------
