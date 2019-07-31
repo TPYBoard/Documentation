@@ -90,7 +90,7 @@ main.py源代码：
 
 	import pyb
 	from pyb import Pin
-	from ds18x20 import DS18X20
+	from ds18b20 import DS18X20
 	x_PIN = [Pin(i, Pin.OUT_PP) for i in ['X1','X2','X3','X4','X5','X6','X7','X8']]
 	y_PIN = [Pin(i, Pin.OUT_PP) for i in ['Y1','Y2','Y3','Y4','Y5','Y6','Y7','Y8']]
 	temp=['0000,0110,0110,0110,0110,0110,0110,0000','1101,1101,1101,1101,1101,1101,1101,1101,

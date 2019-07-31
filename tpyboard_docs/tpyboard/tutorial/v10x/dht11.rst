@@ -78,6 +78,7 @@ TPYBoard v102 main.py文件内容如下：
         print(DATA[1],'%')
     while True:
         readTaHData()
+        pyb.delay(1000)
 
 
 - `下载源码 <https://github.com/TPYBoard/TPYBoard-v102>`_
