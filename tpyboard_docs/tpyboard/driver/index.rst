@@ -31,3 +31,6 @@ TPYBoard的特有功能如下。
    stepper.rst
    ps2.rst
    as608.rst
+   
+
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_
