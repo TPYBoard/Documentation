@@ -72,3 +72,4 @@ TPYBoard v102 典型实例
    esp82662.rst
    max7219.rst
    max30102.rst
+   sim900a.rst
