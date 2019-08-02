@@ -62,7 +62,5 @@ VS1838与开发板接线对应引脚：
 		nec.callback(nec_cb)
 		if necbm():
 			print("bm=",necbm())
-        while True:
-            pass
 
   main()

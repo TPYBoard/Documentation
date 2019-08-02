@@ -17,14 +17,14 @@
         
         - ``id`` 硬件连接的I2C接口编号
         
-    .. method:: writeAT24C0x(addr,data)
+    .. method:: writeAT24C0X(addr,data)
 
        写入函数。
      
        - ``addr`` 写入的地址
        - ``data`` 写入的数据
 
-    .. method:: readAT24C0x(add,bit_len)
+    .. method:: readAT24C0X(add,bit_len)
 
        读取函数。
        - ``addr`` 读取的地址
@@ -54,7 +54,7 @@ AT24C0X与开发板接线对应引脚：
   import at24c0x
 
   def main():
-	at24c=at24c0x.AT24C(1)
-	at24c.writeAT24C0x(0,'qxw')
-	print(at24c.readAT24C0x(0,3))
+	at24c=at24c0x.AT24C0X(1)
+	at24c.writeAT24C0X(0,'qxw')
+	print(at24c.readAT24C0X(0,3))
   main()

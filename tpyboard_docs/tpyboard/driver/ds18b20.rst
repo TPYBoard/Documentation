@@ -11,7 +11,7 @@
 
 .. only:: port_tpyboard
 
-    .. class:: ds18x20.DS18X20(pin)
+    .. class:: ds18b20.DS18X20(pin)
  
     创建一个DS18X20对象。
     
@@ -41,7 +41,7 @@ DS18B20与开发板接线对应引脚：
 
   # main.py -- put your code here!
   from pyb import Pin
-  from ds18x20 import DS18X20
+  from ds18b20 import DS18X20
   wd = DS18X20(Pin('Y10'))		#设置DS18B20 DO引脚为Y10
 
   while True:

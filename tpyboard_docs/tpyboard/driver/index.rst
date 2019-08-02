@@ -29,6 +29,5 @@ TPYBoard的特有功能如下。
    at24c0x.rst
    smg.rst
    stepper.rst
-   gu620.rst
    ps2.rst
    as608.rst
