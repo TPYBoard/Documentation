@@ -73,3 +73,4 @@ TPYBoard v102 典型实例
    max7219.rst
    max30102.rst
    sim900a.rst
+   red.rst
