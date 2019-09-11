@@ -74,3 +74,4 @@ TPYBoard v102 典型实例
    max30102.rst
    sim900a.rst
    red.rst
+   hmi.rst
