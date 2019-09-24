@@ -32,7 +32,7 @@
 
 在使用串口屏之前，我们需要先通过它的上位机软件创建一个工程，工程中进行串口屏界面的设计，包括文本控件、按钮控件等。
 
-`串口屏相关资料下载 <old.tpyboard.com/downloads/docs/USART HMI.rar>`_
+`串口屏相关资料下载 <http://old.tpyboard.com/downloads/docs/USART HMI.rar>`_
 
 *创建工程*
 
