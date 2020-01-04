@@ -66,6 +66,7 @@ TPYBoard v702 典型实例
    gprs.rst
    message.rst
    tel.rst
+   http.rst
 
 **注意：**
  - **v702开发板增加了板载的SHT20温湿度传感使用开发板上的I2C 1(SCL = X9, SDA = X10)。**
