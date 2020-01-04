@@ -58,8 +58,8 @@ TPYBoard v702的开发板的整体整体亮点置一就是能板载通信功能�
 
 **编写v702上的程序**
 
-使用HTTP应用是通过板载的GU620模块来实现的，所以我们需要知道该模块HTTP应用的相关AT指令，才能去编写程序实现功能。
-- `点击下载AT指令说明文档 <http://old.tpyboard.com/downloads/docs/TPYBoard%20v702_GU620%E8%B5%84%E6%96%99.rar>`_
+HTTP应用是通过板载的GU620模块来实现的，所以我们需要知道该模块HTTP应用的相关AT指令，才能去编写程序实现功能。
+`点击下载AT指令说明文档 <http://old.tpyboard.com/downloads/docs/TPYBoard%20v702_GU620%E8%B5%84%E6%96%99.rar>`_
 
 **GET请求实现代码**
 
@@ -131,7 +131,7 @@ TPYBoard v702的开发板的整体整体亮点置一就是能板载通信功能�
 
 **运行效果**
 
-.. image:: img/1.png
+.. image:: /img/1.png
                     
 **POST请求实现代码**
 
@@ -210,7 +210,7 @@ TPYBoard v702的开发板的整体整体亮点置一就是能板载通信功能�
                     u2.write(sendData)
 
                     
-.. image:: img/2.png
+.. image:: /img/2.png
 
    
 - `下载源码 <https://github.com/TPYBoard/TPYBoard-v702>`_
