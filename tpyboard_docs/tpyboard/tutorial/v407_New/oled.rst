@@ -78,12 +78,6 @@ OLED接口定义
 | CS         | 悬空                              |
 +------------+-----------------------------------+
 
-   
-实物接线图
-------------------
-
-.. image:: http://old.tpyboard.com/document/documents/tb407/oled_2.jpg
-   :height: 400px
 
 接线OK后，引入font\_.py文件和ssd1306.py文件，再可运行main.py了。
 
