@@ -12,7 +12,7 @@ TPYBoard F407开发板上有两个DAC接口，分别是PA4和PA5引脚。
     from pyb import DAC
 
     dac = DAC(1)            # create DAC 1 on pin PA4
-    dac.write(128)          # write a value to the DAC (makes X15 1.65V)
+    dac.write(128)          # write a value to the DAC (makes PA4 1.65V)
 
     dac = DAC(1, bits=12)   # use 12 bit resolution
     dac.write(4095)         # output maximum value, 3.3V
