@@ -9,6 +9,7 @@ TPYBoard F407 典型实例
 
 	start.rst
 	repl.rst
+    pin.rst
 	diylight.rst
 	18b20tem.rst
 	bmp180.rst
