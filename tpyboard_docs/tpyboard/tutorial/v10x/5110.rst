@@ -27,13 +27,13 @@ TPYBoard v102的SPI接口
 
 LCD5110需要SPI接口与TPYBoard v102进行连接传输数据，SPI接口是在CPU和外围低速器件之间进行同步串行数据传输。TPYBoard v102有两个SPI接口，本次使用SPI1接口。
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161229/1482973399550325.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161229/1482973399550325.png
 
 TPYBoard v102的I2C接口
 ------------------------
 DS3231是I2C接口通信的，它通过I2C接口与TPYBoard v102进行数据通讯，DS3231通过这个接口与TPYBoard v102进行双向通讯，进行数据传输。TPYBoard有两个I2C接口，本次使用I2C1接口。
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161229/1482973431559379.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161229/1482973431559379.png
 
 DS3231的使用方法
 ---------------------
@@ -84,7 +84,7 @@ TPYBoard v102的针脚与LCD5110的针脚对应关系如下：
 接线OK后，将font.py、upcd8544.py、chinsese.py和DS3231.py复制到TPYBoard v102加载的可移动磁盘中，然后编写main.py并保存。
 等待保存完毕后，重启TPYBoard v102后(等待红灯(LED1)熄灭后，再进行重启操作)，当前温度与时间会显示在LCD5110显示屏上，见下图:
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161229/1482973647210289.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161229/1482973647210289.png
 
 main.py源代码
 ---------------------

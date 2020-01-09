@@ -32,7 +32,7 @@
 
 	如下图接线，VCC 供 5V电源， GND 为地线，TRIG 触发控制信号输入，ECHO 回响信号输出等四个接口端。
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161116/1479286451773829.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161116/1479286451773829.png
 
 控制LCD5110显示屏显示6x8字符
 ---------------------------------

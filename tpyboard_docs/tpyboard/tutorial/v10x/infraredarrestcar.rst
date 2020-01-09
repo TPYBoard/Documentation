@@ -8,7 +8,7 @@
 
 智能小车现在差不多是电子竞赛或者DIY中的主流了，寻迹，壁障，遥控什么的，相信大家也都见得很多了，这次就大家探讨一下防坠落小车的制作方法，不同于以往的是这次的程序不用C语言写，而是要使用python语言写。下面给大家看一下视频演示：
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161104/1478249731266844.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161104/1478249731266844.png
 
 `查看视频 <http://v.youku.com/v_show/id_XMTcwNjAwNjMwOA==.html>`_
 

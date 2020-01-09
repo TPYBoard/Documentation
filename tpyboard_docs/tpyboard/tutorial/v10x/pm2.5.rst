@@ -92,7 +92,7 @@ TPYBoard v102的硬件特点：
 	- 杜邦线 若干
 	- micro USB数据线 1条
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20160823/1471943991787031.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20160823/1471943991787031.png
 
 
 硬件接线方法
@@ -103,7 +103,7 @@ TPYBoard v102的硬件特点：
 
 	传感器上一共六根线，从1到6依次是GND,VCC,NC,NC,RX,TX。其中我们只用三根线，电源（GND,VCC）和串口（TX），传感器与TPYBorad接线参照图1，具体用哪个串口请参照官方网站上文档TPYBoard 关于串口的使用，小编用的串口为	UART(2) is on: (TX, RX) = (X3, X4)	= (PA2,	 PA3)，因为只需要将数据传到PTYBoard，所以只用到RED即PTYBoard的X4引脚。
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20160823/1471941893958432.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20160823/1471941893958432.png
 
 
 LCD5110的针脚
@@ -139,7 +139,7 @@ PM2.5检测仪整体接线方法
 	按照图1、图2所示将PM2.5粉尘传感器以及5110显示屏与TPTYBoard v102连接起来，硬件连接完毕，如图3:
 
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20160823/1471942098496980.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20160823/1471942098496980.png
 
 
 PM2.5粉尘传感器工作原理及数据处理
@@ -154,7 +154,7 @@ PM2.5粉尘传感器工作原理
 
 	内部结构如图内部结构仿真图所示：
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20160823/1471942150331605.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20160823/1471942150331605.png
 
 内部结构仿真图
 
@@ -165,7 +165,7 @@ PM2.5粉尘传感器传感器数据处理
 
 	这个传感器的输出数据是靠串口进行传输的，传感器会通过串口每10ms不到（一般3～4ms）发送一个数据，数据的类型大致是个“0X00”这样的16进制的数据。每次的数据会以“0XAA”作为起始端，以“0XFF”作为结束端。共7个数据位，7个数据位中包含了起始位，结束位，数据高位，数据低位，数据高校验位，数据低校验位和校验位（校验位是怎样计算出来的，下面会讲到）。数据格式大致如下：
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20160823/1471942195856275.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20160823/1471942195856275.png
 
 其中校验位长度=Vout（H）+Vout（L）+Vref（H）+Vref（L）的长度。
 

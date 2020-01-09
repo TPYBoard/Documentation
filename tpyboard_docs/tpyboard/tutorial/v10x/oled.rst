@@ -33,7 +33,7 @@ OLED显示屏简介
 实际显示效果
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20170211/1486776004559236.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170211/1486776004559236.png
 
 OLED接口定义
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -65,7 +65,7 @@ OLED接口定义
 实物接线图
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20170211/1486776112995233.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170211/1486776112995233.png
 
 
 接线OK后，并且导入font.py文件和ssd1306.py文件，再可运行main.py了。
@@ -97,7 +97,7 @@ OLED接口定义
 实现效果
 ---------------------
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20170211/1486776202255121.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20170211/1486776202255121.png
 
 
 - `下载源码 <https://github.com/TPYBoard/TPYBoard-v102>`_

@@ -33,7 +33,7 @@
 
 光敏传感器实物图：
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161119/1479545872307793.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161119/1479545872307793.png
 
 
 声音传感器模块工作原理
@@ -46,7 +46,7 @@
 
 声音传感器实物图：
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161119/1479545901165245.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161119/1479545901165245.png
 
 
 硬件接线方法

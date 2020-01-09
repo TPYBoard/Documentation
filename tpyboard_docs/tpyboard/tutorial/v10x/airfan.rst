@@ -26,7 +26,7 @@
 学习DS18B20的接线方法
 -------------------------------------
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161125/1480062707271272.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161125/1480062707271272.png
 
 
 先看一下DS18B20针脚含义,如上图：

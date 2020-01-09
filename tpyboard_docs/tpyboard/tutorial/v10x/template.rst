@@ -23,7 +23,7 @@
 学习DS18B20的接线方法
 ----------------------------------------
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20160815/1471247227119424.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20160815/1471247227119424.png
 
 
 先看一下DS18B20针脚含义,如上图：
@@ -61,7 +61,7 @@ main.py源代码：
 控制8*8LED点阵显示温度
 ----------------------
 
-.. image:: http://tpyboard.com/ueditor/php/upload/image/20160815/1471247464571951.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20160815/1471247464571951.png
 
 
 点阵后面有两排针脚，一排以1开头，即1-8针脚，一排以9开头，即9-16针脚，上图中圆圈内的数字即为针脚的对应数字。当ROW 的针脚为高电平，COL的针脚为低电平时候，我们的LED即全部点亮。

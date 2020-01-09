@@ -23,7 +23,7 @@
 
 8*8 LED点阵屏针脚图：
 
-.. image:: http://tpyboard.com/ueditor/php/upload/image/20161031/1477879225908683.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161031/1477879225908683.png
 
 通过针脚图，大家可以看出点阵屏中发光二极管对应的行、列数与实际针脚编号不是顺序对应的。上图中带圆圈的数字表示的是点阵屏的针脚编号，不带圆圈的数字表示的是灯珠的行、列编号。
 
@@ -88,7 +88,7 @@
 
 效果图：
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161031/1477882469674497.jpg
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161031/1477882469674497.jpg
 
 
 我们按照上面的步骤接线完毕后，编写main.py文件，下面是显示心形图案的源代码：
