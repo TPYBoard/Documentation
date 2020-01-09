@@ -10,7 +10,7 @@
 
 先给大家看一下视频演示吧！
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161031/1477877141332316.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161031/1477877141332316.png
 
 `查看视频 <http://v.youku.com/v_show/id_XMTcwNzQ5ODcxNg==.html>`_
 
@@ -70,12 +70,12 @@ MicroPython是在单片机上可以跑的Python，也就是说，你可以通过
 
 上个简单的帮助理解的原理图 （其实我们做实验都是插线，不做PCB图和原理图的）。
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161029/1477732081757742.png
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161029/1477732081757742.png
 
 
 再上个实物图给大家看看。
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20161031/1477877362324105.jpg
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20161031/1477877362324105.jpg
 
 
 运行与调试

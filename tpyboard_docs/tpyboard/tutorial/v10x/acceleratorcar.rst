@@ -9,7 +9,7 @@
 现在无线控制已经成为了电子科学领域的主流，这次就来教大家做一个主流中的主流--无线控制的小车，先给大家看一下最终的成品演示视频：
 
 .. raw:: html
-	<video preload='none' src='http://www.micropython.net.cn/ueditor/php/upload/video/20160824/1472020805689816.ogg' id='video_show' />
+	<video preload='none' src='http://old.tpyboard.com/ueditor/php/upload/video/20160824/1472020805689816.ogg' id='video_show' />
 
 
 所有器材
@@ -56,7 +56,7 @@
 
 成品图：
 
-.. image:: http://www.micropython.net.cn/ueditor/php/upload/image/20160815/1471255116488443.jpg
+.. image:: http://old.tpyboard.com/ueditor/php/upload/image/20160815/1471255116488443.jpg
 
 
 这些都是给大家参考的，大家做的时候多学习多看看，亲身体验了才能真的学到东西。
