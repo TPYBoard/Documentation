@@ -48,7 +48,7 @@
 
 上面我们已经知道光敏传感器跟声音传感器的工作原理，以及三根针脚的作用，那么我们只需将它们的电源正极与电源负极跟我们开发板的3.3V跟GND连接起来，然后将光敏传感器和声音传感器的信号输出针脚连接到我们开发板上的任意GPIO引脚。
 
-本次实验将声音传感器信号输出引脚连接的是开发板的PE2针脚，光敏传感器信号输出引脚连接的PE3针脚。传感器连接完毕后，将发光数码管的正极插入面包板正极上,负极插入面包板的纵向插孔里（a,b,c,d,e,f,g,h,i,j）,然后用杜邦线将负极连接到开发板的GND上，灯的正极连接到PE4针脚，然后我们声音大小以及光亮强度来控制PE4针脚输出高电平或者低电平来控制发光二极管的亮灭。
+本次实验将声音传感器信号输出引脚连接的是开发板的Y1针脚，光敏传感器信号输出引脚连接的Y2针脚。传感器连接完毕后，将发光数码管的正极插入面包板正极上,负极插入面包板的纵向插孔里（a,b,c,d,e,f,g,h,i,j）,然后用杜邦线将负极连接到开发板的GND上，灯的正极连接到X1针脚，然后我们声音大小以及光亮强度来控制X1针脚输出高电平或者低电平来控制发光二极管的亮灭。
 
 
 接线OK后，编写main.py，这样我们的DIY声光电控开关就完成了。  
@@ -63,18 +63,27 @@
     import pyb
     from pyb import Pin
 
-    voice = Pin('PE2',Pin.IN)
-    light = Pin('PE3',Pin.IN)
-    led = pyb.Pin("PE4",pyb.Pin.OUT_PP)
+    voice = Pin('Y1',Pin.IN)
+    light = Pin('Y2',Pin.IN)
+    led = pyb.Pin("X1",pyb.Pin.OUT_PP)
 
     while 1:
         if light.value()==1:
             if voice.value()==1:
-                led.value(0)    
+                led.value(0)
+                pyb.LED(2).off()
+                pyb.LED(3).off()
+                pyb.LED(4).on()     
             else:
+                pyb.LED(3).off()
+                pyb.LED(4).off()
                 led.value(1)
+                pyb.LED(2).on()
                 pyb.delay(5000)
         else:
+            pyb.LED(3).on()
+            pyb.LED(2).off()
+            pyb.LED(4).off()
             led.value(0)
 
-- `下载源码 <>`_ 
+- `下载源码 <http://old.tpyboard.com/document/documents/tb407/diylight.rar>`_ 

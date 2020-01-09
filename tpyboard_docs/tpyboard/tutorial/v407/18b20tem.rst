@@ -20,6 +20,8 @@
 - 杜邦线若干
 - PuTTY调试工具
 
+.. image:: http://old.tpyboard.com/document/documents/tb407/18b20tem_0.png
+   :width: 300px
  
 学习DS18B20的接线方法，检测当前温度 
 ------------------------------------------
@@ -41,7 +43,7 @@ DS18B20扩展板的针脚与TPYBoard F407 Micropython开发板的针脚对应关
 +------------------------+----------------+
 |     GND                |      GND       |
 +------------------------+----------------+
-|     PD4                |      DO        |
+|     Y12                |      DO        |
 +------------------------+----------------+
 
 源代码 
@@ -59,7 +61,7 @@ DS18B20扩展板的针脚与TPYBoard F407 Micropython开发板的针脚对应关
 	from pyb import Pin
 	from ds18b20 import DS18X20
 
-	DQ=DS18X20(Pin('PD4'))#DQ
+	DQ=DS18X20(Pin('Y12'))#DQ
 	while True:
 		tem = DQ.read_temp()
 		print(tem)

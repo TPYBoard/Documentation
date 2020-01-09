@@ -4,14 +4,14 @@
 版权声明：翻译整理属于TPYBoard，转载时请以超链接形式标明文章原始出处和作者信息及本声明
 
 DAC是数字模拟转换，将数字信号转换为模拟信号（以电流、电压或电荷的形式）。在TPYBoard F407开发板上DAC可输出介于0和3.3V之间的电压。
-TPYBoard F407开发板上有两个DAC接口，分别是PA4和PA5引脚。
+TPYBoard F407开发板上有两个DAC接口，分别是X15和X16引脚。
 
 
 使用示例::
 
     from pyb import DAC
 
-    dac = DAC(1)            # create DAC 1 on pin PA4
+    dac = DAC(1)            # create DAC 1 on pin X15
     dac.write(128)          # write a value to the DAC (makes X15 1.65V)
 
     dac = DAC(1, bits=12)   # use 12 bit resolution
@@ -51,7 +51,7 @@ TPYBoard F407开发板上有两个DAC接口，分别是PA4和PA5引脚。
 
    构造一个DAC对象。
 
-   ``port`` 是一个针脚, 或整数(1 或 2)。DAC(1) 是针脚PA4 和 DAC(2) 是针脚PA5。
+   ``port`` 是一个针脚, 或整数(1 或 2)。DAC(1) 是针脚X15 和 DAC(2) 是针脚X16。
 
    ``bits`` 是指定分辨率的整数，可以是8或12。
 
