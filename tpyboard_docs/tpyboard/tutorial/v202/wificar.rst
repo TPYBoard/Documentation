@@ -167,3 +167,9 @@ TPYBoard v202 源代码(main.py)
 -------------------------
 
 `点击观看视频 <http://mpvideo.qpic.cn/0bf2hqaaeaaaveaa3ui5h5pfapgdai6aaaqa.f10002.mp4?dis_k=75bc9f531e0fe018cfc344a63c5fdc1d&dis_t=1579070805>`_
+
+
+源码下载
+--------------
+
+`下载源码 <https://github.com/TPYBoard/TPYBoard-v202/tree/master/12.%E6%99%BA%E8%83%BDWIFI%E8%BF%9C%E6%8E%A7%E5%B0%8F%E8%BD%A6>`_

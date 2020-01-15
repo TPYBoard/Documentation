@@ -54,5 +54,6 @@ TPYBoard v202 典型实例
    202wifi1.rst
    202wifi2.rst
    V2023.rst
+   wificar.rst
    firmwipe.rst
    firmware.rst
