@@ -160,7 +160,6 @@ TPYBoard v202 源代码(main.py)
 -------------------------
 
 .. image:: img/html.png
-    :width: 100px
     
     
 演示效果
