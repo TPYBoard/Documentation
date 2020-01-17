@@ -58,3 +58,5 @@ AT24C0X与开发板接线对应引脚：
 	at24c.writeAT24C0X(0,'qxw')
 	print(at24c.readAT24C0X(0,3))
   main()
+  
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

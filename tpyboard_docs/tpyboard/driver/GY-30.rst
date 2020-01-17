@@ -53,3 +53,5 @@ GY-30与开发板接线对应引脚：
   while True:
   	a=gy_30.read()
   	print(a[0]*0xff+a[1])
+    
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

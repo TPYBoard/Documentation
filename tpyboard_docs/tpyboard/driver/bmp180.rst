@@ -58,3 +58,5 @@ BMP180与开发板接线对应引脚：
   	print('当前气压：%s pa'%bmp.readpress())
   	print('当前海拔：%s m'%bmp.readaltitude())
   	time.sleep_ms(500)
+    
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

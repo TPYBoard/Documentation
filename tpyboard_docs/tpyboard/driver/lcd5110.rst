@@ -99,3 +99,5 @@ LCD5110与开发板接线对应引脚：
     lcd_5110.lcd_write_string('This is a test of LCD5110',0,4)
   if __name__ == '__main__':
     main()
+    
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

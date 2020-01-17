@@ -55,3 +55,5 @@ GY-39与开发板接线对应引脚：
   	print('海拔高度:%s m'%H)
   	print('')
   	time.sleep_ms(200)
+    
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

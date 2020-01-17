@@ -65,3 +65,5 @@ DS3221与开发板接线对应引脚：
     print('Time',str(ds.TIME()),0,3)
     print('Tem'str(ds.TEMP()),0,5)
     pyb.delay(1000)
+    
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

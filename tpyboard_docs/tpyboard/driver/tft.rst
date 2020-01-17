@@ -153,3 +153,6 @@ TFT与开发板接线对应引脚：
 - 55.bmp
  
 .. image:: 55.bmp
+
+
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

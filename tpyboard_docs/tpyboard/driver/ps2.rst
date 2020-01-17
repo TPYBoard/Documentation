@@ -71,3 +71,5 @@ PS2无线手柄与开发板接线对应引脚：
   		pyb.LED(3).off()
   	elif(a==8):
   		pyb.LED(4).off()
+        
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

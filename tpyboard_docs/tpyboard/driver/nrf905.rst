@@ -142,3 +142,5 @@ nrf905与开发板接线对应引脚：
   while True:
   	buf=n.recvrx()				#接收内容存储到buf
   	print (buf)
+    
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

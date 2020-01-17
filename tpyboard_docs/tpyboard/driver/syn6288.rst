@@ -46,3 +46,6 @@ SYN6288与开发板接线对应引脚：
     #使用串口2，波特率9600，播报（测试,abc,123）字符。
     #该文本编码使用ASCI格式
     sendspeak(2,9600,'测试,abc,123'.encode())
+    
+    
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

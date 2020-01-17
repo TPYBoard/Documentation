@@ -108,3 +108,5 @@ LCD1602与开发板接线对应引脚：
     delay(1000)
     count += 1
     print(count)
+    
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

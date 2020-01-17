@@ -47,3 +47,5 @@ DS18B20与开发板接线对应引脚：
   while True:
     print(当前温度:',wd.read_temp())
     pyb.delay(1000)
+    
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

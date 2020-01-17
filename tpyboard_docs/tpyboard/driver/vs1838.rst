@@ -64,3 +64,5 @@ VS1838与开发板接线对应引脚：
 			print("bm=",necbm())
 
   main()
+  
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

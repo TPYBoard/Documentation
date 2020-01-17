@@ -58,3 +58,5 @@ AM2320与开发板接线对应引脚：
   	print('温度:',am_2320.temperature())
   	print('湿度:',am_2320.humidity())
   	time.sleep_ms(500)
+    
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_

@@ -82,3 +82,6 @@ MFRC522与开发板接线对应引脚：
   			print("NO_CARD")
   		pyb.delay(1000)
   main()
+  
+  
+- `点击查看源码(GitHub) <https://github.com/TPYBoard/TPYBoard_lib/>`_
